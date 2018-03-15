@@ -40,6 +40,12 @@ function styles() {
     .pipe($gp.sourcemaps.init())
     .pipe($gp.sassGlob())
     .pipe($gp.sass())
+    .pipe($gp.stylelint({
+        reporters: [
+          {formatter: 'string', console: true}
+        ],
+        fix: true
+      }))
     .pipe($gp.autoprefixer({
         browsers: ["last 2 versions"],
         cascade: false

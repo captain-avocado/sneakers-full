@@ -1,1 +1,3 @@
-import './modules/module'
+import module from './modules/module';
+console.log($);
+module();
