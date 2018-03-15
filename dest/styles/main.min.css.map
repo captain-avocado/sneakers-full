@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA;EAEQ,YAAW;EACX,eAAc,EACjB","file":"main.min.css","sourcesContent":[".block {\n    &:after {\n        color: #FFF;\n        color: #ABCACB;\n    }\n}"]}
