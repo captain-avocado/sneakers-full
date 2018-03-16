@@ -1,6 +1,10 @@
-.block {
-    &:after {
-        color: #FFF;
-        color: #ABCACB;
-    }
-}
+//config
+@import "config/variables";
+@import "config/mixins";
+
+//layout
+@import "layout/global";
+@import "layout/fonts";
+
+//blocks
+@import "blocks/*";

@@ -33,6 +33,7 @@ const reportError = function(error) {
 };
 
 function styles() {
+    // clean('styles');
     return gulp.src(paths.src + 'styles/main.scss')
     .pipe($gp.plumber({
         errorHandler: reportError
@@ -59,7 +60,8 @@ function styles() {
 }
 
 function templates() {
-    return gulp.src(paths.src + 'templates/**/*.pug')
+    // clean('*.html');
+    return gulp.src([paths.src + 'templates/**/*.pug', `!${paths.src}templates/base.pug`])
     .pipe($gp.plumber({
         errorHandler: reportError
     }))
@@ -68,6 +70,7 @@ function templates() {
 }
 
 function scripts() {
+    // clean('scripts');
     return gulp.src(paths.src + 'scripts/**/*.js')
     .pipe($gp.plumber({
         errorHandler: reportError
@@ -83,12 +86,15 @@ function scripts() {
 }
 
 function images() {
+    // clean('images');
     return gulp.src(paths.src + 'images/**/*.*')
     .pipe($gp.imagemin({ progressive: true }))
-    .pipe(gulp.dest(paths.dest + 'images/'));
+    .pipe($gp.rename({dirname: ''}))
+    .pipe(gulp.dest(paths.dest + 'images'));
 }
 
 function fonts() {
+    // clean('fonts');
     return gulp.src(paths.src + 'fonts/**').pipe(gulp.dest(paths.dest + 'fonts/'));
 }
 

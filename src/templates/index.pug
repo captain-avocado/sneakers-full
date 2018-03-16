@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-        link(rel="stylesheet", href="styles/main.min.css")
-        script(src="scripts/main.bundle.js")
-    body
+extends ./base
+block head
+    title Авторизация
+block variables
+    -
+        var socialList = [
+            {
+                href: 'https://vk.com',
+                text: 'vk'
+            },
+            {
+                href: 'https://github.com/',
+                text: 'github'
+            },
+            {
+                href: 'https://ru.linkedin.com/',
+                text: 'linkedin'
+            }
+        ];
+
+block content
+    .wrapper
+        section.section.main
+            .main__auth
+                a(href="#").btn-auth Авторизоваться
+            .main__welcome
+                .welcome
+                    .welcome__info
+                        .welcome__about
+                            .about
+                                img(src='images/avatar.jpg').welcome__avatar
+                                .welcome__text
+                                    .welcome__name Артем Калоев 
+                                    .welcome__site Личный сайт веб-разработчика
+                        .welcome__socials
+                            
+                            ul.socials
+                                each item in socialList
+                                    li.socials__item
+                                        a(href=`${item.href}`).socials__link #{item.text}
+                    .welcome__buttons
+                        ul.buttons
+                            li.buttons__item
+                                a(href='./works.html').button.button_works Мои работы
+                            li.buttons__item
+                                a(href='./about.html').button.button_about Обо мне
+                            li.buttons__item
+                                a(href='./blog.html').button.button_blog Блог
+            .main__credits © Артем Калоев | Создано с любовью в Loftscool | 2018

@@ -3456,6 +3456,13 @@ gulp-decompress@^1.2.0:
     gulp-util "^3.0.1"
     readable-stream "^2.0.2"
 
+gulp-flatten@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/gulp-flatten/-/gulp-flatten-0.4.0.tgz#d9ac819416c30fd5dfb3dea9da79c83a1bcd61d1"
+  dependencies:
+    plugin-error "^0.1.2"
+    through2 "^2.0.0"
+
 gulp-group-css-media-queries@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-group-css-media-queries/-/gulp-group-css-media-queries-1.2.2.tgz#c0436b9474086cbe1ab3eb5bc1a3afef4d6b37d6"
