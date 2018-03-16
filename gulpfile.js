@@ -85,9 +85,42 @@ function scripts() {
     .pipe(gulp.dest(paths.dest + 'scripts/'));
 }
 
+const svgConfig = {
+    mode: {
+        symbol: {
+            sprite: '../sprite.svg',
+            example: {
+                dest: '../tmp/spriteSvgDemo.html'
+            }
+        }
+    }
+};
+
+function sprite() {
+    return gulp.src(paths.src + 'images/icons/*.svg')
+        .pipe($gp.svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        .pipe($gp.cheerio({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        .pipe($gp.replace('&gt;', '>'))
+        .pipe($gp.svgSprite(svgConfig))
+        .pipe(gulp.dest(paths.dest + 'images'));
+}
+
 function images() {
     // clean('images');
-    return gulp.src(paths.src + 'images/**/*.*')
+    return gulp.src([paths.src + 'images/**/*.*', `!${paths.src}images/icons/*.svg`])
     .pipe($gp.imagemin({ progressive: true }))
     .pipe($gp.rename({dirname: ''}))
     .pipe(gulp.dest(paths.dest + 'images'));
@@ -102,9 +135,11 @@ function watch() {
     gulp.watch(paths.src + 'styles/**/*.scss', styles);
     gulp.watch(paths.src + 'scripts/**/*.js', scripts);
     gulp.watch(paths.src + 'templates/**/*.pug', templates);
+    gulp.watch(paths.src + 'images/icons/*.svg', sprite);
     gulp.watch(paths.src + 'images/**/*.*', images);
     gulp.watch(paths.src + 'fonts/**/*.*', fonts);
 }
+
 
 function serve() {
     browserSync.init({
@@ -120,12 +155,13 @@ gulp.task('styles', styles);
 gulp.task('templates', templates);
 gulp.task('scripts', scripts);
 gulp.task('images', images);
+gulp.task('sprite', sprite);
 gulp.task('fonts', fonts);
 gulp.task('watch', watch);
 gulp.task('serve', serve);
 //чекнуть соурсмапы
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts, fonts),
+    gulp.parallel(styles, templates, sprite, images, scripts, fonts),
     gulp.parallel(watch, serve)
 ));

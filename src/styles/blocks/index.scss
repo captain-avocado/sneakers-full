@@ -38,8 +38,11 @@
 
     &__avatar {
         border-radius: 50%;
+        
+        //FIX
         max-width: 40%;
         max-width: 150px;
+        //END FIX
     }
 
     &__text {
@@ -50,10 +53,6 @@
 
     &__name {
         font-size: 28px;
-    }
-
-    &__site {
-        font-size: 16px;
     }
 }
 
@@ -87,16 +86,36 @@
         border-radius: 0 0 4px 0;
     }
     padding: 15px 25px;
-    background-color: #0ab19e;
+    background-color: $bg-green;
     &:hover {
         transition: .3s;
-        background-color: rgba(#009688, 0.7);
+        background-color: rgba($bg-green-dark, 0.7);
     }
 }
 
 .socials {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    &__item {
+        &:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.social {
+    display: block;
+        height: 100%;
+        width: 100%;
+    &__icon {
+        fill: $bg-green;
+        &:hover {
+            transition: .3s;
+            fill: rgba($bg-green-dark, 0.7);
+        }
+    }
 }
 
 .btn-auth {
@@ -110,7 +129,7 @@
         border: 1px solid transparent;
         transition: background-color .3s, color .3s;
         background-color: white;
-        color: #0ab19e;
+        color: $bg-green;
         font-weight: 500;
     }
 }
