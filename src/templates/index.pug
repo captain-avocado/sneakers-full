@@ -18,32 +18,45 @@ block variables
             }
         ];
 
+        var buttonsList = [
+            {
+                href: './works.html',
+                spec: 'works',
+                text: 'Мои работы'
+            },
+            {
+                href: './about.html',
+                spec: 'about',
+                text: 'Обо мне'
+            },
+            {
+                href: './blog.html',
+                spec: 'blog',
+                text: 'Блог'
+            }
+        ];
+
 block content
-    .wrapper
-        section.section.main
-            .main__auth
-                a(href="#").btn-auth Авторизоваться
-            .main__welcome
-                .welcome
-                    .welcome__info
-                        .welcome__about
-                            .about
-                                img(src='images/avatar.jpg').welcome__avatar
-                                .welcome__text
-                                    .welcome__name Артем Калоев 
-                                    .welcome__site Личный сайт веб-разработчика
-                        .welcome__socials
-                            
-                            ul.socials
-                                each item in socialList
-                                    li.socials__item
-                                        a(href=`${item.href}`).socials__link #{item.text}
-                    .welcome__buttons
-                        ul.buttons
+    section.section.main
+        .main__auth
+            a(href="#").btn-auth Авторизоваться
+        .main__welcome
+            .welcome
+                .welcome__info
+                    .welcome__about
+                        .about
+                            img(src='images/avatar.jpg').welcome__avatar
+                            .welcome__text
+                                .welcome__name Артем Калоев 
+                                .welcome__site Личный сайт веб-разработчика
+                    .welcome__socials
+                        ul.socials
+                            each item in socialList
+                                li.socials__item
+                                    a(href=`${item.href}`).socials__link #{item.text}
+                .welcome__buttons
+                    ul.buttons
+                        each item in buttonsList
                             li.buttons__item
-                                a(href='./works.html').button.button_works Мои работы
-                            li.buttons__item
-                                a(href='./about.html').button.button_about Обо мне
-                            li.buttons__item
-                                a(href='./blog.html').button.button_blog Блог
-            .main__credits © Артем Калоев | Создано с любовью в Loftscool | 2018
+                                a(href=`${item.href}`, class=`button button_${item.spec}`) #{item.text}
+        .main__credits © Артем Калоев | Создано с любовью в Loftscool | 2018
