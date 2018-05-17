@@ -1,64 +1,41 @@
 extends ./base
 block head
-    title Авторизация
+    title Главная страница
 block variables
-    -
-        var socialList = [
-            {
-                href: 'https://vk.com',
-                text: 'vk'
-            },
-            {
-                href: 'https://github.com/',
-                text: 'github'
-            },
-            {
-                href: 'https://ru.linkedin.com/',
-                text: 'linkedin'
-            }
-        ];
-
-        var buttonsList = [
-            {
-                href: './works.html',
-                spec: 'works',
-                text: 'Мои работы'
-            },
-            {
-                href: './about.html',
-                spec: 'about',
-                text: 'Обо мне'
-            },
-            {
-                href: './blog.html',
-                spec: 'blog',
-                text: 'Блог'
-            }
-        ];
-
 block content
-    section.section.main
-        .main__auth
-            a(href="#").btn-auth Авторизоваться
-        .main__welcome
-            .welcome
-                .welcome__info
-                    .welcome__about
-                        .about
-                            img(src='images/avatar.jpg').welcome__avatar
-                            .welcome__text
-                                .welcome__name Артем Калоев 
-                                .welcome__site Личный сайт веб-разработчика
-                    .welcome__socials
-                        ul.socials
-                            each item in socialList
-                                li.socials__item
-                                    a(href=`${item.href}`).socials__link.social
-                                        svg(width='25', height='25').social__icon
-                                            use(xlink:href=`images/sprite.svg#${item.text}`)
-                .welcome__buttons
-                    ul.buttons
-                        each item in buttonsList
-                            li.buttons__item
-                                a(href=`${item.href}`, class=`button button_${item.spec}`) #{item.text}
-        .main__credits © Артем Калоев | Создано с любовью в Loftscool | 2018
+    header.header
+      .logo.header__logo
+        a(href="#").logo__link
+          img(src="images/logo.png").logo__icon
+          .logo__text
+            .logo__name дасстрой
+            .logo__descr Внимание к деталям
+      .contacts.header__contacts
+        .contacts__row
+          img(src="images/phone.png").contacts__icon
+          .contacts__number +7 (800) 555-35-35
+        .contacts__row
+          .contacts__descr 7 дней в неделю с 9:00 до 19:00
+      .cart.header__cart
+        .cart__goods
+          .cart__num 2
+          img(src="images/cart.png").cart__icon
+        .cart__descr Ваша корзина
+    nav.nav
+      ul.menu.nav__list
+        li.menu__item 
+          a(href="#").menu__link Главная
+        li.menu__item
+          a(href="#").menu__link Услуги
+        li.menu__item
+          a(href="#").menu__link Товары
+        li.menu__item
+          a(href="#").menu__link Бренды
+        li.menu__item
+          a(href="#").menu__link Доставка и оплата
+        li.menu__item 
+          a(href="#").menu__link О компании
+      .search.nav__search
+        a(href="#").search__link
+          img(src="images/search.png").search__icon#search 
+    script(src="scripts/main.bundle.js")

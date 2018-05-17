@@ -1,0 +1,32 @@
+.cart {
+
+  display: flex;
+  align-items: center;
+
+  &__goods {
+    margin-right: 5px;
+
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(0, -90%);
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $bg-red;
+    color: $white;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+}

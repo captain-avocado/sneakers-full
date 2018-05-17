@@ -1,3 +1,2 @@
-import module from './modules/module';
-console.log($);
-module();
+import search from './modules/search';
+search();
