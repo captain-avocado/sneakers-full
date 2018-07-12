@@ -1,18 +1,6 @@
 .header {
   display: flex;
-  align-items: center;
-
-  padding-left: 10%;
-  padding-right: 10%;
-
-  min-height: 170px;
-
-  &__logo {
-    margin-right: auto;
-  }
-
-  &__cart {
-    margin-left: 100px;
-  }
+  justify-content: center;
+  padding: 22px 0;
 
 }

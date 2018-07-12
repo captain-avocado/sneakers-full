@@ -4,38 +4,30 @@ block head
 block variables
 block content
     header.header
-      .logo.header__logo
-        a(href="#").logo__link
-          img(src="images/logo.png").logo__icon
-          .logo__text
-            .logo__name дасстрой
-            .logo__descr Внимание к деталям
-      .contacts.header__contacts
-        .contacts__row
-          img(src="images/phone.png").contacts__icon
-          .contacts__number +7 (800) 555-35-35
-        .contacts__row
-          .contacts__descr 7 дней в неделю с 9:00 до 19:00
-      .cart.header__cart
-        .cart__goods
-          .cart__num 2
-          img(src="images/cart.png").cart__icon
-        .cart__descr Ваша корзина
-    nav.nav
-      ul.menu.nav__list
-        li.menu__item 
-          a(href="#").menu__link Главная
+      .container.container_header
+        .city.header__city
+          svg.city__icon
+          .city__name Владивосток
+        .logo.header__logo sneakers
+        .icons.header__icons
+          svg.icons__search
+          svg.icons__login
+          svg.icons__cart.cart
+            span.cart__num 2
+    ul.menu
+      .container.container_menu
+        li.menu__item.active
+          a.menu__link(href="#") новая коллекция
         li.menu__item
-          a(href="#").menu__link Услуги
+          a.menu__link(href="#") мужские
         li.menu__item
-          a(href="#").menu__link Товары
+          a.menu__link(href="#") женские
         li.menu__item
-          a(href="#").menu__link Бренды
+          a.menu__link(href="#") детские
         li.menu__item
-          a(href="#").menu__link Доставка и оплата
-        li.menu__item 
-          a(href="#").menu__link О компании
-      .search.nav__search
-        a(href="#").search__link
-          img(src="images/search.png").search__icon#search 
+          a.menu__link(href="#") распродажи
+        li.menu__item
+          a.menu__link(href="#") магазин
+    .slider
+      .container
     script(src="scripts/main.bundle.js")

@@ -1,2 +1,2 @@
-import search from './modules/search';
-search();
+// import search from './modules/search';
+// search();
