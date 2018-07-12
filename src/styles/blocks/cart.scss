@@ -1,0 +1,30 @@
+.cart {
+  position: relative;
+  &__icon {
+    height: 20px;
+    width: 18px;
+    z-index: -10;
+  }
+
+  &__num {
+    font-size: 11px;
+    color: #fff;
+    position: absolute;
+    top: -30%;
+    left: 75%;
+    z-index: 20;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-color: #3151cc;
+      border-radius: 50%;
+      z-index: -5;
+    }
+  }
+}

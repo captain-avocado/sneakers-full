@@ -10,16 +10,30 @@
   <body>
     <header class="header">
       <div class="container container_header">
-        <div class="city header__city">
-          <svg class="city__icon"></svg>
+        <div class="city header__city"><a class="city__link" href="#">
+            <svg class="city__icon">
+              <use xlink:href="images/sprite.svg#placeholder"></use>
+            </svg></a>
           <div class="city__name">Владивосток</div>
         </div>
-        <div class="logo header__logo">sneakers</div>
-        <div class="icons header__icons">
-          <svg class="icons__search"></svg>
-          <svg class="icons__login"></svg>
-          <svg class="icons__cart cart"><span class="cart__num">2</span></svg>
-        </div>
+        <div class="logo header__logo"> <a href="#">sneakers</a></div>
+        <ul class="icons header__icons">
+          <li class="icons__item"><a class="icons__link" href="#">
+              <svg class="icons__search">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg></a></li>
+          <li class="icons__item"><a class="icons__link" href="#">
+              <svg class="icons__avatar">
+                <use xlink:href="images/sprite.svg#avatar"></use>
+              </svg></a></li>
+          <li class="icons__item"><a class="icons__link" href="#">
+              <div class="icons__cart cart">
+                <svg class="cart__icon">
+                  <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
+                <div class="cart__num">2</div>
+              </div></a></li>
+        </ul>
       </div>
     </header>
     <ul class="menu">

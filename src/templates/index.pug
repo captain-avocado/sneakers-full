@@ -6,14 +6,27 @@ block content
     header.header
       .container.container_header
         .city.header__city
-          svg.city__icon
+          a(href="#").city__link
+            svg.city__icon
+              use(xlink:href=`images/sprite.svg#placeholder`)
           .city__name Владивосток
-        .logo.header__logo sneakers
-        .icons.header__icons
-          svg.icons__search
-          svg.icons__login
-          svg.icons__cart.cart
-            span.cart__num 2
+        .logo.header__logo 
+          a(href="#") sneakers
+        ul.icons.header__icons
+          li.icons__item
+            a(href="#").icons__link
+              svg.icons__search
+                use(xlink:href=`images/sprite.svg#search`)
+          li.icons__item
+            a(href="#").icons__link
+              svg.icons__avatar
+                use(xlink:href=`images/sprite.svg#avatar`)
+          li.icons__item
+            a(href="#").icons__link
+              .icons__cart.cart
+                svg.cart__icon
+                  use(xlink:href=`images/sprite.svg#cart`)
+                .cart__num 2
     ul.menu
       .container.container_menu
         li.menu__item.active

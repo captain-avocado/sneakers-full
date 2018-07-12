@@ -1,0 +1,14 @@
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.85px;
+  position: relative;
+  &:after {
+    content: '®';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 11px;
+  }
+}

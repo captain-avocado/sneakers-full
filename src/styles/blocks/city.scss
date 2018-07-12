@@ -1,0 +1,10 @@
+.city {
+  display: flex;
+  font-size: 11px;
+  align-items: center;
+  &__icon {
+    height: 20px;
+    width: 16px;
+    margin-right: 15px;
+  }
+}
