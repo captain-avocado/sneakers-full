@@ -42,5 +42,27 @@ block content
         li.menu__item
           a.menu__link(href="#") магазин
     .slider
-      .container
+      .container.container_slider
+        ul.slider__list
+          li.slider__item.active
+            img.slider__img(src="images/slider2.jpg", alt="")
+            .info.slider__info
+              .info__text woman's air max 270
+              .info__price 3 990р
+              a(href="#").info__btn.btn.btn_more Подробнее
+          li.slider__item
+            img.slider__img(src="", alt="")
+          li.slider__item
+            img.slider__img(src="", alt="")
+        ul.slider__dots.dots
+          li.dots__item.active
+            a.dots__link(href="#")
+          li.dots__item
+            a.dots__link(href="#")
+          li.dots__item
+            a.dots__link(href="#")
+        a(href="#").slider__nav.slider__nav_next
+          i.fas.fa-angle-right
+        a(href="#").slider__nav.slider__nav_prev
+          i.fa.fa-angle-left
     script(src="scripts/main.bundle.js")
