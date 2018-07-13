@@ -1,0 +1,16 @@
+.pages {
+  display: flex;
+
+  &__item {
+    border-left: 1px solid $borders-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item:last-of-type {
+    border-right: 1px solid $borders-grey;
+  }
+
+
+}

@@ -1,4 +1,9 @@
 .content {
+
+  &__goods {
+    margin-left: 70px;
+    margin-top: 75px;
+  }
   &__header {
     display: flex;
   }
@@ -9,5 +14,9 @@
 
   &__sort {
     width: 360px;
+  }
+
+  &__pagination {
+    margin-left: 70px;
   }
 }
