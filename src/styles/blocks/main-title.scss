@@ -1,0 +1,29 @@
+.main-title {
+  &__text {
+    padding: 30px;
+    border: 1px solid #ececec;
+    font-size: 12px;
+    text-transform: uppercase;
+    flex: 1;
+    font-weight: 700;
+  }
+  &__icon {
+    padding: 30px;
+    border: 1px solid #ececec;
+    font-size: 14px;
+    color: #3151cc;
+  }
+}
+
+.no-left-border {
+  border-left: 0 !important;
+}
+.no-right-border {
+  border-right: 0 !important;
+}
+.no-top-border {
+  border-top: 0 !important;
+}
+.no-bottom-border {
+  border-bottom: 0 !important;
+}

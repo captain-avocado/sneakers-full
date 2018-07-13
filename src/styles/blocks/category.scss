@@ -1,0 +1,14 @@
+.category {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  &__radio {
+    margin-right: 15px;
+  }
+
+  &__name {
+    color: #2a2a2a;
+    font-size: 11px;
+  }
+}

@@ -65,4 +65,78 @@ block content
           i.fas.fa-angle-right
         a(href="#").slider__nav.slider__nav_prev
           i.fa.fa-angle-left
+    .main-content
+        .container.container_main-content
+          aside.aside
+            .aside__filters.filters
+              .filters__title.main-title
+                .main-title__text.no-right-border Фильтры
+                a(href="#").main-title__icon
+                  i.fas.fa-redo
+              ul.filters__list
+                li.filters__item.filter.filter_categories
+                  .filter__title.title
+                    .title__text.no-top-border.no-right-border Категории
+                    a(href="#").title__icon.no-top-border
+                      i.fas.fa-angle-down
+                  ul.filter__content.categories.no-top-border
+                    li.categories__item.category 
+                      input(type="radio" name="category").category__radio
+                      .category__name мужские
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name женские
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name детские
+                li.filters__item.filter.filter_categories
+                  .filter__title.title
+                    .title__text.no-top-border.no-right-border Бренды
+                    a(href="#").title__icon.no-top-border
+                      i.fas.fa-angle-down
+                  ul.filter__content.categories.no-top-border
+                    li.categories__item.category 
+                      input(type="radio" name="category").category__radio
+                      .category__name adidas
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name converse
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name jordan
+                    li.categories__item.category 
+                      input(type="radio" name="category").category__radio
+                      .category__name new balance
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name nike
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name puma
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name reebok
+                    li.categories__item.category
+                      input(type="radio" name="category").category__radio
+                      .category__name vans
+                li.filters__item.filter.filter_price
+                  .filter__title.title
+                    .title__text.no-top-border.no-right-border Цена
+                    a(href="#").title__icon.no-top-border
+                      i.fas.fa-angle-down
+                  .filter__content.price.no-top-border
+                    .price__borders
+                      .price__from.price-input
+                        .price-input__text От
+                        input(type="text").price-input__input
+                      .price__to.price-input
+                        .price-input__text До
+                        input(type="text").price-input__input
+                    .price__slider
+                      input(type="text" id="price-slider").price__input-slider
+                    //- .price__slider.slider
+          //input(type="text" id="price-slider")      
+
+
+            //- .aside__banner.banner
     script(src="scripts/main.bundle.js")

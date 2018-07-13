@@ -65,6 +65,99 @@
         </ul><a class="slider__nav slider__nav_next" href="#"><i class="fas fa-angle-right"></i></a><a class="slider__nav slider__nav_prev" href="#"><i class="fa fa-angle-left"></i></a>
       </div>
     </div>
+    <div class="main-content">
+      <div class="container container_main-content">
+        <aside class="aside">
+          <div class="aside__filters filters">
+            <div class="filters__title main-title">
+              <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon" href="#"><i class="fas fa-redo"></i></a>
+            </div>
+            <ul class="filters__list">
+              <li class="filters__item filter filter_categories">
+                <div class="filter__title title">
+                  <div class="title__text no-top-border no-right-border">Категории</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <ul class="filter__content categories no-top-border">
+                  <li class="categories__item category"> 
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">мужские</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">женские</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">детские</div>
+                  </li>
+                </ul>
+              </li>
+              <li class="filters__item filter filter_categories">
+                <div class="filter__title title">
+                  <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <ul class="filter__content categories no-top-border">
+                  <li class="categories__item category"> 
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">adidas</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">converse</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">jordan</div>
+                  </li>
+                  <li class="categories__item category"> 
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">new balance</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">nike</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">puma</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">reebok</div>
+                  </li>
+                  <li class="categories__item category">
+                    <input class="category__radio" type="radio" name="category">
+                    <div class="category__name">vans</div>
+                  </li>
+                </ul>
+              </li>
+              <li class="filters__item filter filter_price">
+                <div class="filter__title title">
+                  <div class="title__text no-top-border no-right-border">Цена</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <div class="filter__content price no-top-border">
+                  <div class="price__borders">
+                    <div class="price__from price-input">
+                      <div class="price-input__text">От</div>
+                      <input class="price-input__input" type="text">
+                    </div>
+                    <div class="price__to price-input">
+                      <div class="price-input__text">До</div>
+                      <input class="price-input__input" type="text">
+                    </div>
+                  </div>
+                  <div class="price__slider">
+                    <input class="price__input-slider" type="text" id="price-slider">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--input(type="text" id="price-slider")      //- .aside__banner.banner
+        -->
+      </div>
+    </div>
     <script src="scripts/main.bundle.js"></script>
   </body>
 </html>

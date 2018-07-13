@@ -1,0 +1,15 @@
+.title {
+  font-size: 11px;
+  width: 100%;
+  display: flex;
+  &__text {
+    padding: 30px;
+    font-weight: 700;
+    flex: 1;
+    border: 1px solid #ececec;
+  }  
+  &__icon {
+    padding: 33.5px;
+    border: 1px solid #ececec;
+  }
+}

@@ -1,0 +1,16 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  &__borders {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    width: 150px;
+    align-self: center;
+  }
+}
+
