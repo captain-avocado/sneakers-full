@@ -80,45 +80,67 @@ block content
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
                   ul.filter__content.categories.no-top-border
-                    li.categories__item.category 
-                      input(type="radio" name="category").category__radio
-                      .category__name мужские
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name женские
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name мужские
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name детские
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name женские
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name детские
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Бренды
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
                   ul.filter__content.categories.no-top-border
-                    li.categories__item.category 
-                      input(type="radio" name="category").category__radio
-                      .category__name adidas
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name converse
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name adidas
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name jordan
-                    li.categories__item.category 
-                      input(type="radio" name="category").category__radio
-                      .category__name new balance
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name converse
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name nike
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name jordan
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name puma
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name new balance
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name reebok
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name nike
                     li.categories__item.category
-                      input(type="radio" name="category").category__radio
-                      .category__name vans
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name puma
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name reebok
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="brands").category__radio.radio
+                        .category__radio-fake.radio-fake
+                        .category__name vans
                 li.filters__item.filter.filter_price
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Цена
@@ -298,20 +320,25 @@ block content
                     a.btn.btn_more.product__btn(href="#") Подробнее
                     .product__price 2 590 р
             .content__pagination.pagination
-              .pagination__prev.pagination__icon
+              a(href="#").pagination__prev.pagination__icon
                 i.fas.fa-angle-double-left
               ul.pagination__pages.pages
+                li.pages__item
+                  a(href="#").pagination__icon
+                    span.pages__text 1
                 li.pages__item.pagination__icon
-                  span.pages__text 1
+                  a(href="#").pagination__icon
+                    span.pages__text 1
                 li.pages__item.pagination__icon
-                  span.pages__text 2
+                  a(href="#").pagination__icon
+                    span.pages__text 1
                 li.pages__item.pagination__icon
-                  span.pages__text 3
+                  a(href="#").pagination__icon
+                    span.pages__text 1
                 li.pages__item.pagination__icon
-                  span.pages__text 4
-                li.pages__item.pagination__icon
-                  span.pages__text 5
-              .pagination__next.pagination__icon
+                  a(href="#").pagination__icon
+                    span.pages__text 1
+              a(href="#").pagination__next.pagination__icon
                 i.fas.fa-angle-double-right
              
     script(src="scripts/main.bundle.js")

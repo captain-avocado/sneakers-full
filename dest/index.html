@@ -78,17 +78,26 @@
                   <div class="title__text no-top-border no-right-border">Категории</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                 </div>
                 <ul class="filter__content categories no-top-border">
-                  <li class="categories__item category"> 
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">мужские</div>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="category">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">мужские</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">женские</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="category">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">женские</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">детские</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="category">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">детские</div>
+                    </label>
                   </li>
                 </ul>
               </li>
@@ -97,37 +106,61 @@
                   <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                 </div>
                 <ul class="filter__content categories no-top-border">
-                  <li class="categories__item category"> 
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">adidas</div>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">adidas</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">converse</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">converse</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">jordan</div>
-                  </li>
-                  <li class="categories__item category"> 
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">new balance</div>
-                  </li>
-                  <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">nike</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">jordan</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">puma</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">new balance</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">reebok</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">nike</div>
+                    </label>
                   </li>
                   <li class="categories__item category">
-                    <input class="category__radio" type="radio" name="category">
-                    <div class="category__name">vans</div>
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">puma</div>
+                    </label>
+                  </li>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">reebok</div>
+                    </label>
+                  </li>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio" type="radio" name="brands">
+                      <div class="category__radio-fake radio-fake"></div>
+                      <div class="category__name">vans</div>
+                    </label>
                   </li>
                 </ul>
               </li>
@@ -360,16 +393,14 @@
               </div>
             </li>
           </ul>
-          <div class="content__pagination pagination">
-            <div class="pagination__prev pagination__icon"><i class="fas fa-angle-double-left"></i></div>
+          <div class="content__pagination pagination"><a class="pagination__prev pagination__icon" href="#"><i class="fas fa-angle-double-left"></i></a>
             <ul class="pagination__pages pages">
-              <li class="pages__item pagination__icon"><span class="pages__text">1</span></li>
-              <li class="pages__item pagination__icon"><span class="pages__text">2</span></li>
-              <li class="pages__item pagination__icon"><span class="pages__text">3</span></li>
-              <li class="pages__item pagination__icon"><span class="pages__text">4</span></li>
-              <li class="pages__item pagination__icon"><span class="pages__text">5</span></li>
-            </ul>
-            <div class="pagination__next pagination__icon"><i class="fas fa-angle-double-right"></i></div>
+              <li class="pages__item"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
+              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
+              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
+              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
+              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
+            </ul><a class="pagination__next pagination__icon" href="#"><i class="fas fa-angle-double-right"></i></a>
           </div>
         </div>
       </div>

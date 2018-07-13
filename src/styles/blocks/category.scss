@@ -3,12 +3,50 @@
   align-items: center;
   text-transform: uppercase;
 
-  &__radio {
-    margin-right: 15px;
-  }
-
   &__name {
     color: #2a2a2a;
     font-size: 11px;
+  }
+}
+
+.radio {
+  position: absolute;
+  left: -9999px;
+  &:checked +.radio-fake:after {
+    width: 7.5px;
+    height: 7.5px;
+  }
+}
+
+.label {
+  display: flex;
+  cursor: pointer;
+
+}
+
+.radio-fake {
+  margin-right: 15px;
+
+  background-color: #fff;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid $borders-grey;
+
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    transition: width .2s, height .2s;
+
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: $bg-blue;
   }
 }

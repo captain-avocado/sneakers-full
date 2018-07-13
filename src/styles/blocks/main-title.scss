@@ -1,6 +1,9 @@
 .main-title {
+  height: 75px;
   &__text {
-    padding: 30px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
     border: 1px solid #ececec;
     font-size: 12px;
     text-transform: uppercase;
@@ -8,7 +11,13 @@
     font-weight: 700;
   }
   &__icon {
-    padding: 30px;
+    
+    width: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid #ececec;
     font-size: 14px;
     color: #3151cc;
