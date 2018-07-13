@@ -9,7 +9,18 @@
     border: 1px solid #ececec;
   }  
   &__icon {
-    padding: 33.5px;
+    padding: 32.5px;
     border: 1px solid #ececec;
+    font-size: 14px;
+    &_view, &_sort {
+      &.active {
+        color: #3151cc;
+        background-color: #fbfbfb;
+      }
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+    
+
   }
 }

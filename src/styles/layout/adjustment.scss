@@ -22,4 +22,8 @@ body {
     &_slider {
         position: relative;
     }
+
+    &_main-content {
+        display: flex;
+    }
 }

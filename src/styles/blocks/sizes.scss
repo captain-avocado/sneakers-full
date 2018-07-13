@@ -1,0 +1,23 @@
+.sizes {
+  display: flex;
+  
+  &__col {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-of-type) {
+      margin-right: auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:nth-of-type(4n)) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__radio {
+    margin-right: 15px;
+  }
+}

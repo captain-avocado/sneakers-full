@@ -1,0 +1,18 @@
+.banner {
+  position: relative;
+  &__img {
+    height: 485px;
+    background-image: url("../images/banner.jpg");
+    // background-position: center center;
+    // background-size: cover;
+    background-position: -237px -67px;
+    background-size: 837px;
+    
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+}
