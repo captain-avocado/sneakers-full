@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+  background-color: #ececec;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); 
+
+  &__cols {
+    display: flex;
+    flex: 1;
+  }
+
+  &__col {
+    text-transform: uppercase;
+    &:not(:last-of-type) {
+      margin-right: auto;
+    }
+  }
+
+  &__logo {
+    width: fit-content;
+    margin-bottom: 25px;
+  }
+  &__pay-info {
+    max-width: 200px;
+    margin-right: 135px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+  }
+  
+}
+
+.footer-list {
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  &__link {
+    font-size: 11px;
+    transition: color .5s;
+    &:hover {
+      color: $text-grey;
+    }
+  }
+}

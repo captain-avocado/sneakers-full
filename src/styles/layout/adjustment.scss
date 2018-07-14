@@ -2,6 +2,7 @@ body {
     //fonts
     font-family: 'Montserrat';
     font-size: 11px;
+    color: $text-black;
 
     position: relative;
 }
@@ -24,6 +25,10 @@ body {
     }
 
     &_main-content {
+        display: flex;
+    }
+
+    &_footer {
         display: flex;
     }
 }

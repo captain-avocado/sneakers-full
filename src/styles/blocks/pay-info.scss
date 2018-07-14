@@ -1,0 +1,22 @@
+.pay-info {
+  display: flex;
+  flex-direction: column;
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  &__img {
+    display: block;
+    width: 80px;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+
+  &__main {
+    color: $bg-blue;
+    font-weight: 700;
+  }
+}

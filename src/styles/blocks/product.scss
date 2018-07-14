@@ -1,12 +1,110 @@
 .product {
   border: 1px solid #ececec;
+  border-radius: 3px;
   padding: 50px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
-  // align-items: center;
-  // justify-content: center;
+  &.active {
+    &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $bg-blue;
+    opacity: .9;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  }
+  .product {
+    &__text {
+      z-index: 100;
+    }
+    &__company {
+      color: #b4b4b4;
+    }
+    &__name {
+      color: #fff;
+    }
+    &__bottom-row {
+      position: relative;
+      z-index: 100;
+      justify-content: center;
+    }
+    &__btn {
+      background-color: #fff;
+      color: $text-black;
+    }
+    &__price {
+      position: absolute;
+      color: #fff;
+      bottom: 120%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    &__sale {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      z-index: 1000;
+      color: #fff;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 75px;
+        height: 75px;
+        background-color: #ed1c24;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+
+    &__like-link {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      z-index: 1000;
+    }
+    &__like {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      z-index: 1;
+      
+      &:after {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 50px;
+        background-color: #3151cc;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+}
+
   &__link {
     display: block;
     width: inherit;
@@ -29,7 +127,7 @@
   }
 
   &__img {
-    width: 190px;
+    width: 80%;
     align-self: center;
     // width: 190px;
     // height: 90px;
