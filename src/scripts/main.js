@@ -11,6 +11,11 @@ import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 // import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 // import 'owl.carousel';
 
+
+import Glide from '@glidejs/glide';
+
+new Glide('.glide').mount();
+
 $('#price-slider').ionRangeSlider({
     min: 0,
     max: 20000,

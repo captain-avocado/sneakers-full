@@ -48,21 +48,22 @@
     </ul>
     <div class="slider">
       <div class="container container_slider">
-        <ul class="slider__list">
-          <li class="slider__item active"><img class="slider__img" src="images/slider2.jpg" alt="">
-            <div class="info slider__info">
-              <div class="info__text">woman's air max 270</div>
-              <div class="info__price">3 990р</div><a class="info__btn btn btn_more" href="#">Подробнее</a>
-            </div>
-          </li>
-          <li class="slider__item"><img class="slider__img" src="" alt=""></li>
-          <li class="slider__item"><img class="slider__img" src="" alt=""></li>
-        </ul>
-        <ul class="slider__dots dots">
-          <li class="dots__item active"><a class="dots__link" href="#"></a></li>
-          <li class="dots__item"><a class="dots__link" href="#"></a></li>
-          <li class="dots__item"><a class="dots__link" href="#"></a></li>
-        </ul><a class="slider__nav slider__nav_next" href="#"><i class="fas fa-angle-right"></i></a><a class="slider__nav slider__nav_prev" href="#"><i class="fa fa-angle-left"></i></a>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide" data-num="0">
+                <div class="info slider__info">
+                  <div class="info__text">woman's air max 270</div>
+                  <div class="info__price">3 990р</div><a class="info__btn btn btn_more" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="glide__slide" data-num="1"></li>
+              <li class="glide__slide" data-num="2"></li>
+            </ul>
+          </div>
+          <ul class="glide__bullets" data-glide-el="controls[nav]"><a class="dots__link glide__bullet" href="#" data-glide-dir="=0"></a><a class="dots__link glide__bullet" href="#" data-glide-dir="=1"></a><a class="dots__link glide__bullet" href="#" data-glide-dir="=2"></a></ul>
+          <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow_left" href="#" data-glide-dir="&lt;"><i class="fas fa-angle-left"></i></a><a class="glide__arrow glide__arrow_right" href="#" data-glide-dir="&gt;"><i class="fa fa-angle-right"></i></a></div>
+        </div>
       </div>
     </div>
     <div class="main-content">
