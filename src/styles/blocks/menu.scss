@@ -4,6 +4,8 @@
   font-size: 11px;
   text-transform: uppercase;
   padding: 30px 0;
+  font-size: 13px;
+  font-weight: 600;
   &__item {
     transition: color .5s;
     &.active, &:hover {

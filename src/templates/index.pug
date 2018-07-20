@@ -166,52 +166,52 @@ block content
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="white")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="white")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="black")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="black")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="grey")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="grey")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="yellow")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="yellow")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="orange")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="orange")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="red")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="red")
                     .colors__row
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="blue")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="blue")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="green")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="green")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="brown")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="brown")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="pink")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="pink")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="purple")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="purple")
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
-                          .colors__checkbox-fake.checkbox-fake(data-color="rainbow")
+                          .colors__checkbox-fake.color-fake.checkbox-fake(data-color="rainbow")
                 li.filters__item.filter.filter_price
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Размер
@@ -302,15 +302,7 @@ block content
                       i.fas.fa-angle-down
             ul.content__goods.goods
               li.goods__item.product
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
-                  img(src="images/1.png").product__img
-                  .product__bottom-row
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
-              li.goods__item.product.active
-                  .product__sale 20%
+                  .product__sale
                   a(href="#").product__like-link
                     i.fas.fa-heart.product__like
                   .product__text
@@ -318,56 +310,189 @@ block content
                     .product__name Men's Air More Uptempo
                   img(src="images/1.png").product__img
                   .product__bottom-row
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                            .color-fake(data-color="pink")
                       a.btn.btn_more.product__btn(href="#") Подробнее
                       .product__price 2 590 р
               li.goods__item.product
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
-                  img(src="images/3.png").product__img
-                  .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
-              li.goods__item.product
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
-                  img(src="images/4.png").product__img
-                  .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
-              li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
                   img(src="images/1.png").product__img
                   .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
               li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
-                  img(src="images/2.png").product__img
+                  img(src="images/1.png").product__img
                   .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-3").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-3").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-3").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
               li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
-                  img(src="images/3.png").product__img
+                  img(src="images/1.png").product__img
                   .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
               li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
-                  img(src="images/4.png").product__img
+                  img(src="images/1.png").product__img
                   .product__bottom-row
-                    a.btn.btn_more.product__btn(href="#") Подробнее
-                    .product__price 2 590 р
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
+              li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
+                  .product__text
+                    .product__company Nike
+                    .product__name Men's Air More Uptempo
+                  img(src="images/1.png").product__img
+                  .product__bottom-row
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
+              li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
+                  .product__text
+                    .product__company Nike
+                    .product__name Men's Air More Uptempo
+                  img(src="images/1.png").product__img
+                  .product__bottom-row
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
+              li.goods__item.product
+                  .product__sale
+                  a(href="#").product__like-link
+                    i.fas.fa-heart.product__like
+                  .product__text
+                    .product__company Nike
+                    .product__name Men's Air More Uptempo
+                  img(src="images/1.png").product__img
+                  .product__bottom-row
+                      ul.sneaker-colors.product__sneaker-colors
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
+                            .color-fake(data-color="black")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
+                            .color-fake(data-color="grey")
+                        li.sneaker-colors__item
+                          label.label
+                            input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
+                            .color-fake(data-color="pink")
+                      a.btn.btn_more.product__btn(href="#") Подробнее
+                      .product__price 2 590 р
             .content__pagination.pagination
               a(href="#").pagination__prev.pagination__icon
                 i.fas.fa-angle-double-left
