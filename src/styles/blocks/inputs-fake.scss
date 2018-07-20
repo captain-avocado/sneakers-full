@@ -9,6 +9,13 @@
   &:checked +.color-fake:after {
     border: 2px solid $bg-blue;
   }
+
+  &_brands:checked +.radio-fake:after, &_sizes:checked +.radio-fake:after  {
+    height: 12px;
+    width: 8px;
+    border-color: $bg-blue;
+  }
+
 }
 
 .label {
@@ -23,7 +30,6 @@
 
   width: 15px;
   height: 15px;
-  border-radius: 50%;
   border: 1px solid $borders-grey;
 
   position: relative;
@@ -34,13 +40,34 @@
     left: 50%;
     transform: translate(-50%, -50%);
     
-    transition: width .2s, height .2s;
-
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: $bg-blue;
   }
+  &_gender {
+    border-radius: 50%;
+    &:after {
+
+      transition: width .2s, height .2s;
+
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $bg-blue;
+    }
+  }
+  
+  &_brands, &_sizes {
+    &:after {
+      height: 0;
+      width: 0;
+      // transform-origin: center top;
+      top: -10%;
+      left: 25%;
+      transform: rotate(40deg);
+      background-color: transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+    }
+  }
+  
 }
 
 .checkbox {

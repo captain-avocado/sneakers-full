@@ -82,18 +82,18 @@ block content
                   ul.filter__content.categories.no-top-border
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="category").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
                         .category__name мужские
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="category").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
                         .category__name женские
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="category").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
                         .category__name детские
                 li.filters__item.filter.filter_categories
                   .filter__title.title
@@ -103,43 +103,43 @@ block content
                   ul.filter__content.categories.no-top-border
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name adidas
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name converse
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name jordan
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name new balance
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name nike
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name puma
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name reebok
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="brands").category__radio.radio
-                        .category__radio-fake.radio-fake
+                        input(type="checkbox" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name vans
                 li.filters__item.filter.filter_price
                   .filter__title.title
@@ -150,10 +150,10 @@ block content
                     .price__borders
                       .price__from.price-input
                         .price-input__text От
-                        input(type="text").price-input__input
+                        input(type="text" placeholder="500").price-input__input
                       .price__to.price-input
                         .price-input__text До
-                        input(type="text").price-input__input
+                        input(type="text" placeholder="5000").price-input__input
                     .price__slider
                       input(type="text" id="price-slider").price__input-slider
                 li.filters__item.filter.filter_price
@@ -221,66 +221,66 @@ block content
                     .sizes__col
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 35
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 36
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 37
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 38
                     .sizes__col
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 39
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 40
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 41
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 42
                     .sizes__col
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 43
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 44
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 45
                       li.sizes__item
                         label.sizes__label.label
-                          input(type="radio" name="sizes").sizes__radio.radio
-                          .sizes__radio-fake.radio-fake
-                          .sizes__name 28-29
+                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          .sizes__radio-fake.radio-fake.radio-fake_sizes
+                          .sizes__name 46
             .aside__banner.banner
               .banner__img
               .banner__info.info
