@@ -35,3 +35,10 @@ $('#price-slider').ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
 });
+
+
+$('#sort-btn').on('click', function(e) {
+    e.preventDefault();
+    console.log('er');
+    $('#sort-content').toggleClass('active');
+});

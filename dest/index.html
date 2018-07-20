@@ -389,13 +389,36 @@
           <div class="content__header">
             <div class="content__view view">
               <div class="view__title title">
-                <div class="title__text title__text_view no-left-border">Вид</div><a class="title__icon title__icon_view no-left-border active" href="#"><i class="fas fa-th"></i></a><a class="title__icon title__icon_view no-left-border" href="#"><i class="fas fa-th-list"></i></a>
+                <div class="title__text title__text_view no-left-border">Вид</div><a class="title__icon title__icon_view no-left-border active" href="#"><i class="fas fa-th"></i></a><a class="title__icon title__icon_view no-left-border no-right-border" href="#"><i class="fas fa-th-list"></i></a>
               </div>
             </div>
-            <div class="content__sort sort">
-              <div class="sort__title title">
-                <div class="title__text no-left-border">Сортировать</div><a class="title__icon title__icon_sort no-left-border" href="#"><i class="fas fa-angle-down"></i></a>
+            <div class="content__sort filter filter_sort">
+              <div class="filter__title title">
+                <div class="title__text">Сортировать</div><a class="title__icon title__icon_sort no-left-border" href="#" id="sort-btn"><i class="fas fa-angle-down"></i></a>
               </div>
+              <ul class="filter__content filter__content_sort categories no-top-border" id="sort-content">
+                <li class="categories__item category">
+                  <label class="category__label label">
+                    <input class="category__radio radio radio_gender" type="radio" name="sort">
+                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                    <div class="category__name">по дате</div>
+                  </label>
+                </li>
+                <li class="categories__item category">
+                  <label class="category__label label">
+                    <input class="category__radio radio radio_gender" type="radio" name="sort">
+                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                    <div class="category__name">по цене (от дорогих к дешевым)</div>
+                  </label>
+                </li>
+                <li class="categories__item category">
+                  <label class="category__label label">
+                    <input class="category__radio radio radio_gender" type="radio" name="sort">
+                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                    <div class="category__name">по цене (от дешевых к дорогим)</div>
+                  </label>
+                </li>
+              </ul>
             </div>
           </div>
           <ul class="content__goods goods">

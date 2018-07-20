@@ -298,13 +298,29 @@ block content
                   .title__text.title__text_view.no-left-border Вид
                   a(href="#").title__icon.title__icon_view.no-left-border.active
                     i.fas.fa-th
-                  a(href="#").title__icon.title__icon_view.no-left-border
+                  a(href="#").title__icon.title__icon_view.no-left-border.no-right-border
                     i.fas.fa-th-list
-              .content__sort.sort
-                  .sort__title.title
-                    .title__text.no-left-border Сортировать
-                    a(href="#").title__icon.title__icon_sort.no-left-border
+              .content__sort.filter.filter_sort
+                  .filter__title.title
+                    .title__text Сортировать
+                    a(href="#")#sort-btn.title__icon.title__icon_sort.no-left-border
                       i.fas.fa-angle-down
+                  ul#sort-content.filter__content.filter__content_sort.categories.no-top-border
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по дате
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по цене (от дорогих к дешевым)
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по цене (от дешевых к дорогим)
             ul.content__goods.goods
               li.goods__item.product
                   .product__sale
