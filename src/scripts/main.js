@@ -14,7 +14,16 @@ import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
 import Glide from '@glidejs/glide';
 
-new Glide('.glide').mount();
+new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    gap: 0,
+    // autoplay: 5000,
+    hoverpause: true,
+    animationDuration: 800,
+    animationTimingFunc: 'linear',
+}).mount();
 
 $('#price-slider').ionRangeSlider({
     min: 0,
