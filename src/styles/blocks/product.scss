@@ -131,6 +131,9 @@
     margin-bottom: 10px;
   }
 
+  &__text {
+    margin-bottom: auto;
+  }
   &__name {
     color: #000;
     font-size: 14px;
@@ -140,11 +143,16 @@
   }
 
   &__img {
-    width: 80%;
     align-self: center;
-    // width: 190px;
-    // height: 90px;
     margin-bottom: 45px;
+    max-width: 80%;
+    
+    // width: 80%;
+    // height: auto;
+    max-height: 65%;
+    // background-image: url("images/1.png");
+    // background-size: cover;
+    // background-position: center center;
   }
 
   &__bottom-row {

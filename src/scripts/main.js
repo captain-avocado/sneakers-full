@@ -58,3 +58,68 @@ $('#sort-btn').on('click', function(e) {
     console.log('er');
     $('#sort-content').toggleClass('active');
 });
+
+const prevBtn = $('.pagination__prev');
+const nextBtn = $('.pagination__next');
+
+let curPage = 3;
+
+function updateProducts(curPage) {
+    $.ajax({
+        url: '../data.json',
+        dataType: 'json',
+        success: function(data) {                 
+    
+            $('.goods').fadeOut(500, function() {
+
+                $('.product').each(function(index, element) {
+                    // console.log(element, index);
+                    const $el = $(element);
+                    const curItemData = data.page[curPage - 1].item[index];
+                    $el.find('.product__company').text(curItemData.company);
+                    $el.find('.product__name').text(curItemData.name);
+                    $el.find('.product__img').attr('src', curItemData.imgSrc);
+                    $el.find('.product__price').text(curItemData.price);
+                });
+    
+                $('.goods').fadeIn(500);
+            });
+        },
+    });
+}
+
+prevBtn.on('click', function(e) {
+    e.preventDefault();
+    if (curPage > 1) {
+        $('.pages__item').eq(curPage - 1).removeClass('active');
+        curPage--;
+        $('.pages__item').eq(curPage - 1).addClass('active');
+        updateProducts(curPage);
+    }
+});
+
+nextBtn.on('click', function(e) {
+    e.preventDefault();
+    if (curPage < 5) {
+        $('.pages__item').eq(curPage - 1).removeClass('active');
+        curPage++;
+        $('.pages__item').eq(curPage - 1).addClass('active');
+        updateProducts(curPage);
+    }
+});
+
+$('.pages__item').on('click', function(e) {
+
+    e.preventDefault();
+    const curItem = $(e.currentTarget);
+    const activeItem = $('.pages').children().eq(curPage - 1);
+
+    if (activeItem.index() !== curItem.index()) {
+        activeItem.removeClass('active');
+        curItem.addClass('active');
+        curPage = curItem.index() + 1;
+        updateProducts(curPage);
+    }
+    
+});
+

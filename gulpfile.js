@@ -131,6 +131,10 @@ function fonts() {
     return gulp.src(paths.src + 'fonts/**').pipe(gulp.dest(paths.dest + 'fonts/'));
 }
 
+function transferData() {
+    return gulp.src(paths.src + 'data.json').pipe(gulp.dest(paths.dest));
+}
+
 function watch() {
     gulp.watch(paths.src + 'styles/**/*.scss', styles);
     gulp.watch(paths.src + 'scripts/**/*.js', scripts);
@@ -138,6 +142,7 @@ function watch() {
     gulp.watch(paths.src + 'images/icons/*.svg', sprite);
     gulp.watch(paths.src + 'images/**/*.*', images);
     gulp.watch(paths.src + 'fonts/**/*.*', fonts);
+    gulp.watch(paths.src + 'data.json', transferData);
 }
 
 
@@ -162,6 +167,6 @@ gulp.task('serve', serve);
 //чекнуть соурсмапы
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, sprite, images, scripts, fonts),
+    gulp.parallel(styles, templates, sprite, images, scripts, fonts, transferData),
     gulp.parallel(watch, serve)
 ));

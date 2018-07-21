@@ -1,0 +1,71 @@
+{
+  "page": [
+    {
+      "pageNum": 1,
+      "item": [
+        { "company": "Reebok", "name": "AIR MAXIMUS 1", "imgSrc":"images/1.png", "price": "9 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 2", "imgSrc":"images/2.png", "price": "19 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 3", "imgSrc":"images/3.png", "price": "6 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 4", "imgSrc":"images/1.png", "price": "3 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 5", "imgSrc":"images/4.png", "price": "990 р" },
+        { "company": "New Balance", "name": "AIR MAXIMUS 6", "imgSrc":"images/2.png", "price": "9 990 р" },
+        { "company": "Converse", "name": "AIR MAXIMUS 7", "imgSrc":"images/3.png", "price": "2 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 8", "imgSrc":"images/5.png", "price": "14 990 р" }
+      ]
+    },
+    {
+      "pageNum": 2,
+      "item": [
+        { "company": "Reebok", "name": "AIR MAXIMUS 1", "imgSrc":"images/1.png", "price": "9 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 2", "imgSrc":"images/1.png", "price": "19 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 3", "imgSrc":"images/2.png", "price": "6 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 4", "imgSrc":"images/4.png", "price": "3 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 5", "imgSrc":"images/4.png", "price": "990 р" },
+        { "company": "New Balance", "name": "AIR MAXIMUS 6", "imgSrc":"images/5.png", "price": "9 990 р" },
+        { "company": "Converse", "name": "AIR MAXIMUS 7", "imgSrc":"images/5.png", "price": "2 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 8", "imgSrc":"images/2.png", "price": "14 990 р" }
+      ]
+    },
+    {
+      "pageNum": 3,
+      "item": [
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/1.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/2.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/2.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/2.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/5.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/3.png", "price": "2 590 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/3.png", "price": "2 990 р" },
+        { "company": "Reebok", "name": "Men's Air More Uptempo", "imgSrc":"images/1.png", "price": "2 590 р" }
+      ]
+    },
+    {
+      "pageNum": 4,
+      "item": [
+        { "company": "Reebok", "name": "AIR MAXIMUS 1", "imgSrc":"images/1.png", "price": "9 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 2", "imgSrc":"images/1.png", "price": "19 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 3", "imgSrc":"images/3.png", "price": "6 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 4", "imgSrc":"images/1.png", "price": "3 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 5", "imgSrc":"images/1.png", "price": "990 р" },
+        { "company": "New Balance", "name": "AIR MAXIMUS 6", "imgSrc":"images/2.png", "price": "9 990 р" },
+        { "company": "Converse", "name": "AIR MAXIMUS 7", "imgSrc":"images/3.png", "price": "2 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 8", "imgSrc":"images/4.png", "price": "14 990 р" }
+      ]
+    },
+    {
+      "pageNum": 5,
+      "item": [
+        { "company": "Reebok", "name": "AIR MAXIMUS 1", "imgSrc":"images/5.png", "price": "9 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 2", "imgSrc":"images/3.png", "price": "19 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 3", "imgSrc":"images/3.png", "price": "6 990 р" },
+        { "company": "Jordan", "name": "AIR MAXIMUS 4", "imgSrc":"images/1.png", "price": "3 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 5", "imgSrc":"images/2.png", "price": "990 р" },
+        { "company": "New Balance", "name": "AIR MAXIMUS 6", "imgSrc":"images/2.png", "price": "9 990 р" },
+        { "company": "Converse", "name": "AIR MAXIMUS 7", "imgSrc":"images/5.png", "price": "2 990 р" },
+        { "company": "Reebok", "name": "AIR MAXIMUS 8", "imgSrc":"images/5.png", "price": "14 990 р" }
+      ]
+    }
+    
+  ]
+  
+}
