@@ -42,7 +42,6 @@ block content
         li.menu__item
           a.menu__link(href="#") магазин
     .slider
-      .container.container_slider
         .glide
           .glide__track(data-glide-el="track")
             ul.glide__slides
@@ -67,9 +66,11 @@ block content
             a.bullets__link.glide__bullet(href="#" data-glide-dir="=2")
           .glide__arrows(data-glide-el="controls")
             a.glide__arrow.glide__arrow_left(href="#" data-glide-dir="<")
-              i.fas.fa-angle-left
+              svg.glide__icon.glide__icon_left
+                use(xlink:href="images/sprite.svg#arrow")
             a.glide__arrow.glide__arrow_right(href="#" data-glide-dir=">")
-              i.fa.fa-angle-right
+              svg.glide__icon.glide__icon_right
+                use(xlink:href="images/sprite.svg#arrow")
     .main-content
         .container.container_main-content
           aside.aside
@@ -87,7 +88,7 @@ block content
                   ul.filter__content.categories.no-top-border
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        input(type="radio" checked name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
                         .category__name мужские
                     li.categories__item.category
@@ -325,7 +326,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -338,7 +340,7 @@ block content
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="grey")
                         li.sneaker-colors__item
                           label.label
@@ -349,7 +351,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -358,7 +361,7 @@ block content
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-2").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
@@ -373,7 +376,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -390,14 +394,15 @@ block content
                             .color-fake(data-color="grey")
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-3").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-3").radio.radio_sneaker
                             .color-fake(data-color="pink")
                       a.btn.btn_more.product__btn(href="#") Подробнее
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -406,7 +411,7 @@ block content
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-4").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
@@ -421,7 +426,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -434,7 +440,7 @@ block content
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-5").radio.radio_sneaker
                             .color-fake(data-color="grey")
                         li.sneaker-colors__item
                           label.label
@@ -445,7 +451,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -454,7 +461,7 @@ block content
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-6").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
@@ -469,7 +476,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -478,7 +486,7 @@ block content
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-7").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
@@ -493,7 +501,8 @@ block content
               li.goods__item.product
                   .product__sale
                   a(href="#").product__like-link
-                    i.fas.fa-heart.product__like
+                    svg.product__like
+                      use(xlink:href=`images/sprite.svg#cart`)
                   .product__text
                     .product__company Nike
                     .product__name Men's Air More Uptempo
@@ -502,7 +511,7 @@ block content
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-8").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
@@ -516,7 +525,8 @@ block content
                       .product__price 2 590 р
             .content__pagination.pagination
               a(href="#").pagination__prev.pagination__icon
-                i.fas.fa-angle-double-left
+                svg.pagination__svg
+                  use(xlink:href="images/sprite.svg#arrow_left_double")
               ul.pagination__pages.pages
                 li.pages__item.pagination__icon
                   a(href="#").pagination__icon
@@ -534,7 +544,8 @@ block content
                   a(href="#").pagination__icon
                     span.pages__text 5
               a(href="#").pagination__next.pagination__icon
-                i.fas.fa-angle-double-right
+                svg.pagination__svg
+                  use(xlink:href="images/sprite.svg#arrow_right_double")
     footer.footer
       .container.container_footer
         .footer__pay-info.pay-info

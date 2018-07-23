@@ -29,4 +29,10 @@
       background-color: $bg-grey;
     }
   }
+
+  &__svg {
+    fill: #000;
+    width: 17px;
+    height: 17px;
+  }
 }

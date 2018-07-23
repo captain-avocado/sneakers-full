@@ -80,13 +80,11 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #fff;
-    font-size: 65px;
-    font-family: 'FontAwesome';
-
+    
     padding: 0;
     border: none;
     box-shadow: none;
+
     &_left {
       left: 5%;
     }
@@ -95,5 +93,14 @@
     }
   }
 
+  &__icon {
+    fill: #fff;
+    height: 37px;
+    width: 22px;
+    
+    &_left {
+      transform: rotate(180deg);
+    }
+  }
 
 }
