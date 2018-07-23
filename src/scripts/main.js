@@ -51,14 +51,6 @@ toInput.on('input', function(){
     }
 });
 
-
-
-$('#sort-btn').on('click', function(e) {
-    e.preventDefault();
-    console.log('er');
-    $('#sort-content').toggleClass('active');
-});
-
 const prevBtn = $('.pagination__prev');
 const nextBtn = $('.pagination__next');
 
@@ -120,6 +112,22 @@ $('.pages__item').on('click', function(e) {
         curPage = curItem.index() + 1;
         updateProducts(curPage);
     }
+    
+});
+
+$('.title__icon').on('click', function(e) {
+    e.preventDefault();
+    $(e.currentTarget).parent().toggleClass('active');
+    $(e.currentTarget).find('i').toggleClass('active');
+
+    if ($(e.currentTarget).parent().hasClass('active')) {
+        setTimeout(function() {
+            $(e.currentTarget).parent().parent().find('.filter__content').addClass('no-bottom-border'); 
+        }, 550);
+    } else {
+        $(e.currentTarget).parent().parent().find('.filter__content').removeClass('no-bottom-border'); 
+    }
+    
     
 });
 

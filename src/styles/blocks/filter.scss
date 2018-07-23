@@ -3,21 +3,29 @@
     position: relative;
   }
 
+  &__title {
+    &.active + .filter__content {
+      max-height: 0;
+      padding: 0;
+    }
+  }
+
   &__content {
+    max-height: 750px;
     padding: 35px;
+    overflow: hidden;
+
+    transition: max-height .5s cubic-bezier(0.77, 0, 0.175, 1), padding .5s cubic-bezier(0.77, 0, 0.175, 1);
+
     background-color: #fbfbfb;
     border: 1px solid #ececec;
 
     &_sort {
-      display: none;
-      &.active {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 10001;
-      }
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 10001;
     }
   }
 

@@ -32,6 +32,15 @@
       padding-top: 30px;
     }
     
+  
+
+    & i {
+      transition: transform .5s;
+      transform: rotate(180deg);
+      &.active {
+        transform: rotate(360deg);
+      }
+    }
 
   }
 }
