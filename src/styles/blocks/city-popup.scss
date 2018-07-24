@@ -1,0 +1,44 @@
+.city-popup {
+
+  &__list {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+    
+    &:hover, &.active {
+      .city-popup__icon {
+        fill: $bg-blue;
+        transition: fill .5s;
+      }
+      .city-popup__name {
+        color: #060606;
+        transition: color .5s;
+
+      }
+
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    color: #a9a9a9;
+  }
+
+  &__icon {
+    height: 45px;
+    width: 45px;
+    fill: #a9a9a9;
+    margin-right: 20px;
+  }
+
+  &__delivery-info {
+    font-size: 20px;
+    color: $bg-blue;
+  }
+  
+}

@@ -10,4 +10,33 @@
   &:hover {
     box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
   }
+
+  &_remove {
+    color: $bg-red;
+    padding: 8px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid $bg-red;
+    transition: background-color .2s, color .2s;
+
+    &:hover {
+      background-color: $bg-red;
+      color: #fff;
+    }
+  }
+
+  &_checkout {
+    background-color: $bg-blue;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  &_close {
+    border: 2px solid #a9a9a9;
+    color: #a9a9a9;
+    font-weight: 400;
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }

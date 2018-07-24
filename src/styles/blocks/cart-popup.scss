@@ -1,0 +1,14 @@
+.cart-popup {
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__checkout {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+.auth-popup {
+  &__profile {
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    color: $bg-blue;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    font-size: 20px;
+    margin-bottom: 15px;
+    // transition: font-weight .5s text-shadow.5s;
+    &:hover {
+      font-weight: 700;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__exit {
+    font-size: 20px;
+    color: #D15A5A;
+    &:hover {
+      font-weight: 700;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -4,6 +4,10 @@ import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
 import Glide from '@glidejs/glide';
 
+
+import triggerPopup from './modules/triggerPopup';
+import changePrice from './modules/changePrice';
+
 new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
@@ -129,5 +133,38 @@ $('.title__icon').on('click', function(e) {
     }
     
     
+});
+
+
+
+triggerPopup('.city__link', '.city-popup');
+triggerPopup('.icons__link_avatar', '.auth-popup');
+triggerPopup('.icons__link_cart', '.cart-popup');
+
+$('.city-popup__item').on('click', function(e) {
+    const choosedItem = $(e.currentTarget);
+    $('.city-popup__item.active').removeClass('active');
+    choosedItem.addClass('active');
+    $('.city__name').text(choosedItem.find('.city-popup__name').text());
+});
+
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
+$('.cart-num__plus').on('click', function(e) {
+    e.preventDefault();
+    const target = $(e.currentTarget);
+    const productNumItem =  target.siblings('.cart-num__cur-num');
+    const productPriceItem = target.closest('.cart-popup__item').find('.cart-product__price');
+    changePrice(productNumItem, productPriceItem, '+');
+});
+
+$('.cart-num__minus').on('click', function(e) {
+    e.preventDefault();
+    const target = $(e.currentTarget);
+    const productNumItem =  target.siblings('.cart-num__cur-num');
+    const productPriceItem = target.closest('.cart-popup__item').find('.cart-product__price');
+    changePrice(productNumItem, productPriceItem, '-');
 });
 

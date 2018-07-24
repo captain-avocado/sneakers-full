@@ -4,6 +4,108 @@ block head
 block variables
 block content
     header.header
+      .city-popup.header__popup.header__popup_city.popup.popup_city
+        .popup__title Выберите город
+        ul.city-popup__list
+          li.city-popup__item
+            svg.city-popup__icon
+              use(xlink:href="images/sprite.svg#Msk")
+            .city-popup__name Москва
+          li.city-popup__item
+            svg.city-popup__icon
+              use(xlink:href="images/sprite.svg#Spb")
+            .city-popup__name Санкт-Петербург
+          li.city-popup__item.active
+            svg.city-popup__icon
+              use(xlink:href="images/sprite.svg#Habarovsk")
+            .city-popup__name Владивосток
+          li.city-popup__item
+            svg.city-popup__icon
+              use(xlink:href="images/sprite.svg#Vladivostok")
+            .city-popup__name Хабаровск
+        a(href="#").city-popup__delivery-info Условия доставки
+      .auth-popup.header__popup.header__popup_auth.popup.popup_auth
+        .popup__title Личный кабинет
+        .auth-popup__profile.profile
+          .profile__avatar
+          .profile__text
+            .profile__name
+              a(href="#").auth-popup__link Сергей Климов
+            .profile__mail
+              a(href="#").auth-popup__link s.klimov@khorito.ru
+        ul.auth-popup__info
+          li.auth-popup__personal.auth-popup__item
+            a(href="#").auth-popup__link Персональные данные
+          li.auth-popup__delivery.auth-popup__item
+            a(href="#").auth-popup__link Адрес и способ доставки
+          li.auth-popup__payment.auth-popup__item
+            a(href="#").auth-popup__link Платежные данные
+        .auth-popup__exit
+          a(href="#").auth-popup__link Выйти из системы
+      .cart-popup.header__popup.header__popup_cart.popup.popup_cart
+        .popup__title Моя корзина
+        ul.cart-popup__list
+          li.cart-popup__item.cart-product
+            .cart-product__left-col
+              .cart-product__img(style="background-image: url('../images/4.png');")
+                .cart-product__color(data-color="red")
+              .cart-product__price(data-price="12590") 12 590 р
+            .cart-product__right-col
+              .cart-product__text
+                .cart-product__company Nike
+                .cart-product__name MEN'S AIR MORE UPTEMPO
+              .cart-product__num.cart-num
+                .cart-num__left-col
+                  a(href="#").cart-num__plus +
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__minus -
+                .cart-num__right-col
+                  a(href="#").btn.btn_remove.cart-num__remove Убрать
+          li.cart-popup__item.cart-product
+            .cart-product__left-col
+              .cart-product__img(style="background-image: url('../images/1.png');")
+                .cart-product__color(data-color="blue")
+              .cart-product__price(data-price="2590") 2 590 р
+            .cart-product__right-col
+              .cart-product__text
+                .cart-product__company Nike
+                .cart-product__name MEN'S AIR MORE UPTEMPO
+              .cart-product__num.cart-num
+                .cart-num__left-col
+                  a(href="#").cart-num__plus +
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__minus -
+                .cart-num__right-col
+                  a(href="#").btn.btn_remove.cart-num__remove Убрать
+          li.cart-popup__item.cart-product
+            .cart-product__left-col
+              .cart-product__img(style="background-image: url('../images/3.png');")
+                .cart-product__color(data-color="white")
+              .cart-product__price(data-price="6590") 6 590 р
+            .cart-product__right-col
+              .cart-product__text
+                .cart-product__company Nike
+                .cart-product__name MEN'S AIR MORE UPTEMPO
+              .cart-product__num.cart-num
+                .cart-num__left-col
+                  a(href="#").cart-num__plus +
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__minus -
+                .cart-num__right-col
+                  a(href="#").btn.btn_remove.cart-num__remove Убрать
+        .cart-popup__btns
+          a(href="#").btn.btn_checkout.cart-popup__checkout Оформить заказ
+          a(href="#").btn.btn_close.cart-popup__close Закрыть
+
+
+            //- .cart-product__row
+            //-   .cart-product__img
+            //-     .cart-product__color
+            //-   .cart-product__text
+            //-     .cart-product__company Nike
+            //-     .cart-product__name MEN'S AIR MORE UPTEMPO
+            //- .cart-product__row
+              
       .container.container_header
         .city.header__city
           a(href="#").city__link
@@ -14,15 +116,15 @@ block content
           a(href="#") sneakers
         ul.icons.header__icons
           li.icons__item
-            a(href="#").icons__link
+            a(href="#").icons__link_search
               svg.icons__search
                 use(xlink:href=`images/sprite.svg#search`)
           li.icons__item
-            a(href="#").icons__link
+            a(href="#").icons__link_avatar
               svg.icons__avatar
                 use(xlink:href=`images/sprite.svg#avatar`)
           li.icons__item
-            a(href="#").icons__link
+            a(href="#").icons__link_cart
               .icons__cart.cart
                 svg.cart__icon
                   use(xlink:href=`images/sprite.svg#cart`)

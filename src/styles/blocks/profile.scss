@@ -1,0 +1,26 @@
+.profile {
+  display: flex;
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+
+    background-image: url('../images/avatar.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    margin-right: 20px;
+  }
+
+  &__name {
+    font-size: 24px;
+    margin-bottom: 2px;
+    font-weight: 700;
+  }
+
+  &__mail {
+    font-size: 16px;
+  }
+}

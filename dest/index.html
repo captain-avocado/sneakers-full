@@ -9,6 +9,117 @@
   </head>
   <body>
     <header class="header">
+      <div class="city-popup header__popup header__popup_city popup popup_city">
+        <div class="popup__title">Выберите город</div>
+        <ul class="city-popup__list">
+          <li class="city-popup__item">
+            <svg class="city-popup__icon">
+              <use xlink:href="images/sprite.svg#Msk"></use>
+            </svg>
+            <div class="city-popup__name">Москва</div>
+          </li>
+          <li class="city-popup__item">
+            <svg class="city-popup__icon">
+              <use xlink:href="images/sprite.svg#Spb"></use>
+            </svg>
+            <div class="city-popup__name">Санкт-Петербург</div>
+          </li>
+          <li class="city-popup__item active">
+            <svg class="city-popup__icon">
+              <use xlink:href="images/sprite.svg#Habarovsk"></use>
+            </svg>
+            <div class="city-popup__name">Владивосток</div>
+          </li>
+          <li class="city-popup__item">
+            <svg class="city-popup__icon">
+              <use xlink:href="images/sprite.svg#Vladivostok"></use>
+            </svg>
+            <div class="city-popup__name">Хабаровск</div>
+          </li>
+        </ul><a class="city-popup__delivery-info" href="#">Условия доставки</a>
+      </div>
+      <div class="auth-popup header__popup header__popup_auth popup popup_auth">
+        <div class="popup__title">Личный кабинет</div>
+        <div class="auth-popup__profile profile">
+          <div class="profile__avatar"></div>
+          <div class="profile__text">
+            <div class="profile__name"><a class="auth-popup__link" href="#">Сергей Климов</a></div>
+            <div class="profile__mail"><a class="auth-popup__link" href="#">s.klimov@khorito.ru</a></div>
+          </div>
+        </div>
+        <ul class="auth-popup__info">
+          <li class="auth-popup__personal auth-popup__item"><a class="auth-popup__link" href="#">Персональные данные</a></li>
+          <li class="auth-popup__delivery auth-popup__item"><a class="auth-popup__link" href="#">Адрес и способ доставки</a></li>
+          <li class="auth-popup__payment auth-popup__item"><a class="auth-popup__link" href="#">Платежные данные</a></li>
+        </ul>
+        <div class="auth-popup__exit"><a class="auth-popup__link" href="#">Выйти из системы</a></div>
+      </div>
+      <div class="cart-popup header__popup header__popup_cart popup popup_cart">
+        <div class="popup__title">Моя корзина</div>
+        <ul class="cart-popup__list">
+          <li class="cart-popup__item cart-product">
+            <div class="cart-product__left-col">
+              <div class="cart-product__img" style="background-image: url('../images/4.png');">
+                <div class="cart-product__color" data-color="red"></div>
+              </div>
+              <div class="cart-product__price" data-price="12590">12 590 р</div>
+            </div>
+            <div class="cart-product__right-col">
+              <div class="cart-product__text">
+                <div class="cart-product__company">Nike</div>
+                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+              </div>
+              <div class="cart-product__num cart-num">
+                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                </div>
+                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="cart-popup__item cart-product">
+            <div class="cart-product__left-col">
+              <div class="cart-product__img" style="background-image: url('../images/1.png');">
+                <div class="cart-product__color" data-color="blue"></div>
+              </div>
+              <div class="cart-product__price" data-price="2590">2 590 р</div>
+            </div>
+            <div class="cart-product__right-col">
+              <div class="cart-product__text">
+                <div class="cart-product__company">Nike</div>
+                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+              </div>
+              <div class="cart-product__num cart-num">
+                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                </div>
+                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+              </div>
+            </div>
+          </li>
+          <li class="cart-popup__item cart-product">
+            <div class="cart-product__left-col">
+              <div class="cart-product__img" style="background-image: url('../images/3.png');">
+                <div class="cart-product__color" data-color="white"></div>
+              </div>
+              <div class="cart-product__price" data-price="6590">6 590 р</div>
+            </div>
+            <div class="cart-product__right-col">
+              <div class="cart-product__text">
+                <div class="cart-product__company">Nike</div>
+                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+              </div>
+              <div class="cart-product__num cart-num">
+                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                </div>
+                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="cart-popup__btns"><a class="btn btn_checkout cart-popup__checkout" href="#">Оформить заказ</a><a class="btn btn_close cart-popup__close" href="#">Закрыть</a></div>
+      </div>
       <div class="container container_header">
         <div class="city header__city"><a class="city__link" href="#">
             <svg class="city__icon">
@@ -18,15 +129,15 @@
         </div>
         <div class="logo header__logo"> <a href="#">sneakers</a></div>
         <ul class="icons header__icons">
-          <li class="icons__item"><a class="icons__link" href="#">
+          <li class="icons__item"><a class="icons__link_search" href="#">
               <svg class="icons__search">
                 <use xlink:href="images/sprite.svg#search"></use>
               </svg></a></li>
-          <li class="icons__item"><a class="icons__link" href="#">
+          <li class="icons__item"><a class="icons__link_avatar" href="#">
               <svg class="icons__avatar">
                 <use xlink:href="images/sprite.svg#avatar"></use>
               </svg></a></li>
-          <li class="icons__item"><a class="icons__link" href="#">
+          <li class="icons__item"><a class="icons__link_cart" href="#">
               <div class="icons__cart cart">
                 <svg class="cart__icon">
                   <use xlink:href="images/sprite.svg#cart"></use>
