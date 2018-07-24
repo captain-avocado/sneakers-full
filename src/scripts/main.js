@@ -140,6 +140,7 @@ $('.title__icon').on('click', function(e) {
 triggerPopup('.city__link', '.city-popup');
 triggerPopup('.icons__link_avatar', '.auth-popup');
 triggerPopup('.icons__link_cart', '.cart-popup');
+triggerPopup('.btn_close', '.cart-popup');
 
 $('.city-popup__item').on('click', function(e) {
     const choosedItem = $(e.currentTarget);
@@ -147,10 +148,6 @@ $('.city-popup__item').on('click', function(e) {
     choosedItem.addClass('active');
     $('.city__name').text(choosedItem.find('.city-popup__name').text());
 });
-
-function numberWithSpaces(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-}
 
 $('.cart-num__plus').on('click', function(e) {
     e.preventDefault();
@@ -168,3 +165,27 @@ $('.cart-num__minus').on('click', function(e) {
     changePrice(productNumItem, productPriceItem, '-');
 });
 
+$('.icons__link_search').on('click', function(e) {
+    e.preventDefault();
+    $('.header__right').addClass('active');
+    $('.input-search').addClass('active');
+    $(e.currentTarget).addClass('active');
+});
+
+$(document).on('click', function(e) {
+    const target = e.target;
+    const search = $('.input-search');
+    const searchIcon = $('.icons__link_search');
+    console.log('efef');
+    if (!$(target).is(search) && !$(target).parents().is(search) &&!$(target).is(searchIcon) && !$(target).parents().is(searchIcon) && $(search).hasClass('active')) {
+        // $(search).fadeOut(2000, function (){
+        // $(search).removeClass('active');
+        $('.header__right').removeClass('active');
+        search.removeClass('active');
+        searchIcon.removeClass('active');
+        // });
+    }
+});
+
+
+console.log($('.city__link').offset());

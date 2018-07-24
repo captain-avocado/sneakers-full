@@ -4,7 +4,7 @@ block head
 block variables
 block content
     header.header
-      .city-popup.header__popup.header__popup_city.popup.popup_city
+      .city-popup.header__popup.header__popup_city.popup.popup_city.active
         .popup__title Выберите город
         ul.city-popup__list
           li.city-popup__item
@@ -24,7 +24,7 @@ block content
               use(xlink:href="images/sprite.svg#Vladivostok")
             .city-popup__name Хабаровск
         a(href="#").city-popup__delivery-info Условия доставки
-      .auth-popup.header__popup.header__popup_auth.popup.popup_auth
+      .auth-popup.header__popup.header__popup_auth.popup.popup_auth.active
         .popup__title Личный кабинет
         .auth-popup__profile.profile
           .profile__avatar
@@ -42,7 +42,7 @@ block content
             a(href="#").auth-popup__link Платежные данные
         .auth-popup__exit
           a(href="#").auth-popup__link Выйти из системы
-      .cart-popup.header__popup.header__popup_cart.popup.popup_cart
+      .cart-popup.header__popup.header__popup_cart.popup.popup_cart.active
         .popup__title Моя корзина
         ul.cart-popup__list
           li.cart-popup__item.cart-product
@@ -114,21 +114,23 @@ block content
           .city__name Владивосток
         .logo.header__logo 
           a(href="#") sneakers
-        ul.icons.header__icons
-          li.icons__item
-            a(href="#").icons__link_search
-              svg.icons__search
-                use(xlink:href=`images/sprite.svg#search`)
-          li.icons__item
-            a(href="#").icons__link_avatar
-              svg.icons__avatar
-                use(xlink:href=`images/sprite.svg#avatar`)
-          li.icons__item
-            a(href="#").icons__link_cart
-              .icons__cart.cart
-                svg.cart__icon
-                  use(xlink:href=`images/sprite.svg#cart`)
-                .cart__num 2
+        .header__right
+          input.input-search.header__search(placeholder="Что вы ищете?")
+          ul.icons.header__icons
+            li.icons__item
+              a(href="#").icons__link_search
+                svg.icons__search
+                  use(xlink:href=`images/sprite.svg#search`)
+            li.icons__item
+              a(href="#").icons__link_avatar
+                svg.icons__avatar
+                  use(xlink:href=`images/sprite.svg#avatar`)
+            li.icons__item
+              a(href="#").icons__link_cart
+                .icons__cart.cart
+                  svg.cart__icon
+                    use(xlink:href=`images/sprite.svg#cart`)
+                  .cart__num 2
     ul.menu
       .container.container_menu
         li.menu__item.active

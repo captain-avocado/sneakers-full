@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: path.join(__dirname, 'src/scripts/main.js'),
     output: {
         path: path.join(__dirname, 'dest/scripts'),
@@ -51,5 +51,5 @@ module.exports = {
           }
         ],
       },
-    devtool: '#eval-source-map'
+    // devtool: '#eval-source-map'
 };

@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="city-popup header__popup header__popup_city popup popup_city">
+      <div class="city-popup header__popup header__popup_city popup popup_city active">
         <div class="popup__title">Выберите город</div>
         <ul class="city-popup__list">
           <li class="city-popup__item">
@@ -38,7 +38,7 @@
           </li>
         </ul><a class="city-popup__delivery-info" href="#">Условия доставки</a>
       </div>
-      <div class="auth-popup header__popup header__popup_auth popup popup_auth">
+      <div class="auth-popup header__popup header__popup_auth popup popup_auth active">
         <div class="popup__title">Личный кабинет</div>
         <div class="auth-popup__profile profile">
           <div class="profile__avatar"></div>
@@ -54,7 +54,7 @@
         </ul>
         <div class="auth-popup__exit"><a class="auth-popup__link" href="#">Выйти из системы</a></div>
       </div>
-      <div class="cart-popup header__popup header__popup_cart popup popup_cart">
+      <div class="cart-popup header__popup header__popup_cart popup popup_cart active">
         <div class="popup__title">Моя корзина</div>
         <ul class="cart-popup__list">
           <li class="cart-popup__item cart-product">
@@ -128,23 +128,26 @@
           <div class="city__name">Владивосток</div>
         </div>
         <div class="logo header__logo"> <a href="#">sneakers</a></div>
-        <ul class="icons header__icons">
-          <li class="icons__item"><a class="icons__link_search" href="#">
-              <svg class="icons__search">
-                <use xlink:href="images/sprite.svg#search"></use>
-              </svg></a></li>
-          <li class="icons__item"><a class="icons__link_avatar" href="#">
-              <svg class="icons__avatar">
-                <use xlink:href="images/sprite.svg#avatar"></use>
-              </svg></a></li>
-          <li class="icons__item"><a class="icons__link_cart" href="#">
-              <div class="icons__cart cart">
-                <svg class="cart__icon">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-                <div class="cart__num">2</div>
-              </div></a></li>
-        </ul>
+        <div class="header__right">
+          <input class="input-search header__search" placeholder="Что вы ищете?">
+          <ul class="icons header__icons">
+            <li class="icons__item"><a class="icons__link_search" href="#">
+                <svg class="icons__search">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg></a></li>
+            <li class="icons__item"><a class="icons__link_avatar" href="#">
+                <svg class="icons__avatar">
+                  <use xlink:href="images/sprite.svg#avatar"></use>
+                </svg></a></li>
+            <li class="icons__item"><a class="icons__link_cart" href="#">
+                <div class="icons__cart cart">
+                  <svg class="cart__icon">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg>
+                  <div class="cart__num">2</div>
+                </div></a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <ul class="menu">
