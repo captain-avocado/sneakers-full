@@ -1,4 +1,17 @@
 export default function triggerPopup(popupTrigger, popup) {
+
+    let offset = $(popupTrigger).offset().left;
+    let dir = 'left';
+    if (popup !== '.city-popup') {
+        dir = 'right';
+        offset = window.innerWidth - offset;
+        console.log('ooffset', offset);
+
+    }
+    offset += 'px';
+    $(popup).find('.popup__triangle').css(dir, offset);
+
+    
     $(popupTrigger).on('click', function(e) {
         e.preventDefault();
         $(popup).fadeToggle(200, function() {

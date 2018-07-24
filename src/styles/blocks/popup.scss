@@ -4,10 +4,11 @@
   border-radius: 5px;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1); 
 
-  &:before {
+  &__triangle {
     content: "";
     position: absolute;
     bottom: 100%;
+    // left: 0;
     transform: translateY(50%) rotate(45deg);
     width: 45px;
     height: 45px;
@@ -33,14 +34,16 @@
   }
 
   &_city {
-    &:before {
-      left: 13%;
+    & .popup__triangle {
+      // transform: translateX(50%);
+      transform: translate(-50%, 50%) rotate(45deg);
     }
   }
 
-  &_auth {
-    &:before {
-      right: 16%;
+  &_auth, &_cart {
+    right: 0;
+    & .popup__triangle {
+      transform: translate(50%, 50%) rotate(45deg);
     }
   }
 
