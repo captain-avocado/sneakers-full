@@ -237,7 +237,14 @@
                 <div class="filter__title title">
                   <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                 </div>
-                <ul class="filter__content categories no-top-border">
+                <ul class="filter__content categories no-top-border brands">
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_brands" type="checkbox" checked="checked" name="brands">
+                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                      <div class="category__name">Все бренды</div>
+                    </label>
+                  </li>
                   <li class="categories__item category">
                     <label class="category__label label">
                       <input class="category__radio radio radio_brands" type="checkbox" name="brands">
@@ -321,7 +328,11 @@
                   <div class="title__text no-top-border no-right-border">Цвета</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                 </div>
                 <ul class="filter__content no-top-border colors">
-                  <div class="colors__row">
+                  <li class="colors__item">
+                    <label class="colors__label label">
+                      <input class="colors__checkbox checkbox colors__checkbox_all" type="checkbox" checked="checked" name="colors">
+                      <div class="colors__all">Все цвета</div>
+                    </label>
                     <li class="colors__item">
                       <label class="colors__label label">
                         <input class="colors__checkbox checkbox" type="checkbox" name="colors">
@@ -358,8 +369,6 @@
                         <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="red"></div>
                       </label>
                     </li>
-                  </div>
-                  <div class="colors__row">
                     <li class="colors__item">
                       <label class="colors__label label">
                         <input class="colors__checkbox checkbox" type="checkbox" name="colors">
@@ -396,7 +405,7 @@
                         <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="rainbow"></div>
                       </label>
                     </li>
-                  </div>
+                  </li>
                 </ul>
               </li>
               <li class="filters__item filter filter_price">
@@ -404,96 +413,97 @@
                   <div class="title__text no-top-border no-right-border">Размер</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                 </div>
                 <ul class="filter__content no-top-border sizes">
-                  <div class="sizes__col">
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">35</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">36</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">37</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">38</div>
-                      </label>
-                    </li>
-                  </div>
-                  <div class="sizes__col">
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">39</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">40</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">41</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">42</div>
-                      </label>
-                    </li>
-                  </div>
-                  <div class="sizes__col">
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">43</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">44</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">45</div>
-                      </label>
-                    </li>
-                    <li class="sizes__item">
-                      <label class="sizes__label label">
-                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                        <div class="sizes__name">46</div>
-                      </label>
-                    </li>
-                  </div>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" checked="checked" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">Все размеры</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">35</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">36</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">37</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">38</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">39</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">40</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">41</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">42</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">43</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">44</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">45</div>
+                    </label>
+                  </li>
+                  <li class="sizes__item">
+                    <label class="sizes__label label">
+                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                      <div class="sizes__name">46</div>
+                    </label>
+                  </li>
                 </ul>
               </li>
             </ul>

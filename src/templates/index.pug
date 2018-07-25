@@ -213,7 +213,12 @@ block content
                     .title__text.no-top-border.no-right-border Бренды
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border
+                  ul.filter__content.categories.no-top-border.brands
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="checkbox" checked="checked" name="brands").category__radio.radio.radio_brands
+                        .category__radio-fake.radio-fake.radio-fake_brands
+                        .category__name Все бренды
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
@@ -275,7 +280,10 @@ block content
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
                   ul.filter__content.no-top-border.colors
-                    .colors__row
+                    li.colors__item
+                      label.colors__label.label
+                          input(type="checkbox" checked="checked" name="colors").colors__checkbox.checkbox.colors__checkbox_all
+                          .colors__all Все цвета
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
@@ -300,7 +308,6 @@ block content
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
                           .colors__checkbox-fake.color-fake.checkbox-fake(data-color="red")
-                    .colors__row
                       li.colors__item
                         label.colors__label.label
                           input(type="checkbox" name="colors").colors__checkbox.checkbox
@@ -331,69 +338,72 @@ block content
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
                   ul.filter__content.no-top-border.sizes
-                    .sizes__col
-                      li.sizes__item
+                    li.sizes__item
                         label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                          input(type="checkbox" checked="checked" name="sizes").sizes__radio.radio.radio_sizes
                           .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 35
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 36
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 37
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 38
-                    .sizes__col
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 39
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 40
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 41
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 42
-                    .sizes__col
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 43
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 44
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 45
-                      li.sizes__item
-                        label.sizes__label.label
-                          input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
-                          .sizes__radio-fake.radio-fake.radio-fake_sizes
-                          .sizes__name 46
+                          .sizes__name Все размеры
+
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 35
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 36
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 37
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 38
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 39
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 40
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 41
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 42
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 43
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 44
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 45
+                    li.sizes__item
+                      label.sizes__label.label
+                        input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
+                        .sizes__radio-fake.radio-fake.radio-fake_sizes
+                        .sizes__name 46
             .aside__banner.banner
               .banner__img
               .banner__info.info

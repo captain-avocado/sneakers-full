@@ -7,6 +7,7 @@ import Glide from '@glidejs/glide';
 
 import triggerPopup from './modules/triggerPopup';
 import changePrice from './modules/changePrice';
+import checkAll from './modules/checkAll';
 
 new Glide('.glide', {
     type: 'carousel',
@@ -189,4 +190,32 @@ $(document).on('click', function(e) {
 });
 
 
+$('.brands').find('.radio_brands').on('change', function(e) {
+    if ($(e.currentTarget).closest('.category').first().index() !== 0) {
+        $('.brands').first().find('.category').first().find('.radio_brands').prop('checked', false);
+    } else {
+        let radio = $('.brands').find('.radio_brands');
+        radio = radio.not(radio.first());
+        radio.prop('checked', false);
+    }
+});
+
+checkAll('.brands', '.category', '.radio_brands');
+checkAll('.colors', '.colors__item', '.colors__checkbox');
+checkAll('.sizes', '.sizes__item', '.sizes__radio');
+
+// $('.brands').find('.radio_brands').on('change', function(e) {
+//     if ($(e.currentTarget).closest('.category').first().index() !== 0) {
+//         $(e.currentTarget).closest('.filter__content').first().find('.category').first().find('.radio_brands').prop('checked', false);
+//     } else {
+//         let radio = $(e.currentTarget).closest('.categories').find('.radio_brands');
+//         radio = radio.not(radio.first());
+//         radio.prop('checked', false);
+//     }
+// });
+
+// if ($('.brands').children().first().prop('checked')) {
+//     console.log()
+//     $('.brands').children().prop('checked', false);
+// }
 // console.log($('.city__link').offset());
