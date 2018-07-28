@@ -5,7 +5,11 @@ export default function triggerPopup(popupTrigger, popup) {
     if (popup !== '.city-popup') {
         dir = 'right';
         offset = window.innerWidth - offset;
+        offset -= $(popupTrigger).width() + $(popup).find('.popup__triangle').width()/2;
+    } else {
+        offset -= $(popup).find('.popup__triangle').width()/2;
     }
+    offset +=15;
     offset += 'px';
     $(popup).find('.popup__triangle').css(dir, offset);
 

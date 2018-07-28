@@ -203,3 +203,16 @@ $('.brands').find('.radio_brands').on('change', function(e) {
 checkAll('.brands', '.category', '.radio_brands');
 checkAll('.colors', '.colors__item', '.colors__checkbox');
 checkAll('.sizes', '.sizes__item', '.sizes__radio');
+
+const menu = $('.menu');
+const menuFixed = $('.menu-fixed');
+const startScroll = menu.offset().top + menu.outerHeight();
+$(window).on('scroll', function(e) {
+    if (window.scrollY >= startScroll) {
+        menuFixed.addClass('fixed');
+    } else {
+        menuFixed.removeClass('fixed');
+    }
+});
+
+

@@ -1,4 +1,5 @@
 .auth-popup {
+  min-width: 293px;
   &__profile {
     margin-bottom: 30px;
   }
@@ -9,21 +10,21 @@
   }
 
   &__item {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 15px;
-    // transition: font-weight .5s text-shadow.5s;
+    transition: font-weight .3s;
     &:hover {
       font-weight: 700;
-      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     }
   }
 
   &__exit {
-    font-size: 20px;
+    font-size: 16px;
     color: #D15A5A;
+    margin-top: 25px;
+    transition: font-weight .3s;
     &:hover {
       font-weight: 700;
-      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     }
   }
 }

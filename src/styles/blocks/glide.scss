@@ -44,6 +44,7 @@
     position: absolute;
     top: 83%;
     left: 77%;
+    z-index: 0;
 
     display: flex;
     align-items: center;
@@ -80,6 +81,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 0;
     
     padding: 0;
     border: none;

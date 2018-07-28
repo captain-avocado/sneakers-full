@@ -8,6 +8,16 @@
     <title>Sneakers Shop</title>
   </head>
   <body>
+    <ul class="menu-fixed">
+      <div class="container container_menu">
+        <li class="menu__item"><a class="menu__link" href="#">новая коллекция</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">мужские</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">женские</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">детские</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">распродажи</a></li>
+        <li class="menu__item active"><a class="menu__link" href="#">все кроссовки</a></li>
+      </div>
+    </ul>
     <header class="header">
       <div class="city-popup header__popup header__popup_city popup popup_city">
         <div class="popup__triangle"></div>
@@ -73,8 +83,8 @@
                 <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
               </div>
               <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
                 </div>
                 <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
               </div>
@@ -93,8 +103,8 @@
                 <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
               </div>
               <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
                 </div>
                 <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
               </div>
@@ -113,8 +123,8 @@
                 <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
               </div>
               <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__plus" href="#">+</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__minus" href="#">-</a>
+                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
                 </div>
                 <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
               </div>
@@ -134,20 +144,20 @@
         <div class="header__right">
           <input class="input-search header__search" placeholder="Что вы ищете?">
           <ul class="icons header__icons">
-            <li class="icons__item"><a class="icons__link_search" href="#">
+            <li class="icons__item"><a class="icons__link icons__link_search" href="#">
                 <svg class="icons__search">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg></a></li>
-            <li class="icons__item"><a class="icons__link_avatar" href="#">
+            <li class="icons__item"><a class="icons__link icons__link_avatar" href="#">
                 <svg class="icons__avatar">
                   <use xlink:href="images/sprite.svg#avatar"></use>
                 </svg></a></li>
-            <li class="icons__item"><a class="icons__link_cart" href="#">
+            <li class="icons__item"><a class="icons__link icons__link_cart" href="#">
                 <div class="icons__cart cart">
                   <svg class="cart__icon">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <div class="cart__num">2</div>
+                  <div class="cart__num">3</div>
                 </div></a></li>
           </ul>
         </div>
@@ -155,12 +165,12 @@
     </header>
     <ul class="menu">
       <div class="container container_menu">
-        <li class="menu__item active"><a class="menu__link" href="#">новая коллекция</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">новая коллекция</a></li>
         <li class="menu__item"><a class="menu__link" href="#">мужские</a></li>
         <li class="menu__item"><a class="menu__link" href="#">женские</a></li>
         <li class="menu__item"><a class="menu__link" href="#">детские</a></li>
         <li class="menu__item"><a class="menu__link" href="#">распродажи</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">магазин</a></li>
+        <li class="menu__item active"><a class="menu__link" href="#">все кроссовки</a></li>
       </div>
     </ul>
     <div class="slider">
@@ -205,6 +215,34 @@
               <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon" href="#"><i class="fas fa-redo"></i></a>
             </div>
             <ul class="filters__list">
+              <li class="filters__item filter filter filter_categories">
+                <div class="filter__title title">
+                  <div class="title__text no-right-border no-top-border">Сортировать</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                </div>
+                <ul class="filter__content categories no-top-border no-bottom-border">
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_gender" type="radio" name="sort" checked>
+                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                      <div class="category__name">по названию</div>
+                    </label>
+                  </li>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_gender" type="radio" name="sort">
+                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                      <div class="category__name">по цене (от дорогих к дешевым)</div>
+                    </label>
+                  </li>
+                  <li class="categories__item category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_gender" type="radio" name="sort">
+                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                      <div class="category__name">по цене (от дешевых к дорогим)</div>
+                    </label>
+                  </li>
+                </ul>
+              </li>
               <li class="filters__item filter filter_categories">
                 <div class="filter__title title">
                   <div class="title__text no-top-border no-right-border">Категории</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
@@ -517,50 +555,18 @@
           </div>
         </aside>
         <div class="content">
-          <div class="content__header">
-            <div class="content__view view">
-              <div class="view__title title">
-                <div class="title__text title__text_view no-left-border">Вид</div><a class="title__icon title__icon_view no-left-border active" href="#"><i class="fas fa-th"></i></a><a class="title__icon title__icon_view no-left-border no-right-border" href="#"><i class="fas fa-th-list"></i></a>
-              </div>
-            </div>
-            <div class="content__sort filter filter_sort">
-              <div class="filter__title title">
-                <div class="title__text">Сортировать</div><a class="title__icon title__icon_sort no-left-border" href="#" id="sort-btn"><i class="fas fa-angle-down"></i></a>
-              </div>
-              <ul class="filter__content filter__content_sort categories no-top-border no-bottom-border" id="sort-content">
-                <li class="categories__item category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_gender" type="radio" name="sort" checked>
-                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                    <div class="category__name">по названию</div>
-                  </label>
-                </li>
-                <li class="categories__item category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_gender" type="radio" name="sort">
-                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                    <div class="category__name">по цене (от дорогих к дешевым)</div>
-                  </label>
-                </li>
-                <li class="categories__item category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_gender" type="radio" name="sort">
-                    <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                    <div class="category__name">по цене (от дешевых к дорогим)</div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div class="content__header"></div>
           <ul class="content__goods goods">
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/1.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -587,13 +593,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/2.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -620,13 +628,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/2.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -653,13 +663,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/2.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -686,13 +698,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/5.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -719,13 +733,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/3.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -752,13 +768,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/3.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -785,13 +803,15 @@
               </div>
             </li>
             <li class="goods__item product">
-              <div class="product__sale"></div><a class="product__like-link" href="#">
-                <svg class="product__like">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg></a>
-              <div class="product__text">
-                <div class="product__company">Nike</div>
-                <div class="product__name">Men's Air More Uptempo</div>
+              <div class="product__sale"></div>
+              <div class="product__top-row">
+                <div class="product__text">
+                  <div class="product__company">Nike</div>
+                  <div class="product__name">Men's Air More</div>
+                </div><a class="product__like-link" href="#">
+                  <svg class="product__like">
+                    <use xlink:href="images/sprite.svg#cart"></use>
+                  </svg></a>
               </div><img class="product__img" src="images/1.png">
               <div class="product__bottom-row">
                 <ul class="sneaker-colors product__sneaker-colors">
@@ -823,11 +843,11 @@
                 <use xlink:href="images/sprite.svg#arrow_left_double"></use>
               </svg></a>
             <ul class="pagination__pages pages">
-              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">1</span></a></li>
-              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">2</span></a></li>
-              <li class="pages__item pagination__icon active"><a class="pagination__icon" href="#"><span class="pages__text">3</span></a></li>
-              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">4</span></a></li>
-              <li class="pages__item pagination__icon"><a class="pagination__icon" href="#"><span class="pages__text">5</span></a></li>
+              <li class="pages__item pagination__icon"><a href="#"><span class="pages__text">1</span></a></li>
+              <li class="pages__item pagination__icon"><a href="#"><span class="pages__text">2</span></a></li>
+              <li class="pages__item pagination__icon active"><a href="#"><span class="pages__text">3</span></a></li>
+              <li class="pages__item pagination__icon"><a href="#"><span class="pages__text">4</span></a></li>
+              <li class="pages__item pagination__icon"><a href="#"><span class="pages__text">5</span></a></li>
             </ul><a class="pagination__next pagination__icon" href="#">
               <svg class="pagination__svg">
                 <use xlink:href="images/sprite.svg#arrow_right_double"></use>

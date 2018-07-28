@@ -3,6 +3,20 @@ block head
     title Sneakers Shop
 block variables
 block content
+    ul.menu-fixed
+      .container.container_menu
+        li.menu__item
+          a.menu__link(href="#") новая коллекция
+        li.menu__item
+          a.menu__link(href="#") мужские
+        li.menu__item
+          a.menu__link(href="#") женские
+        li.menu__item
+          a.menu__link(href="#") детские
+        li.menu__item
+          a.menu__link(href="#") распродажи
+        li.menu__item.active
+          a.menu__link(href="#") все кроссовки
     header.header
       .city-popup.header__popup.header__popup_city.popup.popup_city
         .popup__triangle
@@ -59,9 +73,9 @@ block content
                 .cart-product__name MEN'S AIR MORE UPTEMPO
               .cart-product__num.cart-num
                 .cart-num__left-col
-                  a(href="#").cart-num__plus +
-                  .cart-num__cur-num 1
                   a(href="#").cart-num__minus -
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__plus +
                 .cart-num__right-col
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
           li.cart-popup__item.cart-product
@@ -75,9 +89,9 @@ block content
                 .cart-product__name MEN'S AIR MORE UPTEMPO
               .cart-product__num.cart-num
                 .cart-num__left-col
-                  a(href="#").cart-num__plus +
-                  .cart-num__cur-num 1
                   a(href="#").cart-num__minus -
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__plus +
                 .cart-num__right-col
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
           li.cart-popup__item.cart-product
@@ -91,9 +105,9 @@ block content
                 .cart-product__name MEN'S AIR MORE UPTEMPO
               .cart-product__num.cart-num
                 .cart-num__left-col
-                  a(href="#").cart-num__plus +
-                  .cart-num__cur-num 1
                   a(href="#").cart-num__minus -
+                  .cart-num__cur-num 1
+                  a(href="#").cart-num__plus +
                 .cart-num__right-col
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
         .cart-popup__btns
@@ -111,22 +125,22 @@ block content
           input.input-search.header__search(placeholder="Что вы ищете?")
           ul.icons.header__icons
             li.icons__item
-              a(href="#").icons__link_search
+              a(href="#").icons__link.icons__link_search
                 svg.icons__search
                   use(xlink:href=`images/sprite.svg#search`)
             li.icons__item
-              a(href="#").icons__link_avatar
+              a(href="#").icons__link.icons__link_avatar
                 svg.icons__avatar
                   use(xlink:href=`images/sprite.svg#avatar`)
             li.icons__item
-              a(href="#").icons__link_cart
+              a(href="#").icons__link.icons__link_cart
                 .icons__cart.cart
                   svg.cart__icon
                     use(xlink:href=`images/sprite.svg#cart`)
-                  .cart__num 2
+                  .cart__num 3
     ul.menu
       .container.container_menu
-        li.menu__item.active
+        li.menu__item
           a.menu__link(href="#") новая коллекция
         li.menu__item
           a.menu__link(href="#") мужские
@@ -136,8 +150,8 @@ block content
           a.menu__link(href="#") детские
         li.menu__item
           a.menu__link(href="#") распродажи
-        li.menu__item
-          a.menu__link(href="#") магазин
+        li.menu__item.active
+          a.menu__link(href="#") все кроссовки
     .slider
         .glide
           .glide__track(data-glide-el="track")
@@ -177,6 +191,27 @@ block content
                 a(href="#").main-title__icon
                   i.fas.fa-redo
               ul.filters__list
+                li.filters__item.filter.filter.filter_categories
+                  .filter__title.title
+                    .title__text.no-right-border.no-top-border Сортировать
+                    a(href="#").title__icon.no-top-border
+                      i.fas.fa-angle-down
+                  ul.filter__content.categories.no-top-border.no-bottom-border
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort" checked).category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по названию
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по цене (от дорогих к дешевым)
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name по цене (от дешевых к дорогим)
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Категории
@@ -400,14 +435,14 @@ block content
                 .info__price.info__price_banner 3 990
           .content
             .content__header
-              .content__view.view
+              //- .content__view.view
                 .view__title.title
                   .title__text.title__text_view.no-left-border Вид
                   a(href="#").title__icon.title__icon_view.no-left-border.active
                     i.fas.fa-th
                   a(href="#").title__icon.title__icon_view.no-left-border.no-right-border
                     i.fas.fa-th-list
-              .content__sort.filter.filter_sort
+              //- .content__sort.filter.filter_sort
                   .filter__title.title
                     .title__text Сортировать
                     a(href="#")#sort-btn.title__icon.title__icon_sort.no-left-border
@@ -431,12 +466,13 @@ block content
             ul.content__goods.goods
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -456,12 +492,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -481,12 +518,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -506,12 +544,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -531,12 +570,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/5.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -556,12 +596,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -581,12 +622,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -606,12 +648,13 @@ block content
                       .product__price 2 590 р
               li.goods__item.product
                   .product__sale
-                  a(href="#").product__like-link
-                    svg.product__like
-                      use(xlink:href=`images/sprite.svg#cart`)
-                  .product__text
-                    .product__company Nike
-                    .product__name Men's Air More Uptempo
+                  .product__top-row
+                    .product__text
+                      .product__company Nike
+                      .product__name Men's Air More
+                    a(href="#").product__like-link
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
                   .product__bottom-row
                       ul.sneaker-colors.product__sneaker-colors
@@ -635,19 +678,19 @@ block content
                   use(xlink:href="images/sprite.svg#arrow_left_double")
               ul.pagination__pages.pages
                 li.pages__item.pagination__icon
-                  a(href="#").pagination__icon
+                  a(href="#")
                     span.pages__text 1
                 li.pages__item.pagination__icon
-                  a(href="#").pagination__icon
+                  a(href="#")
                     span.pages__text 2
                 li.pages__item.pagination__icon.active
-                  a(href="#").pagination__icon
+                  a(href="#")
                     span.pages__text 3
                 li.pages__item.pagination__icon
-                  a(href="#").pagination__icon
+                  a(href="#")
                     span.pages__text 4
                 li.pages__item.pagination__icon
-                  a(href="#").pagination__icon
+                  a(href="#")
                     span.pages__text 5
               a(href="#").pagination__next.pagination__icon
                 svg.pagination__svg

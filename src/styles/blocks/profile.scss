@@ -1,9 +1,10 @@
 .profile {
   display: flex;
+  align-items: center;
 
   &__avatar {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
     border-radius: 50%;
 
@@ -15,12 +16,12 @@
   }
 
   &__name {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 2px;
     font-weight: 700;
   }
 
   &__mail {
-    font-size: 16px;
+    font-size: 12px;
   }
 }

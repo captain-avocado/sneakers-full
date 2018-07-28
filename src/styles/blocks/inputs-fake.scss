@@ -34,6 +34,8 @@
 
   position: relative;
   &:after {
+    transition: width .2s, height .2s;
+
     content: '';
     position: absolute;
     top: 50%;
@@ -45,7 +47,6 @@
     border-radius: 50%;
     &:after {
 
-      transition: width .2s, height .2s;
 
       width: 0;
       height: 0;

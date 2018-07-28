@@ -31,7 +31,7 @@
   }
   &:hover {
     &:after {
-    box-shadow: 15px 3px 3px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.15);
   }
 }
 
@@ -61,19 +61,27 @@
     }
   } 
 
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
   &__like-link {
-    background-color: #3151cc;
+    border: 1.5px solid #3151cc;
     display: block;
-    position: absolute;
-    top: 30px;
-    right: 30px;
     width: 50px;
     height: 50px;
+    z-index: 1;
     border-radius: 50%;
-    z-index: 1000;
-    transition: box-shadow .5s;
+    transition: background-color .3s, fill .3s;
+    position: relative;
     &:hover {
-      box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    background-color: #3151cc;
+      & .product__like {
+        fill: #fff; 
+      }
     }
   }
   &__like {
@@ -83,8 +91,9 @@
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    fill: #fff;
+    fill: #3151cc;
     z-index: 1;
+    transition: .3s;
   }
 
   &__link {
@@ -97,7 +106,7 @@
     color: #6d6d6d;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &__text {
@@ -105,15 +114,14 @@
   }
   &__name {
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 50px;
   }
 
   &__img {
     align-self: center;
-    margin-bottom: 45px;
+    margin-bottom: 75px;
     max-width: 80%;
     height: 120px;
   }
@@ -127,11 +135,11 @@
   &__btn {
     background-color: #3151cc;
     color: #fff;
-    font-weight: 700;
+    font-weight: 400;
   }
 
   &__price {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
   }
 
