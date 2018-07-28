@@ -5,17 +5,21 @@
 
   &__title {
     &.active + .filter__content {
-      max-height: 0;
-      padding: 0;
+      max-height: 750px;
+      padding: 35px;
+      opacity: 1;
     }
   }
 
   &__content {
-    max-height: 750px;
-    padding: 35px;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+
+    
     overflow: hidden;
 
-    transition: max-height .5s cubic-bezier(0.77, 0, 0.175, 1), padding .5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: max-height .5s cubic-bezier(0.77, 0, 0.175, 1), padding .5s cubic-bezier(0.77, 0, 0.175, 1), opacity .5s;
 
     background-color: #fbfbfb;
     border: 1px solid #ececec;

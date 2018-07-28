@@ -1,17 +1,7 @@
 .colors {
   display: flex;
   flex-wrap: wrap;
-  &.filter__content {
-    padding-bottom: 5px;
-
-  }
-  // &__row {
-  //   display: flex;
-  //   &:not(:last-of-type) {
-  //     margin-bottom: 40px;
-  //   }
-  // }
-
+  
   &__item {
     width: 16.66%;
     display: flex;
@@ -21,17 +11,12 @@
       width: 100%;
       justify-content: flex-start;
     }
-    &:not(:last-of-type) {
-    // margin-right: auto;
-    // margin-right: ;
-    }
   }
 
   &__checkbox_all {
     &:checked+.colors__all {
       background-color: $bg-blue;
       color: #fff;
-      // box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
     }
   }
 
@@ -40,7 +25,6 @@
     border-radius: 40px;
     border: 1px solid $bg-blue;
     color: $bg-blue;
-    // margin-bottom: 40px;
 
     transition: background-color .3s, color .3s, box-shadow .3s;
     &:hover {

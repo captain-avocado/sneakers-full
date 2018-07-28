@@ -4,6 +4,12 @@
   border-radius: 5px;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1); 
 
+  display: none;
+  &.active {
+    display: block;
+  }
+
+
   &__triangle {
     content: "";
     position: absolute;

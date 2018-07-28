@@ -125,7 +125,7 @@ $('.title__icon').on('click', function(e) {
     $(e.currentTarget).parent().toggleClass('active');
     $(e.currentTarget).find('i').toggleClass('active');
 
-    if ($(e.currentTarget).parent().hasClass('active')) {
+    if (!$(e.currentTarget).parent().hasClass('active')) {
         setTimeout(function() {
             $(e.currentTarget).parent().parent().find('.filter__content').addClass('no-bottom-border'); 
         }, 550);
@@ -203,19 +203,3 @@ $('.brands').find('.radio_brands').on('change', function(e) {
 checkAll('.brands', '.category', '.radio_brands');
 checkAll('.colors', '.colors__item', '.colors__checkbox');
 checkAll('.sizes', '.sizes__item', '.sizes__radio');
-
-// $('.brands').find('.radio_brands').on('change', function(e) {
-//     if ($(e.currentTarget).closest('.category').first().index() !== 0) {
-//         $(e.currentTarget).closest('.filter__content').first().find('.category').first().find('.radio_brands').prop('checked', false);
-//     } else {
-//         let radio = $(e.currentTarget).closest('.categories').find('.radio_brands');
-//         radio = radio.not(radio.first());
-//         radio.prop('checked', false);
-//     }
-// });
-
-// if ($('.brands').children().first().prop('checked')) {
-//     console.log()
-//     $('.brands').children().prop('checked', false);
-// }
-// console.log($('.city__link').offset());

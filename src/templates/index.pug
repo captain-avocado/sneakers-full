@@ -4,7 +4,7 @@ block head
 block variables
 block content
     header.header
-      .city-popup.header__popup.header__popup_city.popup.popup_city.active
+      .city-popup.header__popup.header__popup_city.popup.popup_city
         .popup__triangle
         .popup__title Выберите город
         ul.city-popup__list
@@ -25,7 +25,7 @@ block content
               use(xlink:href="images/sprite.svg#Vladivostok")
             .city-popup__name Хабаровск
         a(href="#").city-popup__delivery-info Условия доставки
-      .auth-popup.header__popup.header__popup_auth.popup.popup_auth.active
+      .auth-popup.header__popup.header__popup_auth.popup.popup_auth
         .popup__triangle
         .popup__title Личный кабинет
         .auth-popup__profile.profile
@@ -44,13 +44,13 @@ block content
             a(href="#").auth-popup__link Платежные данные
         .auth-popup__exit
           a(href="#").auth-popup__link Выйти из системы
-      .cart-popup.header__popup.header__popup_cart.popup.popup_cart.active
+      .cart-popup.header__popup.header__popup_cart.popup.popup_cart
         .popup__triangle
         .popup__title Моя корзина
         ul.cart-popup__list
           li.cart-popup__item.cart-product
             .cart-product__left-col
-              .cart-product__img(style="background-image: url('../images/4.png');")
+              .cart-product__img(style="background-image: url('images/4.png');")
                 .cart-product__color(data-color="red")
               .cart-product__price(data-price="12590") 12 590 р
             .cart-product__right-col
@@ -66,7 +66,7 @@ block content
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
           li.cart-popup__item.cart-product
             .cart-product__left-col
-              .cart-product__img(style="background-image: url('../images/1.png');")
+              .cart-product__img(style="background-image: url('images/1.png');")
                 .cart-product__color(data-color="blue")
               .cart-product__price(data-price="2590") 2 590 р
             .cart-product__right-col
@@ -82,7 +82,7 @@ block content
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
           li.cart-popup__item.cart-product
             .cart-product__left-col
-              .cart-product__img(style="background-image: url('../images/3.png');")
+              .cart-product__img(style="background-image: url('images/3.png');")
                 .cart-product__color(data-color="white")
               .cart-product__price(data-price="6590") 6 590 р
             .cart-product__right-col
@@ -99,16 +99,6 @@ block content
         .cart-popup__btns
           a(href="#").btn.btn_checkout.cart-popup__checkout Оформить заказ
           a(href="#").btn.btn_close.cart-popup__close Закрыть
-
-
-            //- .cart-product__row
-            //-   .cart-product__img
-            //-     .cart-product__color
-            //-   .cart-product__text
-            //-     .cart-product__company Nike
-            //-     .cart-product__name MEN'S AIR MORE UPTEMPO
-            //- .cart-product__row
-              
       .container.container_header
         .city.header__city
           a(href="#").city__link
@@ -192,7 +182,7 @@ block content
                     .title__text.no-top-border.no-right-border Категории
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border
+                  ul.filter__content.categories.no-top-border.no-bottom-border
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" checked name="category").category__radio.radio.radio_gender
@@ -213,7 +203,7 @@ block content
                     .title__text.no-top-border.no-right-border Бренды
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border.brands
+                  ul.filter__content.categories.no-top-border.brands.no-bottom-border
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" checked="checked" name="brands").category__radio.radio.radio_brands
@@ -264,7 +254,7 @@ block content
                     .title__text.no-top-border.no-right-border Цена
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  .filter__content.price.no-top-border
+                  .filter__content.price.no-top-border.no-bottom-border
                     .price__borders
                       .price__from.price-input
                         .price-input__text От
@@ -279,7 +269,7 @@ block content
                     .title__text.no-top-border.no-right-border Цвета
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.no-top-border.colors
+                  ul.filter__content.no-top-border.colors.no-bottom-border
                     li.colors__item
                       label.colors__label.label
                           input(type="checkbox" checked="checked" name="colors").colors__checkbox.checkbox.colors__checkbox_all
@@ -337,13 +327,12 @@ block content
                     .title__text.no-top-border.no-right-border Размер
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.no-top-border.sizes
+                  ul.filter__content.no-top-border.sizes.no-bottom-border
                     li.sizes__item
                         label.sizes__label.label
                           input(type="checkbox" checked="checked" name="sizes").sizes__radio.radio.radio_sizes
                           .sizes__radio-fake.radio-fake.radio-fake_sizes
                           .sizes__name Все размеры
-
                     li.sizes__item
                       label.sizes__label.label
                         input(type="checkbox" name="sizes").sizes__radio.radio.radio_sizes
@@ -423,10 +412,10 @@ block content
                     .title__text Сортировать
                     a(href="#")#sort-btn.title__icon.title__icon_sort.no-left-border
                       i.fas.fa-angle-down
-                  ul#sort-content.filter__content.filter__content_sort.categories.no-top-border
+                  ul#sort-content.filter__content.filter__content_sort.categories.no-top-border.no-bottom-border
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="sort").category__radio.radio.radio_gender
+                        input(type="radio" name="sort" checked).category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
                         .category__name по названию
                     li.categories__item.category
