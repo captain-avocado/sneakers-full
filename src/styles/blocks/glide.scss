@@ -32,6 +32,26 @@
     }
   }
 
+  &__slide--active {
+    & .glide__info {
+
+      & .info__btn {
+        opacity: 1;
+      }
+
+      & .info__price {
+        margin-bottom: 30px;
+        margin-right: 0;
+        opacity: 1;
+      }
+
+      & .info__text {
+        margin-top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
   &__info {
     max-width: 320px;
     position: absolute;

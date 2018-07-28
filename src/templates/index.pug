@@ -110,32 +110,35 @@ block content
                   a(href="#").cart-num__plus +
                 .cart-num__right-col
                   a(href="#").btn.btn_remove.cart-num__remove Убрать
-        .cart-popup__btns
-          a(href="#").btn.btn_checkout.cart-popup__checkout Оформить заказ
-          a(href="#").btn.btn_close.cart-popup__close Закрыть
+        ul.cart-popup__btns
+          li.cart-popup__btn
+            a(href="#").btn.btn_checkout.cart-popup__checkout Оформить заказ
+          li.cart-popup__btn
+            a(href="#").btn.btn_close.cart-popup__close Закрыть
       .container.container_header
         .city.header__city
           a(href="#").city__link
-            svg.city__icon
+            svg.city__icon.icon
               use(xlink:href=`images/sprite.svg#placeholder`)
           .city__name Владивосток
         .logo.header__logo 
           a(href="#") sneakers
         .header__right
-          input.input-search.header__search(placeholder="Что вы ищете?")
+          input.input-search.header__search
+          label.input-label Что вы ищете?
           ul.icons.header__icons
             li.icons__item
               a(href="#").icons__link.icons__link_search
-                svg.icons__search
+                svg.icons__search.icon
                   use(xlink:href=`images/sprite.svg#search`)
             li.icons__item
               a(href="#").icons__link.icons__link_avatar
-                svg.icons__avatar
+                svg.icons__avatar.icon
                   use(xlink:href=`images/sprite.svg#avatar`)
             li.icons__item
               a(href="#").icons__link.icons__link_cart
                 .icons__cart.cart
-                  svg.cart__icon
+                  svg.cart__icon.icon
                     use(xlink:href=`images/sprite.svg#cart`)
                   .cart__num 3
     ul.menu
@@ -678,19 +681,19 @@ block content
                   use(xlink:href="images/sprite.svg#arrow_left_double")
               ul.pagination__pages.pages
                 li.pages__item.pagination__icon
-                  a(href="#")
+                  a(href="#").pages__link
                     span.pages__text 1
                 li.pages__item.pagination__icon
-                  a(href="#")
+                  a(href="#").pages__link
                     span.pages__text 2
                 li.pages__item.pagination__icon.active
-                  a(href="#")
+                  a(href="#").pages__link
                     span.pages__text 3
                 li.pages__item.pagination__icon
-                  a(href="#")
+                  a(href="#").pages__link
                     span.pages__text 4
                 li.pages__item.pagination__icon
-                  a(href="#")
+                  a(href="#").pages__link
                     span.pages__text 5
               a(href="#").pagination__next.pagination__icon
                 svg.pagination__svg

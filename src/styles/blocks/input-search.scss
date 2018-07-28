@@ -1,6 +1,35 @@
 .input-search {
   border: none;
-  border-bottom: 1px solid #010101;
-  outline: none;
-  padding: 5px 25px;
+  outline: 0;
+  width: 0;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: -2px;
+  transition: width .5s,padding .5s,border-bottom 0.5s, margin-right .5s;
+  &.active {
+    margin-right: auto;
+    width: 300px;
+    padding: 5px 25px;
+    border-bottom: 1px solid #010101;
+  }
+  &.active + .input-label {
+    display: block;
+  }
+  &.used + .input-label, &:focus + .input-label {
+    top: -35%;
+    color: $bg-blue;
+    font-size: 10px;
+  }
+}
+
+.input-label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transition: top .2s, color .2s, font-size .2s;
+  transform: translate(0, -50%);
+  display: none;
+
+  
+
 }

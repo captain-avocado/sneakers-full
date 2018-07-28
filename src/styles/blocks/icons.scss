@@ -7,9 +7,14 @@
     margin-right: 10px;
   }
   &__link {
-    display: block;
+    &:not(.icons__link_search) {
+      display: block;
     width: 100%;
     height: 100%;
+    }
+    
+
+  
 
     &_search.active {
       position: absolute;
@@ -19,6 +24,7 @@
       & .icons__search {
         width: 15px;
         height: 15px;
+        fill: $bg-blue;
       }
     }
   }

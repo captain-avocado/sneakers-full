@@ -16,7 +16,7 @@ new Glide('.glide', {
     gap: 0,
     // autoplay: 5000,
     hoverpause: true,
-    animationDuration: 800,
+    animationDuration: 500,
     animationTimingFunc: 'linear',
 }).mount();
 
@@ -170,7 +170,7 @@ $('.cart-num__minus').on('click', function(e) {
 $('.icons__link_search').on('click', function(e) {
     e.preventDefault();
     $('.header__right').addClass('active');
-    $('.input-search').addClass('active');
+    $('.input-search').toggleClass('active');
     $(e.currentTarget).addClass('active');
 });
 
@@ -182,9 +182,13 @@ $(document).on('click', function(e) {
     if (!$(target).is(search) && !$(target).parents().is(search) &&!$(target).is(searchIcon) && !$(target).parents().is(searchIcon) && $(search).hasClass('active')) {
         // $(search).fadeOut(2000, function (){
         // $(search).removeClass('active');
+        
         $('.header__right').removeClass('active');
         search.removeClass('active');
-        searchIcon.removeClass('active');
+        setTimeout(function(){
+            searchIcon.removeClass('active');
+        }, 350);
+        // searchIcon.removeClass('active');
         // });
     }
 });
@@ -213,6 +217,15 @@ $(window).on('scroll', function(e) {
     } else {
         menuFixed.removeClass('fixed');
     }
+});
+
+$('.input-search').blur(function() {
+
+    // check if the input has any value (if we've typed into it)
+    if ($(this).val())
+        $(this).addClass('used');
+    else
+        $(this).removeClass('used');
 });
 
 

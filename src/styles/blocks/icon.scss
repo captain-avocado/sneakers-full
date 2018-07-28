@@ -1,0 +1,7 @@
+.icon {
+  transition: fill .3s;
+
+  &:hover, &.active {
+    fill: $bg-blue;
+  }
+}
