@@ -3,17 +3,19 @@ export default function triggerPopup(popupTrigger, popup) {
     let offset = $(popupTrigger).offset().left;
     let dir = 'left';
     if (popup !== '.city-popup') {
+        console.log(popupTrigger, offset);
         dir = 'right';
+        console.log(popupTrigger, offset);
         offset = window.innerWidth - offset;
+        console.log(popupTrigger, offset);
         offset -= 10;
-
+        offset -= 15;
     } else {
-        console.log(offset);
         offset += 10;
-        // console.log(offset);
+        offset -= 15;
 
     }
-    offset -= 15;
+    // offset -= 15;
 
     offset += 'px';
     $(popup).find('.popup__triangle').css(dir, offset);
