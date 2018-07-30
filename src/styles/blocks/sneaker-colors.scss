@@ -1,10 +1,5 @@
 .sneaker-colors {
   display: flex;
-  z-index: 100;
-  position: absolute;
-  top: 67%;
-  left: 50%;
-  transform: translateX(-50%);
 
   &__item {
     &:not(:last-of-type) {

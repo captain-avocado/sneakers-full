@@ -1,0 +1,9 @@
+.select-modal {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+}

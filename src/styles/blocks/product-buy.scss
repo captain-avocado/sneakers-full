@@ -1,0 +1,21 @@
+.product-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_modal {
+    justify-content: flex-end;
+  }
+  &__btn {
+    background-color: #3151cc;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 700;
+    &_modal {
+      margin-right: 25px;
+    }
+  }
+}

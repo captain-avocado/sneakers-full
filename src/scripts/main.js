@@ -4,16 +4,38 @@ import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
 import Glide from '@glidejs/glide';
 
-
 import triggerPopup from './modules/triggerPopup';
 import changePrice from './modules/changePrice';
 import checkAll from './modules/checkAll';
+
 
 new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
     gap: 0,
+    // autoplay: 5000,
+    hoverpause: true,
+    animationDuration: 500,
+    animationTimingFunc: 'linear',
+}).mount();
+
+new Glide('.glide--modal', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    gap: 0,
+    // autoplay: 5000,
+    hoverpause: true,
+    animationDuration: 500,
+    animationTimingFunc: 'linear',
+}).mount();
+
+new Glide('.glide--preview', {
+    type: 'slider',
+    startAt: 0,
+    perView: 3,
+    gap: 30,
     // autoplay: 5000,
     hoverpause: true,
     animationDuration: 500,
@@ -228,4 +250,24 @@ $('.input-search').blur(function() {
         $(this).removeClass('used');
 });
 
+
+var modal = document.querySelector('.modal');
+var triggers = $('.modal-trigger');
+// var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle('active');
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+triggers.on('click', function(e) {
+    e.preventDefault();
+    toggleModal();
+});
+window.addEventListener('click', windowOnClick);
 

@@ -43,11 +43,9 @@
     transform: translate(-50%, -50%);
     
   }
-  &_gender {
+  &_gender, &_modal-sizes {
     border-radius: 50%;
     &:after {
-
-
       width: 0;
       height: 0;
       border-radius: 50%;

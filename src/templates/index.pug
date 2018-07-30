@@ -3,6 +3,85 @@ block head
     title Sneakers Shop
 block variables
 block content
+    .modal
+      .modal__content
+        .modal__gallery
+          .modal__slider
+            .glide--modal.glide--ltr.glide--carousel.glide--swipeable.glide--slider
+              .glide__track(data-glide-el="track")
+                ul.glide__slides
+                  li.glide__slide.glide__slide_modal
+                    img(src="images/1.png")
+                  li.glide__slide.glide__slide_modal
+                    img(src="images/1.png")
+                  li.glide__slide.glide__slide_modal
+                    img(src="images/1.png")
+          .modal__preview-slider
+            .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
+              .glide__track(data-glide-el="track")
+                ul.glide__slides
+                  li.glide__slide.glide__slide_preview(style="background-image: url('images/1.png');")
+                  li.glide__slide.glide__slide_preview(style="background-image: url('images/1.png');")
+                  li.glide__slide.glide__slide_preview(style="background-image: url('images/1.png');")
+                  li.glide__slide.glide__slide_preview(style="background-image: url('images/1.png');")
+                  li.glide__slide.glide__slide_preview(style="background-image: url('images/1.png');")
+        .modal__info
+          .modal__text
+            .modal__row.product-text
+              .product-text__company Nike
+              .product-text__name Men's Air More
+            .modal__row.select-modal
+              .select-modal__title Размеры
+              ul.select-modal__list.categories.categories_modal-sizes
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 35
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 37
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 39
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 40
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 41
+                li.categories__item.categories__item_modal-sizes.category
+                  label.category__label.label
+                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                    .category__name 44
+            .modal__row.select-modal
+              .select-modal__title Цвета
+              ul.sneaker-colors.select-modal__list
+                li.sneaker-colors__item
+                  label.label
+                    input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                    .color-fake(data-color="black")
+                li.sneaker-colors__item
+                  label.label
+                    input(type="radio" checked name="sneaker-colors-1").radio.radio_sneaker
+                    .color-fake(data-color="grey")
+                li.sneaker-colors__item
+                  label.label
+                    input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
+                    .color-fake(data-color="pink").select-modal__list
+            .modal__descr Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Имеет океана одна, ipsum переписали предложения раз меня снова что осталось! Оксмокс языкового рыбного даже прямо до пустился взгляд. Свой!
+          .modal__bottom-row.product-buy.product-buy_modal
+            .product-buy__price.product-buy__price_modal 10 490 р
+            a(href="#").product-buy__btn.btn.btn_buy Купить
     ul.menu-fixed
       .container.container_menu
         li.menu__item
@@ -470,14 +549,14 @@ block content
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -491,19 +570,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -517,19 +596,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -543,19 +622,19 @@ block content
                           label.label
                             input(type="radio" checked name="sneaker-colors-3").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -569,19 +648,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/5.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -595,19 +674,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -621,19 +700,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -647,19 +726,19 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
               li.goods__item.product
                   .product__sale
                   .product__top-row
-                    .product__text
-                      .product__company Nike
-                      .product__name Men's Air More
+                    .product__text.product-text
+                      .product-text__company Nike
+                      .product-text__name Men's Air More
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
-                  .product__bottom-row
+                  .product__bottom-row.product-buy
                       ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
@@ -673,8 +752,8 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
                             .color-fake(data-color="pink")
-                      a.btn.btn_more.product__btn(href="#") Подробнее
-                      .product__price 2 590 р
+                      a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
+                      .product-buy__price 2 590 р
             .content__pagination.pagination
               a(href="#").pagination__prev.pagination__icon
                 svg.pagination__svg
@@ -745,8 +824,4 @@ block content
               li.footer-list__item
                 a.footer-list__link(href="#") контакты
               
-          
-
-
-
     script(src="scripts/main.bundle.js")

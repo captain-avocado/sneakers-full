@@ -1,6 +1,10 @@
 .glide { 
   height: 400px;
   position: relative;
+  &--preview, &--modal {
+    height: 100%;
+    position: relative;
+  }
   &__track {
     height: 100%;
   }
@@ -12,6 +16,19 @@
   &__slide {
     height: 100%;
     position: relative;
+
+    &_preview {
+      background-size: cover;
+      background-position: center center;
+      border: 1px solid #ececec;
+    }
+
+    &_modal {
+      text-align: center;
+      & img {
+        max-width: 70%;
+      }
+    }
 
     &[data-num="0"] {
       background-image: url('../images/slider2.jpg');
