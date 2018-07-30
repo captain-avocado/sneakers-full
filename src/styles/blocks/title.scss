@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
 
+  cursor: pointer;
   height: 75px;
 
   &__text {
@@ -36,9 +37,9 @@
 
     & i {
       transition: transform .5s;
-      transform: rotate(180deg);
+      // transform: rotate(180deg);
       &.active {
-        transform: rotate(360deg);
+        transform: rotate(180deg);
       }
     }
 

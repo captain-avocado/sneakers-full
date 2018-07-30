@@ -13,6 +13,8 @@
     transition: margin .5s, opacity .5s;
     &_banner {
       color: #2a2a2a;
+      opacity: 1;
+      margin-top: 0;
     }
   }
   &__price {
@@ -26,6 +28,8 @@
 
     &_banner {
       margin-bottom: 0;
+      margin-right: 0;
+      opacity: 1;
       color: #ed1c24;
       &:after {
         content: 'р';
