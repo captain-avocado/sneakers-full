@@ -9,7 +9,7 @@ import changePrice from './modules/changePrice';
 import checkAll from './modules/checkAll';
 
 
-new Glide('.glide', {
+const mainGlide = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
@@ -19,6 +19,17 @@ new Glide('.glide', {
     animationDuration: 500,
     animationTimingFunc: 'linear',
 }).mount();
+
+mainGlide.on('run', function() {
+    console.log('starting');
+    $('.glide__slide--active').find('.info').addClass('non-active');
+});
+
+mainGlide.on('run.after', function() {
+    console.log('ending');
+
+    $('.glide__slide--active').find('.info').removeClass('non-active');
+});
 
 new Glide('.glide--modal', {
     type: 'carousel',
@@ -246,7 +257,7 @@ checkAll('.sizes', '.sizes__item', '.sizes__radio');
 const menu = $('.menu');
 const menuFixed = $('.menu-fixed');
 const startScroll = menu.offset().top + menu.outerHeight();
-$(window).on('scroll', function(e) {
+$(window).on('scroll', function() {
     if (window.scrollY >= startScroll) {
         menuFixed.addClass('fixed');
     } else {

@@ -8,6 +8,9 @@
     font-size: 30px;
     color: $text-black;
     background-color: $bg-grey;
+    &:hover svg {
+      fill: $bg-blue;
+    }
   }
 
   &__next {
@@ -24,10 +27,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 1s;
+    transition: background-color 1s, font-weight .1s;
 
     &.active {
       background-color: $bg-grey;
+      font-weight: 600;
     }
   }
 
@@ -35,5 +39,6 @@
     fill: #000;
     width: 17px;
     height: 17px;
+    transition: fill .3s;
   }
 }
