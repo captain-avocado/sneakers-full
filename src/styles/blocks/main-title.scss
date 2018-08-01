@@ -1,5 +1,12 @@
 .main-title {
   height: 75px;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    & .main-title__icon {
+      color: #3151cc;
+    }
+  }
   &__text {
     padding-left: 30px;
     display: flex;
@@ -10,8 +17,36 @@
     flex: 1;
     font-weight: 700;
   }
+
+  &__hint {
+    display: block;
+    opacity: 0;
+    transition: opacity .2s, right .3s;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    border: 1px solid $bg-blue;
+    border-radius: 10px;
+    padding: 10px;
+    color: $bg-blue;
+    font-size: 13px;
+    &:after {
+      display: block;
+      font-size: 20px;
+      // content: '>';
+      position: absolute;
+      left: 105%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
   &__icon {
-    
+    &:hover +.main-title__hint{
+        opacity: 1;
+        right: 100px;
+    }
     width: 75px;
 
     display: flex;
@@ -20,7 +55,8 @@
 
     border: 1px solid #ececec;
     font-size: 14px;
-    color: #3151cc;
+    transition: color .3s;
+
   }
 }
 
