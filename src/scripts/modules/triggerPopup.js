@@ -11,14 +11,7 @@ export default function triggerPopup(popupTrigger, popup) {
         let offset = $(popupTrigger).offset().left;
         let dir = 'left';
         if (popup !== '.city-popup') {
-            console.log(popupTrigger, offset);
-            // dir = 'right';
-            console.log(popupTrigger, offset);
-            // offset = window.innerWidth - offset;
-            console.log('ffw', $(popup).offset().left);
             offset -= $(popup).offset().left;
-
-            console.log(popupTrigger, offset);
             offset -= 17;
             offset -= 15;
         } else {
@@ -26,7 +19,6 @@ export default function triggerPopup(popupTrigger, popup) {
             offset -= 15;
 
         }
-        // offset -= 15;
 
         offset += 'px';
         $(popup).find('.popup__triangle').css(dir, offset);

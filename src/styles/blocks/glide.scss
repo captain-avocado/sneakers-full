@@ -68,7 +68,9 @@
   &__bullets {
     position: absolute;
     top: 83%;
-    left: 77%;
+    // left: 77%;
+    right: 14%;
+    left: auto !important;
     z-index: 0;
 
     display: flex;
