@@ -1,28 +1,7 @@
 .glide { 
   height: 400px;
   position: relative;
-
-  // &--dragging {
-  //   .glide__slide--active, {
-  //     & .glide__info {
-  
-  //       & .info__btn {
-  //         opacity: 0;
-  //       }
-  
-  //       & .info__price {
-  //         margin-bottom: 60px;
-  //         margin-right: -30px;
-  //         opacity: 0;
-  //       }
-  
-  //       & .info__text {
-  //         margin-top: 30px;
-  //         opacity: 0;
-  //       }
-  //     }
-  //   }
-  // }
+  overflow: hidden;
 
   &--preview, &--modal {
     height: 100%;
@@ -54,47 +33,28 @@
     }
 
     &[data-num="0"] {
-      background-image: url('../images/slider.jpg');
+      background-image: url('../images/ban_1.jpg');
       background-size: cover;
       background-position: center center;
     }
 
     &[data-num="1"] {
-      background-image: url('../images/slider.jpg');
+      background-image: url('../images/ban_2.jpg');
       background-size: cover;
       background-position: center center;
     }
 
     &[data-num="2"] {
-      background-image: url('../images/slider.jpg');
+      background-image: url('../images/ban_3.jpg');
       background-size: cover;
       background-position: center center;
-    }
-  }
-
-  &__slide--active, {
-    & .glide__info {
-
-      & .info__btn {
-        opacity: 1;
-      }
-
-      & .info__price {
-        margin-bottom: 30px;
-        margin-right: 0;
-        opacity: 1;
-      }
-
-      & .info__text {
-        margin-top: 0;
-        opacity: 1;
-      }
     }
   }
 
   &__svg {
     position: absolute;
     right: 0;
+    top: 0;
   }
 
   &__info {
@@ -102,7 +62,7 @@
     position: absolute;
     top: 25%;
     right: 14%;
-    z-index: 100;
+    z-index: 0;
   }
 
   &__bullets {

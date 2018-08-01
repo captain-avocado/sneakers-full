@@ -14,21 +14,36 @@ const mainGlide = new Glide('.glide', {
     startAt: 0,
     perView: 1,
     gap: 0,
-    // autoplay: 5000,
+    autoplay: 5000,
     hoverpause: true,
     animationDuration: 500,
-    animationTimingFunc: 'linear',
+    animationTimingFunc: 'ease-in-out',
 }).mount();
 
+const glideInfo = $('.glide__info');
+const glideName = glideInfo.find('.info__text');
+const glidePrice = glideInfo.find('.info__price');
+const glideBtn = glideInfo.find('.info__btn');
+
+const glideData = [
+    { name: 'Nike Epic React Flyknit iD', price: '11 990р' },
+    { name: 'Vans SK8-HI', price: '4 790р' },
+    { name: 'Nike Metcon 4 iD', price: '10 490р' },
+];
+
+glideBtn.on('transitionend', function() {
+    if (glideInfo.hasClass('non-active')) {
+        glideName.text(glideData[mainGlide.index].name);
+        glidePrice.text(glideData[mainGlide.index].price);
+    }
+});
+
 mainGlide.on('run', function() {
-    console.log('starting');
-    $('.glide__slide--active').find('.info').addClass('non-active');
+    $('.glide').find('.info').addClass('non-active');
 });
 
 mainGlide.on('run.after', function() {
-    console.log('ending');
-
-    $('.glide__slide--active').find('.info').removeClass('non-active');
+    $('.glide').find('.info').removeClass('non-active');
 });
 
 new Glide('.glide--modal', {
