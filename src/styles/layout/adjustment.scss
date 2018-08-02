@@ -17,6 +17,10 @@ body {
     &_header {
         display: flex;
         justify-content: space-between;
+        @include phones {
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &_menu {
@@ -37,5 +41,8 @@ body {
 
     &_footer {
         display: flex;
+        @include phones {
+            flex-wrap: wrap;
+        }   
     }
 }

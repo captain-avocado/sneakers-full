@@ -11,7 +11,7 @@
   @include tablets {
     font-size: 11px;
   }
-  
+
   &__item {
     transition: color .5s;
     &.active, &:hover {
@@ -19,6 +19,10 @@
     }
     &:not(:last-of-type) {
       margin-right: 40px;
+      @include phones {
+        margin-right: 0;
+      }
     }
+    
   }
 }

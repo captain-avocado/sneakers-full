@@ -3,6 +3,14 @@
 
   &__item {
     border-left: 1px solid $borders-grey;
+
+    &:first-child, &:last-child {
+      @include phones {
+        display: none;
+      }
+    }
+
+
   }
 
   &__item:last-of-type {

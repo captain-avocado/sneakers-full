@@ -2,6 +2,9 @@
   height: 400px;
   position: relative;
   overflow: hidden;
+  @include phones {
+    height: 250px;   
+  }
 
   &--preview, &--modal {
     height: 100%;

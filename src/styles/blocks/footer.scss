@@ -8,12 +8,23 @@
   &__cols {
     display: flex;
     flex: 1;
+    @include phones {
+    flex-wrap: wrap; 
+    }
   }
 
   &__col {
     text-transform: uppercase;
     &:not(:last-of-type) {
       margin-right: auto;
+    }
+    @include phones {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      text-align: center;
     }
   }
 
@@ -25,6 +36,9 @@
   &__pay-info {
     max-width: 200px;
     margin-right: 135px;
+    @include phones {
+      order: 1;
+    }
   }
 
   &__title {
@@ -32,6 +46,9 @@
     font-weight: 700;
 
     margin-bottom: 40px;
+    @include phones {
+      margin-bottom: 25px;
+    }
   }
   
 }

@@ -13,6 +13,20 @@
   z-index: 1000;
   background: #fff;
 
+  &__city {
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include phones {
+      display: block;
+      margin-left: auto !important;
+    }
+  }
+
 
   &__popup {
     position: absolute;
@@ -31,14 +45,20 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
+    @include phones {
+      position: relative;
+      left: 0;
+      transform: none;
+    }
   }
 
   &__right {
     display: flex;
     position: relative;
-    // &.active {
-    //   width: 40%;
-    // }
+    @include phones {
+      display: none;
+    }
   }
 
   &__search {

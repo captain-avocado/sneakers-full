@@ -3,6 +3,8 @@ block head
     title Sneakers Shop
 block variables
 block content
+    button#scroll-up.scroll-up
+      i.fas.fa-angle-up
     .modal
       .modal__content
         .modal__gallery
@@ -206,6 +208,9 @@ block content
                   svg.cart__icon.icon
                     use(xlink:href=`images/sprite.svg#cart`)
                   .cart__num 3
+        button(type="button").header__burger.hamburger.hamburger--collapse
+          span.hamburger-box
+             span.hamburger-inner
     ul.menu
       .container.container_menu
         li.menu__item
@@ -272,7 +277,7 @@ block content
             .aside__filters.filters
               .filters__title.main-title
                 .main-title__text.no-right-border Фильтры
-                a(href="#").main-title__icon
+                a(href="#").main-title__icon.reset
                   i.fas.fa-redo
                 .main-title__hint Сбросить все
               ul.filters__list
