@@ -334,10 +334,18 @@ $('.reset').on('click', function(e) {
 });
 
 const hamburger = $('.hamburger');
-
 hamburger.on('click', function(e) {
     e.preventDefault();
     hamburger.toggleClass('is-active');
+});
+
+const openFiltersBtn = $('.open-filters');
+openFiltersBtn.on('click', function(e) {
+    e.preventDefault();
+    openFiltersBtn.toggleClass('is-active');
+    $('.modal-filters').toggleClass('is-active');
+    $('.scroll-up').toggleClass('is-hidden');
+    $('.hamburger').toggleClass('is-hidden');
 });
 
 $(document).on('scroll', function(e){

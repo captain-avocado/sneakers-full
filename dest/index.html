@@ -15,7 +15,84 @@
     <title>Sneakers Shop</title>
   </head>
   <body>
+    <div class="modal-filters">
+      <ul class="modal-filters__list">
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#sort"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Сортировать</div>
+            <div class="modal-filters__choosed">По названию</div>
+          </div>
+        </li>
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#organization"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Категории</div>
+            <div class="modal-filters__choosed">Мужские</div>
+          </div>
+        </li>
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#flyers"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Бренды</div>
+            <div class="modal-filters__choosed">Все бренды</div>
+          </div>
+        </li>
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#money"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Цена</div>
+            <div class="modal-filters__choosed">От 500 руб до 5 000 руб</div>
+          </div>
+        </li>
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#color"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Цвета</div>
+            <div class="modal-filters__choosed">Все цвета</div>
+          </div>
+        </li>
+        <li class="modal-filters__item">
+          <div class="modal-filters__icon">
+            <svg class="modal-filters__svg">
+              <use xlink:href="images/sprite.svg#meter"></use>
+            </svg>
+          </div>
+          <div class="modal-filters__text">
+            <div class="modal-filters__name">Размер</div>
+            <div class="modal-filters__choosed">Все размеры</div>
+          </div>
+        </li>
+      </ul>
+      <div class="modal-filters__reset">Сбросить все</div>
+    </div>
     <button class="scroll-up" id="scroll-up"><i class="fas fa-angle-up"></i></button>
+    <button class="open-filters" id="open-filters">
+      <svg class="open-filters__icon">
+        <use xlink:href="images/sprite.svg#filter"></use>
+      </svg>
+      <div class="open-filters__cross"></div>
+    </button>
     <div class="modal">
       <div class="modal__content">
         <div class="modal__gallery">
