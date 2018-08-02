@@ -4,4 +4,23 @@
     display: flex;
     width: 100%;
   }
+
+  &__list {
+    @include tablets {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    &:nth-child(2n) {
+      & .title__text {
+        @include tablets {
+          border-left: none;
+        }
+      }
+    }
+    @include tablets {
+      width: 50%;
+    }
+  }
 }

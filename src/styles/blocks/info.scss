@@ -15,9 +15,15 @@
       opacity: 1;
       margin-top: 0;
     }
+    @include tablets {
+      font-size: 16px;
+    }
   }
   &__price {
     font-size: 38px;
+    @include tablets {
+      font-size: 32px;
+    }
     font-weight: 700;
     text-align: right;
     opacity: 1;

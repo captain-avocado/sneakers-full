@@ -2,15 +2,14 @@
 
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -35px;
 
   &__item {
-    flex: 1;
+    // flex: 1;
     margin-bottom: 75px;
-    // &:not(:nth-of-type(2n)) {
-    //   margin-right: 70px;
-    // }
-    margin-left: 70px;
-    min-width: 35%;
+    width: 50%;
+    padding: 0 35px;
+    
     
 
   }

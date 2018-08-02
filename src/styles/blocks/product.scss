@@ -104,45 +104,18 @@
     height: inherit;
   }
 
-  // &__company {
-  //   color: #6d6d6d;
-  //   font-size: 14px;
-  //   font-weight: 700;
-  //   margin-bottom: 5px;
-  // }
-
   &__text {
     margin-bottom: auto;
   }
-  // &__name {
-  //   color: #000;
-  //   font-size: 16px;
-  //   font-weight: 400;
-  //   text-transform: uppercase;
-  // }
 
   &__img {
     align-self: center;
     margin-bottom: 75px;
     max-width: 80%;
     height: 120px;
+
+    @include tablets {
+      height: 100px;
+    }
   }
-
-  // &__bottom-row {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  // }
-
-  // &__btn {
-  //   background-color: #3151cc;
-  //   color: #fff;
-  //   font-weight: 400;
-  // }
-
-  // &__price {
-  //   font-size: 20px;
-  //   font-weight: 700;
-  // }
-
 }

@@ -1,4 +1,9 @@
 .filter {
+
+  @include tablets {
+    position: relative;
+  }
+
   &_sort {
     position: relative;
   }
@@ -23,6 +28,13 @@
 
     background-color: #fbfbfb;
     border: 1px solid #ececec;
+
+    @include tablets {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+    }
 
     &_sort {
       position: absolute;

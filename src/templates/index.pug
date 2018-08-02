@@ -82,20 +82,6 @@ block content
           .modal__bottom-row.product-buy.product-buy_modal
             .product-buy__price.product-buy__price_modal 10 490 р
             a(href="#").product-buy__btn.btn.btn_buy Купить
-    ul.menu-fixed
-      .container.container_menu
-        li.menu__item
-          a.menu__link(href="#") новая коллекция
-        li.menu__item
-          a.menu__link(href="#") мужские
-        li.menu__item
-          a.menu__link(href="#") женские
-        li.menu__item
-          a.menu__link(href="#") детские
-        li.menu__item
-          a.menu__link(href="#") распродажи
-        li.menu__item.active
-          a.menu__link(href="#") все кроссовки
     header.header
       .city-popup.header__popup.header__popup_city.popup.popup_city
         .popup__triangle
@@ -534,36 +520,9 @@ block content
                 .info__price.info__price_banner 3 990
           .content
             .content__header
-              //- .content__view.view
-                .view__title.title
-                  .title__text.title__text_view.no-left-border Вид
-                  a(href="#").title__icon.title__icon_view.no-left-border.active
-                    i.fas.fa-th
-                  a(href="#").title__icon.title__icon_view.no-left-border.no-right-border
-                    i.fas.fa-th-list
-              //- .content__sort.filter.filter_sort
-                  .filter__title.title
-                    .title__text Сортировать
-                    a(href="#")#sort-btn.title__icon.title__icon_sort.no-left-border
-                      i.fas.fa-angle-down
-                  ul#sort-content.filter__content.filter__content_sort.categories.no-top-border.no-bottom-border
-                    li.categories__item.category
-                      label.category__label.label
-                        input(type="radio" name="sort" checked).category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name по названию
-                    li.categories__item.category
-                      label.category__label.label
-                        input(type="radio" name="sort").category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name по цене (от дорогих к дешевым)
-                    li.categories__item.category
-                      label.category__label.label
-                        input(type="radio" name="sort").category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name по цене (от дешевых к дорогим)
             ul.content__goods.goods
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -589,7 +548,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -615,7 +575,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -641,7 +602,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -667,7 +629,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -693,7 +656,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -719,7 +683,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text
@@ -745,7 +710,8 @@ block content
                             .color-fake(data-color="pink")
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-              li.goods__item.product
+              li.goods__item
+                .product
                   .product__sale
                   .product__top-row
                     .product__text.product-text

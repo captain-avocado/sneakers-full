@@ -55,6 +55,10 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @include tablets {
+      width: 500px;
+    }
   }
 
   &__info {

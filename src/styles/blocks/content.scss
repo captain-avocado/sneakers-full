@@ -1,23 +1,11 @@
 .content {
-  width: 70%;
-  &__goods {
-    // margin-left: 70px;
-    // margin-top: 75px;
+  margin-left: 70px;
+  
+  @include tablets {
+    margin-left: 0;
   }
-  // &__header {
-  //   display: flex;
-  // }
-
-  // &__view {
-  //   width: 54%;
-  // }
-
-  // &__sort {
-  //   width: 46%;
-  // }
 
   &__pagination {
-    margin-left: 70px;
     margin-bottom: 70px;
   }
 }

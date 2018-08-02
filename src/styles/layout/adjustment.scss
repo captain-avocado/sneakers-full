@@ -30,6 +30,9 @@ body {
 
     &_main-content {
         display: flex;
+        @include tablets {
+            flex-wrap: wrap;
+        }
     }
 
     &_footer {
