@@ -3,6 +3,10 @@
   justify-content: center;
   margin-bottom: 25px;
 
+  @include phones {
+    margin-top: 68px;
+  }
+
   &__img {
     width: 100%;
   }

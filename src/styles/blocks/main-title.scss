@@ -23,7 +23,7 @@
     opacity: 0;
     transition: opacity .2s, right .3s;
     position: absolute;
-    right: 50px;
+    right: 75px;
     top: 50%;
     z-index: 100;
     transform: translateY(-50%);
@@ -42,8 +42,21 @@
       transform: translateY(-50%);
     }
   }
+
+  &__reset-angle {
+    width: 12px;
+    height: 12px;
+    fill: $bg-blue;
+
+    position: absolute;
+    display: block;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__icon {
-    &:hover +.main-title__hint{
+    &:hover +.main-title__hint {
         opacity: 1;
         right: 100px;
     }

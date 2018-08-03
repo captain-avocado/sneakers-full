@@ -2,6 +2,12 @@
   padding: 30px 20px;
   opacity: 0;
   transition: opacity .3s;
+  display: none;
+  
+  @include phones {
+    display: block;
+  }
+
   &.is-active {
     z-index: 10000;
     opacity: 1;

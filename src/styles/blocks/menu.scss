@@ -12,6 +12,10 @@
     font-size: 11px;
   }
 
+  @include phones {
+    display: none;
+  }
+
   &__item {
     transition: color .5s;
     &.active, &:hover {

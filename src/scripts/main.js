@@ -296,8 +296,8 @@ $('.input-search').blur(function() {
 });
 
 
-var modal = document.querySelector('.modal');
-var triggers = $('.modal-trigger');
+const modal = document.querySelector('.modal');
+const triggers = $('.modal-trigger');
 // var closeButton = document.querySelector(".close-button");
 
 function toggleModal() {
@@ -314,6 +314,7 @@ triggers.on('click', function(e) {
     e.preventDefault();
     toggleModal();
 });
+
 window.addEventListener('click', windowOnClick);
 
 
@@ -348,7 +349,7 @@ openFiltersBtn.on('click', function(e) {
     $('.hamburger').toggleClass('is-hidden');
 });
 
-$(document).on('scroll', function(e){
+$(document).on('scroll', function(){
     if (window.scrollY > 0) {
         $('.scroll-up').addClass('is-active');
     } else {

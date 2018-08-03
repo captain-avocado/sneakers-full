@@ -10,7 +10,6 @@
   font-weight: 400;
   transition: box-shadow .3s;
   &:hover {
-      
     box-shadow: 3px 3px 15px rgba(0,0,0,0.15);
   }
 
@@ -48,6 +47,25 @@
     }
 
     display: block;
+  }
+
+  &_buy {
+    background-color: #3151cc;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  &_cart {
+    background-color: #fff;
+    border: 1px solid #4A4A4A;
+    color: #4A4A4A;
+    transition: border-color .3s, color .3;
+
+    &:hover {
+      border-color: $bg-blue;
+      color: $bg-blue;
+      box-shadow: none;
+    }
   }
 
 }
