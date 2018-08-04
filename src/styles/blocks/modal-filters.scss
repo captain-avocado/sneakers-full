@@ -3,7 +3,7 @@
   opacity: 0;
   transition: opacity .3s;
   display: none;
-  
+
   @include phones {
     display: block;
   }

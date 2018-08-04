@@ -318,9 +318,9 @@ triggers.on('click', function(e) {
 window.addEventListener('click', windowOnClick);
 
 ////svg
-if (window.innerWidth <= 768) {
-    $('.glide__svg').attr('viewBox', '0 0 500 600');
-}
+// if (window.innerWidth <= 768) {
+//     $('.glide__svg').attr('viewBox', '0 0 500 600');
+// }
 
 $('.reset').on('click', function(e) {
     e.preventDefault();

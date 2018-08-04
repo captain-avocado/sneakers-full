@@ -2,6 +2,7 @@
   height: 400px;
   position: relative;
   overflow: hidden;
+
   @include phones {
     height: 250px;   
   }
@@ -58,10 +59,21 @@
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    opacity: .7;
+  }
 
-    @include tablets {
-      width: 500px;
-    }
+  &__triangle {
+    width: 0;
+    height: 0;
+    border-top: 400px solid #000;
+    border-left: 250px solid transparent;
+  }
+
+  &__rectangle {
+    width: 30vw;
+    height: 400px;
+    background: #000;
   }
 
   &__info {
