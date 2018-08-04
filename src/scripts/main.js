@@ -46,8 +46,8 @@ mainGlide.on('run.after', function() {
     $('.glide').find('.info').removeClass('non-active');
 });
 
-new Glide('.glide--modal', {
-    type: 'carousel',
+const modalGlide = new Glide('.glide--modal', {
+    type: 'slider',
     startAt: 0,
     perView: 1,
     gap: 0,
@@ -57,16 +57,31 @@ new Glide('.glide--modal', {
     animationTimingFunc: 'linear',
 }).mount();
 
-new Glide('.glide--preview', {
+const previewGlide = new Glide('.glide--preview', {
     type: 'slider',
     startAt: 0,
     perView: 3,
+    // focusAt: 'center',
     gap: 30,
     // autoplay: 5000,
     hoverpause: true,
     animationDuration: 500,
     animationTimingFunc: 'linear',
 }).mount();
+
+const slidesNum = $('ul.glide__slides_preview li').length;
+
+
+modalGlide.on('run', function() {
+    previewGlide.go(`=${modalGlide.index}`);
+    console.log(slidesNum, modalGlide.index);
+});
+
+previewGlide.on('run', function() {
+    modalGlide.go(`=${previewGlide.index}`);
+    console.log(slidesNum, previewGlide.index);
+
+});
 
 
 const slider = $('#price-slider').data('ionRangeSlider');
@@ -316,11 +331,6 @@ triggers.on('click', function(e) {
 });
 
 window.addEventListener('click', windowOnClick);
-
-////svg
-// if (window.innerWidth <= 768) {
-//     $('.glide__svg').attr('viewBox', '0 0 500 600');
-// }
 
 $('.reset').on('click', function(e) {
     e.preventDefault();

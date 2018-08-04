@@ -27,6 +27,13 @@
       background-size: cover;
       background-position: center center;
       border: 1px solid #ececec;
+
+      opacity: .6;
+      transition: opacity .3s;
+    }
+
+    &--active {
+      opacity: 1;
     }
 
     &_modal {
@@ -139,6 +146,14 @@
     &_right {
       right: 5%;
     }
+
+    &_preview-left {
+      left: -13%;
+    }
+
+    &_preview-right {
+      right: -13%;
+    }
   }
 
   &__icon {
@@ -148,6 +163,14 @@
     
     &_left {
       transform: rotate(180deg);
+    }
+
+    &_preview {
+      fill: #4a4a4a;
+
+      &:hover {
+        fill: $bg-blue;
+      }
     }
   }
 
