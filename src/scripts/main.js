@@ -233,7 +233,7 @@ $('.icons__link_search').on('click', function(e) {
         setTimeout(function(){
             inputSearch.addClass('used');
             inputSearch.focus();
-        }, 550);
+        }, 250);
     } else if (!hasUsed) {
         inputSearch.removeClass('used');
         hasUsed = false;
@@ -254,7 +254,7 @@ $(document).on('click', function(e) {
         search.removeClass('active');
         setTimeout(function(){
             searchIcon.removeClass('active');
-        }, 350);
+        }, 250);
         // searchIcon.removeClass('active');
         // });
     }
@@ -317,7 +317,7 @@ triggers.on('click', function(e) {
 
 window.addEventListener('click', windowOnClick);
 
-
+////svg
 if (window.innerWidth <= 768) {
     $('.glide__svg').attr('viewBox', '0 0 500 600');
 }

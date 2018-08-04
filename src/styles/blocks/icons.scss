@@ -1,11 +1,21 @@
 .icons {
   display: flex;
-  &__item:not(:last-of-type) {
-    margin-right: 40px;
+  &__item {
+    &_search {
+      @include tablets {
+        display: none;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 40px;
+    }
+
+    &:last-of-type {
+      margin-right: 10px;
+    }
   }
-  &__item:last-of-type {
-    margin-right: 10px;
-  }
+  
   &__link {
     &:not(.icons__link_search) {
       display: block;

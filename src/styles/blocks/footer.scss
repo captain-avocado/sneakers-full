@@ -8,16 +8,28 @@
   &__cols {
     display: flex;
     flex: 1;
+
+    @include tablets {
+      flex: 3;
+    }
+
     @include phones {
-    flex-wrap: wrap; 
+      flex-wrap: wrap; 
     }
   }
 
   &__col {
     text-transform: uppercase;
+
+    @include tablets {
+      padding: 0 15px;
+      flex: 1;
+    }
+
     &:not(:last-of-type) {
       margin-right: auto;
     }
+    
     @include phones {
       width: 100%;
       display: flex;
@@ -36,6 +48,14 @@
   &__pay-info {
     max-width: 200px;
     margin-right: 135px;
+
+    @include tablets {
+      max-width: none;
+      margin-right: 0;
+      flex: 1;
+      padding: 0 15px;
+    }
+
     @include phones {
       order: 1;
     }
