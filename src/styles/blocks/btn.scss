@@ -59,8 +59,8 @@
     background-color: #fff;
     border: 1px solid #4A4A4A;
     color: #4A4A4A;
-    transition: border-color .3s, color .3;
-
+    transition: color .3s, border-color .3s;
+    
     &:hover {
       border-color: $bg-blue;
       color: $bg-blue;

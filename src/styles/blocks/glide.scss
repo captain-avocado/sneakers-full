@@ -30,6 +30,12 @@
 
       opacity: .6;
       transition: opacity .3s;
+      display: flex;
+      align-items: center;
+
+      & img {
+        max-width: 100%;
+      }
     }
 
     &--active {

@@ -39,6 +39,10 @@
     &_auth {
       right: 0;
     }
+
+    @include tablets {
+      top: 105%;
+    }
   }
 
   &__logo {

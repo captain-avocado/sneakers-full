@@ -62,7 +62,7 @@ const previewGlide = new Glide('.glide--preview', {
     startAt: 0,
     perView: 3,
     // focusAt: 'center',
-    gap: 30,
+    // gap: 30,
     // autoplay: 5000,
     hoverpause: true,
     animationDuration: 500,

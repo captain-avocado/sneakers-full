@@ -19,6 +19,7 @@
     
     @include tablets {
       padding: 0 15px;
+      margin-bottom: 30px;
     }
 
     @include phones {
