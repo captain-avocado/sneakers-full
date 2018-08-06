@@ -9,6 +9,10 @@
       font-size: 28px;
     }
 
+    @include tablets {
+      font-size: 18px;
+    }
+
   }
   &__company {
     color: #6d6d6d;
@@ -18,6 +22,10 @@
 
     @include tablets {
       font-size: 18px;
+    }
+
+    @include phones {
+      font-size: 14px;
     }
 
   }

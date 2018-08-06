@@ -118,7 +118,7 @@
     }
     &_tablets {
       display: none;
-      
+
       @include tablets {
         display: flex;
       }
@@ -128,11 +128,20 @@
       @include tablets {
         width: 50%;
       }
+
+      @include phones {
+        width: 100%;
+      }
     }
 
     &_colors {
+
       @include tablets {
         width: 50%;
+      }
+
+      @include phones {
+        width: 100%;
       }
     }
     
@@ -146,6 +155,10 @@
 
     @include tablets {
       font-size: 28px;
+    }
+
+    @include phones {
+      font-size: 18px;
     }
   }
 
@@ -170,8 +183,21 @@
       justify-content: flex-start;
     }
 
+    @include phones {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     & .btn:not(:last-of-type) {
-      margin-right: 20px;
+
+      @include tablets {
+        margin-right: 20px;
+      }
+
+      @include phones {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -196,6 +222,11 @@
     @include tablets {
       position: static;
       transform: none;
+      width: 80%;
+    }
+
+    @include phones {
+      height: 50px;
     }
 
   }
