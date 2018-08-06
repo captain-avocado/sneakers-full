@@ -4,6 +4,11 @@
     width: 40%;
     flex-wrap: wrap;
     margin-bottom: -20px;
+
+    @include tablets {
+      width: 30%;
+    }
+    
   }
   &__item {
     &:not(:last-of-type) {

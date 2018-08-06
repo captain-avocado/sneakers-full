@@ -13,6 +13,7 @@ export default function triggerPopup(popupTrigger, popup) {
         if (popup !== '.city-popup') {
             offset -= $(popup).offset().left;
             if (window.innerWidth > 1200) offset -= 17;
+            else offset += 3;
             offset -= 15;
         } else {
             offset += 10;
