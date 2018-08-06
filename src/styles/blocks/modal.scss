@@ -25,7 +25,7 @@
 
     @include tablets {
       width: 90%;
-      height: 90%;
+      max-height: 90%;
       overflow: auto;
       display: block;
     }
@@ -74,9 +74,10 @@
     }
 
     @include tablets {
-      display: block;
-      min-height: 400px;
+      display: flex;
+      flex-direction: column;
       width: 100%;
+      margin-bottom: 30px;
     }
   }
 
@@ -91,19 +92,61 @@
 
   }
 
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+
+    // @include tablets {
+    //   margin-bottom: 10px;
+    // }
+  }
+
   &__row {
     margin-bottom: 30px;
-    &:first-child {
+    width: 100%;
+
+    &_desktop {
+      @include tablets {
+        display: none;
+      }
+    }
+
+    &_product-text {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
+    &_tablets {
+      display: none;
+      
+      @include tablets {
+        display: flex;
+      }
+    }
+
+    &_sizes {
+      @include tablets {
+        width: 50%;
+      }
+    }
+
+    &_colors {
+      @include tablets {
+        width: 50%;
+      }
+    }
+    
+
   }
 
   &__product-price {
     font-size: 22px;
     color: #000;
     font-weight: 700;
+
+    @include tablets {
+      font-size: 28px;
+    }
   }
 
   &__descr, &__code {
@@ -122,6 +165,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablets {
+      justify-content: flex-start;
+    }
+
+    & .btn:not(:last-of-type) {
+      margin-right: 20px;
+    }
   }
 
   &__slider {
@@ -130,6 +181,7 @@
   
     @include tablets {
       position: static;
+      margin-bottom: 20px;
     }
   
   }
@@ -142,8 +194,8 @@
     width: 70%;
 
     @include tablets {
-      left: 50%;
-      transform: translateX(-50%);
+      position: static;
+      transform: none;
     }
 
   }

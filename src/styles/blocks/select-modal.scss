@@ -4,6 +4,10 @@
 
   &__title {
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+
+    @include tablets{ 
+      font-size: 18px;
+    }
   }
 }

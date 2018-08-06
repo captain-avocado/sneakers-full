@@ -6,7 +6,8 @@
     margin-bottom: -20px;
 
     @include tablets {
-      width: 30%;
+      max-width: 200px;
+      width: auto;
     }
     
   }

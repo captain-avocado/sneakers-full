@@ -4,11 +4,21 @@
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
+
+    @include tablets {
+      font-size: 28px;
+    }
+
   }
   &__company {
     color: #6d6d6d;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 5px;
+
+    @include tablets {
+      font-size: 18px;
+    }
+
   }
 }

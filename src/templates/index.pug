@@ -59,6 +59,11 @@ block content
         a(href="#").modal__close.modal-trigger
           svg.modal__close-icon
             use(xlink:href="images/sprite.svg#close")
+        .modal__row.modal__row_tablets.modal__row_product-text
+              .product-text
+                .product-text__company Nike
+                .product-text__name Men's Air More
+              .modal__product-price 10 490 р
         .modal__gallery
           .modal__slider
             .glide--modal.glide--ltr.glide--carousel.glide--swipeable.glide--slider
@@ -97,12 +102,12 @@ block content
                     use(xlink:href="images/sprite.svg#arrow")
         .modal__info
           .modal__text
-            .modal__row
+            .modal__row.modal__row_product-text.modal__row_desktop
               .product-text
                 .product-text__company Nike
                 .product-text__name Men's Air More
               .modal__product-price 10 490 р
-            .modal__row.select-modal
+            .modal__row.select-modal.modal__row_sizes
               .select-modal__title Размеры
               ul.select-modal__list.categories.categories_modal-sizes
                 li.categories__item.categories__item_modal-sizes.category
@@ -135,7 +140,7 @@ block content
                     input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
                     .category__radio-fake.radio-fake.radio-fake_modal-sizes
                     .category__name 44
-            .modal__row.select-modal
+            .modal__row.select-modal.modal__row_colors
               .select-modal__title Цвета
               ul.sneaker-colors.select-modal__list
                 li.sneaker-colors__item
