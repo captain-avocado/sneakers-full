@@ -137,20 +137,16 @@
     }
 
     &_sizes {
-      @include tablets {
-        width: 50%;
-      }
 
+      width: 50%;
+      
       @include phones {
         width: 100%;
       }
     }
 
     &_colors {
-
-      @include tablets {
-        width: 50%;
-      }
+      width: 50%;
 
       @include phones {
         width: 100%;
@@ -161,7 +157,7 @@
   }
 
   &__product-price {
-    font-size: 22px;
+    font-size: 24px;
     color: #000;
     font-weight: 700;
 
@@ -176,8 +172,8 @@
 
   &__descr, &__code {
     margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 300;
     color: #000;
   }

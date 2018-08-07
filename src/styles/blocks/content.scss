@@ -5,6 +5,10 @@
     margin-left: 0;
   }
 
+  @include phones {
+    width: 100%;
+  }
+
   &__pagination {
     margin-bottom: 70px;
   }

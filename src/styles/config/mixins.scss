@@ -16,6 +16,12 @@
   }
 }
 
+@mixin phones-landscape {
+  @media (max-width: 760px) and (orientation: landscape) {
+    @content;
+  }
+}
+
 @mixin phones-small {
   @media (max-width: 320px) {
     @content;

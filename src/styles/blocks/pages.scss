@@ -4,9 +4,16 @@
   &__item {
     border-left: 1px solid $borders-grey;
 
-    &:first-child, &:last-child {
+    &.active:not(:first-child) +.pages__item {
+      border-right: 1px solid #ececec;
+    }
+
+    &.hidden {
       @include phones {
-        display: none;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        transition: all .5s;
       }
     }
 

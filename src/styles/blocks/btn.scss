@@ -4,6 +4,7 @@
   color: #2a2a2a;
   border-radius: 50px;
   font-size: 16px;
+
   @include tablets {
     font-size: 14px;
   }
@@ -60,7 +61,7 @@
     border: 1px solid #4A4A4A;
     color: #4A4A4A;
     transition: color .3s, border-color .3s;
-    
+
     &:hover {
       border-color: $bg-blue;
       color: $bg-blue;

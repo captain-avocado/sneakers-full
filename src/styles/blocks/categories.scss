@@ -1,12 +1,11 @@
 .categories {
   &_modal-sizes {
     display: flex;
-    width: 40%;
+    max-width: 200px;
     flex-wrap: wrap;
     margin-bottom: -20px;
 
     @include tablets {
-      max-width: 200px;
       width: auto;
     }
     

@@ -1,6 +1,11 @@
 .pagination {
   display: flex;
   height: 75px;
+
+  @include phones {
+    height: 50px;
+  }
+
   justify-content: space-between;
   border: 1px solid $borders-grey;
 
@@ -23,6 +28,11 @@
   
   &__icon {
     width: 75px;
+
+    @include phones {
+      width: 50px;
+    }
+    
     height: 100%;
     display: flex;
     justify-content: center;

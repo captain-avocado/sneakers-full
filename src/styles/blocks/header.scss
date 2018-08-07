@@ -13,6 +13,10 @@
   z-index: 1000;
   background: #fff;
 
+  @include phones {
+    position: static;
+  }
+
   &__city {
     @include phones {
       display: none;
@@ -23,7 +27,13 @@
     display: none;
     @include phones {
       display: block;
-      margin-left: auto !important;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+    }
+
+    @include phones-landscape {
+      right: 20px;
     }
   }
 

@@ -18,12 +18,22 @@
     @include tablets {
       font-size: 16px;
     }
+
+    @include phones {
+      font-size: 12px;
+    }
   }
   &__price {
     font-size: 38px;
+
     @include tablets {
       font-size: 32px;
     }
+
+    @include phones {
+      font-size: 26px;
+    }
+
     font-weight: 700;
     text-align: right;
     opacity: 1;
@@ -45,6 +55,11 @@
   &__btn {
     transition: opacity .3s;
     opacity: 1;
+    
+    @include phones {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
   }
 
 

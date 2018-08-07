@@ -52,6 +52,10 @@ body {
         @include tablets {
             flex-wrap: wrap;
         }
+
+        @include phones-small {
+            padding: 0 10px;
+        }
     }
 
     &_footer {

@@ -92,6 +92,12 @@ previewGlide.on('run', function() {
     modalGlide.go(`=${previewGlide.index}`);
 });
 
+const previewSlide = $('.glide__slide_preview');
+previewSlide.on('click', function(e) {
+    const reqIndex = $(e.currentTarget).index();
+    modalGlide.go(`=${reqIndex}`);
+    previewGlide.go(`=${reqIndex}`);
+});
 
 const slider = $('#price-slider').data('ionRangeSlider');
 const fromInput = $('#price-from');
@@ -160,20 +166,45 @@ function updateProducts(curPage) {
 prevBtn.on('click', function(e) {
     e.preventDefault();
     if (curPage > 1) {
+
+        if (window.innerWidth <= 760) {
+            if (curPage === 3 || curPage === 4) {
+                $('.pages__item').eq(curPage).addClass('hidden');
+                $('.pages__item').eq(curPage - 3).removeClass('hidden');
+            }
+        }
+
         $('.pages__item').eq(curPage - 1).removeClass('active');
         curPage--;
         $('.pages__item').eq(curPage - 1).addClass('active');
+
         updateProducts(curPage);
+
+
+
     }
 });
 
 nextBtn.on('click', function(e) {
+    console.log(curPage);
+
     e.preventDefault();
+    console.log(e.currentTarget);
     if (curPage < 5) {
+
+        if (window.innerWidth <= 760) {
+            if (curPage === 3 || curPage === 2)  {
+                $('.pages__item').eq(curPage + 1).removeClass('hidden');
+                $('.pages__item').eq(curPage - 2).addClass('hidden');
+            }
+        }
+
+
+
         $('.pages__item').eq(curPage - 1).removeClass('active');
         curPage++;
         $('.pages__item').eq(curPage - 1).addClass('active');
-        updateProducts(curPage);
+        // updateProducts(curPage);
     }
 });
 
@@ -357,7 +388,9 @@ $('.reset').on('click', function(e) {
 const hamburger = $('.hamburger');
 hamburger.on('click', function(e) {
     e.preventDefault();
-    hamburger.toggleClass('is-active');
+    if (!$('.open-filters').hasClass('is-active')) {
+        hamburger.toggleClass('is-active');
+    }
 });
 
 const openFiltersBtn = $('.open-filters');
@@ -367,6 +400,9 @@ openFiltersBtn.on('click', function(e) {
     $('.modal-filters').toggleClass('is-active');
     $('.scroll-up').toggleClass('is-hidden');
     $('.hamburger').toggleClass('is-hidden');
+    $('body').toggleClass('active');
+    $('.hamburger').toggleClass('hidden');
+    $('.scroll-up').toggleClass('hidden');
 });
 
 $(document).on('scroll', function(){
@@ -379,7 +415,9 @@ $(document).on('scroll', function(){
 
 $('.scroll-up').on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({
-        scrollTop: 0,
-    }, 500);
+    if (!$('.open-filters').hasClass('is-active')) {
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 500);
+    }
 });

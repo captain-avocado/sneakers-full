@@ -1,5 +1,10 @@
 .scroll-up {
   display: none;
+
+  &.hidden {
+    opacity: .4 !important;
+  }
+
   @include phones {
     display: block;
   }
@@ -8,7 +13,7 @@
   position: fixed;
   right: 5%;
   bottom: 30px;
-  z-index: 1000;
+  z-index: 10000;
   opacity: 0;
   transition: opacity .3s;
   &.is-active {

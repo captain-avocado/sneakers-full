@@ -87,6 +87,10 @@
     width: 30vw;
     height: 400px;
     background: #000;
+    
+    @include phones {
+      width: 15vw;
+    }
   }
 
   &__info {
