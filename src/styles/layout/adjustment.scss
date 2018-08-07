@@ -9,6 +9,10 @@ body {
     color: $text-black;
 
     position: relative;
+
+    &.active {
+        overflow: hidden;
+    }
 }
 
 .container {

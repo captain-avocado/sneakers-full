@@ -56,9 +56,10 @@ block content
       .open-filters__cross
     .modal
       .modal__content
-        a(href="#").modal__close.modal-trigger
+        a(href="#").modal__close.modal-trigger.modal__close_top
           svg.modal__close-icon
             use(xlink:href="images/sprite.svg#close")
+        
         .modal__row.modal__row_tablets.modal__row_product-text
               .product-text
                 .product-text__company Nike
@@ -162,8 +163,9 @@ block content
           .modal__bottom-row
             a(href="#").btn.btn_buy Купить в один клик
             a(href="#").btn.btn_cart Добавить в корзину
-
-
+            a(href="#").modal__close.modal-trigger.modal__close_bottom
+              svg.modal__close-icon
+                use(xlink:href="images/sprite.svg#close")
     header.header
       .city-popup.header__popup.header__popup_city.popup.popup_city
         .popup__triangle

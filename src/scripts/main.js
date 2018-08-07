@@ -2,6 +2,9 @@ import 'ion-rangeslider/css/ion.rangeSlider.css';
 import 'ion-rangeslider/css/ion.rangeSlider.skinHTML5.css';
 import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
+// import Glide, { Breakpoints } from '@glidejs/glide/dist/glide.modular.esm';
+// '@glidejs/glide/dist/glide.modular.esm';
+
 import Glide from '@glidejs/glide';
 
 import triggerPopup from './modules/triggerPopup';
@@ -55,6 +58,12 @@ const modalGlide = new Glide('.glide--modal', {
     hoverpause: true,
     animationDuration: 500,
     animationTimingFunc: 'linear',
+    breakpoints: {
+        760: {
+            dragDistance: false,
+            touchDistance: false,
+        },
+    },
 }).mount();
 
 const previewGlide = new Glide('.glide--preview', {
@@ -67,20 +76,20 @@ const previewGlide = new Glide('.glide--preview', {
     hoverpause: true,
     animationDuration: 500,
     animationTimingFunc: 'linear',
+    breakpoints: {
+        760: {
+            dragDistance: false,
+            touchDistance: false,
+        },
+    },
 }).mount();
-
-const slidesNum = $('ul.glide__slides_preview li').length;
-
 
 modalGlide.on('run', function() {
     previewGlide.go(`=${modalGlide.index}`);
-    console.log(slidesNum, modalGlide.index);
 });
 
 previewGlide.on('run', function() {
     modalGlide.go(`=${previewGlide.index}`);
-    console.log(slidesNum, previewGlide.index);
-
 });
 
 
@@ -317,6 +326,7 @@ const triggers = $('.modal-trigger');
 
 function toggleModal() {
     modal.classList.toggle('active');
+    document.body.classList.toggle('active');
 }
 
 function windowOnClick(event) {
