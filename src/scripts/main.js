@@ -217,7 +217,26 @@ $('.pages__item').on('click', function(e) {
     if (activeItem.index() !== curItem.index()) {
         activeItem.removeClass('active');
         curItem.addClass('active');
+        const prevCurPage = curPage;
         curPage = curItem.index() + 1;
+
+        if (prevCurPage < curPage) {
+            if (window.innerWidth <= 760) {
+                if (curPage === 3 || curPage === 2)  {
+                    $('.pages__item').eq(curPage + 1).removeClass('hidden');
+                    $('.pages__item').eq(curPage - 2).addClass('hidden');
+                }
+            }
+        } else {
+
+            if (window.innerWidth <= 760) {
+                if (curPage === 3 || curPage === 4) {
+                    $('.pages__item').eq(curPage).addClass('hidden');
+                    $('.pages__item').eq(curPage - 3).removeClass('hidden');
+                }
+            }
+        }
+
         updateProducts(curPage);
     }
     
