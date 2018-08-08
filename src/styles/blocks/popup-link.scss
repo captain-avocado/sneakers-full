@@ -1,0 +1,14 @@
+.popup-link {
+  color: $bg-blue;
+  font-weight: 400;
+  transition: font-weight .1s;
+  font-size: 16px;
+
+  &:hover {
+    font-weight: 600;
+  }
+
+  &_exit {
+    color: #d15a5a;
+  }
+}

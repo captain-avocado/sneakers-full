@@ -1,0 +1,9 @@
+.auth-exit {
+    font-size: 16px;
+    color: #D15A5A;
+    margin-top: 25px;
+    transition: font-weight .1s;
+    &:hover {
+      font-weight: 600;
+    }
+}

@@ -18,7 +18,7 @@
   height: 50px;
   border-radius: 50%;
   background: #fff;
-  z-index: 10000;
+  z-index: 1000;
 
   &__cross {
     position: absolute;
@@ -50,7 +50,7 @@
     }
   }
   &.is-active {
-
+    z-index: 10000;
     &:before {
       border: 1px solid $bg-blue;
       background-color: transparent;

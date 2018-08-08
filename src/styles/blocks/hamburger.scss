@@ -9,11 +9,7 @@ $hamburger-hover-opacity: 1;
   position: relative;
   width: 50px;
   height: 50px;
-  z-index: 10000;
-
-  &.hidden {
-    opacity: .4;
-  }
+  z-index: 1000;
 
   &-box {
     position: absolute !important;
@@ -23,6 +19,7 @@ $hamburger-hover-opacity: 1;
   }
 
   &.is-active {
+    z-index: 10000;
     &:before {
       border: 1px solid $bg-blue;
       background-color: transparent;

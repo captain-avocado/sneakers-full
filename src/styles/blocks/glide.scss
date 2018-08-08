@@ -81,6 +81,10 @@
     height: 0;
     border-top: 400px solid #000;
     border-left: 250px solid transparent;
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__rectangle {
@@ -89,7 +93,7 @@
     background: #000;
     
     @include phones {
-      width: 15vw;
+      width: 100vw;
     }
   }
 
@@ -99,6 +103,12 @@
     top: 25%;
     right: 14%;
     z-index: 0;
+
+    @include phones {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__bullets {
@@ -111,6 +121,12 @@
 
     display: flex;
     align-items: center;
+
+    @include phones {
+      left: 50% !important;
+      right: auto;
+      transform: translateX(-50%);
+    }
   }
 
   &__bullet {

@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include phones {
+    align-items: center;
+  }
+  
   &__text {
     font-size: 20px;
     font-weight: 400;

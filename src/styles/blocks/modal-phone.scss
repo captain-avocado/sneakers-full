@@ -1,0 +1,23 @@
+.modal-phone {
+  padding: 30px 20px;
+  opacity: 0;
+  transition: opacity .3s;
+  display: none;
+  z-index: -1;
+
+  @include phones {
+    display: block;
+  }
+
+  &.is-active {
+    z-index: 10000;
+    opacity: 1;
+  }
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(#fff, .9);
+}

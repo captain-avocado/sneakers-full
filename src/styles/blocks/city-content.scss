@@ -1,4 +1,4 @@
-.city-popup {
+.city-content {
 
   &__list {
     display: flex;
@@ -13,14 +13,13 @@
     cursor: pointer;
     
     &:hover, &.active {
-      .city-popup__icon {
+      .city-content__icon {
         fill: $bg-blue;
         transition: fill .3s;
       }
-      .city-popup__name {
+      .city-content__name {
         color: #060606;
         transition: color .3s;
-
       }
 
     }
@@ -38,13 +37,4 @@
     margin-right: 15px;
   }
 
-  &__delivery-info {
-    font-size: 16px;
-    font-weight: 400;
-    color: $bg-blue;
-    transition: font-weight .1s;
-    &:hover {
-      font-weight: 600;
-    }
-  }
 }

@@ -5,26 +5,7 @@
   }
 
   &__info {
-    color: $bg-blue;
     margin-bottom: 15px;
   }
 
-  &__item {
-    font-size: 16px;
-    margin-bottom: 15px;
-    transition: font-weight .1s;
-    &:hover {
-      font-weight: 600;
-    }
-  }
-
-  &__exit {
-    font-size: 16px;
-    color: #D15A5A;
-    margin-top: 25px;
-    transition: font-weight .1s;
-    &:hover {
-      font-weight: 600;
-    }
-  }
 }
