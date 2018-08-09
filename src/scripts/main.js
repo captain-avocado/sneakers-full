@@ -283,7 +283,21 @@ $('.city-content__item').on('click', function(e) {
     const choosedItem = $(e.currentTarget);
     $('.city-content__item.active').removeClass('active');
     choosedItem.addClass('active');
-    $('.city__name').text(choosedItem.find('.city-content__name').text());
+    $('.set-city').text(choosedItem.find('.city-content__name').text());
+    if ($('.set-city').hasClass('set-icon')) {
+        const value = 'images/sprite.svg#' + choosedItem.find('.city-content__name').data('name');
+        const icon = document.querySelector('.modal-filter__svg_city use');
+        icon.setAttributeNS('http://www.w3.org/1999/xlink', 'href', value);
+    }
+});
+
+$('.modal-city-open').on('click', function() {
+    $('.modal-city').toggleClass('is-active');
+});
+
+$('.modal-city__close-link').on('click', function(e) {
+    e.preventDefault();
+    $('.modal-city').toggleClass('is-active');
 });
 
 $('.cart-num__plus').on('click', function(e) {

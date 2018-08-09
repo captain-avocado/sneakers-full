@@ -1,0 +1,29 @@
+.modal-city {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.15);
+  padding: 35px;
+  opacity: 0;
+  transition: opacity .3s;
+  z-index: -1;
+
+
+  position: relative;
+  
+  &.is-active {
+    opacity: 1;
+    z-index: 20000;
+  }
+
+  &__close-link {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  &__close-icon {
+    width: 10px;
+    height: 10px;
+    fill: $bg-blue;
+  }
+}

@@ -19,4 +19,12 @@
   &__text {
     margin-bottom: 35px;
   }
+
+  &__modal-city {
+    width: fit-content;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

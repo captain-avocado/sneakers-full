@@ -1,6 +1,8 @@
 .modal-filter {
     display: flex;
     align-items: center;
+    position: relative;
+    width: fit-content;
 
     @include phones-landscape {
       width: 50%;
@@ -13,6 +15,11 @@
     border-radius: 50%;
     position: relative;
     margin-right: 20px;
+
+    &_city {
+      border: none;
+    }
+
   }
 
   &__svg {
@@ -22,6 +29,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &_city {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__name {
@@ -33,5 +45,9 @@
     font-size: 12px;
     color: $bg-blue;
     font-weight: 500;
+  }
+
+  &__text {
+    cursor: pointer;
   }
 }

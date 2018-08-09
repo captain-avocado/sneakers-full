@@ -26,12 +26,36 @@ block content
         .modal-menu__exit.auth-exit
           a(href="#").auth-exit__link.popup-link.popup-link_exit Выйти из системы
       .modal-menu__city.modal-filter
-        .modal-filter__icon
-          svg.modal-filter__svg
+        .modal-filter__icon.modal-filter__icon_city
+          svg.modal-filter__svg.modal-filter__svg_city
             use(xlink:href="images/sprite.svg#Vladivostok")
         .modal-filter__text
-          .modal-filter__name Выберите город
-          .modal-filter__choosed Владивосток
+          .modal-city-open
+            .modal-filter__name Выберите город
+            .modal-filter__choosed.set-city.set-icon Владивосток
+          .modal-city.modal-menu__modal-city
+            a(href="#").modal-city__close-link
+              svg.modal-city__close-icon
+                use(xlink:href="images/sprite.svg#close")
+            .city-content.modal-city__content
+              ul.city-content__list
+                li.city-content__item
+                  svg.city-content__icon
+                    use(xlink:href="images/sprite.svg#Msk")
+                  .city-content__name(data-name="Msk") Москва
+                li.city-content__item
+                  svg.city-content__icon
+                    use(xlink:href="images/sprite.svg#Spb")
+                  .city-content__name(data-name="Spb") Санкт-Петербург
+                li.city-content__item.active
+                  svg.city-content__icon
+                    use(xlink:href="images/sprite.svg#Vladivostok")
+                  .city-content__name(data-name="Vladivostok") Владивосток
+                li.city-content__item
+                  svg.city-content__icon
+                    use(xlink:href="images/sprite.svg#Habarovsk")
+                  .city-content__name(data-name="Habarovsk") Хабаровск
+              a(href="#").city-content__delivery-info.popup-link Условия доставки
     .modal-filters.modal-phone
       ul.modal-filters__list
         li.modal-filters__item.modal-filter
@@ -88,7 +112,6 @@ block content
         a(href="#").modal__close.modal-trigger.modal__close_top
           svg.modal__close-icon
             use(xlink:href="images/sprite.svg#close")
-        
         .modal__row.modal__row_tablets.modal__row_product-text
               .product-text
                 .product-text__company Nike
@@ -299,7 +322,7 @@ block content
           a(href="#").city__link
             svg.city__icon.icon
               use(xlink:href=`images/sprite.svg#placeholder`)
-          .city__name Владивосток
+          .city__name.set-city Владивосток
         .logo.header__logo 
           a(href="#") sneakers
         .header__right
