@@ -5,6 +5,10 @@
     display: block;
   }
 
+  &.hidden {
+    z-index: 1000;
+  }
+
   position: fixed;
   bottom: 25px;
   left: 5%;

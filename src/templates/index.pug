@@ -3,104 +3,109 @@ block head
     title Sneakers Shop
 block variables
 block content
+    .close-icon.hidden
+      a(href="#").close-icon__link
+        svg.close-icon__svg
+          use(xlink:href="images/sprite.svg#close")
     .modal-menu.modal-phone
       .modal-menu__logo.logo 
         a(href="#") sneakers
-      .modal-menu__profile.profile
-        .profile__avatar
-        .profile__text
-          .profile__name
-            a(href="#").profile__link Сергей Климов
-          .profile__mail
-            a(href="#").profile__link s.klimov@khorito.ru
-      .modal-menu__text
-        .modal-menu__cart
-          a(href="#").popup-link Моя корзина
-        ul.modal-menu__info.auth-info
-          li.auth-info__personal.auth-info__item
-            a(href="#").auth-info__link.popup-link Персональные данные
-          li.auth-info__delivery.auth-info__item
-            a(href="#").auth-info__link.popup-link Адрес и способ доставки
-          li.auth-info__payment.auth-info__item
-            a(href="#").auth-info__link.popup-link Платежные данные
-        .modal-menu__exit.auth-exit
-          a(href="#").auth-exit__link.popup-link.popup-link_exit Выйти из системы
-      .modal-menu__city.modal-filter
-        .modal-filter__icon.modal-filter__icon_city
-          svg.modal-filter__svg.modal-filter__svg_city
-            use(xlink:href="images/sprite.svg#Vladivostok")
-        .modal-filter__text
-          .modal-city-open
-            .modal-filter__name Выберите город
-            .modal-filter__choosed.set-city.set-icon Владивосток
-          .modal-city.modal-menu__modal-city
-            a(href="#").modal-city__close-link
-              svg.modal-city__close-icon
-                use(xlink:href="images/sprite.svg#close")
-            .city-content.modal-city__content
-              ul.city-content__list
-                li.city-content__item
-                  svg.city-content__icon
-                    use(xlink:href="images/sprite.svg#Msk")
-                  .city-content__name(data-name="Msk") Москва
-                li.city-content__item
-                  svg.city-content__icon
-                    use(xlink:href="images/sprite.svg#Spb")
-                  .city-content__name(data-name="Spb") Санкт-Петербург
-                li.city-content__item.active
-                  svg.city-content__icon
-                    use(xlink:href="images/sprite.svg#Vladivostok")
-                  .city-content__name(data-name="Vladivostok") Владивосток
-                li.city-content__item
-                  svg.city-content__icon
-                    use(xlink:href="images/sprite.svg#Habarovsk")
-                  .city-content__name(data-name="Habarovsk") Хабаровск
-              a(href="#").city-content__delivery-info.popup-link Условия доставки
+      .modal-menu__info-text
+        .modal-menu__profile.profile
+          .profile__avatar
+          .profile__text
+            .profile__name
+              a(href="#").profile__link Сергей Климов
+            .profile__mail
+              a(href="#").profile__link s.klimov@khorito.ru
+        .modal-menu__text
+          .modal-menu__cart
+            a(href="#").popup-link Моя корзина
+          ul.modal-menu__info.auth-info
+            li.auth-info__personal.auth-info__item
+              a(href="#").auth-info__link.popup-link Персональные данные
+            li.auth-info__delivery.auth-info__item
+              a(href="#").auth-info__link.popup-link Адрес и способ доставки
+            li.auth-info__payment.auth-info__item
+              a(href="#").auth-info__link.popup-link Платежные данные
+          .modal-menu__exit.auth-exit
+            a(href="#").auth-exit__link.popup-link.popup-link_exit Выйти из системы
+        .modal-menu__city.modal-filter
+          .modal-filter__icon.modal-filter__icon_city
+            svg.modal-filter__svg.modal-filter__svg_city
+              use(xlink:href="images/sprite.svg#Vladivostok")
+          .modal-filter__text
+            .modal-city-open
+              .modal-filter__name.modal-filter__name_city Выберите город
+              .modal-filter__choosed.set-city.set-icon Владивосток
+            .modal-city.modal-menu__modal-city
+              a(href="#").modal-city__close-link
+                svg.modal-city__close-icon
+                  use(xlink:href="images/sprite.svg#close")
+              .city-content.modal-city__content
+                ul.city-content__list
+                  li.city-content__item
+                    svg.city-content__icon
+                      use(xlink:href="images/sprite.svg#Msk")
+                    .city-content__name(data-name="Msk") Москва
+                  li.city-content__item
+                    svg.city-content__icon
+                      use(xlink:href="images/sprite.svg#Spb")
+                    .city-content__name(data-name="Spb") Санкт-Петербург
+                  li.city-content__item.active
+                    svg.city-content__icon
+                      use(xlink:href="images/sprite.svg#Vladivostok")
+                    .city-content__name(data-name="Vladivostok") Владивосток
+                  li.city-content__item
+                    svg.city-content__icon
+                      use(xlink:href="images/sprite.svg#Habarovsk")
+                    .city-content__name(data-name="Habarovsk") Хабаровск
+                a(href="#").city-content__delivery-info.popup-link Условия доставки
     .modal-filters.modal-phone
       ul.modal-filters__list
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#sort")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="sort")
             .modal-filter__name Сортировать
             .modal-filter__choosed По названию
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#organization")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="categories")
             .modal-filter__name Категории
             .modal-filter__choosed Мужские
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#flyers")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="brands")
             .modal-filter__name Бренды
             .modal-filter__choosed Все бренды
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#money")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="price")
             .modal-filter__name Цена
             .modal-filter__choosed От 500 руб до 5 000 руб
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#color")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="colors")
             .modal-filter__name Цвета
             .modal-filter__choosed Все цвета
         li.modal-filters__item.modal-filter
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#meter")
-          .modal-filter__text
+          .modal-filter__text(data-filter-type="sizes")
             .modal-filter__name Размер
             .modal-filter__choosed Все размеры
-      .modal-filters__reset Сбросить все
+      .modal-filters__reset.reset Сбросить все
     button#scroll-up.scroll-up
       i.fas.fa-angle-up
     button#open-filters.open-filters
@@ -402,7 +407,7 @@ block content
                     .title__text.no-right-border.no-top-border Сортировать
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border.no-bottom-border
+                  ul.filter__content.categories.no-top-border.no-bottom-border.sort.sort-content
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="sort" checked).category__radio.radio.radio_gender
@@ -423,7 +428,7 @@ block content
                     .title__text.no-top-border.no-right-border Категории
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border.no-bottom-border
+                  ul.filter__content.categories.no-top-border.no-bottom-border.categories-content
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" checked name="category").category__radio.radio.radio_gender
@@ -444,7 +449,7 @@ block content
                     .title__text.no-top-border.no-right-border Бренды
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border.brands.no-bottom-border
+                  ul.filter__content.categories.no-top-border.brands.brands-content.no-bottom-border(data-filter-type="brands")
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" checked="checked" name="brands").category__radio.radio.radio_brands
@@ -495,7 +500,7 @@ block content
                     .title__text.no-top-border.no-right-border Цена
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  .filter__content.price.no-top-border.no-bottom-border
+                  .filter__content.price.no-top-border.no-bottom-border.price-content
                     .price__borders
                       .price__from.price-input
                         .price-input__text От
@@ -510,7 +515,7 @@ block content
                     .title__text.no-top-border.no-right-border Цвета
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.no-top-border.colors.no-bottom-border
+                  ul.filter__content.no-top-border.colors.no-bottom-border.colors-content
                     li.colors__item
                       label.colors__label.label
                           input(type="checkbox" checked="checked" name="colors").colors__checkbox.checkbox.colors__checkbox_all
@@ -568,7 +573,7 @@ block content
                     .title__text.no-top-border.no-right-border Размер
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.no-top-border.sizes.no-bottom-border
+                  ul.filter__content.no-top-border.sizes.no-bottom-border.sizes-content
                     li.sizes__item
                         label.sizes__label.label
                           input(type="checkbox" checked="checked" name="sizes").sizes__radio.radio.radio_sizes

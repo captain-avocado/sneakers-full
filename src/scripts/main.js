@@ -255,7 +255,6 @@ function togglePopup(e) {
     if (window.innerWidth <= 768) {
         const prevActiveItem = target.closest('.filters').find('.title.active');
         if (prevActiveItem.length && !target.is(prevActiveItem)) {
-            console.log(target, prevActiveItem);
             prevActiveItem.removeClass('active');
             prevActiveItem.find('i').removeClass('active');
         }
@@ -293,6 +292,7 @@ $('.city-content__item').on('click', function(e) {
 
 $('.modal-city-open').on('click', function() {
     $('.modal-city').toggleClass('is-active');
+    $('.modal-filter__name_city').toggleClass('is-highlighted');
 });
 
 $('.modal-city__close-link').on('click', function(e) {
@@ -416,7 +416,15 @@ window.addEventListener('click', windowOnClick);
 $('.reset').on('click', function(e) {
     e.preventDefault();
     const target = $(e.currentTarget);
-    const inputList = target.closest('.filters').find('ul.filter__content');
+    let inputList;
+    if (window.innerWidth <= 760) {
+        console.log(target);
+        inputList = target.siblings('.modal-filters__list').find('ul.filter__content');
+        console.log(inputList);
+
+    } else {
+        inputList = target.closest('.filters').find('ul.filter__content');
+    }
     $(inputList).each(function() {
         const inputs = $(this).find('input');
         const firstInput = inputs.first();
@@ -432,7 +440,7 @@ hamburger.on('click', function(e) {
     // if (!$('.open-filters').hasClass('is-active')) {
     hamburger.toggleClass('is-active');
     modalMenu.toggleClass('is-active');
-    // }
+    $(document.body).toggleClass('active');
 });
 
 const openFiltersBtn = $('.open-filters');
@@ -440,10 +448,41 @@ openFiltersBtn.on('click', function(e) {
     e.preventDefault();
     openFiltersBtn.toggleClass('is-active');
     $('.modal-filters').toggleClass('is-active');
-    $('.scroll-up').toggleClass('is-hidden');
-    $('.hamburger').toggleClass('is-hidden');
     $('body').toggleClass('active');
 });
+
+
+if (window.innerWidth <= 760) {
+    $('.filter__content').addClass('is-modal');
+}
+
+const modalFilterText = $('.modal-filter__text');
+modalFilterText.on('click', function(e) {
+    const target = $(e.currentTarget);
+    const filterType = target.data('filter-type') + '-content';
+    const filterContent = $(`.filter__content.${filterType}`);
+    if (!filterContent.find($('.close-icon')).length) {
+        $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
+        $('.filters-icon a').on('click', function(ev) {
+            ev.preventDefault();
+            setTimeout(function() {
+                filterContent.removeClass('is-modal-active');        
+            }, 10);
+        });
+    }
+    
+    if (!target.parent().find('.filter__content').length) {
+        filterContent.appendTo(target.parent());
+    }
+    setTimeout(function() {
+        filterContent.toggleClass('is-modal-active');        
+    }, 10);
+});
+
+
+
+
+
 
 $(document).on('scroll', function(){
     if (window.scrollY > 0) {
