@@ -24,13 +24,8 @@
 
     @include phones {
       width: 100%;
-      padding: 0 25px;
-    }
-
-    @include phones-small {
       padding: 0;
-    }
+    }    
     
-
   }
 }
