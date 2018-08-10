@@ -6,11 +6,7 @@
     text-transform: uppercase;
 
     @include tablets {
-      font-size: 28px;
-    }
-
-    @include tablets {
-      font-size: 16px;
+      font-size: 18px;
     }
 
   }
@@ -21,7 +17,7 @@
     margin-bottom: 5px;
 
     @include tablets {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @include phones {

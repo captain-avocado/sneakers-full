@@ -29,7 +29,27 @@
       overflow: auto;
       display: block;
     }
+  }
+  &__hidden-row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    content: '';
+    background: #fff;
+    z-index: 10;
+    &_bottom {
+      bottom: 0;
+      display: none;
 
+      @include tablets {
+        display: block;
+      }
+      
+    }
+    &_top {
+      top: 0;
+    }
   }
 
   &__close {
@@ -43,8 +63,8 @@
 
       @include phones {
         position: absolute;
-        bottom: -35px;
-        right: -15px;
+        bottom: 15px;
+        right: 15px;
         display: block;
       }
     }
@@ -166,7 +186,7 @@
     }
 
     @include phones {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 

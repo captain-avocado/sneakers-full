@@ -54,10 +54,11 @@ const modalGlide = new Glide('.glide--modal', {
     startAt: 0,
     perView: 1,
     gap: 0,
-    // autoplay: 5000,
     hoverpause: true,
     animationDuration: 500,
     animationTimingFunc: 'linear',
+    touchDistance: false,
+    swipeThreshold: false,
     breakpoints: {
         760: {
             dragDistance: false,
@@ -76,6 +77,9 @@ const previewGlide = new Glide('.glide--preview', {
     hoverpause: true,
     animationDuration: 500,
     animationTimingFunc: 'linear',
+    touchDistance: false,
+    swipeThreshold: false,
+    
     breakpoints: {
         760: {
             dragDistance: false,
@@ -499,4 +503,10 @@ $('.scroll-up').on('click', function(e) {
             scrollTop: 0,
         }, 500);
     }
+});
+
+$('.modal__content').on('scroll', function() {
+    $('.modal__hidden-row_top').css('top', `${$('.modal__content').get(0).scrollTop}px`);
+    $('.modal__hidden-row_bottom').css('bottom', `-${$('.modal__content').get(0).scrollTop}px`);
+    console.log($('.modal__content').get(0).scrollTop);
 });
