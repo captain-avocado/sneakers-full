@@ -3,6 +3,7 @@ block head
     title Sneakers Shop
 block variables
 block content
+  .wrapper
     .close-icon.hidden
       a(href="#").close-icon__link
         svg.close-icon__svg
@@ -140,8 +141,8 @@ block content
                     img(src="images/1.png")
                   li.glide__slide.glide__slide_modal
                     img(src="images/1.png")
-                  li.glide__slide.glide__slide_modal
-                    img(src="images/1.png")
+                  //- li.glide__slide.glide__slide_modal
+                  //-   img(src="images/1.png")
           .modal__preview-slider
             .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
               .glide__track(data-glide-el="track")
@@ -154,8 +155,8 @@ block content
                     img(src="images/1.png")
                   li.glide__slide.glide__slide_preview
                     img(src="images/1.png")
-                  li.glide__slide.glide__slide_preview
-                    img(src="images/1.png")
+                  //- li.glide__slide.glide__slide_preview
+                  //-   img(src="images/1.png")
               .glide__arrows(data-glide-el="controls")
                 a.glide__arrow.glide__arrow_preview-left.glide__arrow_left(href="#" data-glide-dir="<")
                   svg.glide__icon.glide__icon_preview.glide__icon_left
@@ -163,6 +164,19 @@ block content
                 a.glide__arrow.glide__arrow_preview-right.glide__arrow_right(href="#" data-glide-dir=">")
                   svg.glide__icon.glide__icon_preview.glide__icon_right
                     use(xlink:href="images/sprite.svg#arrow")
+            ul.modal__preview-gallery
+              li.modal__preview-item
+                .modal__preview-inner
+                  img.modal__preview-img(src="images/1.png")
+              li.modal__preview-item
+                .modal__preview-inner
+                  img.modal__preview-img(src="images/1.png")
+              li.modal__preview-item
+                .modal__preview-inner
+                  img.modal__preview-img(src="images/1.png")
+              li.modal__preview-item
+                .modal__preview-inner
+                  img.modal__preview-img(src="images/1.png")
         .modal__info
           .modal__text
             .modal__row.modal__row_product-text.modal__row_desktop

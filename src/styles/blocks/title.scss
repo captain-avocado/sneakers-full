@@ -6,6 +6,12 @@
   cursor: pointer;
   height: 75px;
 
+  transition: color .3s;
+
+  &.active {
+    color: $bg-blue;
+  }
+
   &__text {
     padding-left: 30px;
     font-weight: 700;

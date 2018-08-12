@@ -9,11 +9,14 @@ body {
     color: $text-black;
 
     position: relative;
-
-    &.active {
-        overflow: hidden;
-    }
 }
+
+// .wrapper {
+//     &.active {
+//         height: 100%;
+//         overflow: hidden;
+//     }
+// }
 
 .container {
     width: 90%;

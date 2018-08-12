@@ -11,6 +11,22 @@
     height: 100%;
     position: relative;
   }
+
+  &--preview {
+    @include tablets {
+      display: none;
+    }
+    @include phones {
+      display: block;
+    }
+  }
+
+  &--modal {
+    @include tablets {
+      height: auto;
+    }
+  }
+  
   &__track {
     height: 100%;
   }

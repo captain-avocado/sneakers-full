@@ -15,1193 +15,1207 @@
     <title>Sneakers Shop</title>
   </head>
   <body>
-    <div class="close-icon hidden"><a class="close-icon__link" href="#">
-        <svg class="close-icon__svg">
-          <use xlink:href="images/sprite.svg#close"></use>
-        </svg></a></div>
-    <div class="modal-menu modal-phone">
-      <div class="modal-menu__logo logo"> <a href="#">sneakers</a></div>
-      <div class="modal-menu__info-text">
-        <div class="modal-menu__profile profile">
-          <div class="profile__avatar"></div>
-          <div class="profile__text">
-            <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
-            <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
+    <div class="wrapper">
+      <div class="close-icon hidden"><a class="close-icon__link" href="#">
+          <svg class="close-icon__svg">
+            <use xlink:href="images/sprite.svg#close"></use>
+          </svg></a></div>
+      <div class="modal-menu modal-phone">
+        <div class="modal-menu__logo logo"> <a href="#">sneakers</a></div>
+        <div class="modal-menu__info-text">
+          <div class="modal-menu__profile profile">
+            <div class="profile__avatar"></div>
+            <div class="profile__text">
+              <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
+              <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
+            </div>
+          </div>
+          <div class="modal-menu__text">
+            <div class="modal-menu__cart"><a class="popup-link" href="#">Моя корзина</a></div>
+            <ul class="modal-menu__info auth-info">
+              <li class="auth-info__personal auth-info__item"><a class="auth-info__link popup-link" href="#">Персональные данные</a></li>
+              <li class="auth-info__delivery auth-info__item"><a class="auth-info__link popup-link" href="#">Адрес и способ доставки</a></li>
+              <li class="auth-info__payment auth-info__item"><a class="auth-info__link popup-link" href="#">Платежные данные</a></li>
+            </ul>
+            <div class="modal-menu__exit auth-exit"><a class="auth-exit__link popup-link popup-link_exit" href="#">Выйти из системы</a></div>
+          </div>
+          <div class="modal-menu__city modal-filter">
+            <div class="modal-filter__icon modal-filter__icon_city">
+              <svg class="modal-filter__svg modal-filter__svg_city">
+                <use xlink:href="images/sprite.svg#Vladivostok"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text">
+              <div class="modal-city-open">
+                <div class="modal-filter__name modal-filter__name_city">Выберите город</div>
+                <div class="modal-filter__choosed set-city set-icon">Владивосток</div>
+              </div>
+              <div class="modal-city modal-menu__modal-city"><a class="modal-city__close-link" href="#">
+                  <svg class="modal-city__close-icon">
+                    <use xlink:href="images/sprite.svg#close"></use>
+                  </svg></a>
+                <div class="city-content modal-city__content">
+                  <ul class="city-content__list">
+                    <li class="city-content__item">
+                      <svg class="city-content__icon">
+                        <use xlink:href="images/sprite.svg#Msk"></use>
+                      </svg>
+                      <div class="city-content__name" data-name="Msk">Москва</div>
+                    </li>
+                    <li class="city-content__item">
+                      <svg class="city-content__icon">
+                        <use xlink:href="images/sprite.svg#Spb"></use>
+                      </svg>
+                      <div class="city-content__name" data-name="Spb">Санкт-Петербург</div>
+                    </li>
+                    <li class="city-content__item active">
+                      <svg class="city-content__icon">
+                        <use xlink:href="images/sprite.svg#Vladivostok"></use>
+                      </svg>
+                      <div class="city-content__name" data-name="Vladivostok">Владивосток</div>
+                    </li>
+                    <li class="city-content__item">
+                      <svg class="city-content__icon">
+                        <use xlink:href="images/sprite.svg#Habarovsk"></use>
+                      </svg>
+                      <div class="city-content__name" data-name="Habarovsk">Хабаровск</div>
+                    </li>
+                  </ul><a class="city-content__delivery-info popup-link" href="#">Условия доставки</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="modal-menu__text">
-          <div class="modal-menu__cart"><a class="popup-link" href="#">Моя корзина</a></div>
-          <ul class="modal-menu__info auth-info">
+      </div>
+      <div class="modal-filters modal-phone">
+        <ul class="modal-filters__list">
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#sort"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="sort">
+              <div class="modal-filter__name">Сортировать</div>
+              <div class="modal-filter__choosed">По названию</div>
+            </div>
+          </li>
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#organization"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="categories">
+              <div class="modal-filter__name">Категории</div>
+              <div class="modal-filter__choosed">Мужские</div>
+            </div>
+          </li>
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#flyers"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="brands">
+              <div class="modal-filter__name">Бренды</div>
+              <div class="modal-filter__choosed">Все бренды</div>
+            </div>
+          </li>
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#money"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="price">
+              <div class="modal-filter__name">Цена</div>
+              <div class="modal-filter__choosed">От 500 руб до 5 000 руб</div>
+            </div>
+          </li>
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#color"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="colors">
+              <div class="modal-filter__name">Цвета</div>
+              <div class="modal-filter__choosed">Все цвета</div>
+            </div>
+          </li>
+          <li class="modal-filters__item modal-filter">
+            <div class="modal-filter__icon">
+              <svg class="modal-filter__svg">
+                <use xlink:href="images/sprite.svg#meter"></use>
+              </svg>
+            </div>
+            <div class="modal-filter__text" data-filter-type="sizes">
+              <div class="modal-filter__name">Размер</div>
+              <div class="modal-filter__choosed">Все размеры</div>
+            </div>
+          </li>
+        </ul>
+        <div class="modal-filters__reset reset">Сбросить все</div>
+      </div>
+      <button class="scroll-up" id="scroll-up"><i class="fas fa-angle-up"></i></button>
+      <button class="open-filters" id="open-filters">
+        <svg class="open-filters__icon">
+          <use xlink:href="images/sprite.svg#filter"></use>
+        </svg>
+        <div class="open-filters__cross"></div>
+      </button>
+      <div class="modal">
+        <div class="modal__content">
+          <div class="modal__hidden-row modal__hidden-row_top"><a class="modal__close modal-trigger" href="#">
+              <svg class="modal__close-icon">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg></a></div>
+          <div class="modal__hidden-row modal__hidden-row_bottom"><a class="modal__close modal-trigger" href="#">
+              <svg class="modal__close-icon">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg></a></div>
+          <div class="modal__row modal__row_tablets modal__row_product-text">
+            <div class="product-text">
+              <div class="product-text__company">Nike</div>
+              <div class="product-text__name">Men's Air More</div>
+            </div>
+            <div class="modal__product-price">10 490 р</div>
+          </div>
+          <div class="modal__gallery">
+            <div class="modal__slider">
+              <div class="glide--modal glide--ltr glide--carousel glide--swipeable glide--slider">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal__preview-slider">
+              <div class="glide--preview glide--ltr glide--carousel glide--swipeable glide--slider">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides glide__slides_preview">
+                    <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
+                    <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow_preview-left glide__arrow_left" href="#" data-glide-dir="&lt;">
+                    <svg class="glide__icon glide__icon_preview glide__icon_left">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg></a><a class="glide__arrow glide__arrow_preview-right glide__arrow_right" href="#" data-glide-dir="&gt;">
+                    <svg class="glide__icon glide__icon_preview glide__icon_right">
+                      <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg></a></div>
+              </div>
+              <ul class="modal__preview-gallery">
+                <li class="modal__preview-item">
+                  <div class="modal__preview-inner"><img class="modal__preview-img" src="images/1.png"></div>
+                </li>
+                <li class="modal__preview-item">
+                  <div class="modal__preview-inner"><img class="modal__preview-img" src="images/1.png"></div>
+                </li>
+                <li class="modal__preview-item">
+                  <div class="modal__preview-inner"><img class="modal__preview-img" src="images/1.png"></div>
+                </li>
+                <li class="modal__preview-item">
+                  <div class="modal__preview-inner"><img class="modal__preview-img" src="images/1.png"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal__info">
+            <div class="modal__text">
+              <div class="modal__row modal__row_product-text modal__row_desktop">
+                <div class="product-text">
+                  <div class="product-text__company">Nike</div>
+                  <div class="product-text__name">Men's Air More</div>
+                </div>
+                <div class="modal__product-price">10 490 р</div>
+              </div>
+              <div class="modal__row select-modal modal__row_sizes">
+                <div class="select-modal__title">Размеры</div>
+                <ul class="select-modal__list categories categories_modal-sizes">
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" checked name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">35</div>
+                    </label>
+                  </li>
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">37</div>
+                    </label>
+                  </li>
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">39</div>
+                    </label>
+                  </li>
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" checked name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">40</div>
+                    </label>
+                  </li>
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">41</div>
+                    </label>
+                  </li>
+                  <li class="categories__item categories__item_modal-sizes category">
+                    <label class="category__label label">
+                      <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
+                      <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                      <div class="category__name">44</div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal__row select-modal modal__row_colors">
+                <div class="select-modal__title">Цвета</div>
+                <ul class="sneaker-colors select-modal__list">
+                  <li class="sneaker-colors__item">
+                    <label class="label">
+                      <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-modal-1">
+                      <div class="color-fake" data-color="black"></div>
+                    </label>
+                  </li>
+                  <li class="sneaker-colors__item">
+                    <label class="label">
+                      <input class="radio radio_sneaker" type="radio" name="sneaker-colors-modal-1">
+                      <div class="color-fake" data-color="grey"></div>
+                    </label>
+                  </li>
+                  <li class="sneaker-colors__item">
+                    <label class="label">
+                      <input class="radio radio_sneaker" type="radio" name="sneaker-colors-modal-1">
+                      <div class="color-fake select-modal__list" data-color="pink"></div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal__descr">Мужские кроссовки Nike Air More Money сделают твой образ ярче благодаря сочетанию элементов моделей Nike Air More Uptempo и Nike Air Money. Съемная накладка закрывает язычок, позволяя создавать разные образы.</div>
+              <div class="modal__code">
+                <div class="modal__code-text">Модель:&nbsp </div>
+                <div class="modal__code-nums">AJ2998-600</div>
+              </div>
+            </div>
+            <div class="modal__bottom-row"><a class="btn btn_buy" href="#">Купить в один клик</a><a class="btn btn_cart" href="#">Добавить в корзину</a></div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="city-popup header__popup header__popup_city popup popup_city">
+          <div class="popup__triangle"></div>
+          <div class="popup__title">Выберите город</div>
+          <div class="city-content">
+            <ul class="city-content__list">
+              <li class="city-content__item">
+                <svg class="city-content__icon">
+                  <use xlink:href="images/sprite.svg#Msk"></use>
+                </svg>
+                <div class="city-content__name">Москва</div>
+              </li>
+              <li class="city-content__item">
+                <svg class="city-content__icon">
+                  <use xlink:href="images/sprite.svg#Spb"></use>
+                </svg>
+                <div class="city-content__name">Санкт-Петербург</div>
+              </li>
+              <li class="city-content__item active">
+                <svg class="city-content__icon">
+                  <use xlink:href="images/sprite.svg#Habarovsk"></use>
+                </svg>
+                <div class="city-content__name">Владивосток</div>
+              </li>
+              <li class="city-content__item">
+                <svg class="city-content__icon">
+                  <use xlink:href="images/sprite.svg#Vladivostok"></use>
+                </svg>
+                <div class="city-content__name">Хабаровск</div>
+              </li>
+            </ul><a class="city-content__delivery-info popup-link" href="#">Условия доставки</a>
+          </div>
+        </div>
+        <div class="auth-popup header__popup header__popup_auth popup popup_auth">
+          <div class="popup__triangle"></div>
+          <div class="popup__title">Личный кабинет</div>
+          <div class="auth-popup__profile profile">
+            <div class="profile__avatar"></div>
+            <div class="profile__text">
+              <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
+              <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
+            </div>
+          </div>
+          <ul class="auth-popup__info auth-info">
             <li class="auth-info__personal auth-info__item"><a class="auth-info__link popup-link" href="#">Персональные данные</a></li>
             <li class="auth-info__delivery auth-info__item"><a class="auth-info__link popup-link" href="#">Адрес и способ доставки</a></li>
             <li class="auth-info__payment auth-info__item"><a class="auth-info__link popup-link" href="#">Платежные данные</a></li>
           </ul>
-          <div class="modal-menu__exit auth-exit"><a class="auth-exit__link popup-link popup-link_exit" href="#">Выйти из системы</a></div>
+          <div class="auth-popup__exit auth-exit"><a class="auth-exit__link popup-link popup-link_exit" href="#">Выйти из системы</a></div>
         </div>
-        <div class="modal-menu__city modal-filter">
-          <div class="modal-filter__icon modal-filter__icon_city">
-            <svg class="modal-filter__svg modal-filter__svg_city">
-              <use xlink:href="images/sprite.svg#Vladivostok"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text">
-            <div class="modal-city-open">
-              <div class="modal-filter__name modal-filter__name_city">Выберите город</div>
-              <div class="modal-filter__choosed set-city set-icon">Владивосток</div>
-            </div>
-            <div class="modal-city modal-menu__modal-city"><a class="modal-city__close-link" href="#">
-                <svg class="modal-city__close-icon">
-                  <use xlink:href="images/sprite.svg#close"></use>
-                </svg></a>
-              <div class="city-content modal-city__content">
-                <ul class="city-content__list">
-                  <li class="city-content__item">
-                    <svg class="city-content__icon">
-                      <use xlink:href="images/sprite.svg#Msk"></use>
-                    </svg>
-                    <div class="city-content__name" data-name="Msk">Москва</div>
-                  </li>
-                  <li class="city-content__item">
-                    <svg class="city-content__icon">
-                      <use xlink:href="images/sprite.svg#Spb"></use>
-                    </svg>
-                    <div class="city-content__name" data-name="Spb">Санкт-Петербург</div>
-                  </li>
-                  <li class="city-content__item active">
-                    <svg class="city-content__icon">
-                      <use xlink:href="images/sprite.svg#Vladivostok"></use>
-                    </svg>
-                    <div class="city-content__name" data-name="Vladivostok">Владивосток</div>
-                  </li>
-                  <li class="city-content__item">
-                    <svg class="city-content__icon">
-                      <use xlink:href="images/sprite.svg#Habarovsk"></use>
-                    </svg>
-                    <div class="city-content__name" data-name="Habarovsk">Хабаровск</div>
-                  </li>
-                </ul><a class="city-content__delivery-info popup-link" href="#">Условия доставки</a>
+        <div class="cart-popup header__popup header__popup_cart popup popup_cart">
+          <div class="popup__triangle"></div>
+          <div class="popup__title">Моя корзина</div>
+          <ul class="cart-popup__list">
+            <li class="cart-popup__item cart-product">
+              <div class="cart-product__left-col">
+                <div class="cart-product__img" style="background-image: url('images/4.png');">
+                  <div class="cart-product__color" data-color="red"></div>
+                </div>
+                <div class="cart-product__price" data-price="12590">12 590 р</div>
               </div>
-            </div>
-          </div>
+              <div class="cart-product__right-col">
+                <div class="cart-product__text">
+                  <div class="cart-product__company">Nike</div>
+                  <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+                </div>
+                <div class="cart-product__num cart-num">
+                  <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                    <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
+                  </div>
+                  <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="cart-popup__item cart-product">
+              <div class="cart-product__left-col">
+                <div class="cart-product__img" style="background-image: url('images/1.png');">
+                  <div class="cart-product__color" data-color="blue"></div>
+                </div>
+                <div class="cart-product__price" data-price="2590">2 590 р</div>
+              </div>
+              <div class="cart-product__right-col">
+                <div class="cart-product__text">
+                  <div class="cart-product__company">Nike</div>
+                  <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+                </div>
+                <div class="cart-product__num cart-num">
+                  <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                    <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
+                  </div>
+                  <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="cart-popup__item cart-product">
+              <div class="cart-product__left-col">
+                <div class="cart-product__img" style="background-image: url('images/3.png');">
+                  <div class="cart-product__color" data-color="white"></div>
+                </div>
+                <div class="cart-product__price" data-price="6590">6 590 р</div>
+              </div>
+              <div class="cart-product__right-col">
+                <div class="cart-product__text">
+                  <div class="cart-product__company">Nike</div>
+                  <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
+                </div>
+                <div class="cart-product__num cart-num">
+                  <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
+                    <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
+                  </div>
+                  <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="cart-popup__btns">
+            <li class="cart-popup__btn"><a class="btn btn_checkout cart-popup__checkout" href="#">Оформить заказ</a></li>
+            <li class="cart-popup__btn"><a class="btn btn_close cart-popup__close" href="#">В корзину</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
-    <div class="modal-filters modal-phone">
-      <ul class="modal-filters__list">
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#sort"></use>
-            </svg>
+        <div class="container container_header">
+          <div class="city header__city"><a class="city__link" href="#">
+              <svg class="city__icon icon">
+                <use xlink:href="images/sprite.svg#placeholder"></use>
+              </svg></a>
+            <div class="city__name set-city">Владивосток</div>
           </div>
-          <div class="modal-filter__text" data-filter-type="sort">
-            <div class="modal-filter__name">Сортировать</div>
-            <div class="modal-filter__choosed">По названию</div>
+          <div class="logo header__logo"> <a href="#">sneakers</a></div>
+          <div class="header__right">
+            <input class="input-search header__search">
+            <label class="input-label">Что вы ищете?</label>
+            <ul class="icons header__icons">
+              <li class="icons__item icons__item_search"><a class="icons__link icons__link_search" href="#">
+                  <svg class="icons__search icon">
+                    <use xlink:href="images/sprite.svg#search"></use>
+                  </svg></a></li>
+              <li class="icons__item"><a class="icons__link icons__link_avatar" href="#">
+                  <svg class="icons__avatar icon">
+                    <use xlink:href="images/sprite.svg#avatar"></use>
+                  </svg></a></li>
+              <li class="icons__item"><a class="icons__link icons__link_cart" href="#">
+                  <div class="icons__cart cart">
+                    <svg class="cart__icon icon">
+                      <use xlink:href="images/sprite.svg#cart"></use>
+                    </svg>
+                    <div class="cart__num">3</div>
+                  </div></a></li>
+            </ul>
           </div>
-        </li>
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#organization"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text" data-filter-type="categories">
-            <div class="modal-filter__name">Категории</div>
-            <div class="modal-filter__choosed">Мужские</div>
-          </div>
-        </li>
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#flyers"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text" data-filter-type="brands">
-            <div class="modal-filter__name">Бренды</div>
-            <div class="modal-filter__choosed">Все бренды</div>
-          </div>
-        </li>
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#money"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text" data-filter-type="price">
-            <div class="modal-filter__name">Цена</div>
-            <div class="modal-filter__choosed">От 500 руб до 5 000 руб</div>
-          </div>
-        </li>
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#color"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text" data-filter-type="colors">
-            <div class="modal-filter__name">Цвета</div>
-            <div class="modal-filter__choosed">Все цвета</div>
-          </div>
-        </li>
-        <li class="modal-filters__item modal-filter">
-          <div class="modal-filter__icon">
-            <svg class="modal-filter__svg">
-              <use xlink:href="images/sprite.svg#meter"></use>
-            </svg>
-          </div>
-          <div class="modal-filter__text" data-filter-type="sizes">
-            <div class="modal-filter__name">Размер</div>
-            <div class="modal-filter__choosed">Все размеры</div>
-          </div>
-        </li>
+          <button class="header__burger hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+        </div>
+      </header>
+      <ul class="menu">
+        <div class="container container_menu">
+          <li class="menu__item"><a class="menu__link" href="#">новая коллекция</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">распродажи</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">мужские</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">женские</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">детские</a></li>
+          <li class="menu__item active"><a class="menu__link" href="#">все кроссовки</a></li>
+        </div>
       </ul>
-      <div class="modal-filters__reset reset">Сбросить все</div>
-    </div>
-    <button class="scroll-up" id="scroll-up"><i class="fas fa-angle-up"></i></button>
-    <button class="open-filters" id="open-filters">
-      <svg class="open-filters__icon">
-        <use xlink:href="images/sprite.svg#filter"></use>
-      </svg>
-      <div class="open-filters__cross"></div>
-    </button>
-    <div class="modal">
-      <div class="modal__content">
-        <div class="modal__hidden-row modal__hidden-row_top"><a class="modal__close modal-trigger" href="#">
-            <svg class="modal__close-icon">
-              <use xlink:href="images/sprite.svg#close"></use>
-            </svg></a></div>
-        <div class="modal__hidden-row modal__hidden-row_bottom"><a class="modal__close modal-trigger" href="#">
-            <svg class="modal__close-icon">
-              <use xlink:href="images/sprite.svg#close"></use>
-            </svg></a></div>
-        <div class="modal__row modal__row_tablets modal__row_product-text">
-          <div class="product-text">
-            <div class="product-text__company">Nike</div>
-            <div class="product-text__name">Men's Air More</div>
+      <div class="slider">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide" data-num="0"></li>
+              <li class="glide__slide" data-num="1"></li>
+              <li class="glide__slide" data-num="2"></li>
+            </ul>
           </div>
-          <div class="modal__product-price">10 490 р</div>
-        </div>
-        <div class="modal__gallery">
-          <div class="modal__slider">
-            <div class="glide--modal glide--ltr glide--carousel glide--swipeable glide--slider">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_modal"><img src="images/1.png"></li>
-                </ul>
-              </div>
-            </div>
+          <div class="glide__svg">
+            <div class="glide__triangle"></div>
+            <div class="glide__rectangle"></div>
           </div>
-          <div class="modal__preview-slider">
-            <div class="glide--preview glide--ltr glide--carousel glide--swipeable glide--slider">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides glide__slides_preview">
-                  <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
-                  <li class="glide__slide glide__slide_preview"><img src="images/1.png"></li>
-                </ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow_preview-left glide__arrow_left" href="#" data-glide-dir="&lt;">
-                  <svg class="glide__icon glide__icon_preview glide__icon_left">
-                    <use xlink:href="images/sprite.svg#arrow"></use>
-                  </svg></a><a class="glide__arrow glide__arrow_preview-right glide__arrow_right" href="#" data-glide-dir="&gt;">
-                  <svg class="glide__icon glide__icon_preview glide__icon_right">
-                    <use xlink:href="images/sprite.svg#arrow"></use>
-                  </svg></a></div>
-            </div>
+          <div class="info glide__info">
+            <div class="info__text">Nike Epic React Flyknit iD</div>
+            <div class="info__price">11 990р</div><a class="info__btn btn btn_more" href="#">Подробнее</a>
           </div>
-        </div>
-        <div class="modal__info">
-          <div class="modal__text">
-            <div class="modal__row modal__row_product-text modal__row_desktop">
-              <div class="product-text">
-                <div class="product-text__company">Nike</div>
-                <div class="product-text__name">Men's Air More</div>
-              </div>
-              <div class="modal__product-price">10 490 р</div>
-            </div>
-            <div class="modal__row select-modal modal__row_sizes">
-              <div class="select-modal__title">Размеры</div>
-              <ul class="select-modal__list categories categories_modal-sizes">
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" checked name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">35</div>
-                  </label>
-                </li>
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">37</div>
-                  </label>
-                </li>
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">39</div>
-                  </label>
-                </li>
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" checked name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">40</div>
-                  </label>
-                </li>
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">41</div>
-                  </label>
-                </li>
-                <li class="categories__item categories__item_modal-sizes category">
-                  <label class="category__label label">
-                    <input class="category__radio radio radio_modal-sizes" type="radio" name="modal-sizes">
-                    <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
-                    <div class="category__name">44</div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="modal__row select-modal modal__row_colors">
-              <div class="select-modal__title">Цвета</div>
-              <ul class="sneaker-colors select-modal__list">
-                <li class="sneaker-colors__item">
-                  <label class="label">
-                    <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-modal-1">
-                    <div class="color-fake" data-color="black"></div>
-                  </label>
-                </li>
-                <li class="sneaker-colors__item">
-                  <label class="label">
-                    <input class="radio radio_sneaker" type="radio" name="sneaker-colors-modal-1">
-                    <div class="color-fake" data-color="grey"></div>
-                  </label>
-                </li>
-                <li class="sneaker-colors__item">
-                  <label class="label">
-                    <input class="radio radio_sneaker" type="radio" name="sneaker-colors-modal-1">
-                    <div class="color-fake select-modal__list" data-color="pink"></div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="modal__descr">Мужские кроссовки Nike Air More Money сделают твой образ ярче благодаря сочетанию элементов моделей Nike Air More Uptempo и Nike Air Money. Съемная накладка закрывает язычок, позволяя создавать разные образы.</div>
-            <div class="modal__code">
-              <div class="modal__code-text">Модель:&nbsp </div>
-              <div class="modal__code-nums">AJ2998-600</div>
-            </div>
-          </div>
-          <div class="modal__bottom-row"><a class="btn btn_buy" href="#">Купить в один клик</a><a class="btn btn_cart" href="#">Добавить в корзину</a></div>
+          <div class="glide__bullets bullets" data-glide-el="controls[nav]"><a class="bullets__link glide__bullet" href="#" data-glide-dir="=0"></a><a class="bullets__link glide__bullet" href="#" data-glide-dir="=1"></a><a class="bullets__link glide__bullet" href="#" data-glide-dir="=2"></a></div>
+          <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow_left" href="#" data-glide-dir="&lt;">
+              <svg class="glide__icon glide__icon_left">
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg></a><a class="glide__arrow glide__arrow_right" href="#" data-glide-dir="&gt;">
+              <svg class="glide__icon glide__icon_right">
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg></a></div>
         </div>
       </div>
-    </div>
-    <header class="header">
-      <div class="city-popup header__popup header__popup_city popup popup_city">
-        <div class="popup__triangle"></div>
-        <div class="popup__title">Выберите город</div>
-        <div class="city-content">
-          <ul class="city-content__list">
-            <li class="city-content__item">
-              <svg class="city-content__icon">
-                <use xlink:href="images/sprite.svg#Msk"></use>
-              </svg>
-              <div class="city-content__name">Москва</div>
-            </li>
-            <li class="city-content__item">
-              <svg class="city-content__icon">
-                <use xlink:href="images/sprite.svg#Spb"></use>
-              </svg>
-              <div class="city-content__name">Санкт-Петербург</div>
-            </li>
-            <li class="city-content__item active">
-              <svg class="city-content__icon">
-                <use xlink:href="images/sprite.svg#Habarovsk"></use>
-              </svg>
-              <div class="city-content__name">Владивосток</div>
-            </li>
-            <li class="city-content__item">
-              <svg class="city-content__icon">
-                <use xlink:href="images/sprite.svg#Vladivostok"></use>
-              </svg>
-              <div class="city-content__name">Хабаровск</div>
-            </li>
-          </ul><a class="city-content__delivery-info popup-link" href="#">Условия доставки</a>
-        </div>
-      </div>
-      <div class="auth-popup header__popup header__popup_auth popup popup_auth">
-        <div class="popup__triangle"></div>
-        <div class="popup__title">Личный кабинет</div>
-        <div class="auth-popup__profile profile">
-          <div class="profile__avatar"></div>
-          <div class="profile__text">
-            <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
-            <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
-          </div>
-        </div>
-        <ul class="auth-popup__info auth-info">
-          <li class="auth-info__personal auth-info__item"><a class="auth-info__link popup-link" href="#">Персональные данные</a></li>
-          <li class="auth-info__delivery auth-info__item"><a class="auth-info__link popup-link" href="#">Адрес и способ доставки</a></li>
-          <li class="auth-info__payment auth-info__item"><a class="auth-info__link popup-link" href="#">Платежные данные</a></li>
-        </ul>
-        <div class="auth-popup__exit auth-exit"><a class="auth-exit__link popup-link popup-link_exit" href="#">Выйти из системы</a></div>
-      </div>
-      <div class="cart-popup header__popup header__popup_cart popup popup_cart">
-        <div class="popup__triangle"></div>
-        <div class="popup__title">Моя корзина</div>
-        <ul class="cart-popup__list">
-          <li class="cart-popup__item cart-product">
-            <div class="cart-product__left-col">
-              <div class="cart-product__img" style="background-image: url('images/4.png');">
-                <div class="cart-product__color" data-color="red"></div>
-              </div>
-              <div class="cart-product__price" data-price="12590">12 590 р</div>
-            </div>
-            <div class="cart-product__right-col">
-              <div class="cart-product__text">
-                <div class="cart-product__company">Nike</div>
-                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
-              </div>
-              <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
-                </div>
-                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
-              </div>
-            </div>
-          </li>
-          <li class="cart-popup__item cart-product">
-            <div class="cart-product__left-col">
-              <div class="cart-product__img" style="background-image: url('images/1.png');">
-                <div class="cart-product__color" data-color="blue"></div>
-              </div>
-              <div class="cart-product__price" data-price="2590">2 590 р</div>
-            </div>
-            <div class="cart-product__right-col">
-              <div class="cart-product__text">
-                <div class="cart-product__company">Nike</div>
-                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
-              </div>
-              <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
-                </div>
-                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
-              </div>
-            </div>
-          </li>
-          <li class="cart-popup__item cart-product">
-            <div class="cart-product__left-col">
-              <div class="cart-product__img" style="background-image: url('images/3.png');">
-                <div class="cart-product__color" data-color="white"></div>
-              </div>
-              <div class="cart-product__price" data-price="6590">6 590 р</div>
-            </div>
-            <div class="cart-product__right-col">
-              <div class="cart-product__text">
-                <div class="cart-product__company">Nike</div>
-                <div class="cart-product__name">MEN'S AIR MORE UPTEMPO</div>
-              </div>
-              <div class="cart-product__num cart-num">
-                <div class="cart-num__left-col"><a class="cart-num__minus" href="#">-</a>
-                  <div class="cart-num__cur-num">1</div><a class="cart-num__plus" href="#">+</a>
-                </div>
-                <div class="cart-num__right-col"><a class="btn btn_remove cart-num__remove" href="#">Убрать</a></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="cart-popup__btns">
-          <li class="cart-popup__btn"><a class="btn btn_checkout cart-popup__checkout" href="#">Оформить заказ</a></li>
-          <li class="cart-popup__btn"><a class="btn btn_close cart-popup__close" href="#">В корзину</a></li>
-        </ul>
-      </div>
-      <div class="container container_header">
-        <div class="city header__city"><a class="city__link" href="#">
-            <svg class="city__icon icon">
-              <use xlink:href="images/sprite.svg#placeholder"></use>
-            </svg></a>
-          <div class="city__name set-city">Владивосток</div>
-        </div>
-        <div class="logo header__logo"> <a href="#">sneakers</a></div>
-        <div class="header__right">
-          <input class="input-search header__search">
-          <label class="input-label">Что вы ищете?</label>
-          <ul class="icons header__icons">
-            <li class="icons__item icons__item_search"><a class="icons__link icons__link_search" href="#">
-                <svg class="icons__search icon">
-                  <use xlink:href="images/sprite.svg#search"></use>
-                </svg></a></li>
-            <li class="icons__item"><a class="icons__link icons__link_avatar" href="#">
-                <svg class="icons__avatar icon">
-                  <use xlink:href="images/sprite.svg#avatar"></use>
-                </svg></a></li>
-            <li class="icons__item"><a class="icons__link icons__link_cart" href="#">
-                <div class="icons__cart cart">
-                  <svg class="cart__icon icon">
-                    <use xlink:href="images/sprite.svg#cart"></use>
+      <div class="main-content">
+        <div class="container container_main-content">
+          <aside class="aside">
+            <div class="aside__filters filters">
+              <div class="filters__title main-title">
+                <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon reset" href="#"><i class="fas fa-redo"></i></a>
+                <div class="main-title__hint">Сбросить все  
+                  <svg class="main-title__reset-angle">
+                    <use xlink:href="images/sprite.svg#angle-reset"></use>
                   </svg>
-                  <div class="cart__num">3</div>
-                </div></a></li>
-          </ul>
-        </div>
-        <button class="header__burger hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
-      </div>
-    </header>
-    <ul class="menu">
-      <div class="container container_menu">
-        <li class="menu__item"><a class="menu__link" href="#">новая коллекция</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">распродажи</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">мужские</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">женские</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">детские</a></li>
-        <li class="menu__item active"><a class="menu__link" href="#">все кроссовки</a></li>
-      </div>
-    </ul>
-    <div class="slider">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide" data-num="0"></li>
-            <li class="glide__slide" data-num="1"></li>
-            <li class="glide__slide" data-num="2"></li>
-          </ul>
-        </div>
-        <div class="glide__svg">
-          <div class="glide__triangle"></div>
-          <div class="glide__rectangle"></div>
-        </div>
-        <div class="info glide__info">
-          <div class="info__text">Nike Epic React Flyknit iD</div>
-          <div class="info__price">11 990р</div><a class="info__btn btn btn_more" href="#">Подробнее</a>
-        </div>
-        <div class="glide__bullets bullets" data-glide-el="controls[nav]"><a class="bullets__link glide__bullet" href="#" data-glide-dir="=0"></a><a class="bullets__link glide__bullet" href="#" data-glide-dir="=1"></a><a class="bullets__link glide__bullet" href="#" data-glide-dir="=2"></a></div>
-        <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow_left" href="#" data-glide-dir="&lt;">
-            <svg class="glide__icon glide__icon_left">
-              <use xlink:href="images/sprite.svg#arrow"></use>
-            </svg></a><a class="glide__arrow glide__arrow_right" href="#" data-glide-dir="&gt;">
-            <svg class="glide__icon glide__icon_right">
-              <use xlink:href="images/sprite.svg#arrow"></use>
-            </svg></a></div>
-      </div>
-    </div>
-    <div class="main-content">
-      <div class="container container_main-content">
-        <aside class="aside">
-          <div class="aside__filters filters">
-            <div class="filters__title main-title">
-              <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon reset" href="#"><i class="fas fa-redo"></i></a>
-              <div class="main-title__hint">Сбросить все  
-                <svg class="main-title__reset-angle">
-                  <use xlink:href="images/sprite.svg#angle-reset"></use>
-                </svg>
+                </div>
               </div>
-            </div>
-            <ul class="filters__list">
-              <li class="filters__item filter filter filter_categories">
-                <div class="filter__title title">
-                  <div class="title__text no-right-border no-top-border">Сортировать</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
-                </div>
-                <ul class="filter__content categories no-top-border no-bottom-border sort sort-content">
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" name="sort" checked>
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">по названию</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" name="sort">
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">от дорогих к дешевым</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" name="sort">
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">от дешевых к дорогим</div>
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li class="filters__item filter filter_categories">
-                <div class="filter__title title">
-                  <div class="title__text no-top-border no-right-border">Категории</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
-                </div>
-                <ul class="filter__content categories no-top-border no-bottom-border categories-content">
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" checked name="category">
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">мужские</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" name="category">
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">женские</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_gender" type="radio" name="category">
-                      <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                      <div class="category__name">детские</div>
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li class="filters__item filter filter_categories">
-                <div class="filter__title title">
-                  <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
-                </div>
-                <ul class="filter__content categories no-top-border brands brands-content no-bottom-border" data-filter-type="brands">
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" checked="checked" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">Все бренды</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">adidas</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">converse</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">jordan</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">new balance</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">nike</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">puma</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">reebok</div>
-                    </label>
-                  </li>
-                  <li class="categories__item category">
-                    <label class="category__label label">
-                      <input class="category__radio radio radio_brands" type="checkbox" name="brands">
-                      <div class="category__radio-fake radio-fake radio-fake_brands"></div>
-                      <div class="category__name">vans</div>
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li class="filters__item filter filter_price">
-                <div class="filter__title title">
-                  <div class="title__text no-top-border no-right-border">Цена</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
-                </div>
-                <div class="filter__content price no-top-border no-bottom-border price-content">
-                  <div class="price__borders">
-                    <div class="price__from price-input">
-                      <div class="price-input__text">От</div>
-                      <input class="price-input__input" type="text" placeholder="500" id="price-from">
+              <ul class="filters__list">
+                <li class="filters__item filter filter filter_categories">
+                  <div class="filter__title title">
+                    <div class="title__text no-right-border no-top-border">Сортировать</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <ul class="filter__content categories no-top-border no-bottom-border sort sort-content">
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="sort" checked>
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">по названию</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">от дорогих к дешевым</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">от дешевых к дорогим</div>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filters__item filter filter_categories">
+                  <div class="filter__title title">
+                    <div class="title__text no-top-border no-right-border">Категории</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <ul class="filter__content categories no-top-border no-bottom-border categories-content">
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" checked name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">мужские</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">женские</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name">детские</div>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filters__item filter filter_categories">
+                  <div class="filter__title title">
+                    <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <ul class="filter__content categories no-top-border brands brands-content no-bottom-border" data-filter-type="brands">
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" checked="checked" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">Все бренды</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">adidas</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">converse</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">jordan</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">new balance</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">nike</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">puma</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">reebok</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_brands" type="checkbox" name="brands">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name">vans</div>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filters__item filter filter_price">
+                  <div class="filter__title title">
+                    <div class="title__text no-top-border no-right-border">Цена</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <div class="filter__content price no-top-border no-bottom-border price-content">
+                    <div class="price__borders">
+                      <div class="price__from price-input">
+                        <div class="price-input__text">От</div>
+                        <input class="price-input__input" type="text" placeholder="500" id="price-from">
+                      </div>
+                      <div class="price__to price-input">
+                        <div class="price-input__text">До</div>
+                        <input class="price-input__input" type="text" placeholder="5000" id="price-to">
+                      </div>
                     </div>
-                    <div class="price__to price-input">
-                      <div class="price-input__text">До</div>
-                      <input class="price-input__input" type="text" placeholder="5000" id="price-to">
+                    <div class="price__slider">
+                      <input class="price__input-slider" type="text" id="price-slider">
                     </div>
                   </div>
-                  <div class="price__slider">
-                    <input class="price__input-slider" type="text" id="price-slider">
+                </li>
+                <li class="filters__item filter filter_price">
+                  <div class="filter__title title">
+                    <div class="title__text no-top-border no-right-border">Цвета</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <ul class="filter__content no-top-border colors no-bottom-border colors-content">
+                    <li class="colors__item">
+                      <label class="colors__label label">
+                        <input class="colors__checkbox checkbox colors__checkbox_all" type="checkbox" checked="checked" name="colors">
+                        <div class="colors__all">Все цвета</div>
+                      </label>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="white"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="yellow"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="orange"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="red"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="blue"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="green"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="brown"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="purple"></div>
+                        </label>
+                      </li>
+                      <li class="colors__item">
+                        <label class="colors__label label">
+                          <input class="colors__checkbox checkbox" type="checkbox" name="colors">
+                          <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="rainbow"></div>
+                        </label>
+                      </li>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filters__item filter filter_price">
+                  <div class="filter__title title">
+                    <div class="title__text no-top-border no-right-border">Размер</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                  </div>
+                  <ul class="filter__content no-top-border sizes no-bottom-border sizes-content">
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" checked="checked" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">Все размеры</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">35</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">36</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">37</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">38</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">39</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">40</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">41</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">42</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">43</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">44</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">45</div>
+                      </label>
+                    </li>
+                    <li class="sizes__item">
+                      <label class="sizes__label label">
+                        <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
+                        <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
+                        <div class="sizes__name">46</div>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="aside__banner banner">
+              <div class="banner__img"></div>
+              <div class="banner__info info">
+                <div class="info__text info__text_banner">woman's air max 270</div>
+                <div class="info__price info__price_banner">3 990</div>
+              </div>
+            </div>
+          </aside>
+          <div class="content">
+            <div class="content__header"></div>
+            <ul class="content__goods goods">
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/1.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-1">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-1">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-1">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
                   </div>
                 </div>
               </li>
-              <li class="filters__item filter filter_price">
-                <div class="filter__title title">
-                  <div class="title__text no-top-border no-right-border">Цвета</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/2.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-2">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-2">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-2">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
                 </div>
-                <ul class="filter__content no-top-border colors no-bottom-border colors-content">
-                  <li class="colors__item">
-                    <label class="colors__label label">
-                      <input class="colors__checkbox checkbox colors__checkbox_all" type="checkbox" checked="checked" name="colors">
-                      <div class="colors__all">Все цвета</div>
-                    </label>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="white"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="yellow"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="orange"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="red"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="blue"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="green"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="brown"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="purple"></div>
-                      </label>
-                    </li>
-                    <li class="colors__item">
-                      <label class="colors__label label">
-                        <input class="colors__checkbox checkbox" type="checkbox" name="colors">
-                        <div class="colors__checkbox-fake color-fake checkbox-fake" data-color="rainbow"></div>
-                      </label>
-                    </li>
-                  </li>
-                </ul>
               </li>
-              <li class="filters__item filter filter_price">
-                <div class="filter__title title">
-                  <div class="title__text no-top-border no-right-border">Размер</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/2.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-3">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-3">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-3">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
                 </div>
-                <ul class="filter__content no-top-border sizes no-bottom-border sizes-content">
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" checked="checked" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">Все размеры</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">35</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">36</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">37</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">38</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">39</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">40</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">41</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">42</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">43</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">44</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">45</div>
-                    </label>
-                  </li>
-                  <li class="sizes__item">
-                    <label class="sizes__label label">
-                      <input class="sizes__radio radio radio_sizes" type="checkbox" name="sizes">
-                      <div class="sizes__radio-fake radio-fake radio-fake_sizes"></div>
-                      <div class="sizes__name">46</div>
-                    </label>
-                  </li>
-                </ul>
+              </li>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/2.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-4">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-4">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-4">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/5.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-5">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-5">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-5">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/3.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-6">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-6">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-6">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/3.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-7">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-7">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-7">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods__item">
+                <div class="product">
+                  <div class="product__sale"></div>
+                  <div class="product__top-row">
+                    <div class="product__text product-text">
+                      <div class="product-text__company">Nike</div>
+                      <div class="product-text__name">Men's Air More</div>
+                    </div><a class="product__like-link" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div><img class="product__img" src="images/1.png">
+                  <div class="product__bottom-row product-buy">
+                    <ul class="sneaker-colors product__sneaker-colors">
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-8">
+                          <div class="color-fake" data-color="black"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-8">
+                          <div class="color-fake" data-color="grey"></div>
+                        </label>
+                      </li>
+                      <li class="sneaker-colors__item">
+                        <label class="label">
+                          <input class="radio radio_sneaker" type="radio" name="sneaker-colors-8">
+                          <div class="color-fake" data-color="pink"></div>
+                        </label>
+                      </li>
+                    </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                    <div class="product-buy__price">2 590 р</div>
+                  </div>
+                </div>
               </li>
             </ul>
-          </div>
-          <div class="aside__banner banner">
-            <div class="banner__img"></div>
-            <div class="banner__info info">
-              <div class="info__text info__text_banner">woman's air max 270</div>
-              <div class="info__price info__price_banner">3 990</div>
+            <div class="content__pagination pagination"><a class="pagination__prev pagination__icon" href="#">
+                <svg class="pagination__svg">
+                  <use xlink:href="images/sprite.svg#arrow_left_double"></use>
+                </svg></a>
+              <ul class="pagination__pages pages">
+                <li class="pages__item pagination__icon hidden"><a class="pages__link" href="#"><span class="pages__text">1</span></a></li>
+                <li class="pages__item pagination__icon"><a class="pages__link" href="#"><span class="pages__text">2</span></a></li>
+                <li class="pages__item pagination__icon active"><a class="pages__link" href="#"><span class="pages__text">3</span></a></li>
+                <li class="pages__item pagination__icon"><a class="pages__link" href="#"><span class="pages__text">4</span></a></li>
+                <li class="pages__item pagination__icon hidden"><a class="pages__link" href="#"><span class="pages__text">5</span></a></li>
+              </ul><a class="pagination__next pagination__icon" href="#">
+                <svg class="pagination__svg">
+                  <use xlink:href="images/sprite.svg#arrow_right_double"></use>
+                </svg></a>
             </div>
           </div>
-        </aside>
-        <div class="content">
-          <div class="content__header"></div>
-          <ul class="content__goods goods">
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/1.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-1">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-1">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-1">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container container_footer">
+          <div class="footer__pay-info pay-info">
+            <div class="footer__logo logo"><a href="#">sneakers</a></div>
+            <div class="footer__pay-logos pay-info__logos"><img class="pay-logos__visa pay-info__img" src="images/logo-visa.png"><img class="pay-logos__mc pay-info__img" src="images/master-card.png"></div>
+            <div class="pay-info__pay-text">Вы можете оплатить покупки наличными при получении, либо выбрать другой <a class="pay-info__main" href="#">способ оплаты</a></div>
+          </div>
+          <ul class="footer__cols">
+            <li class="footer__col">
+              <div class="footer__title">аккаунт</div>
+              <ul class="footer__list footer-list">
+                <li class="footer-list__item"><a class="footer-list__link" href="#">вход </a><span>|</span><a class="footer-list__link" href="#"> регистрация</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">корзина</a></li>
+              </ul>
             </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/2.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-2">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-2">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-2">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
+            <li class="footer__col">
+              <div class="footer__title">навигация</div>
+              <ul class="footer__list footer-list">
+                <li class="footer-list__item"><a class="footer-list__link" href="#">новая коллекция</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">мужские</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">женские</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">детские</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">распродажа</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">магазин</a></li>
+              </ul>
             </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/2.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-3">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-3">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-3">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
-            </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/2.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-4">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-4">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-4">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
-            </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/5.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-5">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-5">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-5">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
-            </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/3.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-6">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-6">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-6">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
-            </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/3.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-7">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-7">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-7">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
-            </li>
-            <li class="goods__item">
-              <div class="product">
-                <div class="product__sale"></div>
-                <div class="product__top-row">
-                  <div class="product__text product-text">
-                    <div class="product-text__company">Nike</div>
-                    <div class="product-text__name">Men's Air More</div>
-                  </div><a class="product__like-link" href="#">
-                    <svg class="product__like">
-                      <use xlink:href="images/sprite.svg#cart"></use>
-                    </svg></a>
-                </div><img class="product__img" src="images/1.png">
-                <div class="product__bottom-row product-buy">
-                  <ul class="sneaker-colors product__sneaker-colors">
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" checked name="sneaker-colors-8">
-                        <div class="color-fake" data-color="black"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-8">
-                        <div class="color-fake" data-color="grey"></div>
-                      </label>
-                    </li>
-                    <li class="sneaker-colors__item">
-                      <label class="label">
-                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-8">
-                        <div class="color-fake" data-color="pink"></div>
-                      </label>
-                    </li>
-                  </ul><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
-                  <div class="product-buy__price">2 590 р</div>
-                </div>
-              </div>
+            <li class="footer__col">
+              <div class="footer__title">компания</div>
+              <ul class="footer__list footer-list">
+                <li class="footer-list__item"><a class="footer-list__link" href="#">о нас</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">политика конфиденциальности</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">справка и помощь</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">контакты</a></li>
+              </ul>
             </li>
           </ul>
-          <div class="content__pagination pagination"><a class="pagination__prev pagination__icon" href="#">
-              <svg class="pagination__svg">
-                <use xlink:href="images/sprite.svg#arrow_left_double"></use>
-              </svg></a>
-            <ul class="pagination__pages pages">
-              <li class="pages__item pagination__icon hidden"><a class="pages__link" href="#"><span class="pages__text">1</span></a></li>
-              <li class="pages__item pagination__icon"><a class="pages__link" href="#"><span class="pages__text">2</span></a></li>
-              <li class="pages__item pagination__icon active"><a class="pages__link" href="#"><span class="pages__text">3</span></a></li>
-              <li class="pages__item pagination__icon"><a class="pages__link" href="#"><span class="pages__text">4</span></a></li>
-              <li class="pages__item pagination__icon hidden"><a class="pages__link" href="#"><span class="pages__text">5</span></a></li>
-            </ul><a class="pagination__next pagination__icon" href="#">
-              <svg class="pagination__svg">
-                <use xlink:href="images/sprite.svg#arrow_right_double"></use>
-              </svg></a>
-          </div>
         </div>
-      </div>
+      </footer>
+      <script src="scripts/main.bundle.js"></script>
     </div>
-    <footer class="footer">
-      <div class="container container_footer">
-        <div class="footer__pay-info pay-info">
-          <div class="footer__logo logo"><a href="#">sneakers</a></div>
-          <div class="footer__pay-logos pay-info__logos"><img class="pay-logos__visa pay-info__img" src="images/logo-visa.png"><img class="pay-logos__mc pay-info__img" src="images/master-card.png"></div>
-          <div class="pay-info__pay-text">Вы можете оплатить покупки наличными при получении, либо выбрать другой <a class="pay-info__main" href="#">способ оплаты</a></div>
-        </div>
-        <ul class="footer__cols">
-          <li class="footer__col">
-            <div class="footer__title">аккаунт</div>
-            <ul class="footer__list footer-list">
-              <li class="footer-list__item"><a class="footer-list__link" href="#">вход </a><span>|</span><a class="footer-list__link" href="#"> регистрация</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">корзина</a></li>
-            </ul>
-          </li>
-          <li class="footer__col">
-            <div class="footer__title">навигация</div>
-            <ul class="footer__list footer-list">
-              <li class="footer-list__item"><a class="footer-list__link" href="#">новая коллекция</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">мужские</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">женские</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">детские</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">распродажа</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">магазин</a></li>
-            </ul>
-          </li>
-          <li class="footer__col">
-            <div class="footer__title">компания</div>
-            <ul class="footer__list footer-list">
-              <li class="footer-list__item"><a class="footer-list__link" href="#">о нас</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">политика конфиденциальности</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">справка и помощь</a></li>
-              <li class="footer-list__item"><a class="footer-list__link" href="#">контакты</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <script src="scripts/main.bundle.js"></script>
   </body>
 </html>

@@ -103,6 +103,13 @@ previewSlide.on('click', function(e) {
     previewGlide.go(`=${reqIndex}`);
 });
 
+const previewGalleryItem = $('.modal__preview-item');
+previewGalleryItem.on('click', function(e) {
+    const reqIndex = $(e.currentTarget).index();
+    modalGlide.go(`=${reqIndex}`);
+    previewGlide.go(`=${reqIndex}`);
+});
+
 const slider = $('#price-slider').data('ionRangeSlider');
 const fromInput = $('#price-from');
 const toInput = $('#price-to');
@@ -401,7 +408,7 @@ const triggers = $('.modal-trigger');
 
 function toggleModal() {
     modal.classList.toggle('active');
-    document.body.classList.toggle('active');
+    $('.wrapper').classList.toggle('active');
 }
 
 function windowOnClick(event) {
@@ -444,7 +451,7 @@ hamburger.on('click', function(e) {
     // if (!$('.open-filters').hasClass('is-active')) {
     hamburger.toggleClass('is-active');
     modalMenu.toggleClass('is-active');
-    $(document.body).toggleClass('active');
+    $('.wrapper').toggleClass('active');
 });
 
 const openFiltersBtn = $('.open-filters');
@@ -452,7 +459,7 @@ openFiltersBtn.on('click', function(e) {
     e.preventDefault();
     openFiltersBtn.toggleClass('is-active');
     $('.modal-filters').toggleClass('is-active');
-    $('body').toggleClass('active');
+    $('.wrapper').toggleClass('active');
 });
 
 
