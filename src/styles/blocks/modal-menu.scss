@@ -8,7 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 100vh;
+    
+    @include phones-landscape {
+      height: 100vh;
+    }
   }
 
   &__profile {
@@ -46,13 +49,14 @@
   }
 
   &__modal-city {
-    width: fit-content;
     position: absolute;
     bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    width: fit-content;
     @include phones-landscape {
       left: 100%;
+      right: auto;
       bottom: auto;
       transform: translateY(-70%);
       top: 50%;

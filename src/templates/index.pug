@@ -32,14 +32,7 @@ block content
           .modal-menu__exit.auth-exit
             a(href="#").auth-exit__link.popup-link.popup-link_exit Выйти из системы
         .modal-menu__city.modal-filter
-          .modal-filter__icon.modal-filter__icon_city
-            svg.modal-filter__svg.modal-filter__svg_city
-              use(xlink:href="images/sprite.svg#Vladivostok")
-          .modal-filter__text
-            .modal-city-text
-              .modal-filter__name.modal-filter__name_city Выберите город
-              .modal-filter__choosed.set-city.set-icon Владивосток
-            .modal-city.modal-menu__modal-city
+          .modal-city.modal-menu__modal-city
               a(href="#").modal-city__close-link
                 svg.modal-city__close-icon
                   use(xlink:href="images/sprite.svg#close")
@@ -62,6 +55,13 @@ block content
                       use(xlink:href="images/sprite.svg#Habarovsk")
                     .city-content__name(data-name="Habarovsk") Хабаровск
                 a(href="#").city-content__delivery-info.popup-link Условия доставки
+          .modal-filter__icon.modal-filter__icon_city
+            svg.modal-filter__svg.modal-filter__svg_city
+              use(xlink:href="images/sprite.svg#Vladivostok")
+          .modal-filter__text
+            .modal-city-text
+              .modal-filter__name.modal-filter__name_city Выберите город
+              .modal-filter__choosed.set-city.set-icon Владивосток
     .modal-filters.modal-phone
       ul.modal-filters__list
         li.modal-filters__item.modal-filter(data-filter-type="sort")
