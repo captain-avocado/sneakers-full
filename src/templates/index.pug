@@ -64,46 +64,46 @@ block content
                 a(href="#").city-content__delivery-info.popup-link Условия доставки
     .modal-filters.modal-phone
       ul.modal-filters__list
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="sort")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#sort")
-          .modal-filter__text(data-filter-type="sort")
+          .modal-filter__text
             .modal-filter__name Сортировать
             .modal-filter__choosed По названию
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="categories")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#organization")
-          .modal-filter__text(data-filter-type="categories")
+          .modal-filter__text
             .modal-filter__name Категории
             .modal-filter__choosed Мужские
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="brands")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#flyers")
-          .modal-filter__text(data-filter-type="brands")
+          .modal-filter__text
             .modal-filter__name Бренды
             .modal-filter__choosed Все бренды
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="price")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#money")
-          .modal-filter__text(data-filter-type="price")
+          .modal-filter__text
             .modal-filter__name Цена
             .modal-filter__choosed От 500 руб до 5 000 руб
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="colors")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#color")
-          .modal-filter__text(data-filter-type="colors")
+          .modal-filter__text
             .modal-filter__name Цвета
             .modal-filter__choosed Все цвета
-        li.modal-filters__item.modal-filter
+        li.modal-filters__item.modal-filter(data-filter-type="sizes")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#meter")
-          .modal-filter__text(data-filter-type="sizes")
+          .modal-filter__text
             .modal-filter__name Размер
             .modal-filter__choosed Все размеры
       .modal-filters__reset.reset Сбросить все
