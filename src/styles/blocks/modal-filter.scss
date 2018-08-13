@@ -59,6 +59,10 @@
     font-size: 12px;
     color: $bg-blue;
     font-weight: 500;
+    
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__text {

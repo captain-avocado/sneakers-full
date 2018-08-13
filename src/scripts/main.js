@@ -555,3 +555,27 @@ $('.scroll-up').on('click', function(e) {
     }
 });
 
+
+$('.radio').on('click', function(e) {
+   
+    const target = $(e.target);
+    const filterContent = target.closest('ul');
+    const checkedInput = filterContent.find('input:checked');
+    const checkedInputNames = checkedInput.siblings('.filter-item-name');
+
+    console.log(checkedInputNames);
+    console.log($(checkedInputNames[0]).text());
+    
+    let text = '';
+    for (let i = 0; i < checkedInputNames.length; i++) {
+        text += $(checkedInputNames[i]).text() + ', ';
+    }
+    text = text.substring(0, text.length - 2);
+    const textPlace = filterContent.siblings('.modal-filter__text').find('.modal-filter__choosed');
+    textPlace.text('');
+    textPlace.text(text);
+
+
+
+});
+
