@@ -458,7 +458,7 @@ hamburger.on('click', function(e) {
     // if (!$('.open-filters').hasClass('is-active')) {
     hamburger.toggleClass('is-active');
     modalMenu.toggleClass('is-active');
-    $('.wrapper').toggleClass('active');
+    $('body').toggleClass('active');
 });
 
 const openFiltersBtn = $('.open-filters');
@@ -466,7 +466,7 @@ openFiltersBtn.on('click', function(e) {
     e.preventDefault();
     openFiltersBtn.toggleClass('is-active');
     $('.modal-filters').toggleClass('is-active');
-    $('.wrapper').toggleClass('active');
+    $('body').toggleClass('active');
 });
 
 
