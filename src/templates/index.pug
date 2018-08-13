@@ -36,7 +36,7 @@ block content
             svg.modal-filter__svg.modal-filter__svg_city
               use(xlink:href="images/sprite.svg#Vladivostok")
           .modal-filter__text
-            .modal-city-open
+            .modal-city-text
               .modal-filter__name.modal-filter__name_city Выберите город
               .modal-filter__choosed.set-city.set-icon Владивосток
             .modal-city.modal-menu__modal-city
@@ -114,131 +114,128 @@ block content
         use(xlink:href="images/sprite.svg#filter")
       .open-filters__cross
     .modal
-      .modal__content
+      .modal__box
         .modal__hidden-row.modal__hidden-row_top
-          a(href="#").modal__close.modal-trigger
-              svg.modal__close-icon
-                use(xlink:href="images/sprite.svg#close")
-        .modal__hidden-row.modal__hidden-row_bottom
-          a(href="#").modal__close.modal-trigger
-              svg.modal__close-icon
-                use(xlink:href="images/sprite.svg#close")
-        .modal__row.modal__row_tablets.modal__row_product-text
-              .product-text
-                .product-text__company Nike
-                .product-text__name Men's Air More
-              .modal__product-price 10 490 р
-        .modal__gallery
-          .modal__slider
-            .glide--modal.glide--ltr.glide--carousel.glide--swipeable.glide--slider
-              .glide__track(data-glide-el="track")
-                ul.glide__slides
-                  li.glide__slide.glide__slide_modal
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_modal
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_modal
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_modal
-                    img(src="images/1.png")
-                  //- li.glide__slide.glide__slide_modal
-                  //-   img(src="images/1.png")
-          .modal__preview-slider
-            .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
-              .glide__track(data-glide-el="track")
-                ul.glide__slides.glide__slides_preview
-                  li.glide__slide.glide__slide_preview
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_preview
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_preview
-                    img(src="images/1.png")
-                  li.glide__slide.glide__slide_preview
-                    img(src="images/1.png")
-                  //- li.glide__slide.glide__slide_preview
-                  //-   img(src="images/1.png")
-              .glide__arrows(data-glide-el="controls")
-                a.glide__arrow.glide__arrow_preview-left.glide__arrow_left(href="#" data-glide-dir="<")
-                  svg.glide__icon.glide__icon_preview.glide__icon_left
-                    use(xlink:href="images/sprite.svg#arrow")
-                a.glide__arrow.glide__arrow_preview-right.glide__arrow_right(href="#" data-glide-dir=">")
-                  svg.glide__icon.glide__icon_preview.glide__icon_right
-                    use(xlink:href="images/sprite.svg#arrow")
-            ul.modal__preview-gallery
-              li.modal__preview-item
-                .modal__preview-inner
-                  img.modal__preview-img(src="images/1.png")
-              li.modal__preview-item
-                .modal__preview-inner
-                  img.modal__preview-img(src="images/1.png")
-              li.modal__preview-item
-                .modal__preview-inner
-                  img.modal__preview-img(src="images/1.png")
-              li.modal__preview-item
-                .modal__preview-inner
-                  img.modal__preview-img(src="images/1.png")
-        .modal__info
-          .modal__text
-            .modal__row.modal__row_product-text.modal__row_desktop
-              .product-text
-                .product-text__company Nike
-                .product-text__name Men's Air More
-              .modal__product-price 10 490 р
-            .modal__row.select-modal.modal__row_sizes
-              .select-modal__title Размеры
-              ul.select-modal__list.categories.categories_modal-sizes
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 35
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 37
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 39
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 40
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 41
-                li.categories__item.categories__item_modal-sizes.category
-                  label.category__label.label
-                    input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                    .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                    .category__name 44
-            .modal__row.select-modal.modal__row_colors
-              .select-modal__title Цвета
-              ul.sneaker-colors.select-modal__list
-                li.sneaker-colors__item
-                  label.label
-                    input(type="radio" checked name="sneaker-colors-modal-1").radio.radio_sneaker
-                    .color-fake(data-color="black")
-                li.sneaker-colors__item
-                  label.label
-                    input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
-                    .color-fake(data-color="grey")
-                li.sneaker-colors__item
-                  label.label
-                    input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
-                    .color-fake(data-color="pink").select-modal__list
-            .modal__descr Мужские кроссовки Nike Air More Money сделают твой образ ярче благодаря сочетанию элементов моделей Nike Air More Uptempo и Nike Air Money. Съемная накладка закрывает язычок, позволяя создавать разные образы.
-            .modal__code
-              .modal__code-text Модель:&nbsp 
-              .modal__code-nums AJ2998-600
-          .modal__bottom-row
-            a(href="#").btn.btn_buy Купить в один клик
-            a(href="#").btn.btn_cart Добавить в корзину
+            a(href="#").modal__close.modal-trigger
+                svg.modal__close-icon
+                  use(xlink:href="images/sprite.svg#close")
+        .modal__content
+          .modal__row.modal__row_tablets.modal__row_product-text
+                .product-text
+                  .product-text__company Nike
+                  .product-text__name Men's Air More
+                .modal__product-price 10 490 р
+          .modal__gallery
+            .modal__slider
+              .glide--modal.glide--ltr.glide--carousel.glide--swipeable.glide--slider
+                .glide__track(data-glide-el="track")
+                  ul.glide__slides
+                    li.glide__slide.glide__slide_modal
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_modal
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_modal
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_modal
+                      img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_modal
+                    //-   img(src="images/1.png")
+            .modal__preview-slider
+              .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
+                .glide__track(data-glide-el="track")
+                  ul.glide__slides.glide__slides_preview
+                    li.glide__slide.glide__slide_preview
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_preview
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_preview
+                      img(src="images/1.png")
+                    li.glide__slide.glide__slide_preview
+                      img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_preview
+                    //-   img(src="images/1.png")
+                .glide__arrows(data-glide-el="controls")
+                  a.glide__arrow.glide__arrow_preview-left.glide__arrow_left(href="#" data-glide-dir="<")
+                    svg.glide__icon.glide__icon_preview.glide__icon_left
+                      use(xlink:href="images/sprite.svg#arrow")
+                  a.glide__arrow.glide__arrow_preview-right.glide__arrow_right(href="#" data-glide-dir=">")
+                    svg.glide__icon.glide__icon_preview.glide__icon_right
+                      use(xlink:href="images/sprite.svg#arrow")
+              ul.modal__preview-gallery
+                li.modal__preview-item
+                  .modal__preview-inner
+                    img.modal__preview-img(src="images/1.png")
+                li.modal__preview-item
+                  .modal__preview-inner
+                    img.modal__preview-img(src="images/1.png")
+                li.modal__preview-item
+                  .modal__preview-inner
+                    img.modal__preview-img(src="images/1.png")
+                li.modal__preview-item
+                  .modal__preview-inner
+                    img.modal__preview-img(src="images/1.png")
+          .modal__info
+            .modal__text
+              .modal__row.modal__row_product-text.modal__row_desktop
+                .product-text
+                  .product-text__company Nike
+                  .product-text__name Men's Air More
+                .modal__product-price 10 490 р
+              .modal__row.select-modal.modal__row_sizes
+                .select-modal__title Размеры
+                ul.select-modal__list.categories.categories_modal-sizes
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 35
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 37
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 39
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 40
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 41
+                  li.categories__item.categories__item_modal-sizes.category
+                    label.category__label.label
+                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                      .category__name 44
+              .modal__row.select-modal.modal__row_colors
+                .select-modal__title Цвета
+                ul.sneaker-colors.select-modal__list
+                  li.sneaker-colors__item
+                    label.label
+                      input(type="radio" checked name="sneaker-colors-modal-1").radio.radio_sneaker
+                      .color-fake(data-color="black")
+                  li.sneaker-colors__item
+                    label.label
+                      input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
+                      .color-fake(data-color="grey")
+                  li.sneaker-colors__item
+                    label.label
+                      input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
+                      .color-fake(data-color="pink").select-modal__list
+              .modal__descr Мужские кроссовки Nike Air More Money сделают твой образ ярче благодаря сочетанию элементов моделей Nike Air More Uptempo и Nike Air Money. Съемная накладка закрывает язычок, позволяя создавать разные образы.
+              .modal__code
+                .modal__code-text Модель:&nbsp 
+                .modal__code-nums AJ2998-600
+            .modal__bottom-row
+              a(href="#").btn.btn_buy Купить в один клик
+              a(href="#").btn.btn_cart Добавить в корзину
     header.header
       .city-popup.header__popup.header__popup_city.popup.popup_city
         .popup__triangle

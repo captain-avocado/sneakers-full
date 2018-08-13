@@ -115,7 +115,8 @@
     height: 120px;
 
     @include tablets {
-      height: 100px;
+      height: auto;
+      max-width: 100%;
     }
   }
 }

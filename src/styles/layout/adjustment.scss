@@ -1,6 +1,13 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
+// html {
+//     &.active {
+//         overflow: hidden;
+//         position: relative;
+//         height: 100%; 
+//     }
+// }
 
 body {
     //fonts
@@ -9,14 +16,16 @@ body {
     color: $text-black;
 
     position: relative;
+    
+    &.active {
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
 }
 
-// .wrapper {
-//     &.active {
-//         height: 100%;
-//         overflow: hidden;
-//     }
-// }
+
 
 .container {
     width: 90%;

@@ -33,6 +33,11 @@
     &_city {
       width: 40px;
       height: 40px;
+      transition: fill .3s;
+
+      &.is-highlighted {
+        fill: $bg-blue;
+      }
     }
   }
 
