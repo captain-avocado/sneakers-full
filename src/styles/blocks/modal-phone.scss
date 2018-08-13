@@ -1,7 +1,7 @@
 .modal-phone {
   padding: 30px 20px;
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity .3s, z-index .3s, top .3s, background-color .3s;
   display: none;
   z-index: -1;
 

@@ -471,37 +471,11 @@ if (window.innerWidth <= 760) {
     $('.filter__content').addClass('is-modal');
 }
 
-const modalFilterText = $('.modal-filter__text, .modal-filter__icon');
-modalFilterText.on('click', function(e) {
-    const target = $(e.currentTarget);
-    const filterType = target.parent().data('filter-type') + '-content';
-    const filterContent = $(`.filter__content.${filterType}`);
-    if (!filterContent.find($('.close-icon')).length) {
-        $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
-        $('.filters-icon a').on('click', function(ev) {
-            ev.preventDefault();
-            setTimeout(function() {
-                filterContent.removeClass('is-modal-active');        
-            }, 10);
-        });
-    }
-    
-    if (!target.parent().find('.filter__content').length) {
-        filterContent.appendTo(target.parent());
-        console.log(target.parent());
-    }
-    setTimeout(function() {
-        filterContent.toggleClass('is-modal-active');  
-    }, 10);
-});
-
-// const modalFilter = $('.modal-filter');
-// modalFilter.on('click', function(e) {
+// const modalFilterText = $('.modal-filter__text, .modal-filter__icon');
+// modalFilterText.on('click', function(e) {
 //     const target = $(e.currentTarget);
-//     // console.log(target);
-//     const filterType = target.find('.modal-filter__text').data('filter-type') + '-content';
+//     const filterType = target.parent().data('filter-type') + '-content';
 //     const filterContent = $(`.filter__content.${filterType}`);
-//     // console.log(filterType);
 //     if (!filterContent.find($('.close-icon')).length) {
 //         $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
 //         $('.filters-icon a').on('click', function(ev) {
@@ -512,13 +486,49 @@ modalFilterText.on('click', function(e) {
 //         });
 //     }
     
-//     if (!target.find('.filter__content').length) {
-//         filterContent.appendTo(target);
+//     if (!target.parent().find('.filter__content').length) {
+//         filterContent.appendTo(target.parent());
+//         console.log(target.parent());
 //     }
 //     setTimeout(function() {
 //         filterContent.toggleClass('is-modal-active');  
 //     }, 10);
 // });
+
+const modalFilter = $('.modal-filter');
+const modalFilterList = $('.modal-filters__list');
+modalFilter.on('click', function(e) {
+
+    const prevActiveItem = modalFilterList.find('.is-modal-active');
+    if (prevActiveItem.length) {
+        // console.log(prevActiveItem);
+        prevActiveItem.removeClass('is-modal-active');
+    }
+    const target = $(e.currentTarget);
+
+    if (!prevActiveItem.closest('.modal-filter').is(target)) {
+        // console.log(prevActiveItem);
+        // console.log(target);
+        const filterType = target.data('filter-type') + '-content';
+        const filterContent = $(`.filter__content.${filterType}`);
+        if (!filterContent.find($('.close-icon')).length) {
+            $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
+            $('.filters-icon a').on('click', function(ev) {
+                ev.preventDefault();
+                setTimeout(function() {
+                    filterContent.removeClass('is-modal-active');        
+                }, 10);
+            });
+        }
+    
+        if (!target.find('.filter__content').length) {
+            filterContent.appendTo(target);
+        }
+        setTimeout(function() {
+            filterContent.toggleClass('is-modal-active');  
+        }, 10);
+    }
+});
 
 
 

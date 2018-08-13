@@ -106,13 +106,14 @@ block content
           .modal-filter__text
             .modal-filter__name Размер
             .modal-filter__choosed Все размеры
+      button#close-filters.modal-btn
+        .modal-btn__cross
       .modal-filters__reset.reset Сбросить все
     button#scroll-up.scroll-up
       i.fas.fa-angle-up
-    button#open-filters.open-filters
+    button#open-filters.modal-btn.open-filters
       svg.open-filters__icon
         use(xlink:href="images/sprite.svg#filter")
-      .open-filters__cross
     .modal
       .modal__box
         .modal__hidden-row.modal__hidden-row_top
