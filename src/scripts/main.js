@@ -309,7 +309,10 @@ $('.modal-menu__city').on('click', function() {
 
 $('.modal-city__close-link').on('click', function(e) {
     e.preventDefault();
+    e.stopPropagation();
     $('.modal-city').toggleClass('is-active');
+    $('.modal-filter__name_city').toggleClass('is-highlighted');
+    $('.modal-filter__svg_city').toggleClass('is-highlighted');
 });
 
 $('.cart-num__plus').on('click', function(e) {
