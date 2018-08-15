@@ -126,6 +126,10 @@ $('#price-slider').ionRangeSlider({
     onChange: function (data) {
         fromInput.val(data.from);
         toInput.val(data.to);
+        if (window.innerWidth <= 760) {
+            const priceText = `От ${data.from} руб до ${data.to}`;
+            $('.modal-filter__choosed_price').text(priceText);
+        }
     },
 });
 
@@ -135,6 +139,12 @@ fromInput.on('input', function() {
             from: fromInput.val(),
         });
     }
+
+    if (window.innerWidth <= 760) {
+        console.log(fromInput.val(), toInput.val());
+        const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
+        $('.modal-filter__choosed_price').text(priceText);
+    }
 });
 
 toInput.on('input', function(){
@@ -142,6 +152,10 @@ toInput.on('input', function(){
         slider.update({
             to: toInput.val(),
         });
+    }
+    if (window.innerWidth <= 760) {
+        const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
+        $('.modal-filter__choosed_price').text(priceText);
     }
 });
 
@@ -472,79 +486,112 @@ if (window.innerWidth <= 760) {
     $('.filter__content').addClass('is-modal');
 }
 
-// const modalFilterText = $('.modal-filter__text, .modal-filter__icon');
-// modalFilterText.on('click', function(e) {
-//     const target = $(e.currentTarget);
-//     const filterType = target.parent().data('filter-type') + '-content';
-//     const filterContent = $(`.filter__content.${filterType}`);
-//     if (!filterContent.find($('.close-icon')).length) {
-//         $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
-//         $('.filters-icon a').on('click', function(ev) {
-//             ev.preventDefault();
-//             setTimeout(function() {
-//                 filterContent.removeClass('is-modal-active');        
-//             }, 10);
-//         });
-//     }
+$('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
     
-//     if (!target.parent().find('.filter__content').length) {
-//         filterContent.appendTo(target.parent());
-//         console.log(target.parent());
-//     }
-//     setTimeout(function() {
-//         filterContent.toggleClass('is-modal-active');  
-//     }, 10);
-// });
-
-const modalFilter = $('.modal-filter');
-const modalFilterList = $('.modal-filters__list');
-modalFilter.on('click', function(e) {
-
-
+    const modalFilterList = $('.modal-filters__list');
     const prevActiveItem = modalFilterList.find('.is-modal-active');
     if (prevActiveItem.length) {
-        // console.log(prevActiveItem);
         prevActiveItem.removeClass('is-modal-active');
     }
+
     const target = $(e.currentTarget);
 
-    let name = target.find('.modal-filter__name');
-    let icon = target.find('.modal-filter__icon');
-    let svg = target.find('.modal-filter__svg');
-
+    let name = target.parent().find('.modal-filter__name');
+    let icon = target.parent().find('.modal-filter__icon');
+    let svg = target.parent().find('.modal-filter__svg');
+    
     name.toggleClass('is-highlighted');
     icon.toggleClass('is-highlighted');
     svg.toggleClass('is-highlighted');
 
-    if (!prevActiveItem.closest('.modal-filter').is(target)) {
-        
-        name = prevActiveItem.closest('.modal-filter').find('.modal-filter__name');
-        icon = prevActiveItem.closest('.modal-filter').find('.modal-filter__icon');
-        svg = prevActiveItem.closest('.modal-filter').find('.modal-filter__svg');
-        name.toggleClass('is-highlighted');
-        icon.toggleClass('is-highlighted');
-        svg.toggleClass('is-highlighted');
-
-        const filterType = target.data('filter-type') + '-content';
+    if (!prevActiveItem.closest('.modal-filter').is(target.parent())) {
+    
+        const filterType = target.parent().data('filter-type') + '-content';
         const filterContent = $(`.filter__content.${filterType}`);
         if (!filterContent.find($('.close-icon')).length) {
             $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
             $('.filters-icon a').on('click', function(ev) {
+                name = target.parent().find('.modal-filter__name');
+                icon = target.parent().find('.modal-filter__icon');
+                svg = target.parent().find('.modal-filter__svg');
+                
+                name.removeClass('is-highlighted');
+                icon.removeClass('is-highlighted');
+                svg.removeClass('is-highlighted');
                 ev.preventDefault();
                 setTimeout(function() {
                     filterContent.removeClass('is-modal-active');        
                 }, 10);
             });
         }
-    
-        if (!target.find('.filter__content').length) {
-            filterContent.appendTo(target);
+
+        name = prevActiveItem.closest('.modal-filter').find('.modal-filter__name');
+        icon = prevActiveItem.closest('.modal-filter').find('.modal-filter__icon');
+        svg = prevActiveItem.closest('.modal-filter').find('.modal-filter__svg');
+        name.toggleClass('is-highlighted');
+        icon.toggleClass('is-highlighted');
+        svg.toggleClass('is-highlighted');
+        
+        if (!target.parent().find('.filter__content').length) {
+            filterContent.appendTo(target.parent());
+            console.log(target.parent());
         }
         setTimeout(function() {
             filterContent.toggleClass('is-modal-active');  
         }, 10);
     }
 });
+
+// const modalFilter = $('.modal-filter');
+// const modalFilterList = $('.modal-filters__list');
+// modalFilter.on('click', function(e) {
+
+//     console.log(e.target);
+//     console.log(e.currentTarget);
+
+//     const prevActiveItem = modalFilterList.find('.is-modal-active');
+//     if (prevActiveItem.length) {
+//         prevActiveItem.removeClass('is-modal-active');
+//     }
+//     const target = $(e.currentTarget);
+
+//     let name = target.find('.modal-filter__name');
+//     let icon = target.find('.modal-filter__icon');
+//     let svg = target.find('.modal-filter__svg');
+
+//     name.toggleClass('is-highlighted');
+//     icon.toggleClass('is-highlighted');
+//     svg.toggleClass('is-highlighted');
+
+//     if (!prevActiveItem.closest('.modal-filter').is(target)) {
+        
+//         name = prevActiveItem.closest('.modal-filter').find('.modal-filter__name');
+//         icon = prevActiveItem.closest('.modal-filter').find('.modal-filter__icon');
+//         svg = prevActiveItem.closest('.modal-filter').find('.modal-filter__svg');
+//         name.toggleClass('is-highlighted');
+//         icon.toggleClass('is-highlighted');
+//         svg.toggleClass('is-highlighted');
+
+//         const filterType = target.data('filter-type') + '-content';
+//         const filterContent = $(`.filter__content.${filterType}`);
+//         if (!filterContent.find($('.close-icon')).length) {
+//             $('.close-icon').clone().removeClass('hidden').addClass('filters-icon').appendTo(filterContent);
+//             $('.filters-icon a').on('click', function(ev) {
+//                 ev.preventDefault();
+//                 setTimeout(function() {
+//                     filterContent.removeClass('is-modal-active');        
+//                 }, 10);
+//             });
+//         }
+    
+//         if (!target.find('.filter__content').length) {
+//             filterContent.appendTo(target);
+//         }
+//         setTimeout(function() {
+//             filterContent.toggleClass('is-modal-active');  
+//         }, 10);
+//     }
+// });
 
 
 
@@ -591,4 +638,3 @@ $('.radio').on('click', function(e) {
 
 
 });
-

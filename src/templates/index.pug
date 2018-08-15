@@ -91,14 +91,15 @@ block content
               use(xlink:href="images/sprite.svg#money")
           .modal-filter__text
             .modal-filter__name Цена
-            .modal-filter__choosed От 500 руб до 5 000 руб
+            .modal-filter__choosed.modal-filter__choosed_price От 500 руб до 5 000 руб
         li.modal-filters__item.modal-filter(data-filter-type="colors")
           .modal-filter__icon
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#color")
           .modal-filter__text
             .modal-filter__name Цвета
-            .modal-filter__choosed Все цвета
+            .modal-filter__choosed
+              .modal-filter__color-list Все цвета
         li.modal-filters__item.modal-filter(data-filter-type="sizes")
           .modal-filter__icon
             svg.modal-filter__svg

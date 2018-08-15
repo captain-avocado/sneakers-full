@@ -9,21 +9,34 @@ export default function checkAll(inputList, inputItem, input) {
         }
 
         const target = $(e.target);
-        console.log(target);
         const filterContent = target.closest('ul');
         const checkedInput = filterContent.find('input:checked');
-        const checkedInputNames = checkedInput.siblings('.filter-item-name');
+    
+        if (inputList !== '.colors') {
+            
+            const checkedInputNames = checkedInput.siblings('.filter-item-name');
+            
+            let text = '';
+            for (let i = 0; i < checkedInputNames.length; i++) {
+                text += $(checkedInputNames[i]).text() + ', ';
+            }
+            text = text.substring(0, text.length - 2);
+            const textPlace = filterContent.siblings('.modal-filter__text').find('.modal-filter__choosed');
+            textPlace.text('');
+            textPlace.text(text);
+        } else {
+            const colorList = $('.modal-filter__color-list');
+            colorList.empty();
+            for (let i = 0; i < checkedInput.length; i++) {
 
-        console.log(checkedInputNames);
-        console.log($(checkedInputNames[0]).text());
-        
-        let text = '';
-        for (let i = 0; i < checkedInputNames.length; i++) {
-            text += $(checkedInputNames[i]).text() + ', ';
+                if ($(checkedInput[i]).siblings('.colors__all').length) {
+                    colorList.text($(checkedInput[i]).siblings('.colors__all').text());
+                    break;
+                }
+
+                const colorItem = $(checkedInput[i]).siblings('.color-fake');
+                colorItem.clone().appendTo(colorList);
+            }
         }
-        text = text.substring(0, text.length - 2);
-        const textPlace = filterContent.siblings('.modal-filter__text').find('.modal-filter__choosed');
-        textPlace.text('');
-        textPlace.text(text);
     });
 }
