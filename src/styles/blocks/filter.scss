@@ -73,15 +73,14 @@
         }
 
         & .category {
+          margin-bottom: 20px !important;
           &:not(:first-child) {
             width: 50%;
           }
           &:first-child {
             width: 100%;
           }
-          &:nth-last-child(2) {
-            margin-bottom: 0;
-          }
+          
         }
       }
 

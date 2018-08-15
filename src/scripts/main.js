@@ -134,29 +134,38 @@ $('#price-slider').ionRangeSlider({
 });
 
 fromInput.on('input', function() {
-    if (fromInput.val() !== '') {
-        slider.update({
+    const fromValue = parseInt(fromInput.val());
+    const toValue = parseInt(toInput.val());
+
+    if (fromInput.val() !== '' && toInput.val() !== '' && fromValue < toValue) {
+
+        $('#price-slider').data('ionRangeSlider').update({
             from: fromInput.val(),
         });
+        if (window.innerWidth <= 760) {
+            const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
+            $('.modal-filter__choosed_price').text(priceText);
+        }
     }
 
-    if (window.innerWidth <= 760) {
-        console.log(fromInput.val(), toInput.val());
-        const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
-        $('.modal-filter__choosed_price').text(priceText);
-    }
+    
 });
 
-toInput.on('input', function(){
-    if (toInput.val() !== '') {
-        slider.update({
+toInput.on('input', function() {
+    const fromValue = parseInt(fromInput.val());
+    const toValue = parseInt(toInput.val());
+
+    if (fromInput.val() !== '' && toInput.val() !== '' && fromValue < toValue) {
+       
+        $('#price-slider').data('ionRangeSlider').update({
             to: toInput.val(),
         });
+        if (window.innerWidth <= 760) {
+            const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
+            $('.modal-filter__choosed_price').text(priceText);
+        }
     }
-    if (window.innerWidth <= 760) {
-        const priceText = `От ${fromInput.val()} руб до ${toInput.val()}`;
-        $('.modal-filter__choosed_price').text(priceText);
-    }
+    
 });
 
 const prevBtn = $('.pagination__prev');
@@ -627,10 +636,18 @@ $('.radio').on('click', function(e) {
     console.log($(checkedInputNames[0]).text());
     
     let text = '';
+    let flag = false;
     for (let i = 0; i < checkedInputNames.length; i++) {
+        if (i === 2) {
+            text += ` и еще ${checkedInputNames.length - i}`;
+            flag = true;
+            break;
+        }
         text += $(checkedInputNames[i]).text() + ', ';
     }
-    text = text.substring(0, text.length - 2);
+    if (!flag) {
+        text = text.substring(0, text.length - 2);
+    }
     const textPlace = filterContent.siblings('.modal-filter__text').find('.modal-filter__choosed');
     textPlace.text('');
     textPlace.text(text);
@@ -638,3 +655,15 @@ $('.radio').on('click', function(e) {
 
 
 });
+
+
+// $(window).onload(function() {
+//     setTimeout(function() {
+//         $('#particles').fadeOut(400);
+//     }, 500);
+// });
+
+// import particlesJS from 'particles.js';
+// particlesJS.load('particles-js', '../particles.json', function() {
+//     console.log('callback - particles-js config loaded');
+// });

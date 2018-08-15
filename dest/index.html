@@ -15,7 +15,19 @@
     <title>Sneakers Shop</title>
   </head>
   <body>
+    <style>
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #3151CC;
+        z-index: 100000;
+      }
+    </style>
     <div class="wrapper">
+      <div class="particles-js" id="particles-js"></div>
       <div class="close-icon hidden"><a class="close-icon__link" href="#">
           <svg class="close-icon__svg">
             <use xlink:href="images/sprite.svg#close"></use>
@@ -583,63 +595,63 @@
                     <div class="title__text no-top-border no-right-border">Бренды</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                   </div>
                   <ul class="filter__content categories no-top-border brands brands-content no-bottom-border" data-filter-type="brands">
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" checked="checked" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Все бренды</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Adidas</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Converse</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Jordan</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">New balance</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Nike</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Puma</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
                         <div class="category__name filter-item-name">Reebok</div>
                       </label>
                     </li>
-                    <li class="categories__item category">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
                         <input class="category__radio radio radio_brands" type="checkbox" name="brands">
                         <div class="category__radio-fake radio-fake radio-fake_brands"></div>
@@ -1217,6 +1229,52 @@
           </ul>
         </div>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+        
+        var preloaderLayer = document.getElementById("particles-js");
+        var wrapper = document.getElementById('wrapper');
+        
+        
+        function fadeOut( elem, ms )
+        {
+          if( ! elem )
+            return;
+        
+          if( ms )
+          {
+            var opacity = 1;
+            var timer = setInterval( function() {
+              opacity -= 50 / ms;
+              if( opacity <= 0 )
+              {
+                clearInterval(timer);
+                opacity = 0;
+                elem.style.display = "none";
+                elem.style.visibility = "hidden";
+              }
+              elem.style.opacity = opacity;
+              elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+            }, 50 );
+          }
+          else
+          {
+            elem.style.opacity = 0;
+            elem.style.filter = "alpha(opacity=0)";
+            elem.style.display = "none";
+            elem.style.visibility = "hidden";
+          }
+        }
+        
+        window.onload = function(){
+          setTimeout(function(){
+            fadeOut(preloaderLayer, 500);
+          }, 3500);
+        };
+      </script>
       <script src="scripts/main.bundle.js"></script>
     </div>
   </body>

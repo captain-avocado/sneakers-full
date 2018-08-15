@@ -132,7 +132,7 @@ function fonts() {
 }
 
 function transferData() {
-    return gulp.src(paths.src + 'data.json').pipe(gulp.dest(paths.dest));
+    return gulp.src(paths.src + '*.json').pipe(gulp.dest(paths.dest));
 }
 
 function watch() {

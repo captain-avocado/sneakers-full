@@ -3,7 +3,18 @@ block head
     title Sneakers Shop
 block variables
 block content
+  style.
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #3151CC;
+      z-index: 100000;
+    }
   .wrapper
+    .particles-js#particles-js
     .close-icon.hidden
       a(href="#").close-icon__link
         svg.close-icon__svg
@@ -465,47 +476,47 @@ block content
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
                   ul.filter__content.categories.no-top-border.brands.brands-content.no-bottom-border(data-filter-type="brands")
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" checked="checked" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Все бренды
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Adidas
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Converse
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Jordan
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name New balance
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Nike
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Puma
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
                         .category__name.filter-item-name Reebok
-                    li.categories__item.category
+                    li.categories__item.category.brands__item
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
@@ -948,4 +959,50 @@ block content
               li.footer-list__item
                 a.footer-list__link(href="#") контакты
               
+
+    script(src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js")
+    script.
+      particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+
+      var preloaderLayer = document.getElementById("particles-js");
+      var wrapper = document.getElementById('wrapper');
+
+
+      function fadeOut( elem, ms )
+      {
+        if( ! elem )
+          return;
+
+        if( ms )
+        {
+          var opacity = 1;
+          var timer = setInterval( function() {
+            opacity -= 50 / ms;
+            if( opacity <= 0 )
+            {
+              clearInterval(timer);
+              opacity = 0;
+              elem.style.display = "none";
+              elem.style.visibility = "hidden";
+            }
+            elem.style.opacity = opacity;
+            elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+          }, 50 );
+        }
+        else
+        {
+          elem.style.opacity = 0;
+          elem.style.filter = "alpha(opacity=0)";
+          elem.style.display = "none";
+          elem.style.visibility = "hidden";
+        }
+      }
+
+      window.onload = function(){
+        setTimeout(function(){
+          fadeOut(preloaderLayer, 500);
+        }, 3500);
+      };
     script(src="scripts/main.bundle.js")
