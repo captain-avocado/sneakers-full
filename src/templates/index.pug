@@ -61,7 +61,7 @@ block content
           .modal-filter__text
             .modal-city-text
               .modal-filter__name.modal-filter__name_city Выберите город
-              .modal-filter__choosed.set-city.set-icon Владивосток
+              .modal-filter__choosed.modal-filter__choosed_city.set-city.set-icon Владивосток
     .modal-filters.modal-phone
       ul.modal-filters__list
         li.modal-filters__item.modal-filter(data-filter-type="sort")
@@ -426,17 +426,17 @@ block content
                       label.category__label.label
                         input(type="radio" name="sort" checked).category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name по названию
+                        .category__name.filter-item-name По названию
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="sort").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name от дорогих к дешевым
+                        .category__name.filter-item-name От дорогих к дешевым
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="sort").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name от дешевых к дорогим
+                        .category__name.filter-item-name От дешевых к дорогим
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Категории
@@ -447,17 +447,17 @@ block content
                       label.category__label.label
                         input(type="radio" checked name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name мужские
+                        .category__name.filter-item-name Мужские
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name женские
+                        .category__name.filter-item-name Женские
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name детские
+                        .category__name.filter-item-name Детские
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Бренды
@@ -473,42 +473,42 @@ block content
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name adidas
+                        .category__name.filter-item-name Adidas
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name converse
+                        .category__name.filter-item-name Converse
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name jordan
+                        .category__name.filter-item-name Jordan
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name new balance
+                        .category__name.filter-item-name New balance
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name nike
+                        .category__name.filter-item-name Nike
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name puma
+                        .category__name.filter-item-name Puma
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name reebok
+                        .category__name.filter-item-name Reebok
                     li.categories__item.category
                       label.category__label.label
                         input(type="checkbox" name="brands").category__radio.radio.radio_brands
                         .category__radio-fake.radio-fake.radio-fake_brands
-                        .category__name.filter-item-name vans
+                        .category__name.filter-item-name Vans
                 li.filters__item.filter.filter_price
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Цена
@@ -672,8 +672,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
@@ -686,6 +685,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -699,20 +699,20 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" checked name="sneaker-colors-2").radio.radio_sneaker
+                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="black")
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            input(type="radio" checked name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="grey")
                         li.sneaker-colors__item
                           label.label
-                            input(type="radio" name="sneaker-colors-2").radio.radio_sneaker
+                            input(type="radio" name="sneaker-colors-1").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -726,8 +726,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" name="sneaker-colors-3").radio.radio_sneaker
@@ -740,6 +739,7 @@ block content
                           label.label
                             input(type="radio" checked name="sneaker-colors-3").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -753,8 +753,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/2.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" checked name="sneaker-colors-4").radio.radio_sneaker
@@ -767,6 +766,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-4").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -780,8 +780,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/5.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
@@ -794,6 +793,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-5").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -807,8 +807,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" checked name="sneaker-colors-6").radio.radio_sneaker
@@ -821,6 +820,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-6").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -834,8 +834,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/3.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" checked name="sneaker-colors-7").radio.radio_sneaker
@@ -848,6 +847,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-7").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
               li.goods__item
@@ -861,8 +861,7 @@ block content
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
                   img(src="images/1.png").product__img
-                  .product__bottom-row.product-buy
-                      ul.sneaker-colors.product__sneaker-colors
+                  ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
                           label.label
                             input(type="radio" checked name="sneaker-colors-8").radio.radio_sneaker
@@ -875,6 +874,7 @@ block content
                           label.label
                             input(type="radio" name="sneaker-colors-8").radio.radio_sneaker
                             .color-fake(data-color="pink")
+                  .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
             .content__pagination.pagination

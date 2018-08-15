@@ -303,8 +303,6 @@ $('.city-content__item').on('click', function(e) {
 
 $('.modal-menu__city').on('click', function() {
     $('.modal-city').toggleClass('is-active');
-    $('.modal-filter__name_city').toggleClass('is-highlighted');
-    $('.modal-filter__svg_city').toggleClass('is-highlighted');
 });
 
 $('.modal-city__close-link').on('click', function(e) {
@@ -502,6 +500,7 @@ const modalFilter = $('.modal-filter');
 const modalFilterList = $('.modal-filters__list');
 modalFilter.on('click', function(e) {
 
+
     const prevActiveItem = modalFilterList.find('.is-modal-active');
     if (prevActiveItem.length) {
         // console.log(prevActiveItem);
@@ -509,9 +508,23 @@ modalFilter.on('click', function(e) {
     }
     const target = $(e.currentTarget);
 
+    let name = target.find('.modal-filter__name');
+    let icon = target.find('.modal-filter__icon');
+    let svg = target.find('.modal-filter__svg');
+
+    name.toggleClass('is-highlighted');
+    icon.toggleClass('is-highlighted');
+    svg.toggleClass('is-highlighted');
+
     if (!prevActiveItem.closest('.modal-filter').is(target)) {
-        // console.log(prevActiveItem);
-        // console.log(target);
+        
+        name = prevActiveItem.closest('.modal-filter').find('.modal-filter__name');
+        icon = prevActiveItem.closest('.modal-filter').find('.modal-filter__icon');
+        svg = prevActiveItem.closest('.modal-filter').find('.modal-filter__svg');
+        name.toggleClass('is-highlighted');
+        icon.toggleClass('is-highlighted');
+        svg.toggleClass('is-highlighted');
+
         const filterType = target.data('filter-type') + '-content';
         const filterContent = $(`.filter__content.${filterType}`);
         if (!filterContent.find($('.close-icon')).length) {

@@ -15,11 +15,20 @@
     border-radius: 50%;
     position: relative;
     margin-right: 20px;
+    transition: border-color .3s;
+
+    @include phones {
+      width: 45px;
+      height: 45px;
+    }
+
+    &.is-highlighted {
+      border-color: $bg-blue;
+    }
 
     &_city {
       border: none;
     }
-
   }
 
   &__svg {
@@ -30,28 +39,39 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: fill .3s;
+
+    @include phones {
+      width: 25px;
+      height: 25px;
+    }
 
     &_city {
       width: 40px;
       height: 40px;
       transition: fill .3s;
+    }
 
-      &.is-highlighted {
-        fill: $bg-blue;
-      }
+    &.is-highlighted {
+      fill: $bg-blue;
     }
   }
 
   &__name {
     font-size: 24px;
     color: #4A4A4A;
+    transition: color .3s;
+
+    @include phones {
+      font-size: 18px;
+    }
 
     &_city {
       font-size: 18px;
+    }
 
-      &.is-highlighted {
-        color: $bg-blue;
-      }
+    &.is-highlighted {
+      color: $bg-blue;
     }
   }
 
@@ -59,10 +79,18 @@
     font-size: 12px;
     color: $bg-blue;
     font-weight: 500;
-    
+
     width: 200px;
     overflow: hidden;
     white-space: nowrap;
+
+    &_city {
+      width: auto;
+    }
+
+    @include phones-landscape {
+      width: auto;
+    }
   }
 
   &__text {

@@ -37,11 +37,10 @@
   }
 
   &_close {
-    border: 1.5px solid #000;
-    color: #000;
-    //#a9a9a9
     font-weight: 400;
     transition: border .3s, color .3s;
+    border: 1px solid #4a4a4a; 
+    color: #4a4a4a;
     &:hover {
       border: 1.5px solid $bg-blue;
       color: $bg-blue;

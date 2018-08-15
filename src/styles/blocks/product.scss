@@ -13,12 +13,9 @@
   }
   
   &__sneaker-colors {
-      margin-bottom: 30px;
-      z-index: 100;
-      position: absolute;
-      top: 67%;
-      left: 50%;
-      transform: translateX(-50%);
+    margin-bottom: 30px;
+    z-index: 100;
+    align-self: center;
   }
   &:after {
     content: '';
@@ -110,13 +107,14 @@
 
   &__img {
     align-self: center;
-    margin-bottom: 75px;
+    margin-bottom: 35px;
     max-width: 80%;
     height: 120px;
 
-    @include tablets {
+    @include phones {
       height: auto;
-      max-width: 100%;
+      max-width: 370px;
+      width: 80%;
     }
   }
 }
