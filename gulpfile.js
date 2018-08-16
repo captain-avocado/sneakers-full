@@ -142,7 +142,7 @@ function watch() {
     gulp.watch(paths.src + 'images/icons/*.svg', sprite);
     gulp.watch(paths.src + 'images/**/*.*', images);
     gulp.watch(paths.src + 'fonts/**/*.*', fonts);
-    gulp.watch(paths.src + 'data.json', transferData);
+    gulp.watch(paths.src + '*.json', transferData);
 }
 
 

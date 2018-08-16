@@ -12,9 +12,45 @@ block content
       bottom: 0;
       background-color: #3151CC;
       z-index: 100000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading {
+      position: absolute;
+    }
+
+    @keyframes wave {
+      0%   {x: -400px;}
+      100% {x: 0}
+    }
+        
+    @keyframes fill-up {
+      0% {
+        height: 0;
+        y: 130px;
+      }
+      100% {
+        height: 160px;
+        y: -30px;
+      }
+    }
+    .water-fill {
+      animation: wave 0.7s infinite linear, fill-up 5s infinite ease-out alternate;
     }
   .wrapper
     .particles-js#particles-js
+      svg(class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="910px" height="120px" viewBox="-5 0 910 120" enable-background="new 0 0 574.558 120" xml:space="preserve")
+        defs
+          pattern(id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox")
+            path(fill="#fff" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z")
+          text(id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="700") SNEAKERS
+    
+          mask(id="text_mask")
+            use(x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff")
+        rect(class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120")
     .close-icon.hidden
       a(href="#").close-icon__link
         svg.close-icon__svg
@@ -1000,9 +1036,16 @@ block content
         }
       }
 
+      
+
       window.onload = function(){
-        setTimeout(function(){
+        var loadingEl = document.getElementById('loading');
+        console.log(loadingEl);
+        loadingEl.addEventListener('click', function(e) {
           fadeOut(preloaderLayer, 500);
-        }, 3500);
-      };
+        });
+      //-   setTimeout(function(){
+      //-     fadeOut(preloaderLayer, 500);
+      //-   }, 50000);
+      }
     script(src="scripts/main.bundle.js")

@@ -213,10 +213,12 @@ prevBtn.on('click', function(e) {
 
         updateProducts(curPage);
     }
-    if (curPage === 1) {
-        $('.pages').children().eq(2).css('border-right', '1px solid #ececec');
-    } else {
-        $('.pages').children().eq(2).css('border-right', '');
+    if (window.innerWidth <= 760) {
+        if (curPage === 1) {
+            $('.pages').children().eq(2).css('border-right', '1px solid #ececec');
+        } else {
+            $('.pages').children().eq(2).css('border-right', '');
+        }
     }
 });
 
@@ -656,14 +658,3 @@ $('.radio').on('click', function(e) {
 
 });
 
-
-// $(window).onload(function() {
-//     setTimeout(function() {
-//         $('#particles').fadeOut(400);
-//     }, 500);
-// });
-
-// import particlesJS from 'particles.js';
-// particlesJS.load('particles-js', '../particles.json', function() {
-//     console.log('callback - particles-js config loaded');
-// });
