@@ -316,6 +316,11 @@ triggerPopup('.icons__link_cart', '.cart-popup');
 
 $('.city-content__item').on('click', function(e) {
     const choosedItem = $(e.currentTarget);
+
+    $('.modal-filter__name_city').removeClass('is-highlighted');
+    $('.modal-filter__svg_city').removeClass('is-highlighted');
+
+
     $('.city-content__item.active').removeClass('active');
     choosedItem.addClass('active');
     $('.set-city').text(choosedItem.find('.city-content__name').text());
