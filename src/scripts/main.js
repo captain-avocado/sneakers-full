@@ -519,10 +519,12 @@ hamburger.on('click', function(e) {
 
 const openFiltersBtn = $('.open-filters');
 const modalFilters = $('.modal-filters');
+const resetBtn = $('.reset');
 openFiltersBtn.on('click', function(e) {
     e.preventDefault();
     openFiltersBtn.toggleClass('is-active');
     modalFilters.toggleClass('is-active');
+    resetBtn.toggleClass('is-active');
 
     if (modalFilters.hasClass('is-active')) {
         disableBodyScroll(modalFilters);

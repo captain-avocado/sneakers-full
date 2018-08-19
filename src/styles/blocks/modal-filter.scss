@@ -8,10 +8,6 @@
       width: 50%;
     }
 
-    @include phones-small {
-      padding: 0;
-    }
-
   &__icon {
     width: 55px;
     height: 55px;
