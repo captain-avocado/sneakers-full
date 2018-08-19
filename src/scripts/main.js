@@ -451,6 +451,12 @@ function stopBodyScrolling (bool) {
         // document.body.removeEventListener('touchmove', freezeVp, false);
     }
 }
+// import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+const bodyScrollLock = require('body-scroll-lock');
+const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+const targetElement = document.querySelector('.modal__content');
+
 
 function toggleModal() {
     modal.classList.toggle('active');
@@ -467,10 +473,11 @@ function toggleModal() {
 
 
 
+
     if ($(modal).hasClass('active')) {
-        stopBodyScrolling(true);
+        disableBodyScroll(targetElement);
     } else {
-        stopBodyScrolling(false);
+        enableBodyScroll(targetElement);
     }
 }
 
