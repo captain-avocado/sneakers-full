@@ -309,7 +309,7 @@ function togglePopup(e) {
 
 $('.title').on('click', togglePopup);
 
-triggerPopup('.city__link', '.city-popup');
+triggerPopup('.city', '.city-popup');
 triggerPopup('.btn_close', '.cart-popup');
 triggerPopup('.icons__link_avatar', '.auth-popup');
 triggerPopup('.icons__link_cart', '.cart-popup');
