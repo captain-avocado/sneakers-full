@@ -438,20 +438,7 @@ const modal = document.querySelector('.modal');
 const triggers = $('.modal-trigger');
 // var closeButton = document.querySelector(".close-button");
 
-var freezeVp = function(e) {
-    e.preventDefault();
-};
 
-function stopBodyScrolling (bool) {
-    if (bool === true) {
-        document.body.style.touchAction = 'none';
-        // document.body.addEventListener('touchmove', freezeVp, false);
-    } else {
-        document.body.style.touchAction = '';
-        // document.body.removeEventListener('touchmove', freezeVp, false);
-    }
-}
-// import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 const bodyScrollLock = require('body-scroll-lock');
 const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
@@ -519,18 +506,29 @@ const hamburger = $('.hamburger');
 const modalMenu = $('.modal-menu');
 hamburger.on('click', function(e) {
     e.preventDefault();
-    // if (!$('.open-filters').hasClass('is-active')) {
     hamburger.toggleClass('is-active');
     modalMenu.toggleClass('is-active');
-    $('body').toggleClass('active');
+
+    if (modalMenu.hasClass('is-active')) {
+        disableBodyScroll(modalMenu);
+    } else {
+        enableBodyScroll(modalMenu);
+    }
+
 });
 
 const openFiltersBtn = $('.open-filters');
+const modalFilters = $('.modal-filters');
 openFiltersBtn.on('click', function(e) {
     e.preventDefault();
     openFiltersBtn.toggleClass('is-active');
-    $('.modal-filters').toggleClass('is-active');
-    $('body').toggleClass('active');
+    modalFilters.toggleClass('is-active');
+
+    if (modalFilters.hasClass('is-active')) {
+        disableBodyScroll(modalFilters);
+    } else {
+        enableBodyScroll(modalFilters);
+    }
 });
 
 
