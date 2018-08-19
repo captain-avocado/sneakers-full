@@ -1,5 +1,9 @@
 .modal-filters {
   
+  @include phones-small {
+    padding: 15px;
+  }
+
   &__list {
     // height: 90%;
     display: flex;
@@ -18,6 +22,11 @@
     @include phones-landscape {
       margin-bottom: 15px;
     }
+
+    @include phones-small {
+      margin-bottom: 15px;
+    }
+
   }
 
   &__reset {
