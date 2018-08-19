@@ -12,7 +12,6 @@
     transition: z-index .3s, opacity .3s;
 
     &.is-active {
-      z-index: 10000;
       opacity: 1;
     }
 }
