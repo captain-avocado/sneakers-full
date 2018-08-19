@@ -291,6 +291,7 @@
         <button class="modal-btn" id="close-filters">
           <div class="modal-btn__cross"></div>
         </button>
+        <button class="reset reset-btn">Сбросить все</button>
       </div>
       <button class="scroll-up" id="scroll-up"><i class="fas fa-angle-up"></i></button>
       <button class="modal-btn open-filters" id="open-filters">
@@ -298,7 +299,6 @@
           <use xlink:href="images/sprite.svg#filter"></use>
         </svg>
       </button>
-      <button class="reset">Сбросить все</button>
       <div class="modal">
         <div class="modal__box">
           <div class="modal__hidden-row modal__hidden-row_top"><a class="modal__close modal-trigger" href="#">
@@ -370,7 +370,12 @@
                   <div class="modal__product-price">10 490 р</div>
                 </div>
                 <div class="modal__row select-modal modal__row_sizes">
-                  <div class="select-modal__title">Размеры</div>
+                  <div class="select-modal__title">
+                    <div class="select-modal__title-text">Размеры</div>
+                    <div class="select-modal__grid">
+                      <div class="select-modal__grid-text">Размерная сетка</div><img class="select-modal__grid-arrow" src="images/arrow-grid.png">
+                    </div>
+                  </div>
                   <ul class="select-modal__list categories categories_modal-sizes">
                     <li class="categories__item categories__item_modal-sizes category">
                       <label class="category__label label">
@@ -644,7 +649,7 @@
           <aside class="aside">
             <div class="aside__filters filters">
               <div class="filters__title main-title">
-                <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon reset" href="#"><i class="fas fa-redo"></i></a>
+                <div class="main-title__text no-right-border">Фильтры</div><a class="main-title__icon reset-btn" href="#"><i class="fas fa-redo"></i></a>
                 <div class="main-title__hint">Сбросить все  
                   <svg class="main-title__reset-angle">
                     <use xlink:href="images/sprite.svg#angle-reset"></use>
@@ -689,21 +694,42 @@
                       <label class="category__label label">
                         <input class="category__radio radio radio_gender" type="radio" checked name="category">
                         <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">Мужские</div>
+                        <div class="category__name filter-item-name">Ботинки</div>
                       </label>
                     </li>
                     <li class="categories__item category">
                       <label class="category__label label">
                         <input class="category__radio radio radio_gender" type="radio" name="category">
                         <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">Женские</div>
+                        <div class="category__name filter-item-name">Кроссовки</div>
                       </label>
                     </li>
                     <li class="categories__item category">
                       <label class="category__label label">
                         <input class="category__radio radio radio_gender" type="radio" name="category">
                         <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">Детские</div>
+                        <div class="category__name filter-item-name">Футбольные бутсы</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name filter-item-name">Кроссовки баскетбольные</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name filter-item-name">Беговые кроссовки</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name filter-item-name">Кеды</div>
                       </label>
                     </li>
                   </ul>
@@ -1004,6 +1030,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/1.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1041,6 +1070,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/2.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1078,6 +1110,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/2.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1115,6 +1150,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/2.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1152,6 +1190,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/5.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1189,6 +1230,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/3.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1226,6 +1270,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/3.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1263,6 +1310,9 @@
                     </div><a class="product__like-link" href="#">
                       <svg class="product__like">
                         <use xlink:href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                      <svg class="product__like">
+                        <use xlink:href="images/sprite.svg#like-icon"></use>
                       </svg></a>
                   </div><img class="product__img" src="images/1.png">
                   <ul class="sneaker-colors product__sneaker-colors">
@@ -1320,7 +1370,7 @@
             <li class="footer__col">
               <div class="footer__title">аккаунт</div>
               <ul class="footer__list footer-list">
-                <li class="footer-list__item"><a class="footer-list__link" href="#">вход </a><span>|</span><a class="footer-list__link" href="#"> регистрация</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">личный кабинет</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">корзина</a></li>
               </ul>
             </li>
@@ -1328,17 +1378,18 @@
               <div class="footer__title">навигация</div>
               <ul class="footer__list footer-list">
                 <li class="footer-list__item"><a class="footer-list__link" href="#">новая коллекция</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">распродажи</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">мужские</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">женские</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">детские</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="#">распродажа</a></li>
-                <li class="footer-list__item"><a class="footer-list__link" href="#">магазин</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">все кроссовки</a></li>
               </ul>
             </li>
             <li class="footer__col">
               <div class="footer__title">компания</div>
               <ul class="footer__list footer-list">
                 <li class="footer-list__item"><a class="footer-list__link" href="#">о нас</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">условия доставки</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">политика конфиденциальности</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">справка и помощь</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">контакты</a></li>

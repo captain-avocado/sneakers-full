@@ -238,12 +238,13 @@ block content
             .modal-filter__choosed Все размеры
       button#close-filters.modal-btn
         .modal-btn__cross
+      button.reset.reset-btn Сбросить все
     button#scroll-up.scroll-up
       i.fas.fa-angle-up
     button#open-filters.modal-btn.open-filters
       svg.open-filters__icon
         use(xlink:href="images/sprite.svg#filter")
-    button.reset Сбросить все
+    //- button.reset.reset-btn Сбросить все
     .modal
       .modal__box
         .modal__hidden-row.modal__hidden-row_top
@@ -313,7 +314,11 @@ block content
                   .product-text__name Men's Air More
                 .modal__product-price 10 490 р
               .modal__row.select-modal.modal__row_sizes
-                .select-modal__title Размеры
+                .select-modal__title
+                  .select-modal__title-text Размеры
+                  .select-modal__grid
+                    .select-modal__grid-text Размерная сетка
+                    img(src="images/arrow-grid.png").select-modal__grid-arrow
                 ul.select-modal__list.categories.categories_modal-sizes
                   li.categories__item.categories__item_modal-sizes.category
                     label.category__label.label
@@ -540,7 +545,7 @@ block content
             .aside__filters.filters
               .filters__title.main-title
                 .main-title__text.no-right-border Фильтры
-                a(href="#").main-title__icon.reset
+                a(href="#").main-title__icon.reset-btn
                   i.fas.fa-redo
                 .main-title__hint Сбросить все  
                   svg.main-title__reset-angle
@@ -577,17 +582,32 @@ block content
                       label.category__label.label
                         input(type="radio" checked name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name Мужские
+                        .category__name.filter-item-name Ботинки
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name Женские
+                        .category__name.filter-item-name Кроссовки
                     li.categories__item.category
                       label.category__label.label
                         input(type="radio" name="category").category__radio.radio.radio_gender
                         .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name Детские
+                        .category__name.filter-item-name Футбольные бутсы
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name.filter-item-name Кроссовки баскетбольные
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name.filter-item-name Беговые кроссовки
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="radio" name="category").category__radio.radio.radio_gender
+                        .category__radio-fake.radio-fake.radio-fake_gender
+                        .category__name.filter-item-name Кеды
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Бренды
@@ -801,6 +821,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/1.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -828,6 +851,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/2.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -855,6 +881,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/2.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -882,6 +911,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/2.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -909,6 +941,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/5.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -936,6 +971,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/3.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -963,6 +1001,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/3.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -990,6 +1031,9 @@ block content
                     a(href="#").product__like-link
                       svg.product__like
                         use(xlink:href=`images/sprite.svg#cart`)
+                    a(href="#").product__like-link.product__like-link_fav
+                      svg.product__like
+                        use(xlink:href=`images/sprite.svg#like-icon`)
                   img(src="images/1.png").product__img
                   ul.sneaker-colors.product__sneaker-colors
                         li.sneaker-colors__item
@@ -1045,9 +1089,7 @@ block content
             .footer__title аккаунт
             ul.footer__list.footer-list
               li.footer-list__item
-                a.footer-list__link(href="#") вход 
-                span |
-                a.footer-list__link(href="#")  регистрация
+                a.footer-list__link(href="#") личный кабинет
               li.footer-list__item
                 a.footer-list__link(href="#") корзина
           li.footer__col
@@ -1056,20 +1098,22 @@ block content
               li.footer-list__item
                 a.footer-list__link(href="#") новая коллекция
               li.footer-list__item
+                a.footer-list__link(href="#") распродажи
+              li.footer-list__item
                 a.footer-list__link(href="#") мужские
               li.footer-list__item
                 a.footer-list__link(href="#") женские
               li.footer-list__item
                 a.footer-list__link(href="#") детские
               li.footer-list__item
-                a.footer-list__link(href="#") распродажа
-              li.footer-list__item
-                a.footer-list__link(href="#") магазин
+                a.footer-list__link(href="#") все кроссовки
           li.footer__col
             .footer__title компания
             ul.footer__list.footer-list
               li.footer-list__item
                 a.footer-list__link(href="#") о нас
+              li.footer-list__item
+                a.footer-list__link(href="#") условия доставки
               li.footer-list__item
                 a.footer-list__link(href="#") политика конфиденциальности
               li.footer-list__item

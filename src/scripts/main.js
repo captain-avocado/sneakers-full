@@ -482,7 +482,7 @@ triggers.on('click', function(e) {
 
 window.addEventListener('click', windowOnClick);
 
-$('.reset').on('click', function(e) {
+$('.reset-btn').on('click', function(e) {
     e.preventDefault();
     const target = $(e.currentTarget);
     let inputList;
