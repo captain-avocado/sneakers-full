@@ -1,4 +1,13 @@
 @font-face {
+    font-family: 'Black Rose';
+    src: url('../fonts/BlackRose/blackr-webfont.woff2') format('woff2'),
+         url('../fonts/BlackRose/blackr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'Montserrat';
     src: url("../fonts/Montserrat/montserrat-thin-webfont.woff2") format("woff2"),
     url("../fonts/Montserrat/montserrat-thin-webfont.woff") format("woff");
