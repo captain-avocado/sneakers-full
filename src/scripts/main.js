@@ -443,6 +443,9 @@ function toggleModal() {
 
     $('html').toggleClass('active');
     document.body.classList.toggle('active');
+    var vpH = window.innerHeight;
+    document.documentElement.style.height = vpH.toString() + 'px';
+    document.body.style.height = vpH.toString() + 'px';
 }
 
 
