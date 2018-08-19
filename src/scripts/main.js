@@ -438,18 +438,40 @@ const modal = document.querySelector('.modal');
 const triggers = $('.modal-trigger');
 // var closeButton = document.querySelector(".close-button");
 
+var freezeVp = function(e) {
+    e.preventDefault();
+};
+
+function stopBodyScrolling (bool) {
+    if (bool === true) {
+        document.body.style.touchAction = 'none';
+        // document.body.addEventListener('touchmove', freezeVp, false);
+    } else {
+        document.body.style.touchAction = '';
+        // document.body.removeEventListener('touchmove', freezeVp, false);
+    }
+}
+
 function toggleModal() {
     modal.classList.toggle('active');
 
     // $('html').toggleClass('active');
     // document.body.classList.toggle('active');
-    var vpH = window.innerHeight;
-    document.documentElement.style.height = vpH.toString() + 'px';
-    document.body.style.height = vpH.toString() + 'px';
+    // var vpH = window.innerHeight;
+    // document.documentElement.style.height = vpH.toString() + 'px';
+    // document.body.style.height = vpH.toString() + 'px';
     // document.body.style.overflow = 'hidden';
     // document.body.style.height = '100%';
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.height = '100%';
+    // document.documentElement.style.overflow = 'hidden';
+    // document.documentElement.style.height = '100%';
+
+
+
+    if ($(modal).hasClass('active')) {
+        stopBodyScrolling(true);
+    } else {
+        stopBodyScrolling(false);
+    }
 }
 
 
