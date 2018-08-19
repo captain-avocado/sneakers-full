@@ -1,7 +1,7 @@
 .modal-menu {
   
   &__logo {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__info-text {
@@ -15,7 +15,7 @@
   }
 
   &__profile {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     @include phones-landscape {
       height: fit-content;
       order: 0;
@@ -24,15 +24,15 @@
   }
 
   &__info {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__cart {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   &__text {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     
     @include phones-landscape {
       width: 50%;
