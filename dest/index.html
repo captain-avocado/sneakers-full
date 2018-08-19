@@ -15,6 +15,7 @@
     <title>Sneakers Shop</title>
   </head>
   <body>
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
     <style>
       #particles-js {
         position: fixed;
@@ -29,8 +30,47 @@
         justify-content: center;
       }
       
+      
+      #agency {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity .5s, top .5s, left .3s;
+      }
       .loading {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .5s, top .5s, left .3s;
+      }
+      
+      /*//- .letter-main {
+      //-   animation: fromTop 5s infinite linear;
+      //- }*/
+      .letter-main {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+        stroke-dashoffset: -630;
+        stroke-dasharray: 630;
+        stroke-linecap: butt;
+        stroke-linejoin: round;
+        animation: dash 3.5s ease-in-out forwards;
+      }
+      
+      
+      @keyframes dash {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      
+      @keyframes fromTop {
+        0%  {y: -100px;}
+        100% {y: 0}
       }
       
       @keyframes wave {
@@ -49,22 +89,69 @@
         }
       }
       .water-fill {
-        animation: wave 0.7s infinite linear, fill-up 5s infinite ease-out alternate;
+        animation: none;
       }
     </style>
     <div class="wrapper">
       <div class="particles-js" id="particles-js">
-        <svg class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="910px" height="120px" viewBox="-5 0 910 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
+        <svg class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="940px" height="120px" viewBox="-10 0 940 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
           <defs>
             <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
               <path fill="#fff" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"></path>
             </pattern>
-            <text id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="700">SNEAKERS</text>
+            <path id="text-path" d="M 50,50 L 100,50"></path>
+            <g class="letters" id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900">
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="0" y="0">S</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="105" y="0">N</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="235" y="0">E</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="343" y="0">A</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="474" y="0">K</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="596" y="0">E</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="705" y="0">R</text>
+              <text class="letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="825" y="0">S</text>
+            </g>
             <mask id="text_mask">
               <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"></use>
             </mask>
           </defs>
-          <rect class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120"></rect>
+          <rect class="water-fill" id="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="130" width="1600" height="160"></rect>
+          <g class="letters" id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900">
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="0" y="0">S
+              <animate attributeName="y" from="-100" to="0" begin="0s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="0s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="105" y="0">N
+              <animate attributeName="y" from="-100" to="0" begin="0.2s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="235" y="0">E
+              <animate attributeName="y" from="-100" to="0" begin="0.4s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="343" y="0">A
+              <animate attributeName="y" from="-100" to="0" begin="0.6s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="474" y="0">K
+              <animate attributeName="y" from="-100" to="0" begin="0.8s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="596" y="0">E
+              <animate attributeName="y" from="-100" to="0" begin="1s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="1s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="705" y="0">R
+              <animate attributeName="y" from="-100" to="0" begin="1.2s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+            <text class="letter-main" id="last-letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="825" y="0">S
+              <animate attributeName="y" from="-100" to="0" begin="1.4s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+              <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="1s" keyTimes="0; 1" keySplines=".18 .73 .87 .24"></animate>
+            </text>
+          </g>
+        </svg>
+        <svg class="agency" width="130px" height="30px" viewBox="0 0 130 30" id="agency">
+          <text font-family="'Pattaya'" font-size="40" y="30" fill="#fff">Khorito</text>
         </svg>
       </div>
       <div class="close-icon hidden"><a class="close-icon__link" href="#">
@@ -1271,8 +1358,36 @@
       <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
       <script>
         particlesJS.load('particles-js', 'particles.json', function() {
-          console.log('callback - particles.js config loaded');
+          //- loadingEl.style.top: 50
+          //- console.log('callback - particles.js config loaded');
         });
+        
+        var loadingEl = document.getElementById('loading');
+        var agency = document.getElementById('agency');
+        
+        
+        
+        var svgRect = document.getElementById('water-fill');
+        var lastLetter = document.getElementById('last-letter');
+        
+        lastLetter.addEventListener('animationend', function() {
+          svgRect.style.animation="wave 0.7s infinite linear, fill-up 5s ease-out";
+        })
+        
+        svgRect.addEventListener('animationend', function() {
+          svgRect.style.animation = "none";
+          loadingEl.style.top = "30%";
+          svgRect.style.y = "-30px";
+          agency.style.opacity = 1;
+          agency.style.top = "50%";
+        })
+        
+        //webkit не работает
+        //- var lastLetter = document.querySelector('#last-letter animate');
+        //- console.log(lastLetter)
+        //- lastLetter.addEventListener('onend', function() {
+        //-     console.log('Animation finished');
+        //- }, false);
         
         var preloaderLayer = document.getElementById("particles-js");
         var wrapper = document.getElementById('wrapper');
@@ -1309,16 +1424,31 @@
         }
         
         
-        
+        var iter = 0;
+        var pressTimer;
         window.onload = function(){
-          var loadingEl = document.getElementById('loading');
-          console.log(loadingEl);
+          //- console.log(loadingEl);
+        document.addEventListener('mousedown', function(e) {
+            clearTimeout(pressTimer);
+            iter = 0;
+        });
+        
+        document.addEventListener('mousedown', function(e) {
+          console.log(++iter)
+          pressTimer = window.setTimeout(function() { console.log(++iter); },100);
+        })
           loadingEl.addEventListener('click', function(e) {
-            fadeOut(preloaderLayer, 500);
-          });
-        //-   setTimeout(function(){
-        //-     fadeOut(preloaderLayer, 500);
-        //-   }, 50000);
+        
+            
+            //- loadingEl.style.top = "50px";
+            loadingEl.style.left = "30%";
+            loadingEl.style.opacity = "0";
+            agency.style.left = "30%";
+            agency.style.opacity = "0";
+            setTimeout(function(){
+            fadeOut(preloaderLayer, 300);
+              }, 200);
+            });
         }
       </script>
       <script src="scripts/main.bundle.js"></script>
