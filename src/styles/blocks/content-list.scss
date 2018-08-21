@@ -1,0 +1,39 @@
+.content-list {
+
+  &__title {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    color: #a9a9a9;
+    font-size: 16px;
+    &.active {
+      color: $bg-blue;
+    }
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+
+    &_sort {
+      @include phones {
+        width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    transition: color .3s;
+    &:hover {
+      color: $bg-blue;
+    }
+  }
+
+}

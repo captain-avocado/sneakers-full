@@ -270,8 +270,6 @@ block content
                       img(src="images/1.png")
                     li.glide__slide.glide__slide_modal
                       img(src="images/1.png")
-                    //- li.glide__slide.glide__slide_modal
-                    //-   img(src="images/1.png")
             .modal__preview-slider
               .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
                 .glide__track(data-glide-el="track")
@@ -284,8 +282,6 @@ block content
                       img(src="images/1.png")
                     li.glide__slide.glide__slide_preview
                       img(src="images/1.png")
-                    //- li.glide__slide.glide__slide_preview
-                    //-   img(src="images/1.png")
                 .glide__arrows(data-glide-el="controls")
                   a.glide__arrow.glide__arrow_preview-left.glide__arrow_left(href="#" data-glide-dir="<")
                     svg.glide__icon.glide__icon_preview.glide__icon_left
@@ -810,6 +806,26 @@ block content
                 .info__price.info__price_banner 3 990
           .content
             .content__header
+              .content__sort.content-list
+                .content-list__title Сортировать по:
+                ul.content-list__list
+                  li.content-list__item.active.content-list__item_sort
+                    a(href="#").content-list__link Названию
+                  li.content-list__item.content-list__item_sort
+                    a(href="#").content-list__link От дорогих к дешевым
+                  li.content-list__item.content-list__item_sort
+                    a(href="#").content-list__link От дешевых к дорогим
+              .content__model-num.content-list
+                .content-list__title Моделей на странице:
+                ul.content-list__list 
+                  li.content-list__item.active
+                    a(href="#").content-list__link 8
+                  li.content-list__item
+                    a(href="#").content-list__link 20
+                  li.content-list__item
+                    a(href="#").content-list__link 40
+                  li.content-list__item
+                    a(href="#").content-list__link 80
             ul.content__goods.goods
               li.goods__item
                 .product

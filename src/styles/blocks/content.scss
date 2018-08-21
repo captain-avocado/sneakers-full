@@ -12,4 +12,33 @@
   &__pagination {
     margin-bottom: 70px;
   }
+
+  &__header {
+    display: flex;
+    margin: 0 -1vw;
+    @include tablets {
+      margin: 0 -15px;
+    }
+  
+    @include phones {
+      margin: 0;   
+      flex-wrap: wrap;
+    }
+  }
+
+  &__sort, &__model-num {
+    margin-bottom: 2vw;
+    width: 50%;
+    padding: 0 1vw;
+
+    @include tablets {
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+
+    @include phones {
+      width: 100%;
+      padding: 0;
+    }   
+  }
 }
