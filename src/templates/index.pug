@@ -31,6 +31,14 @@ block content
       transition: opacity .5s, top .5s, left .3s;
     }
 
+    #agency.visible {
+      opacity: .6;
+    }
+
+    #agency:hover {
+      opacity: 1;
+    }
+
     #khorito {
       font-family: 'Black Rose';
       font-size: 28px;
@@ -104,15 +112,29 @@ block content
       bottom: 10%;
       left: 50%;
       transform: translate(-50%, 0);
+      width: 500px;
+      opacity: 0;
+      transition: opacity .5s;
+      text-align: center;
+      color: #fff;
+    }
+
+    .interactive.visible {
+      opacity: .6;
+    }
+
+    .interactive:hover {
+      opacity: 1;
+    }
+
+    .interactive__svg {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 500px;
     }
 
     .interactive svg {
       fill: #fff;
-      opacity: .6;
     }
 
     .interactive__van {
@@ -127,7 +149,7 @@ block content
 
   .wrapper
     .particles-js#particles-js
-      .agency#agency Сделано в #[span#khorito khorito ]
+      a(href="#").agency#agency Сделано в #[span#khorito khorito ]
       svg(class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="940px" height="200px" viewBox="-10 0 940 120" enable-background="new 0 0 574.558 120" xml:space="preserve")
         defs
@@ -162,14 +184,16 @@ block content
       //- svg(width="130px" height="30px" viewBox="0 0 130 30").agency#agency
       //-   text(font-family="'Pattaya'" font-size="40" y="30" fill="#fff") Khorito
       .interactive
-        svg.interactive__van(width="50" height="46")
-          use(xlink:href="images/sprite.svg#van")
-        svg.interactive__path(width="400" height="15" viewBox="0 0 400 10")
-          circle(cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
-          line(x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12")
-          circle(cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
-        svg.interactive__shop(width="50" height="46")
-          use(xlink:href="images/sprite.svg#online-shop")
+        .interactive__svg
+          svg.interactive__van(width="50" height="46")
+            use(xlink:href="images/sprite.svg#van")
+          svg.interactive__path(width="400" height="15" viewBox="0 0 400 10")
+            circle(cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
+            line(x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12")
+            circle(cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
+          svg.interactive__shop(width="50" height="46")
+            use(xlink:href="images/sprite.svg#online-shop")
+        .interactive__text Завези новинки в Sneakers
     .close-icon.hidden
       a(href="#").close-icon__link
         svg.close-icon__svg
@@ -1207,7 +1231,7 @@ block content
       var svgRect = document.getElementById('water-fill');
       var lastLetter = document.getElementById('last-letter');
 
-      var interactive = document.querySelector('.interactive');
+      var interactive = document.querySelector('.interactive__svg');
       var interactivePath = document.querySelector('.interactive__path');
       var pathCircle = interactivePath.querySelector('circle');
       var pathLine = interactivePath.querySelector('line');
@@ -1330,7 +1354,7 @@ block content
         
         var letters = document.querySelectorAll('.letter-main');
 
-        agency.style.opacity = .8;
+        //- agency.style.opacity = .8;
 
 
         for (var i = 0; i < letters.length; i++) {
@@ -1340,6 +1364,13 @@ block content
             this.style.transform = 'translate(0, 0)';
           });
         }
+
+        letters[letters.length - 1].addEventListener('animationend', function(e) {
+          agency.classList.add('visible');
+          //- agency.style.opacity = .8
+          document.querySelector('.interactive').classList.add('visible');
+          //- .style.opacity = .6;
+        });
 
         //- document.addEventListener('mousedown', function(e) {
         //-     clearTimeout(pressTimer);
@@ -1357,7 +1388,8 @@ block content
           loadingEl.style.left = "30%";
           loadingEl.style.opacity = "0";
           agency.style.left = "30%";
-          agency.style.opacity = "0";
+          agency.classList.remove('visible');
+          document.querySelector('.interactive').classList.remove('visible');
           setTimeout(function(){
           fadeOut(preloaderLayer, 300);
             }, 200);

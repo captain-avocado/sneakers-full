@@ -43,6 +43,14 @@
         transition: opacity .5s, top .5s, left .3s;
       }
       
+      #agency.visible {
+        opacity: .6;
+      }
+      
+      #agency:hover {
+        opacity: 1;
+      }
+      
       #khorito {
         font-family: 'Black Rose';
         font-size: 28px;
@@ -116,15 +124,29 @@
         bottom: 10%;
         left: 50%;
         transform: translate(-50%, 0);
+        width: 500px;
+        opacity: 0;
+        transition: opacity .5s;
+        text-align: center;
+        color: #fff;
+      }
+      
+      .interactive.visible {
+        opacity: .6;
+      }
+      
+      .interactive:hover {
+        opacity: 1;
+      }
+      
+      .interactive__svg {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 500px;
       }
       
       .interactive svg {
         fill: #fff;
-        opacity: .6;
       }
       
       .interactive__van {
@@ -139,8 +161,7 @@
       
     </style>
     <div class="wrapper">
-      <div class="particles-js" id="particles-js">
-        <div class="agency" id="agency">Сделано в <span id="khorito">khorito </span></div>
+      <div class="particles-js" id="particles-js"><a class="agency" href="#" id="agency">Сделано в <span id="khorito">khorito </span></a>
         <svg class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="940px" height="200px" viewBox="-10 0 940 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
           <defs>
             <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
@@ -174,17 +195,20 @@
           </g>
         </svg>
         <div class="interactive">
-          <svg class="interactive__van" width="50" height="46">
-            <use xlink:href="images/sprite.svg#van"></use>
-          </svg>
-          <svg class="interactive__path" width="400" height="15" viewBox="0 0 400 10">
-            <circle cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
-            <line x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12"></line>
-            <circle cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
-          </svg>
-          <svg class="interactive__shop" width="50" height="46">
-            <use xlink:href="images/sprite.svg#online-shop"></use>
-          </svg>
+          <div class="interactive__svg">
+            <svg class="interactive__van" width="50" height="46">
+              <use xlink:href="images/sprite.svg#van"></use>
+            </svg>
+            <svg class="interactive__path" width="400" height="15" viewBox="0 0 400 10">
+              <circle cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
+              <line x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12"></line>
+              <circle cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
+            </svg>
+            <svg class="interactive__shop" width="50" height="46">
+              <use xlink:href="images/sprite.svg#online-shop"></use>
+            </svg>
+          </div>
+          <div class="interactive__text">Завези новинки в Sneakers</div>
         </div>
       </div>
       <div class="close-icon hidden"><a class="close-icon__link" href="#">
@@ -1493,7 +1517,7 @@
         var svgRect = document.getElementById('water-fill');
         var lastLetter = document.getElementById('last-letter');
         
-        var interactive = document.querySelector('.interactive');
+        var interactive = document.querySelector('.interactive__svg');
         var interactivePath = document.querySelector('.interactive__path');
         var pathCircle = interactivePath.querySelector('circle');
         var pathLine = interactivePath.querySelector('line');
@@ -1616,7 +1640,7 @@
           
           var letters = document.querySelectorAll('.letter-main');
         
-          agency.style.opacity = .8;
+          //- agency.style.opacity = .8;
         
         
           for (var i = 0; i < letters.length; i++) {
@@ -1626,6 +1650,13 @@
               this.style.transform = 'translate(0, 0)';
             });
           }
+        
+          letters[letters.length - 1].addEventListener('animationend', function(e) {
+            agency.classList.add('visible');
+            //- agency.style.opacity = .8
+            document.querySelector('.interactive').classList.add('visible');
+            //- .style.opacity = .6;
+          });
         
           //- document.addEventListener('mousedown', function(e) {
           //-     clearTimeout(pressTimer);
@@ -1643,7 +1674,8 @@
             loadingEl.style.left = "30%";
             loadingEl.style.opacity = "0";
             agency.style.left = "30%";
-            agency.style.opacity = "0";
+            agency.classList.remove('visible');
+            document.querySelector('.interactive').classList.remove('visible');
             setTimeout(function(){
             fadeOut(preloaderLayer, 300);
               }, 200);
