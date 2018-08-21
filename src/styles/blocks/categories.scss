@@ -1,24 +1,31 @@
 .categories {
   &_modal-sizes {
     display: flex;
-    max-width: 200px;
+    // max-width: 200px;
     flex-wrap: wrap;
-    margin-bottom: -20px;
+    // margin-bottom: -20px;
+    
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto;
+    grid-row-gap: 20px;
+    justify-content: space-between;
 
     @include tablets {
       width: auto;
     }
     
   }
-  &__item {
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
-    }
-    &_modal-sizes {
-      &:not(:nth-of-type(3n)) {
-        margin-right: 20px;
-      }
-      margin-bottom: 20px;
-    }
-  }
+  // &__item {
+  //   &:not(:last-of-type) {
+  //     margin-bottom: 20px;
+  //   }
+  //   &_modal-sizes {
+  //     &:not(:nth-of-type(3n)) {
+  //       margin-right: 20px;
+  //     }
+  //     margin-bottom: 20px;
+  //   }
+  // }
 }

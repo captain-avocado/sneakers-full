@@ -226,8 +226,8 @@
               </svg>
             </div>
             <div class="modal-filter__text">
-              <div class="modal-filter__name">Сортировать</div>
-              <div class="modal-filter__choosed">По названию</div>
+              <div class="modal-filter__name">В тренде</div>
+              <div class="modal-filter__choosed">Все тренды</div>
             </div>
           </li>
           <li class="modal-filters__item modal-filter" data-filter-type="categories">
@@ -371,10 +371,8 @@
                 </div>
                 <div class="modal__row select-modal modal__row_sizes">
                   <div class="select-modal__title">
-                    <div class="select-modal__title-text">Размеры</div>
-                    <div class="select-modal__grid">
-                      <div class="select-modal__grid-text">Размерная сетка</div><img class="select-modal__grid-arrow" src="images/arrow-grid.png">
-                    </div>
+                    <div class="select-modal__title-text">Размеры</div><a class="select-modal__grid" href="#">
+                      <div class="select-modal__grid-text">Размерная сетка</div><img class="select-modal__grid-arrow" src="images/arrow-grid.png"></a>
                   </div>
                   <ul class="select-modal__list categories categories_modal-sizes">
                     <li class="categories__item categories__item_modal-sizes category">
@@ -659,28 +657,49 @@
               <ul class="filters__list">
                 <li class="filters__item filter filter filter_categories">
                   <div class="filter__title title">
-                    <div class="title__text no-right-border no-top-border">Сортировать</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
+                    <div class="title__text no-right-border no-top-border">В тренде</div><a class="title__icon no-top-border" href="#"><i class="fas fa-angle-down"></i></a>
                   </div>
-                  <ul class="filter__content categories no-top-border no-bottom-border sort sort-content">
-                    <li class="categories__item category">
+                  <ul class="filter__content categories no-top-border no-bottom-border sort sort-content trands">
+                    <li class="categories__item category brands__item">
                       <label class="category__label label">
-                        <input class="category__radio radio radio_gender" type="radio" name="sort" checked>
-                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">По названию</div>
+                        <input class="category__radio radio radio_trands" type="checkbox" checked="checked" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_brands"></div>
+                        <div class="category__name filter-item-name">Все тренды</div>
                       </label>
                     </li>
                     <li class="categories__item category">
                       <label class="category__label label">
-                        <input class="category__radio radio radio_gender" type="radio" name="sort">
-                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">От дорогих к дешевым</div>
+                        <input class="category__radio radio radio_trands" type="checkbox" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_trands"></div>
+                        <div class="category__name filter-item-name">Animal Print</div>
                       </label>
                     </li>
                     <li class="categories__item category">
                       <label class="category__label label">
-                        <input class="category__radio radio radio_gender" type="radio" name="sort">
-                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
-                        <div class="category__name filter-item-name">От дешевых к дорогим</div>
+                        <input class="category__radio radio radio_trands" type="checkbox" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_trands"></div>
+                        <div class="category__name filter-item-name">Colorblock</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_trands" type="checkbox" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_trands"></div>
+                        <div class="category__name filter-item-name">Dad Sneakers</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_trands" type="checkbox" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_trands"></div>
+                        <div class="category__name filter-item-name">Retro Sneakers</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_trands" type="checkbox" name="sort">
+                        <div class="category__radio-fake radio-fake radio-fake_trands"></div>
+                        <div class="category__name filter-item-name">Pastel Colored</div>
                       </label>
                     </li>
                   </ul>

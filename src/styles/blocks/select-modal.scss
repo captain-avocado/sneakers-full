@@ -5,12 +5,22 @@
   &__grid {
     display: flex;
     align-items: center;
+
+    &:hover {
+      .select-modal__grid-arrow {
+        transform: translateX(50%);
+      }
+    }
   }
 
   &__grid-text {
     color: $bg-blue;
     font-size: 10px;
     margin-right: 10px;
+  }
+
+  &__grid-arrow {
+    transition: transform .3s;
   }
 
   &__title {

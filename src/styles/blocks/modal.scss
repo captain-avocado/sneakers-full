@@ -166,15 +166,17 @@
 
     &_sizes {
 
-      width: 50%;
+      width: 60%;
+      margin-right: 10%;
       
       @include phones {
         width: 100%;
+        margin-right: 0;
       }
     }
 
     &_colors {
-      width: 50%;
+      width: 30%;
 
       @include phones {
         width: 100%;

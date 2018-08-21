@@ -410,6 +410,7 @@ $('.brands').find('.radio_brands').on('change', function(e) {
 });
 
 checkAll('.brands', '.category', '.radio_brands');
+checkAll('.trands', '.category', '.radio_trands');
 checkAll('.colors', '.colors__item', '.colors__checkbox');
 checkAll('.sizes', '.sizes__item', '.sizes__radio');
 

@@ -10,7 +10,7 @@
     border: 2px solid $bg-blue;
   }
 
-  &_brands:checked +.radio-fake:after, &_sizes:checked +.radio-fake:after  {
+  &_brands:checked +.radio-fake:after, &_sizes:checked +.radio-fake:after, &_trands:checked +.radio-fake:after  {
     height: 12px;
     width: 8px;
     border-color: $bg-blue;
@@ -53,7 +53,7 @@
     }
   }
   
-  &_brands, &_sizes {
+  &_brands, &_sizes, &_trands {
     &:after {
       height: 0;
       width: 0;

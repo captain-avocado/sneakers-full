@@ -198,8 +198,8 @@ block content
             svg.modal-filter__svg
               use(xlink:href="images/sprite.svg#sort")
           .modal-filter__text
-            .modal-filter__name Сортировать
-            .modal-filter__choosed По названию
+            .modal-filter__name В тренде
+            .modal-filter__choosed Все тренды
         li.modal-filters__item.modal-filter(data-filter-type="categories")
           .modal-filter__icon
             svg.modal-filter__svg
@@ -312,7 +312,7 @@ block content
               .modal__row.select-modal.modal__row_sizes
                 .select-modal__title
                   .select-modal__title-text Размеры
-                  .select-modal__grid
+                  a(href="#").select-modal__grid
                     .select-modal__grid-text Размерная сетка
                     img(src="images/arrow-grid.png").select-modal__grid-arrow
                 ul.select-modal__list.categories.categories_modal-sizes
@@ -549,25 +549,40 @@ block content
               ul.filters__list
                 li.filters__item.filter.filter.filter_categories
                   .filter__title.title
-                    .title__text.no-right-border.no-top-border Сортировать
+                    .title__text.no-right-border.no-top-border В тренде
                     a(href="#").title__icon.no-top-border
                       i.fas.fa-angle-down
-                  ul.filter__content.categories.no-top-border.no-bottom-border.sort.sort-content
+                  ul.filter__content.categories.no-top-border.no-bottom-border.sort.sort-content.trands
+                    li.categories__item.category.brands__item
+                      label.category__label.label
+                        input(type="checkbox" checked="checked" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_brands
+                        .category__name.filter-item-name Все тренды
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="sort" checked).category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name По названию
+                        input(type="checkbox" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_trands
+                        .category__name.filter-item-name Animal Print
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="sort").category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name От дорогих к дешевым
+                        input(type="checkbox" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_trands
+                        .category__name.filter-item-name Colorblock
                     li.categories__item.category
                       label.category__label.label
-                        input(type="radio" name="sort").category__radio.radio.radio_gender
-                        .category__radio-fake.radio-fake.radio-fake_gender
-                        .category__name.filter-item-name От дешевых к дорогим
+                        input(type="checkbox" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_trands
+                        .category__name.filter-item-name Dad Sneakers
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="checkbox" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_trands
+                        .category__name.filter-item-name Retro Sneakers
+                    li.categories__item.category
+                      label.category__label.label
+                        input(type="checkbox" name="sort").category__radio.radio.radio_trands
+                        .category__radio-fake.radio-fake.radio-fake_trands
+                        .category__name.filter-item-name Pastel Colored
                 li.filters__item.filter.filter_categories
                   .filter__title.title
                     .title__text.no-top-border.no-right-border Категории
