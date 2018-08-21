@@ -65,8 +65,8 @@
       }
       
       .letter-main {
-        fill: none;
         transform: translate(0, -200%);
+        fill: none;
         stroke: #fff;
         stroke-width: 2px;
         stroke-dashoffset: -630;
@@ -132,12 +132,12 @@
       }
       
       .interactive.visible {
-        opacity: .6;
-      }
-      
-      .interactive:hover {
         opacity: 1;
       }
+      
+      //- .interactive:hover {
+      //-   opacity: 1;
+      //- }
       
       .interactive__svg {
         display: flex;
@@ -146,17 +146,33 @@
       }
       
       .interactive svg {
-        fill: #fff;
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: butt;
+        stroke-linejoin: round;
+        transition: stroke-dashoffset 3.5s;
       }
       
       .interactive__van {
         position: absolute;
+        stroke-width: .5px;
+        stroke-dashoffset: 122;
+        stroke-dasharray: 122;
         /* transition: left .2s ease-in-out;*/
+      }
+      
+      .interactive__shop {
+        stroke-width: 10px;
+        stroke-dashoffset: 2560;
+        stroke-dasharray: 2560;
       }
       
       .interactive__path {
         margin-left: 55px;
         left: 0;
+        stroke-dashoffset: -630;
+        stroke-dasharray: -630;
+      
       }
       
     </style>
@@ -1501,6 +1517,7 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.min.js"></script>
       <script>
         particlesJS.load('particles-js', 'particles.json', function() {
@@ -1522,6 +1539,9 @@
         var pathCircle = interactivePath.querySelector('circle');
         var pathLine = interactivePath.querySelector('line');
         var pathVan = document.querySelector('.interactive__van'); 
+        var pathShop = document.querySelector('.interactive__shop'); 
+        
+        console.log(Snap('.interactive__path line'))
         
         let mouseDown = false;
         interactive.addEventListener('mousedown', function(e) {
@@ -1574,30 +1594,22 @@
             }
         
             let circleCenter = pathCircle.getAttribute('cx');
-            setTimeout(function(e) {
+            //- setTimeout(function(e) {
               circleCenter += 10;
               pathVan.style.left = vanOffset + pos - 5;
+        
+        
+              //- Snap('.interactive__path line').animate({ x1: pos + 10 }, 20)
+              //- Snap('.interactive__path circle').animate({ cx: pos }, 20)
         
               pathCircle.setAttribute('cx', pos);
               pathLine.setAttribute('x1', pos + 10);
               
-            }, 500);
+            //- }, 50);
           }
         }
         interactive.addEventListener('mousemove', moveTrack);
         
-        
-        //- lastLetter.addEventListener('animationend', function() {
-        //-   //- svgRect.style.animation="wave 0.7s infinite linear, fill-up 5s ease-out";
-        //- })
-        
-        //- svgRect.addEventListener('animationend', function() {
-        //-   svgRect.style.animation = "none";
-        //-   loadingEl.style.top = "30%";
-        //-   svgRect.style.y = "-30px";
-        //-   agency.style.opacity = 0.8;
-        //-   agency.style.top = "50%";
-        //- })
         
         var preloaderLayer = document.getElementById("particles-js");
         var wrapper = document.getElementById('wrapper');
@@ -1653,20 +1665,14 @@
         
           letters[letters.length - 1].addEventListener('animationend', function(e) {
             agency.classList.add('visible');
-            //- agency.style.opacity = .8
             document.querySelector('.interactive').classList.add('visible');
-            //- .style.opacity = .6;
+            pathVan.style.strokeDashoffset = 0;
+            pathShop.style.strokeDashoffset = 0;
+            pathLine.style.strokeDashoffset = 0;
+            interactivePath.style.strokeDashoffset = 0;
+        
           });
         
-          //- document.addEventListener('mousedown', function(e) {
-          //-     clearTimeout(pressTimer);
-          //-     iter = 0;
-          //- });
-        
-          //- document.addEventListener('mousedown', function(e) {
-          //-   //- console.log(++iter)
-          //-   //- pressTimer = window.setTimeout(function() { console.log(++iter); },100);
-          //- })
           loadingEl.addEventListener('click', function(e) {
         
             
