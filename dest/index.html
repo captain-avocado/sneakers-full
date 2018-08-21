@@ -109,6 +109,34 @@
       .water-fill {
         animation: none;
       }
+      
+      .interactive {
+        cursor: pointer;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+      }
+      
+      .interactive svg {
+        fill: #fff;
+        opacity: .6;
+      }
+      
+      .interactive__van {
+        position: absolute;
+        /* transition: left .2s ease-in-out;*/
+      }
+      
+      .interactive__path {
+        margin-left: 55px;
+        left: 0;
+      }
+      
     </style>
     <div class="wrapper">
       <div class="particles-js" id="particles-js">
@@ -145,6 +173,19 @@
             <text class="letter-main" id="last-letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="825" y="0">S</text>
           </g>
         </svg>
+        <div class="interactive">
+          <svg class="interactive__van" width="50" height="46">
+            <use xlink:href="images/sprite.svg#van"></use>
+          </svg>
+          <svg class="interactive__path" width="400" height="15" viewBox="0 0 400 10">
+            <circle cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
+            <line x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12"></line>
+            <circle cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
+          </svg>
+          <svg class="interactive__shop" width="50" height="46">
+            <use xlink:href="images/sprite.svg#online-shop"></use>
+          </svg>
+        </div>
       </div>
       <div class="close-icon hidden"><a class="close-icon__link" href="#">
           <svg class="close-icon__svg">
@@ -1452,6 +1493,74 @@
         var svgRect = document.getElementById('water-fill');
         var lastLetter = document.getElementById('last-letter');
         
+        var interactive = document.querySelector('.interactive');
+        var interactivePath = document.querySelector('.interactive__path');
+        var pathCircle = interactivePath.querySelector('circle');
+        var pathLine = interactivePath.querySelector('line');
+        var pathVan = document.querySelector('.interactive__van'); 
+        
+        let mouseDown = false;
+        interactive.addEventListener('mousedown', function(e) {
+          mouseDown = true;
+        });
+        
+        interactive.addEventListener('mouseup', function(e) {
+          mouseDown = false;
+                  varnOffset = 0;
+        
+          //- clearInterval(interval);
+        });
+        
+        interactive.addEventListener('mouseleave', function(e) {
+          mouseDown = false;
+          varnOffset = 0;
+                  //- clearInterval(interval);
+        
+        });
+        
+        var interval;
+        var vanOffset = 0;
+        let prevPos = 0;
+        //- interactivePath
+        
+        
+        function moveTrack(e) {
+          //- clearInterval(interval)
+          if (mouseDown) {
+            const pos = e.clientX - interactive.getBoundingClientRect().left;
+            if (pos >= 390) {
+              interactive.removeEventListener('mousemove', moveTrack);
+              loadingEl.style.left = "30%";
+              loadingEl.style.opacity = "0";
+              agency.style.left = "30%";
+              agency.style.opacity = "0";
+              setTimeout(function(){
+                fadeOut(preloaderLayer, 300);
+              }, 200);
+              
+              return;
+            }
+            if (pos - prevPos > 20) {
+              //- console.log(pos, prevPos);
+              prevPos = pos;
+        
+              console.log(pos)
+              //- pathVan.style.left = pos - 5;
+        
+            }
+        
+            let circleCenter = pathCircle.getAttribute('cx');
+            setTimeout(function(e) {
+              circleCenter += 10;
+              pathVan.style.left = vanOffset + pos - 5;
+        
+              pathCircle.setAttribute('cx', pos);
+              pathLine.setAttribute('x1', pos + 10);
+              
+            }, 500);
+          }
+        }
+        interactive.addEventListener('mousemove', moveTrack);
         
         
         //- lastLetter.addEventListener('animationend', function() {
@@ -1518,15 +1627,15 @@
             });
           }
         
-          document.addEventListener('mousedown', function(e) {
-              clearTimeout(pressTimer);
-              iter = 0;
-          });
+          //- document.addEventListener('mousedown', function(e) {
+          //-     clearTimeout(pressTimer);
+          //-     iter = 0;
+          //- });
         
-          document.addEventListener('mousedown', function(e) {
-            console.log(++iter)
-            pressTimer = window.setTimeout(function() { console.log(++iter); },100);
-          })
+          //- document.addEventListener('mousedown', function(e) {
+          //-   //- console.log(++iter)
+          //-   //- pressTimer = window.setTimeout(function() { console.log(++iter); },100);
+          //- })
           loadingEl.addEventListener('click', function(e) {
         
             
