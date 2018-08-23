@@ -20,13 +20,13 @@ block content
 
     #agency {
       position: absolute;
-      top: 10%;
+      top: 5%;
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
       color: #fff;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 400;
 
       transition: opacity .5s, top .5s, left .3s;
     }
@@ -41,7 +41,7 @@ block content
 
     #khorito {
       font-family: 'Black Rose';
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .loading {
@@ -54,14 +54,27 @@ block content
 
     .letter-main {
       transform: translate(0, -200%);
-      fill: none;
-      stroke: #fff;
+      fill: #fff;
+      /*stroke: #fff;
       stroke-width: 2px;
       stroke-dashoffset: -630;
       stroke-dasharray: -630;
       stroke-linecap: butt;
       stroke-linejoin: round;
       /*animation: dash 3.5s ease-in-out forwards;*/
+    }
+
+    @keyframes waterBtn {
+      0% {
+        transform: scale3d(0.3, 0.3, 1);
+      }
+      25%, 50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale3d(1.2, 1.2, 1);
+      }
     }
 
     @keyframes dash {
@@ -111,21 +124,18 @@ block content
       position: absolute;
       bottom: 10%;
       left: 50%;
-      transform: translate(-50%, 0);
-      width: 500px;
-      opacity: 0;
-      transition: opacity .5s;
+      transform: translate(-50%, 20px);
+      max-width: 500px;
+      //- opacity: 0;
+      transition: opacity .5s, transform .5s;
       text-align: center;
       color: #fff;
+      width: 80%;
     }
 
-    .interactive.visible {
+    .interactive:hover .interactive__van {
       opacity: 1;
     }
-
-    //- .interactive:hover {
-    //-   opacity: 1;
-    //- }
 
     .interactive__svg {
       display: flex;
@@ -133,26 +143,46 @@ block content
       align-items: center;
     }
 
+    .interactive__text {
+      opacity: 0;
+      transition: opacity .5s;
+    }
+
     .interactive svg {
-      fill: none;
-      stroke: #fff;
-      stroke-linecap: butt;
-      stroke-linejoin: round;
-      transition: stroke-dashoffset 3.5s;
+      fill: #fff;
+      stroke: none;
     }
 
     .interactive__van {
       position: absolute;
-      stroke-width: .5px;
-      stroke-dashoffset: 122;
-      stroke-dasharray: 122;
-      /* transition: left .2s ease-in-out;*/
+      opacity: 0;
+      transition: opacity .5s;
+      
+    }
+
+    .interactive__svg-water {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      z-index: 1;
+      border-radius: 50%;
+      opacity: 0;
+      background: rgba(111,148,182,0.1);
+    }
+
+    .interactive__svg-water:hover {
+      animation: waterBtn 0.3s forwards;
     }
 
     .interactive__shop {
       stroke-width: 10px;
       stroke-dashoffset: 2560;
       stroke-dasharray: 2560;
+      opacity: 0;
+      transition: opacity .5s;
     }
 
     .interactive__path {
@@ -160,14 +190,31 @@ block content
       left: 0;
       stroke-dashoffset: -630;
       stroke-dasharray: -630;
-
+      opacity: 0;
+      transition: opacity .5s;
     }
 
+    .visible {
+      opacity: .75;
+    }
+
+    /*#canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 930px !important;
+      z-index: 2000000;
+      background-color: rgba(255,255,255,.4);
+      height: 130px !important;
+    } */
+      
   .wrapper
+    //- canvas.canvas#canvas
     .particles-js#particles-js
-      a(href="#").agency#agency Сделано в #[span#khorito khorito ]
+      a(href="https://khorito.ru" target = "_blank").agency#agency Сделано в #[span#khorito khorito ]
       svg(class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="940px" height="200px" viewBox="-10 0 940 120" enable-background="new 0 0 574.558 120" xml:space="preserve")
+	 width="80%" height="200px" viewBox="-10 0 960 120" enable-background="new 0 0 574.558 120" xml:space="preserve")
         defs
           pattern(id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox")
             path(fill="#fff" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z")
@@ -175,12 +222,12 @@ block content
           g.letters(id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900")
             text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="0" y="0") S
             text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="105" y="0") N
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="235" y="0") E
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="343" y="0") A
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="474" y="0") K
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="596" y="0") E
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="705" y="0") R
-            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="825" y="0") S
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="230" y="0") E
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="348" y="0") A
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="485" y="0") K
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="617" y="0") E
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="725" y="0") R
+            text.letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="850" y="0") S
 
 
           mask(id="text_mask")
@@ -189,23 +236,32 @@ block content
         g.letters(id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900")
             text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="0" y="0") S
             text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="105" y="0") N
-            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="235" y="0") E
-            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="343" y="0") A
-            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="474" y="0") K
-            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="596" y="0") E
-            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="705" y="0") R
-            text.letter-main#last-letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="825" y="0") S
+            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="230" y="0") E
+            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="348" y="0") A
+            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="485" y="0") K
+            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="617" y="0") E
+            text.letter-main(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="725" y="0") R
+            text.letter-main#last-letter(font-family="'Montserrat'" font-size="161.047" font-weight="900" x="850" y="0") S
         //- text(transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900" fill="transparent" stroke="#fff" stroke-width="2").contour-text SNEAKERS
         //-   animate(attributeName="y" from="-100" to ="0" begin="0s" dur="5s" repeatCount="indefinite")
       //- svg(width="130px" height="30px" viewBox="0 0 130 30").agency#agency
       //-   text(font-family="'Pattaya'" font-size="40" y="30" fill="#fff") Khorito
       .interactive
         .interactive__svg
-          svg.interactive__van(width="50" height="46")
-            use(xlink:href="images/sprite.svg#van")
-          svg.interactive__path(width="400" height="15" viewBox="0 0 400 10")
+          .interactive__svg-water
+          svg.interactive__van(width="50" height="46" viewBox="0 0 189.512 189.511")
+            path(id="truck" d="M104.11,29.99c1.025-1.777,0.01-4.859-2.438-4.546c-29.983,3.829-63.621,3.847-93.952,2.488 c-0.909-0.041-1.444,0.51-1.633,1.187c-0.358,0.365-0.622,0.854-0.66,1.512C3.652,61.116-2.141,97.303,5.11,127.4 c-0.52,1.116,0.03,2.66,1.697,2.806c30.319,2.638,66.314,3.87,96.024-3.354c0.121-0.028,0.16-0.112,0.246-0.167 c1.629,0.487,3.695-0.352,3.673-2.557C106.44,92.734,102.884,61.398,104.11,29.99z M9.024,126.07 c-2.93-31.27,2.034-62.579,1.014-93.877c13.592,3.626,27.911,1.771,41.86,1.094c15.595-0.756,32.442,0.506,47.863-1.751 c-4.871,30.894,0.918,61.522,1.392,92.591c0.004,0.29,0.096,0.518,0.166,0.762C71.935,121.288,38.602,123.461,9.024,126.07z")
+            path(id="left-wheel" d="M68.451,138.679c-1.611-1.926-4.146-2.661-6.531-2.924c-0.516-0.057-0.999,0.072-1.455,0.269 c-4.234-2.603-10.28-0.749-13.922,2.61c-5.1,4.705-6.379,12.562-2.899,18.521c3.046,5.216,9.654,8.108,15.457,6.48 c5.138-1.441,8.937-6.179,10.827-10.954C71.803,147.944,71.83,142.719,68.451,138.679z M63.325,150.247 c-1.286,3.753-4.984,7.87-9.291,6.745c-4.982-1.303-6.567-6.865-4.526-11.128c1.983-4.142,5.358-5.232,9.192-5.412 c0.251,0.345,0.581,0.659,1.098,0.879c1.541,0.654,3.429,1.018,4.046,2.775C64.541,146.086,63.978,148.343,63.325,150.247z")
+            path(id="right-wheel" d="M151.357,137.761c-1.823-1.747-5.481-3.463-8.46-3.261c-3.272-1.376-7.49-0.199-10.514,1.364 c-4.335,2.24-7.521,6.397-8.896,11.021c-3.122,10.493,8.19,17.823,17.445,16.479c7.734-1.123,13.198-8.996,13.918-16.286 C155.191,143.642,153.827,140.129,151.357,137.761z M141.046,155.983c-4.746,1.909-11.963-1.472-10.721-7.213 c1.194-5.52,5.841-7.348,10.405-9.051c1.699,1.044,4.027,0.709,5.739,2.057c1.511,1.188,1.774,2.873,1.676,4.682 C147.936,150.313,144.543,154.576,141.046,155.983z")
+            path(d="M36.42,138.726c-6.279-1.533-12.914-1.486-19.341-1.52c-4.403-0.023-13.455-1.217-16.569,2.514 c-0.673,0.807-0.686,1.76,0,2.563c3.006,3.529,10.28,1.994,14.438,2.039c6.915,0.074,13.702,0.336,20.594,0.896 C39.298,145.526,39.993,139.599,36.42,138.726z")
+            path(d="M186.502,142.901c-2.183,0.133-4.271,0.438-6.355,0.815c-0.487-0.079-0.978-0.174-1.46-0.21 c-1.457-9.108,0.277-18.403,0.225-27.588c-0.056-9.987-0.037-20.127-1.83-29.974c0.156-0.639,0.151-1.324-0.112-1.942 c-2.558-5.993-8.031-11.603-12.259-16.6c-3.638-4.301-8.488-7.355-12.531-11.212c0.781-1.02,0.749-2.679-0.578-3.321 c-4.726-2.283-9.621-1.787-14.812-1.636c-7.315,0.212-14.585,1.106-21.892,1.494c-0.018,0.001-0.029,0.01-0.046,0.011 c-1.351-0.063-2.681,0.756-2.593,2.522c1.427,28.593-2.971,58.104,0.582,86.487c-10.398-1.261-22.719-2.302-32.722,0.822 c-2.413,0.754-1.816,4.036,0.574,4.241c10.706,0.922,22.602,2.612,33.293,1.522c1.943-0.198,2.923-1.483,3.039-2.857 c3.315-10.083,9.132-17.554,19.32-21.508c14.268-5.536,23.758,5.994,24.045,19.176c0.206,9.437,8.466,7.847,15.718,7.062 c0.377,0.049,0.763,0.04,1.129-0.027c0.324-0.073,0.651-0.1,0.977-0.166c0.982-0.071,1.934-0.109,2.814-0.069 c0.766,0.034,1.364-0.221,1.837-0.604c1.209-0.105,2.418-0.203,3.636-0.202C190.524,148.991,190.507,142.656,186.502,142.901z M134.054,57.87c4.847-0.297,9.944,0.336,14.736-0.43c2.286,4.296,5.545,7.817,8.845,11.489c5.142,5.723,8.923,13.91,15.215,18.413 c-0.016,0.096-0.018,0.192-0.032,0.288c-11.768-0.208-23.674,0.072-35.448,0.257c-5.146,0.081-12.912-1.39-18.411-0.675 c-0.155-9.854-0.521-19.663-1.232-29.229C123.166,58.329,128.601,58.206,134.054,57.87z M170.737,143.992 c-5.854,0.679-2.65-5.041-3.591-8.956c-2.229-9.284-7.307-15.093-16.264-18.447c-12.097-4.53-26.357,3.441-33.14,14.56 c0.986-12.722,1.388-25.722,1.318-38.662c5.687,2.058,12.442,1.532,18.308,1.62c11.751,0.176,23.096,0.484,34.829-0.925 c-0.629,7.541-0.342,15.113,0.003,22.738c0.422,9.364-0.383,18.567,0.771,27.812C172.234,143.815,171.496,143.904,170.737,143.992z")
+            path(d="M163.494,98.752c-2.348-0.939-4.977,0.203-7.312,0.835c-2.54,0.688-5.082,1.361-7.618,2.063 c-2.257,0.624-1.717,3.881,0.538,3.979c2.641,0.115,5.203-0.249,7.819-0.58c2.383-0.302,5.188-0.016,7.209-1.424 C166.132,102.232,165.676,99.625,163.494,98.752z")
+          svg.interactive__path(width="400" height="25" viewBox="0 0 400 10")
             circle(cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
-            line(x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12")
+            path(id="path" d="M10,5 Q140,150 240,5 Q240,-150 390,5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12" style="stroke-dashoffset: 0;" dur="10s")
+            animateMotion(dur="10s" repeatCount="indefinite")
+              mpath(xlink:href="#path")
+            //- line(x1="22" x2="380" y1="5" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12")
             circle(cx="390" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent")
           svg.interactive__shop(width="50" height="46")
             use(xlink:href="images/sprite.svg#online-shop")
@@ -1235,8 +1291,7 @@ block content
     script(src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.min.js")
     script.
       particlesJS.load('particles-js', 'particles.json', function() {
-        //- loadingEl.style.top: 50
-        //- console.log('callback - particles.js config loaded');
+        console.log('callback - particles.js config loaded');
       });
 
       
@@ -1255,7 +1310,30 @@ block content
       var pathVan = document.querySelector('.interactive__van'); 
       var pathShop = document.querySelector('.interactive__shop'); 
 
-      console.log(Snap('.interactive__path line'))
+      var interactiveText = document.querySelector('.interactive__text');
+
+      function leftWheel() {
+        Snap('#left-wheel').animate({transform: 's1.05,1.05'}, 300, function() {
+          Snap('#left-wheel').animate({transform: 's0.9,0.9'}, 300);
+        })
+      }
+
+      function rightWheel() {
+        Snap('#right-wheel').animate({transform: 's1.05,1.05'}, 300, function() {
+          Snap('#right-wheel').animate({transform: 's0.9,0.9'}, 300);
+        })
+      }
+
+      function truck() {
+        Snap('#truck').animate({transform: 'translate(3,3)'}, 300, function() {
+          Snap('#truck').animate({transform: 'translate(0,0)'}, 300);
+        })
+      }
+      setInterval(truck, 700);
+      setInterval(leftWheel, 700);
+      setInterval(rightWheel, 700);
+      
+      
 
       let mouseDown = false;
       interactive.addEventListener('mousedown', function(e) {
@@ -1264,7 +1342,7 @@ block content
 
       interactive.addEventListener('mouseup', function(e) {
         mouseDown = false;
-                varnOffset = 0;
+        vanOffset = 0;
 
         //- clearInterval(interval);
       });
@@ -1282,12 +1360,70 @@ block content
       //- interactivePath
 
 
+      ///
+      ///
+      var continueAnimation = true;
+      var stopPos;
+      var path = document.getElementById('path');
+        var pathD = path.getAttribute('d');
+      ///
+      ///
+
+      //- var animationTruckBack = function() {
+      //-   if (stopPos > 10) {
+      //-     path.setAttribute('d', `M${stopPos},5 L390,5`);
+      //-     pathVan.style.left = vanOffset + stopPos - 5;
+      //-     pathCircle.setAttribute('cx', stopPos);
+      //-     stopPos -= 3;
+      //-     requestAnimationFrame(animationTruckBack);
+      //-   }
+      //- }
+
+      interactive.addEventListener('mousedown', function() {
+        continueAnimation = false;
+        mouseDown = true;
+
+      });
+
+      function backAnimation() {
+        continueAnimation = true;
+        mouseDown = false;
+        interactiveText.style.opacity = '';
+
+        pathVan.style.transition = 'left .5s ease-out';
+          pathVan.style.left = 0;
+          
+          Snap('#path').animate({ d: 'M10,5 L390,5' }, 500);
+          Snap('.interactive__path circle').animate({ cx: '10' }, 500);
+
+        pathShop.style.opacity = '';
+        interactivePath.style.opacity = '';
+      }
+
+      interactive.addEventListener('mouseup', backAnimation);
+      interactive.addEventListener('mouseleave', backAnimation);
+      
+
+
       function moveTrack(e) {
-        //- clearInterval(interval)
+        var pos = e.clientX - interactive.getBoundingClientRect().left;
+
         if (mouseDown) {
-          const pos = e.clientX - interactive.getBoundingClientRect().left;
-          if (pos >= 390) {
+          pathVan.style.transition = '';
+          interactiveText.style.opacity = 0;
+
+          var opacityLevel = (pos/1000);
+          console.log(opacityLevel);
+          pathShop.style.opacity = 0.75 + opacityLevel;
+          interactivePath.style.opacity = 0.75 + opacityLevel;
+
+
+          if (pos >= 391) {
+            document.querySelector('.interactive__svg-water').style.animation = 'waterBtn 0.3s forwards';
             interactive.removeEventListener('mousemove', moveTrack);
+            interactive.removeEventListener('mouseup', backAnimation);
+            interactive.removeEventListener('mouseleave', backAnimation);
+
             loadingEl.style.left = "30%";
             loadingEl.style.opacity = "0";
             agency.style.left = "30%";
@@ -1295,31 +1431,13 @@ block content
             setTimeout(function(){
               fadeOut(preloaderLayer, 300);
             }, 200);
-            
             return;
-          }
-          if (pos - prevPos > 20) {
-            //- console.log(pos, prevPos);
-            prevPos = pos;
-
-            console.log(pos)
-            //- pathVan.style.left = pos - 5;
-
-          }
-
-          let circleCenter = pathCircle.getAttribute('cx');
-          //- setTimeout(function(e) {
-            circleCenter += 10;
+          } else {
             pathVan.style.left = vanOffset + pos - 5;
-
-
-            //- Snap('.interactive__path line').animate({ x1: pos + 10 }, 20)
-            //- Snap('.interactive__path circle').animate({ cx: pos }, 20)
-
             pathCircle.setAttribute('cx', pos);
-            pathLine.setAttribute('x1', pos + 10);
-            
-          //- }, 50);
+            document.getElementById('path').setAttribute('d', `M${pos+10},5 L390,5`);
+          }
+          
         }
       }
       interactive.addEventListener('mousemove', moveTrack);
@@ -1327,7 +1445,6 @@ block content
 
       var preloaderLayer = document.getElementById("particles-js");
       var wrapper = document.getElementById('wrapper');
-
 
       function fadeOut( elem, ms )
       {
@@ -1360,14 +1477,10 @@ block content
       }
 
       
-      var iter = 0;
-      var pressTimer;
-      window.onload = function(){
+    
+      window.onload = function() {
         
         var letters = document.querySelectorAll('.letter-main');
-
-        //- agency.style.opacity = .8;
-
 
         for (var i = 0; i < letters.length; i++) {
           letters[i].style.animation = 'fromTop 0.55s ease-in-out';
@@ -1379,18 +1492,52 @@ block content
 
         letters[letters.length - 1].addEventListener('animationend', function(e) {
           agency.classList.add('visible');
-          document.querySelector('.interactive').classList.add('visible');
-          pathVan.style.strokeDashoffset = 0;
-          pathShop.style.strokeDashoffset = 0;
-          pathLine.style.strokeDashoffset = 0;
-          interactivePath.style.strokeDashoffset = 0;
+          //- document.querySelector('.interactive').classList.add('visible');
+          document.querySelector('.interactive__path').classList.add('visible');
+          document.querySelector('.interactive__van').classList.add('visible');
+          document.querySelector('.interactive__shop').classList.add('visible');
+          document.querySelector('.interactive__text').classList.add('visible');
+          
+          var coord = 0;
+          var flag = true;
+          var svgPath = document.getElementById("path");
 
-        });
+          //- var animateTruckBack = function() {
+          //-     svgPath.setAttribute('d', `M10,5 Q100,5 200,5 Q300,5 390,5`);
+          //- }
+          //- var continueAnimation = true;
+            
+          //- function stopAnimation() {
+          //-   continueAnimation = false;
+          //- }
 
-        loadingEl.addEventListener('click', function(e) {
+          function startAnimation() {
+            continueAnimation = true;
+            requestAnimationFrame(animate);
+          }
 
           
-          //- loadingEl.style.top = "50px";
+          
+          var animate = function() {
+            if (coord === 20) flag = false;
+            if (coord === -20) flag = true;
+            if (coord === 0 && !continueAnimation) {
+              svgPath.setAttribute('d', `M10,5 Q100,5 200,5 Q300,5 390,5`);
+              return;
+            }
+
+            if (flag) {
+              coord++;
+            } else {
+              coord--;
+            }
+            svgPath.setAttribute('d', `M10,5 Q100,${coord} 200,5 Q300,${-coord} 380,5`);
+            requestAnimationFrame(animate);
+          }
+          animate();
+        });
+
+        loadingEl.addEventListener('click', function(e) {   
           loadingEl.style.left = "30%";
           loadingEl.style.opacity = "0";
           agency.style.left = "30%";
@@ -1401,4 +1548,114 @@ block content
             }, 200);
           });
       }
+    //- script.
+      //  CANVAS include type="text/paperscript" canvas="canvas"
+      var values = {
+        friction: 0.8,
+        timeStep: 0.01,
+        amount: 15,
+        mass: 2,
+        count: 0
+      };
+      values.invMass = 1 / values.mass;
+
+      var path, springs;
+      var size = view.size * [1.2, 1];
+
+      var Spring = function(a, b, strength, restLength) {
+        this.a = a;
+        this.b = b;
+        this.restLength = restLength || 80;
+        this.strength = strength ? strength : 0.55;
+        this.mamb = values.invMass * values.invMass;
+      };
+
+      Spring.prototype.update = function() {
+        var delta = this.b - this.a;
+        var dist = delta.length;
+        var normDistStrength = (dist - this.restLength) /
+            (dist * this.mamb) * this.strength;
+        delta.y *= normDistStrength * values.invMass * 0.2;
+        if (!this.a.fixed)
+          this.a.y += delta.y;
+        if (!this.b.fixed)
+          this.b.y -= delta.y;
+      };
+
+
+      function createPath(strength) {
+        var path = new Path({
+          fillColor: 'black'
+        });
+        springs = [];
+        for (var i = 0; i <= values.amount; i++) {
+          var segment = path.add(new Point(i / values.amount, 0.5) * size);
+          var point = segment.point;
+          if (i == 0 || i == values.amount)
+            point.y += size.height;
+          point.px = point.x;
+          point.py = point.y;
+          // The first two and last two points are fixed:
+          point.fixed = i < 2 || i > values.amount - 2;
+          if (i > 0) {
+            var spring = new Spring(segment.previous.point, point, strength);
+            springs.push(spring);
+          }
+        }
+        path.position.x -= size.width / 4;
+        return path;
+      }
+
+      function onResize() {
+        if (path)
+          path.remove();
+        size = view.bounds.size * [2, 1];
+        path = createPath(0.1);
+      }
+
+      function onMouseMove(event) {
+        var location = path.getNearestLocation(event.point);
+        var segment = location.segment;
+        var point = segment.point;
+
+        if (!point.fixed && location.distance < size.height / 4) {
+          var y = event.point.y;
+          point.y += (y - point.y) / 6;
+          if (segment.previous && !segment.previous.fixed) {
+            var previous = segment.previous.point;
+            previous.y += (y - previous.y) / 24;
+          }
+          if (segment.next && !segment.next.fixed) {
+            var next = segment.next.point;
+            next.y += (y - next.y) / 24;
+          }
+        }
+      }
+
+      function onFrame(event) {
+        updateWave(path);
+      }
+
+      function updateWave(path) {
+        var force = 1 - values.friction * values.timeStep * values.timeStep;
+        for (var i = 0, l = path.segments.length; i < l; i++) {
+          var point = path.segments[i].point;
+          var dy = (point.y - point.py) * force;
+          point.py = point.y;
+          point.y = Math.max(point.y + dy, 0);
+        }
+
+        for (var j = 0, l = springs.length; j < l; j++) {
+          springs[j].update();
+        }
+        path.smooth({ type: 'continuous' });
+      }
+
+      function onKeyDown(event) {
+        if (event.key == 'space') {
+          path.fullySelected = !path.fullySelected;
+          path.fillColor = path.fullySelected ? null : 'black';
+        }
+      }
+
     script(src="scripts/main.bundle.js")
