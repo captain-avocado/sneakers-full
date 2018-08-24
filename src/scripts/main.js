@@ -410,7 +410,7 @@ $('.brands').find('.radio_brands').on('change', function(e) {
 });
 
 checkAll('.brands', '.category', '.radio_brands');
-checkAll('.trands', '.category', '.radio_trands');
+// checkAll('.trands', '.category', '.radio_trands');
 checkAll('.colors', '.colors__item', '.colors__checkbox');
 checkAll('.sizes', '.sizes__item', '.sizes__radio');
 
@@ -541,6 +541,7 @@ if (window.innerWidth <= 760) {
 
 $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
     
+    
     const modalFilterList = $('.modal-filters__list');
     const prevActiveItem = modalFilterList.find('.is-modal-active');
     if (prevActiveItem.length) {
@@ -548,6 +549,15 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
     }
 
     const target = $(e.currentTarget);
+    const itemIndex = target.parent().index();
+    // console.log(itemIndex);
+    $('.modal-filters__item').each(function(index) {
+        if (index !== itemIndex) {
+            $(this).find('.modal-filter__icon').toggleClass('grey');
+            $(this).find('.modal-filter__svg').toggleClass('grey');
+            $(this).find('.modal-filter__text').toggleClass('grey');
+        }
+    });
 
     let name = target.parent().find('.modal-filter__name');
     let icon = target.parent().find('.modal-filter__icon');
@@ -558,7 +568,6 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
     svg.toggleClass('is-highlighted');
 
     if (!prevActiveItem.closest('.modal-filter').is(target.parent())) {
-    
         const filterType = target.parent().data('filter-type') + '-content';
         const filterContent = $(`.filter__content.${filterType}`);
         if (!filterContent.find($('.close-icon')).length) {
@@ -571,6 +580,14 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
                 name.removeClass('is-highlighted');
                 icon.removeClass('is-highlighted');
                 svg.removeClass('is-highlighted');
+
+                $('.modal-filters__item').each(function(index) {
+                    if (index !== itemIndex) {
+                        $(this).find('.modal-filter__icon').removeClass('grey');
+                        $(this).find('.modal-filter__svg').removeClass('grey');
+                        $(this).find('.modal-filter__text').removeClass('grey');
+                    }
+                });
                 ev.preventDefault();
                 setTimeout(function() {
                     filterContent.removeClass('is-modal-active');        
@@ -700,3 +717,11 @@ $('.radio').on('click', function(e) {
 
 });
 
+
+$('.content-list__link').on('click', function(e) {
+    e.preventDefault();
+    const target = $(e.currentTarget);
+    const targetItem = target.parent();
+    targetItem.closest('ul').find('.active').removeClass('active');
+    targetItem.addClass('active');
+});

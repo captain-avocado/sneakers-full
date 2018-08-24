@@ -7,8 +7,11 @@
     align-items: center;
 
     &:hover {
+      .select-modal__grid-text {
+        font-weight: 600;
+      }
       .select-modal__grid-arrow {
-        transform: translateX(50%);
+        transform: translateX(25%);
       }
     }
   }
@@ -17,6 +20,8 @@
     color: $bg-blue;
     font-size: 10px;
     margin-right: 10px;
+    font-weight: 400;
+    transition: font-weight .1s;
   }
 
   &__grid-arrow {

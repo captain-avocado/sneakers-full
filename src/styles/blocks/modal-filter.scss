@@ -26,6 +26,10 @@
       border-color: $bg-blue;
     }
 
+    &.grey {
+      border-color: #c5c5c5;
+    }
+
     &_city {
       border: none;
     }
@@ -54,6 +58,10 @@
 
     &.is-highlighted {
       fill: $bg-blue;
+    }
+
+    &.grey {
+      fill: #c5c5c5;
     }
   }
 
@@ -95,6 +103,9 @@
 
   &__text {
     cursor: pointer;
+    &.grey {
+      color: #c5c5c5;
+    }
   }
 
   &__color-list {

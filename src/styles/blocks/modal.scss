@@ -168,16 +168,26 @@
 
       width: 60%;
       margin-right: 10%;
-      
+     
+      @include tablets {
+        width: 50%;
+      }
+
       @include phones {
         width: 100%;
         margin-right: 0;
+      }
+
+      @include phones-landscape {
+        max-width: 275px;
       }
     }
 
     &_colors {
       width: 30%;
-
+      @include tablets {
+        width: 40%;
+      }
       @include phones {
         width: 100%;
       }
