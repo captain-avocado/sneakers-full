@@ -25,6 +25,9 @@
   }
 
   &__grid-arrow {
+    width: 20px;
+    height: 6px;
+    fill: $bg-blue;
     transition: transform .3s;
   }
 

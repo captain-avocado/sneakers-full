@@ -83,6 +83,23 @@ block content
       }
     }
 
+    @keyframes fromBottom {
+      0%  {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      40% {
+        transform: translate(0, 25%);
+        opacity: .8;
+      }
+
+      100% {
+        transform: translate(0, -40%);
+        opacity: 0;
+      }
+    }
+
     @keyframes fromTop {
       0%  {
         transform: translate(0, -20%);
@@ -457,7 +474,8 @@ block content
                   .select-modal__title-text Размеры
                   a(href="#").select-modal__grid
                     .select-modal__grid-text Размерная сетка
-                    img(src="images/arrow-grid.png").select-modal__grid-arrow
+                    svg.select-modal__grid-arrow
+                      use(xlink:href="images/sprite.svg#arrow-grid")
                 ul.select-modal__list.categories.categories_modal-sizes
                   li.categories__item.categories__item_modal-sizes.category
                     label.category__label.label
@@ -1350,6 +1368,7 @@ block content
       var loadingEl = document.getElementById('loading');
       var agency = document.getElementById('agency');
       
+      var letters = document.querySelectorAll('.letter-main');
 
 
       //- var svgRect = document.getElementById('water-fill');
@@ -1459,6 +1478,16 @@ block content
         }
       }
 
+      function animationend() {
+        //- this.style.opacity = 1;
+        this.style.transform = 'translate(0, 0)';
+      }
+
+      function animationFromEnd() {
+        this.style.transform = '';
+        this.style.opacity = 0;
+      }
+
       interact('.draggable')
         .draggable({
           inertia: true,
@@ -1529,12 +1558,37 @@ block content
             interactiveWaterBtn.style.animation = 'waterBtn 0.3s forwards';
             interactEnd = true;
             interact('.draggable').draggable(false);
+            
             if (startFadingOut < 1) {
-              loadingEl.style.opacity = "0";
-              agency.style.opacity = "0";
-              setTimeout(function(){
-                fadeOut(preloaderLayer, 500);
-              }, 500);
+              agency.classList.remove('visible');
+              interactive.style.opacity = 0;
+              interactive.style.transition = 'opacity .5s';
+
+
+              interactive.addEventListener('transitionend', function() {
+                for (var i = 0; i < letters.length; i++) {
+                  letters[i].style.transform = 'translate(0,0)';
+                  letters[i].removeEventListener('animationend', animationend);             
+                  letters[i].addEventListener('animationend', animationFromEnd);             
+                  letters[i].style.animation = 'fromBottom .55s ease-in';
+                  letters[i].style.animationDelay = 0.075 * i + 's'; 
+                }
+
+                letters[letters.length - 1].addEventListener('animationend', function(e) {
+                  agency.classList.remove('visible');
+                  interactive.classList.add('visible');
+
+                  //- document.querySelector('.interactive').classList.add('visible');
+                  document.querySelector('.interactive__path').classList.remove('visible');
+                  document.querySelector('.interactive__van').classList.remove('visible');
+                  document.querySelector('.interactive__shop').classList.remove('visible');
+                  document.querySelector('.interactive__text').classList.remove('visible');
+                  
+                  setTimeout(function(){
+                    fadeOut(preloaderLayer, 500);
+                  }, 500);
+                });
+              });
               startFadingOut++;
             } 
           }
@@ -1581,15 +1635,11 @@ block content
       
     
       window.onload = function() {
-        
-        var letters = document.querySelectorAll('.letter-main');
 
         for (var i = 0; i < letters.length; i++) {
           letters[i].style.animation = 'fromTop 0.55s ease-in-out';
           letters[i].style.animationDelay = 0.075 * i + 's';
-          letters[i].addEventListener('animationend', function() {
-            this.style.transform = 'translate(0, 0)';
-          });
+          letters[i].addEventListener('animationend', animationend);
         }
 
         letters[letters.length - 1].addEventListener('animationend', function(e) {
