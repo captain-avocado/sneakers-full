@@ -1773,7 +1773,12 @@
         }
         var leftBoundary = interactiveVan.getBoundingClientRect().left;
         var rightBoundary = pathRightCircle.getBoundingClientRect().right;
-        interact('.draggable')
+        
+        function addDragging() {
+          leftBoundary = interactiveVan.getBoundingClientRect().left;
+          rightBoundary = pathRightCircle.getBoundingClientRect().right;
+          pathWidth = interactivePath.clientWidth;
+          interact('.draggable')
           .draggable({
             isSwipeEnabled: true,
             inertia: true,
@@ -1893,6 +1898,10 @@
             target.setAttribute('data-x', x);
           }
           window.dragMoveListener = dragMoveListener;
+        }
+        addDragging();
+        window.addEventListener('resize', addDragging);
+        
         
         var preloaderLayer = document.getElementById("particles-js");
         var wrapper = document.getElementById('wrapper');
