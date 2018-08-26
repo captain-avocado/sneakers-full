@@ -546,6 +546,11 @@ $('#close-menu').on('click', function(e) {
     modalMenu.removeClass('is-active');
     $('#close-menu').addClass('hidden');
     hamburger.removeClass('is-active');
+    if (modalMenu.hasClass('is-active')) {
+        disableBodyScroll(modalMenu);
+    } else {
+        enableBodyScroll(modalMenu);
+    }
 
 });
 

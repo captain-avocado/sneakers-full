@@ -29,8 +29,11 @@
 
   &_menu {
     left: auto !important;
-    right: 20px;
+    right: 10px;
     top: 10px;
+    @include phones-landscape {
+      left: 20px;
+    }
   }
 
 
