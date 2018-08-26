@@ -59,10 +59,11 @@
     &.is-highlighted {
       fill: $bg-blue;
     }
-
     &.grey {
       fill: #c5c5c5;
     }
+
+    
   }
 
   &__name {
@@ -81,6 +82,9 @@
     &.is-highlighted {
       color: $bg-blue;
     }
+    &.grey {
+      color: #c5c5c5;
+    }
   }
 
   &__choosed {
@@ -94,6 +98,9 @@
 
     &_city {
       width: auto;
+    }
+    &.grey {
+      color: #c5c5c5;
     }
 
     @include phones-landscape {

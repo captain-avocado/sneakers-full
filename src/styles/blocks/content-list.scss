@@ -27,8 +27,17 @@
     }
 
     &_sort {
+
+      &:nth-child(1) {
+        min-width: 91px;
+      }
+
+      &:nth-child(2) {
+        min-width: 112px;
+      }
+
       &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 15px;
       }
     }
   }

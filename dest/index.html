@@ -95,25 +95,25 @@
           opacity: 1;
         }
       
-        40% {
-          transform: translate(0, 25%);
-          opacity: .8;
+        50% {
+          transform: translate(0, -35px);
+          opacity: .4;
         }
       
         100% {
-          transform: translate(0, -40%);
+          transform: translate(0, 50px);
           opacity: 0;
         }
       }
       
       @keyframes fromTop {
         0%  {
-          transform: translate(0, -20%);
+          transform: translate(0, -50px);
           opacity: 0;
         }
       
         50% {
-          transform: translate(0, 15%);
+          transform: translate(0, 35px);
           opacity: .4;
         }
       
@@ -148,7 +148,7 @@
         bottom: 10%;
         left: 50%;
         transform: translate(-50%, 20px);
-        max-width: 500px;
+        max-width: 350px;
         //- opacity: 0;
         transition: opacity .5s, transform .5s;
         text-align: center;
@@ -169,6 +169,7 @@
       .interactive__text {
         opacity: 0;
         transition: opacity .5s;
+        margin-top: 20px;
       }
       
       .interactive svg {
@@ -194,13 +195,13 @@
         content: '';
         display: block;
         position: absolute;
-        right: -10px;
+        right: -50px;
         width: 150px;
         height: 150px;
         z-index: 1;
         border-radius: 50%;
         opacity: 0;
-        background: rgba(111,148,182,0.1);
+        background: rgba(111,148,182,0.05);
       }
       
       .interactive__shop {
@@ -248,13 +249,13 @@
         <svg class="loading" id="loading" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80%" height="20vw" viewBox="-10 0 960 120" enable-background="new 0 0 574.558 120" xml:space="preserve">
           <g class="letters" id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-family="'Montserrat'" font-size="161.047" font-weight="900">
             <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="0" y="0">S</text>
-            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="105" y="0">N</text>
-            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="230" y="0">E</text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="106" y="0">N</text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="231" y="0">E</text>
             <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="348" y="0">A</text>
-            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="485" y="0">K</text>
-            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="617" y="0">E</text>
-            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="725" y="0">R</text>
-            <text class="letter-main" id="last-letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="850" y="0">S</text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="483" y="0">K</text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="612" y="0">E</text>
+            <text class="letter-main" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="718" y="0">R</text>
+            <text class="letter-main" id="last-letter" font-family="'Montserrat'" font-size="161.047" font-weight="900" x="841" y="0">S</text>
           </g>
         </svg>
         <div class="interactive">
@@ -271,7 +272,7 @@
               </svg>
               <svg class="interactive__path" width="82.5%" height="25" viewBox="0 0 400 10">
                 <circle id="left-circle" cx="10" cy="5" r="5" stroke="#fff" stroke-width="1" fill="transparent"></circle>
-                <path id="path" d="M10,5 Q140,150 240,5 Q240,-150 390,5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12" style="stroke-dashoffset: 0;" dur="10s"></path>
+                <path id="path" d="M25,5 Q140,150 240,5 Q240,-150 390,5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1, 12" style="stroke-dashoffset: 0;" dur="10s"></path>
                 <animate dur="10s" repeatCount="indefinite">
                   <path xlink:href="#path"></path>
                 </animate>
@@ -355,6 +356,9 @@
             </div>
           </div>
         </div>
+        <button class="modal-btn modal-btn_menu hidden" id="close-menu">
+          <div class="modal-btn__cross"> </div>
+        </button>
       </div>
       <div class="modal-filters modal-phone">
         <ul class="modal-filters__list">
@@ -868,6 +872,13 @@
                       <label class="category__label label">
                         <input class="category__radio radio radio_gender" type="radio" checked name="category">
                         <div class="category__radio-fake radio-fake radio-fake_gender"></div>
+                        <div class="category__name filter-item-name">Все категории</div>
+                      </label>
+                    </li>
+                    <li class="categories__item category">
+                      <label class="category__label label">
+                        <input class="category__radio radio radio_gender" type="radio" name="category">
+                        <div class="category__radio-fake radio-fake radio-fake_gender"></div>
                         <div class="category__name filter-item-name">Ботинки</div>
                       </label>
                     </li>
@@ -1205,9 +1216,9 @@
                 <div class="content-list__title">Моделей на странице:</div>
                 <ul class="content-list__list"> 
                   <li class="content-list__item active"><a class="content-list__link" href="#">8</a></li>
-                  <li class="content-list__item"><a class="content-list__link" href="#">20</a></li>
-                  <li class="content-list__item"><a class="content-list__link" href="#">40</a></li>
-                  <li class="content-list__item"><a class="content-list__link" href="#">80</a></li>
+                  <li class="content-list__item"><a class="content-list__link" href="#">16</a></li>
+                  <li class="content-list__item"><a class="content-list__link" href="#">32</a></li>
+                  <li class="content-list__item"><a class="content-list__link" href="#">48</a></li>
                 </ul>
               </div>
             </div>
@@ -1629,6 +1640,7 @@
               <div class="footer__title">компания</div>
               <ul class="footer__list footer-list">
                 <li class="footer-list__item"><a class="footer-list__link" href="#">о нас</a></li>
+                <li class="footer-list__item"><a class="footer-list__link" href="#">размерная сетка</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">условия доставки</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">политика конфиденциальности</a></li>
                 <li class="footer-list__item"><a class="footer-list__link" href="#">справка и помощь</a></li>
@@ -1696,45 +1708,66 @@
           setInterval(leftWheel, 700);
           setInterval(rightWheel, 700);
         }
-        animateTruck();
         
-            var coord = 0;
+        animateTruck();
+            var prevCoord = 0;
+            var coord = 2;
             var startCoord = 10;
             var flag = true;
             var continueAnimation = true;
             var startPathAnimation = false;
+            var stop = false;
+            var frameCount = 0;
+            var fps, fpsInterval, startTime, now, then, elapsed;
         
+        
+            // initialize the timer variables and start the animation
+        
+            function startAnimating(fps) {
+                fpsInterval = 1000 / fps;
+                then = Date.now();
+                startTime = then;
+                animate();
+            }
             
             var animate = function() {
-              
-              if (coord === 20) flag = false;
-              if (coord === -20) flag = true;
-              if (!continueAnimation) {
-                //- if (coord === 0) {
-                  startPathAnimation = true;
-                  //- startCoord = 10;
-                  interactiveInnerPath.setAttribute('d', `M10,5 Q100,5 200,5 Q300,5 390,5`);
-                  return;
-                //- }
-                //- startCoord = parseInt(interactiveVan.getAttribute('data-x')) + 15;
-                //- console.log(startCoord)
-              }
-        
-              //- if (coord === 0 && !continueAnimation) {
-              //-   interactiveInnerPath.setAttribute('d', `M10,5 Q100,5 200,5 Q300,5 390,5`);
-              //-   return;
-              //- }
-        
-              if (flag) {
-                coord++;
-              } else {
-                coord--;
-              }
-              
-              interactiveInnerPath.setAttribute('d', `M${startCoord},5 Q100,${coord} 200,5 Q300,${-coord} 380,5`);
               requestAnimationFrame(animate);
+        
+              now = Date.now();
+              elapsed = now - then;
+        
+              // if enough time has elapsed, draw the next frame
+        
+              if (elapsed > fpsInterval && !startPathAnimation) {
+        
+                  // Get ready for next frame by setting then=now, but also adjust for your
+                  // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
+                  then = now - (elapsed % fpsInterval);
+        
+                  // Put your drawing code here
+                  if (coord === 30) flag = false;
+                  if (coord === -30) flag = true;
+                  if (!continueAnimation) {
+                      startPathAnimation = true;
+                      
+                      interactiveInnerPath.setAttribute('d', `M25,5 Q100,5 200,5 Q300,5 390,5`);
+                      return;
+                  }
+        
+                  if (flag) {
+                    coord++;
+                  } else {
+                    coord--;
+                  }
+                  Snap('.interactive__path path').animate({d: `M25,5 Q50,${coord} 100,5 Q150,${-coord} 200,5 Q250,${coord} 300,5 350,${-coord} 380,5`}, 100);
+        
+        
+        
+                  //- interactiveInnerPath.setAttribute('d', `M10,5 Q50,${coord} 100,5 Q150,${-coord} 200,5 Q250,${coord} 300,5 350,${-coord} 380,5`);
+              }
             }
-            animate();
+            //- animate();
+            startAnimating(20);
         
         
         
@@ -1802,19 +1835,20 @@
                 //move Truck
                 event.target.style.webkitTransform = 'translateX(0)';
                 event.target.style.transform = 'translateX(0)';
-                event.target.style.transition = 'transform .5s';
+                event.target.style.transition = 'transform .42s ease-in-out';
                 event.target.setAttribute('data-x', 0);
                 //move Path & Left-Circle
-                Snap('#path').animate({ d: 'M10,5 L390,5' }, 500);
-                Snap('.interactive__path circle').animate({ cx: '10' }, 500);
+                Snap('#path').animate({ d: 'M25,5 L390,5' }, 500, mina.easeinout);
+                Snap('.interactive__path circle').animate({ cx: '10' }, 500, mina.easeinout);
         
                 fadeInInteractive(interactiveInnerPath, true);
                 fadeInInteractive(pathLeftCircle, true);
                 fadeInInteractive(pathRightCircle, true);
         
                 setTimeout(function() {
+                  startPathAnimation = false;
                   continueAnimation = true;
-                  animate();
+                  startAnimating(20);
                 }, 500);
               }
             }
@@ -1856,7 +1890,7 @@
             if (x >= pathWidth - 17) {
               interact('.draggable').draggable(false);
         
-              interactiveWaterBtn.style.animation = 'waterBtn 0.3s forwards';
+              interactiveWaterBtn.style.animation = 'waterBtn 0.5s forwards';
               interactEnd = true;
               
               if (startFadingOut < 1) {

@@ -223,10 +223,10 @@ prevBtn.on('click', function(e) {
 });
 
 nextBtn.on('click', function(e) {
-    console.log(curPage);
+    // console.log(curPage);
 
     e.preventDefault();
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
     if (curPage < 5) {
 
         if (window.innerWidth <= 760) {
@@ -488,18 +488,40 @@ $('.reset-btn').on('click', function(e) {
     const target = $(e.currentTarget);
     let inputList;
     if (window.innerWidth <= 760) {
-        console.log(target);
+        // console.log(target);
         inputList = target.siblings('.modal-filters__list').find('ul.filter__content');
-        console.log(inputList);
+        // console.log(inputList);
 
     } else {
-        inputList = target.closest('.filters').find('ul.filter__content');
+        inputList = target.closest('.filters').find('.filter__content');
     }
     $(inputList).each(function() {
+        const textPlace = $(this).closest('.modal-filter').find('.modal-filter__choosed');
+        // console.log($(this));
+        // console.log(textPlace);
+
         const inputs = $(this).find('input');
         const firstInput = inputs.first();
         firstInput.prop('checked', true);
-        inputs.not(firstInput).prop('checked', false);
+        const text = firstInput.siblings('.filter-item-name').text();
+        textPlace.text(text);
+        if ($(this).hasClass('colors')) {
+            textPlace.text('Все цвета');
+        }
+        if ($(this).hasClass('trands')) {
+            inputs.prop('checked', false);
+            textPlace.text('');
+        } else {
+            inputs.not(firstInput).prop('checked', false);
+        }
+    });
+    const priceText = 'От 500 руб до 5000';
+    $('.modal-filter__choosed_price').text(priceText);
+    fromInput.val(500);
+    toInput.val(5000);            
+    $('#price-slider').data('ionRangeSlider').update({
+        from: 500,
+        to: 5000,
     });
 });
 
@@ -507,14 +529,23 @@ const hamburger = $('.hamburger');
 const modalMenu = $('.modal-menu');
 hamburger.on('click', function(e) {
     e.preventDefault();
-    hamburger.toggleClass('is-active');
-    modalMenu.toggleClass('is-active');
+    hamburger.addClass('is-active');
+    $('#close-menu').removeClass('hidden');
+    modalMenu.addClass('is-active');
 
     if (modalMenu.hasClass('is-active')) {
         disableBodyScroll(modalMenu);
     } else {
         enableBodyScroll(modalMenu);
     }
+
+});
+
+$('#close-menu').on('click', function(e) {
+    e.preventDefault();
+    modalMenu.removeClass('is-active');
+    $('#close-menu').addClass('hidden');
+    hamburger.removeClass('is-active');
 
 });
 
@@ -550,14 +581,9 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
 
     const target = $(e.currentTarget);
     const itemIndex = target.parent().index();
+    console.log(itemIndex);
     // console.log(itemIndex);
-    $('.modal-filters__item').each(function(index) {
-        if (index !== itemIndex) {
-            $(this).find('.modal-filter__icon').toggleClass('grey');
-            $(this).find('.modal-filter__svg').toggleClass('grey');
-            $(this).find('.modal-filter__text').toggleClass('grey');
-        }
-    });
+    
 
     let name = target.parent().find('.modal-filter__name');
     let icon = target.parent().find('.modal-filter__icon');
@@ -566,8 +592,22 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
     name.toggleClass('is-highlighted');
     icon.toggleClass('is-highlighted');
     svg.toggleClass('is-highlighted');
-
+    
     if (!prevActiveItem.closest('.modal-filter').is(target.parent())) {
+        $('.modal-filters__item').each(function(index) {
+            if (index !== itemIndex) {
+                console.log($(this));
+                $(this).find('.modal-filter__icon').addClass('grey');
+                $(this).find('.modal-filter__svg').addClass('grey');
+                $(this).find('.modal-filter__name').addClass('grey');
+                $(this).find('.modal-filter__choosed').addClass('grey');
+            } else {
+                $(this).find('.modal-filter__icon').removeClass('grey');
+                $(this).find('.modal-filter__svg').removeClass('grey');
+                $(this).find('.modal-filter__name').removeClass('grey');
+                $(this).find('.modal-filter__choosed').removeClass('grey');
+            }
+        });
         const filterType = target.parent().data('filter-type') + '-content';
         const filterContent = $(`.filter__content.${filterType}`);
         if (!filterContent.find($('.close-icon')).length) {
@@ -585,7 +625,8 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
                     if (index !== itemIndex) {
                         $(this).find('.modal-filter__icon').removeClass('grey');
                         $(this).find('.modal-filter__svg').removeClass('grey');
-                        $(this).find('.modal-filter__text').removeClass('grey');
+                        $(this).find('.modal-filter__name').removeClass('grey');
+                        $(this).find('.modal-filter__choosed').removeClass('grey');
                     }
                 });
                 ev.preventDefault();
@@ -604,11 +645,18 @@ $('.modal-filter__icon, .modal-filter__text').on('click', function(e) {
         
         if (!target.parent().find('.filter__content').length) {
             filterContent.appendTo(target.parent());
-            console.log(target.parent());
+            // console.log(target.parent());
         }
         setTimeout(function() {
             filterContent.toggleClass('is-modal-active');  
         }, 10);
+    } else {
+        $('.modal-filters__item').each(function(index) {
+            $(this).find('.modal-filter__icon').removeClass('grey');
+            $(this).find('.modal-filter__svg').removeClass('grey');
+            $(this).find('.modal-filter__name').removeClass('grey');
+            $(this).find('.modal-filter__choosed').removeClass('grey');
+        });
     }
 });
 
@@ -693,13 +741,14 @@ $('.radio').on('click', function(e) {
     const checkedInput = filterContent.find('input:checked');
     const checkedInputNames = checkedInput.siblings('.filter-item-name');
 
-    console.log(checkedInputNames);
-    console.log($(checkedInputNames[0]).text());
-    
+    // console.log(checkedInputNames);
+    // console.log($(checkedInputNames[0]).text());
+    let border = 2;
+    if (filterContent.hasClass('trands')) border = 1;
     let text = '';
     let flag = false;
     for (let i = 0; i < checkedInputNames.length; i++) {
-        if (i === 2) {
+        if (i === border) {
             text += ` и еще ${checkedInputNames.length - i}`;
             flag = true;
             break;

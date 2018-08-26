@@ -5,7 +5,7 @@
   padding: 0;
   margin-right: 0;
   margin-bottom: -2px;
-  transition: width .2s,padding .2s,border-bottom 0.2s, margin-right .2s;
+  transition: width .3s,padding .3s,border-bottom 0.3s, margin-right .3s;
   &.active {
     margin-right: auto;
     width: 300px;
@@ -19,6 +19,7 @@
     top: -35%;
     color: $bg-blue;
     font-size: 10px;
+    opacity: 1;
   }
 }
 
@@ -26,10 +27,10 @@
   position: absolute;
   left: 25px;
   top: 50%;
-  transition: top .2s, color .2s, font-size .2s;
+  transition: top .3s, color .3s, font-size .3s, opacity .3s;
   transform: translate(0, -50%);
   display: none;
-
+  opacity: 0;
   
 
 }

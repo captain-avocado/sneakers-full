@@ -27,6 +27,13 @@
   background: transparent;
   z-index: 1000;
 
+  &_menu {
+    left: auto !important;
+    right: 20px;
+    top: 10px;
+  }
+
+
   &__cross {
     position: absolute;
     top: 50%;

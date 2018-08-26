@@ -51,7 +51,7 @@ export default function checkAll(inputList, inputItem, input) {
                 }
 
                 const colorItem = $(checkedInput[i]).siblings('.color-fake');
-                colorItem.clone().css('margin-right', '2px').appendTo(colorList);
+                colorItem.clone().css('margin-right', '10px').appendTo(colorList);
             }
         }
     });
