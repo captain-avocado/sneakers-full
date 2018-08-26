@@ -43,6 +43,12 @@
         transition: opacity .5s, top .5s, left .3s;
       }
       
+      @media (max-width: 760px) and (orientation: landscape) {
+        .interactive__text {
+          font-size: 10px;
+        }
+      }
+      
       #agency.visible {
         opacity: .6;
       }
@@ -201,7 +207,7 @@
         z-index: 1;
         border-radius: 50%;
         opacity: 0;
-        background: rgba(111,148,182,0.05);
+        background: rgba(111,148,182,0.2);
       }
       
       .interactive__shop {
