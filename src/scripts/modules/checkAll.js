@@ -43,7 +43,16 @@ export default function checkAll(inputList, inputItem, input) {
         } else {
             const colorList = $('.modal-filter__color-list');
             colorList.empty();
+            if (checkedInput.length <= 4) {
+                $('.modal-filter__color-num').text('');
+            }
             for (let i = 0; i < checkedInput.length; i++) {
+                
+                
+                if (i === 4) {
+                    $('.modal-filter__color-num').text(`и еще ${checkedInput.length - 4}`);
+                    break;
+                }
 
                 if ($(checkedInput[i]).siblings('.colors__all').length) {
                     colorList.text($(checkedInput[i]).siblings('.colors__all').text());

@@ -87,6 +87,10 @@
     }
   }
 
+  &__color-num {
+    font-size: 11px;
+  }
+
   &__choosed {
     font-size: 12px;
     color: $bg-blue;
@@ -95,6 +99,8 @@
     width: 200px;
     overflow: hidden;
     white-space: nowrap;
+    display: flex;
+
 
     &_city {
       width: auto;

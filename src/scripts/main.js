@@ -410,7 +410,7 @@ $('.brands').find('.radio_brands').on('change', function(e) {
 });
 
 checkAll('.brands', '.category', '.radio_brands');
-// checkAll('.trands', '.category', '.radio_trands');
+checkAll('.categories-list', '.category', '.radio_category');
 checkAll('.colors', '.colors__item', '.colors__checkbox');
 checkAll('.sizes', '.sizes__item', '.sizes__radio');
 
@@ -448,18 +448,6 @@ const targetElement = document.querySelector('.modal__content');
 
 function toggleModal() {
     modal.classList.toggle('active');
-
-    // $('html').toggleClass('active');
-    // document.body.classList.toggle('active');
-    // var vpH = window.innerHeight;
-    // document.documentElement.style.height = vpH.toString() + 'px';
-    // document.body.style.height = vpH.toString() + 'px';
-    // document.body.style.overflow = 'hidden';
-    // document.body.style.height = '100%';
-    // document.documentElement.style.overflow = 'hidden';
-    // document.documentElement.style.height = '100%';
-
-
 
 
     if ($(modal).hasClass('active')) {

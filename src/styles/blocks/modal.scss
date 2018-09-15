@@ -166,11 +166,12 @@
 
     &_sizes {
 
-      width: 60%;
+      width: 55%;
       margin-right: 10%;
      
       @include tablets {
         width: 50%;
+        max-width: 400px;
       }
 
       @include phones {
