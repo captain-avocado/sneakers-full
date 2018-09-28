@@ -52,7 +52,7 @@ function styles() {
         cascade: false
     }))
     .pipe($gp.groupCssMediaQueries())
-    .pipe($gp.cleancss())
+    // .pipe($gp.cleancss())
     .pipe($gp.rename({  suffix: '.min'  }))
     .pipe($gp.sourcemaps.write('/'))
     .pipe(gulp.dest(paths.dest + 'styles/'))
