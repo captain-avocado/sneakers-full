@@ -2,7 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
+    optimization: {
+      // We no not want to minimize our code.
+      minimize: false
+    },
     entry: path.join(__dirname, 'src/scripts/main.js'),
     output: {
         path: path.join(__dirname, 'dest/scripts'),
