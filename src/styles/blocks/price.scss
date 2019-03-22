@@ -14,3 +14,17 @@
   }
 }
 
+
+.irs--flat .irs-handle {
+  top: 19px !important;
+  /* transform: translateY(-50%); */
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  display: none !important;
+}

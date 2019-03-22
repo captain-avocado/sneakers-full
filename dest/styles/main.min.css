@@ -4413,7 +4413,7 @@ button {
   height: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  white-space: initial;
+  white-space: normal;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4555,6 +4555,7 @@ body {
 
 .container {
   width: 90%;
+  max-width: 1280px;
 }
 
 .container_header {
@@ -8439,6 +8440,21 @@ body {
   width: 150px;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.irs--flat .irs-handle {
+  top: 19px !important;
+  /* transform: translateY(-50%); */
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  display: none !important;
 }
 
 .product-buy {

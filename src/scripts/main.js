@@ -1,11 +1,12 @@
 import 'ion-rangeslider/css/ion.rangeSlider.css';
-import 'ion-rangeslider/css/ion.rangeSlider.skinHTML5.css';
+// import 'ion-rangeslider/css/ion.rangeSlider.skinHTML5.css';
 import 'ion-rangeslider/js/ion.rangeSlider.min.js';
 
 // import Glide, { Breakpoints } from '@glidejs/glide/dist/glide.modular.esm';
 // '@glidejs/glide/dist/glide.modular.esm';
 
 import Glide from '@glidejs/glide';
+// const Glide = require('@glidejs/glide');
 
 import triggerPopup from './modules/triggerPopup';
 import changePrice from './modules/changePrice';
