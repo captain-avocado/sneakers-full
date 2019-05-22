@@ -1,0 +1,39 @@
+.auth-start {
+  &__inputs {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__to-reg, &__to-auth {
+    margin-top: 15px;
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+}
+
+.input {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    font-size: 14px;
+
+    margin-bottom: 15px;
+    transition: border-color .3s;
+}
+
+.error {
+  border-color: #b00020;
+}
+
+.validate, .input:focus {
+  border-color: #1973E7;
+}
+
+button {
+  outline: none;
+}

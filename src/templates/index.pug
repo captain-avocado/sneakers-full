@@ -575,23 +575,41 @@ block content
           a(href="#").city-content__delivery-info.popup-link Условия доставки
       .auth-popup.header__popup.header__popup_auth.popup.popup_auth
         .popup__triangle
-        .popup__title Личный кабинет
-        .auth-popup__profile.profile
-          .profile__avatar
-          .profile__text
-            .profile__name
-              a(href="#").profile__link Сергей Климов
-            .profile__mail
-              a(href="#").profile__link s.klimov@khorito.ru
-        ul.auth-popup__info.auth-info
-          li.auth-info__personal.auth-info__item
-            a(href="#").auth-info__link.popup-link Персональные данные
-          li.auth-info__delivery.auth-info__item
-            a(href="#").auth-info__link.popup-link Адрес и способ доставки
-          li.auth-info__payment.auth-info__item
-            a(href="#").auth-info__link.popup-link Платежные данные
-        .auth-popup__exit.auth-exit
-          a(href="#").auth-exit__link.popup-link.popup-link_exit Выйти из системы
+        form.auth-start#auth
+          .popup__title Вход
+          .auth-start__inputs
+            input.error.input(type="text" placeholder="Почта" id="auth-email")
+            input.validate.input(type="text" placeholder="Пароль" id="auth-password")
+          button(type="submit")#submit-auth.btn.btn_more.product-buy__btn.auth-start__btn Войти
+          .auth-start__to-reg
+            a(href="#").auth-info__link.popup-link#to-reg Нет аккаунта?
+        form.auth-start#reg
+          .popup__title Регистрация
+          .auth-start__inputs
+            input.input(type="text" placeholder="Имя" id="name")
+            input.input(type="text" placeholder="Почта" id="reg-email")
+            input.input(type="text" placeholder="Пароль" id="reg-password")
+          button(type="submit")#submit-reg.btn.btn_more.product-buy__btn.auth-start__btn Зарегистрироваться
+          .auth-start__to-auth
+            a(href="#").auth-info__link.popup-link#to-auth Уже есть аккаунт?
+        #lk
+          .popup__title Личный кабинет
+          .auth-popup__profile.profile
+            .profile__avatar
+            .profile__text
+              .profile__name
+                a(href="#").profile__link Сергей Климов
+              .profile__mail
+                a(href="#").profile__link s.klimov@khorito.ru
+          ul.auth-popup__info.auth-info
+            li.auth-info__personal.auth-info__item
+              a(href="#").auth-info__link.popup-link Персональные данные
+            li.auth-info__delivery.auth-info__item
+              a(href="#").auth-info__link.popup-link Адрес и способ доставки
+            li.auth-info__payment.auth-info__item
+              a(href="#").auth-info__link.popup-link Платежные данные
+          .auth-popup__exit.auth-exit
+          a(href="#")#exit-lk.auth-exit__link.popup-link.popup-link_exit Выйти из системы
       .cart-popup.header__popup.header__popup_cart.popup.popup_cart
         .popup__triangle
         .popup__title Моя корзина

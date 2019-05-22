@@ -662,20 +662,41 @@
         </div>
         <div class="auth-popup header__popup header__popup_auth popup popup_auth">
           <div class="popup__triangle"></div>
-          <div class="popup__title">Личный кабинет</div>
-          <div class="auth-popup__profile profile">
-            <div class="profile__avatar"></div>
-            <div class="profile__text">
-              <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
-              <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
+          <form class="auth-start" id="auth">
+            <div class="popup__title">Вход</div>
+            <div class="auth-start__inputs">
+              <input class="error input" type="text" placeholder="Почта" id="auth-email">
+              <input class="validate input" type="text" placeholder="Пароль" id="auth-password">
             </div>
+            <button class="btn btn_more product-buy__btn auth-start__btn" type="submit" id="submit-auth">Войти</button>
+            <div class="auth-start__to-reg"><a class="auth-info__link popup-link" href="#" id="to-reg">Нет аккаунта?</a></div>
+          </form>
+          <form class="auth-start" id="reg">
+            <div class="popup__title">Регистрация</div>
+            <div class="auth-start__inputs">
+              <input class="input" type="text" placeholder="Имя" id="name">
+              <input class="input" type="text" placeholder="Почта" id="reg-email">
+              <input class="input" type="text" placeholder="Пароль" id="reg-password">
+            </div>
+            <button class="btn btn_more product-buy__btn auth-start__btn" type="submit" id="submit-reg">Зарегистрироваться</button>
+            <div class="auth-start__to-auth"><a class="auth-info__link popup-link" href="#" id="to-auth">Уже есть аккаунт?</a></div>
+          </form>
+          <div id="lk">
+            <div class="popup__title">Личный кабинет</div>
+            <div class="auth-popup__profile profile">
+              <div class="profile__avatar"></div>
+              <div class="profile__text">
+                <div class="profile__name"><a class="profile__link" href="#">Сергей Климов</a></div>
+                <div class="profile__mail"><a class="profile__link" href="#">s.klimov@khorito.ru</a></div>
+              </div>
+            </div>
+            <ul class="auth-popup__info auth-info">
+              <li class="auth-info__personal auth-info__item"><a class="auth-info__link popup-link" href="#">Персональные данные</a></li>
+              <li class="auth-info__delivery auth-info__item"><a class="auth-info__link popup-link" href="#">Адрес и способ доставки</a></li>
+              <li class="auth-info__payment auth-info__item"><a class="auth-info__link popup-link" href="#">Платежные данные</a></li>
+            </ul>
+            <div class="auth-popup__exit auth-exit"></div><a class="auth-exit__link popup-link popup-link_exit" href="#" id="exit-lk">Выйти из системы</a>
           </div>
-          <ul class="auth-popup__info auth-info">
-            <li class="auth-info__personal auth-info__item"><a class="auth-info__link popup-link" href="#">Персональные данные</a></li>
-            <li class="auth-info__delivery auth-info__item"><a class="auth-info__link popup-link" href="#">Адрес и способ доставки</a></li>
-            <li class="auth-info__payment auth-info__item"><a class="auth-info__link popup-link" href="#">Платежные данные</a></li>
-          </ul>
-          <div class="auth-popup__exit auth-exit"><a class="auth-exit__link popup-link popup-link_exit" href="#">Выйти из системы</a></div>
         </div>
         <div class="cart-popup header__popup header__popup_cart popup popup_cart">
           <div class="popup__triangle"></div>

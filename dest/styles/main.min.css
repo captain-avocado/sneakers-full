@@ -4623,6 +4623,51 @@ body {
   margin-bottom: 15px;
 }
 
+.auth-start__inputs {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.auth-start__to-reg,
+.auth-start__to-auth {
+  margin-top: 15px;
+}
+
+.auth-start__btn {
+  cursor: pointer;
+}
+
+.input {
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 50px;
+  border: 1px solid #eaeaea;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
+}
+
+.error {
+  border-color: #b00020;
+}
+
+.validate,
+.input:focus {
+  border-color: #1973e7;
+}
+
+button {
+  outline: none;
+}
+
 .banner {
   position: relative;
   cursor: pointer;
