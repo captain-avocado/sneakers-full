@@ -11,9 +11,221 @@ import Glide from '@glidejs/glide';
 import triggerPopup from './modules/triggerPopup';
 import changePrice from './modules/changePrice';
 import checkAll from './modules/checkAll';
-
 //запрос при попадании на страницу: авторизован ли пользователь?
 
+
+//список товаров
+const goods = [
+    {
+        id: 'articul-1',
+        company: 'Nike',
+        model: 'ez1',
+        colors: ['grey', 'orange'],
+        price: 10290,
+        descr: 'TexttexteeetfefTexttexteeetfefTexttexteeetfefTexttexteeetfef',
+        sizes: [39, 40, 42],
+        images: [
+            'https://images.unsplash.com/photo-1559311745-a57f6233488e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1717&q=80',
+            'https://images.unsplash.com/photo-1559255394-044328bfa8b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80',
+            'https://images.unsplash.com/photo-1559261514-64081d3526cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=802&q=80',
+        ],
+    },
+    {
+        id: 'articul-2',
+        company: 'Nikesss',
+        model: 'ez1efef -2',
+        colors: ['grey', 'orange'],
+        price: 11290,
+        descr: 'fir',
+        sizes: [40, 41, 42],
+        images: ['https://images.unsplash.com/photo-1559311745-a57f6233488e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1717&q=80'],
+    },
+];
+
+//возвращает дом-элемент колор радио-кнопку
+const renderColor = (color) => {
+    const node = document.createElement('li');
+    node.classList.add('sneaker-colors__item');
+    node.innerHTML = `<label class="label">
+                        <input class="radio radio_sneaker" type="radio" name="sneaker-colors-1">
+                            <div class="color-fake" data-color="${color}"></div>
+                      </label>`;
+    return node;
+};
+
+const renderSize = (size) => {
+    const node = document.createElement('li');
+    node.classList.add('categories__item');
+    node.classList.add('category');
+    node.classList.add('categories__item_modal-sizes');
+    node.innerHTML = `<label class="category__label label">
+                        <input class="category__radio radio radio_modal-sizes" type="radio" checked="" name="modal-sizes">
+                        <div class="category__radio-fake radio-fake radio-fake_modal-sizes"></div>
+                        <div class="category__name">${size}</div>
+                      </label>`;
+    return node;
+};
+
+const renderGlideItem = (img) => {
+    const node = document.createElement('li');
+    node.classList.add('glide__slide_modal');
+    node.classList.add('glide__slide');
+    node.innerHTML = `<img src="${img}"/>`;
+    return node;
+};
+
+const renderImgMainItem = (img) => {
+    const node = document.createElement('li');
+    node.classList.add('glide__slide');
+    node.classList.add('glide__slide_preview');
+    node.innerHTML = `<img src="${img}" />`;
+    return node;
+};
+
+const renderImgItem = (img) => {
+    const node = document.createElement('li');
+    node.classList.add('modal__preview-item');
+    node.innerHTML = `<div class="modal__preview-inner"><img class="modal__preview-img" src="${img}"></div>`;
+    return node;
+};
+
+const renderGoodDetail = (good) => {
+    const {
+        id,
+        company,
+        model,
+        colors,
+        price,
+        descr,
+        sizes,
+        images,
+    } = good;
+
+    const modal = document.querySelector('.modal');
+    modal.querySelector('.modal__code-nums').innerText = id;
+    modal.querySelector('.product-text__company').innerText = company;
+    modal.querySelector('.product-text__name').innerText = model;
+    modal.querySelector('.modal__product-price-nums').innerText = price;
+    modal.querySelector('.modal__descr').innerText = descr;
+
+    const colorList = modal.querySelector('ul.sneaker-colors.select-modal__list');
+    console.log(colorList);
+    colors.forEach((color) => {
+        const colorNode = renderColor(color);
+        colorList.appendChild(colorNode);
+    });
+
+    const sizeList = modal.querySelector('ul.select-modal__list.categories.categories_modal-sizes');
+    sizes.forEach((size) => {
+        const sizeNode = renderSize(size);
+        sizeList.appendChild(sizeNode);
+    });
+
+    const glideList = modal.querySelector('.glide--modal ul');
+    const imgMainList = modal.querySelector('ul.glide__slides.glide__slides_preview');
+    const imgList = modal.querySelector('ul.modal__preview-gallery');
+    images.forEach((img) => {
+        const glideNode = renderGlideItem(img);
+        glideList.appendChild(glideNode);
+
+        const imgMainNode = renderImgMainItem(img);
+        imgMainList.appendChild(imgMainNode);
+
+        const imgNode = renderImgItem(img);
+        imgList.appendChild(imgNode);
+    });
+
+
+};
+
+renderGoodDetail(goods[0]);
+
+//вычислить общее кол-во товаров
+//сохранить текущее кол-во товаров на странице
+//вычислить необходимое кол-во страниц
+//отрендерить пагинацию
+//отобразить первую страницу
+
+//при изменении кол-ва товаров на странице повторить действия
+
+// const goodsNum = 120;
+// if (goodsNum <= 0) console.log('error');
+// const pageNumSwitchers = document.querySelectorAll('.page-num');
+// let goodsPageNum = parseInt(document.querySelector('.page-num.active a').innerText);
+// let pageNum = (goodsNum % goodsPageNum)
+//     ? Math.floor(goodsNum / goodsPageNum) + 1
+//     : (goodsNum / goodsPageNum);
+// console.log(pageNum);
+
+// const renderPageNums = (pageNum) => {
+//     const list = document.createElement('ul');
+//     list.classList.add('pagination__pages');
+//     list.classList.add('pages');
+
+//     for (let i = 0; i < pageNum; i++) {
+//         const item = document.createElement('li');
+//         item.classList.add('pagination__icon');
+//         item.classList.add('pages__item');
+//         if (i > 4) {
+//             item.classList.add('hidden');
+//         }
+//         item.innerHTML = `
+//             <a class="pages__link" href="#"><span class="pages__text">${i + 1}</span></a>
+//         `;
+
+//         list.appendChild(item);
+//     }
+//     console.log(list);
+//     const parent = document.querySelector('.pagination');
+//     const siblings = parent.childNodes;
+//     parent.insertBefore(list, siblings[1]);
+// };
+
+// renderPageNums(pageNum);
+
+//возвращает дом-элемент товара
+const renderGood = ({ id, company, model, colors, price }) => {
+    const node = document.createElement('li');
+    node.classList.add('goods__item');
+    node.innerHTML = `<div class="product" id="${id}">
+            <div class="product__sale"></div>
+            <div class="product__top-row">
+                <div class="product__text product-text">
+                    <div class="product-text__company">${company}</div>
+                    <div class="product-text__name">${model}</div>
+                </div><a class="product__like-link" href="#">
+                    <svg class="product__like">
+                        <use xlink: href="images/sprite.svg#cart"></use>
+                      </svg></a><a class="product__like-link product__like-link_fav" href="#">
+                <svg class="product__like">
+                    <use xlink: href="images/sprite.svg#like-icon"></use>
+                      </svg></a>
+                  </div> <img class="product__img" src="images/1.png">
+            <ul class="sneaker-colors product__sneaker-colors"></ul>
+                            <div class="product__bottom-row product-buy"><a class="product-buy__btn btn btn_more modal-trigger" href="#">Подробнее</a>
+                                <div class="product-buy__price">${price} р</div>
+                            </div>
+                </div>`;
+
+    const colorList = node.querySelector('ul.product__sneaker-colors');
+    colors.forEach((color) => {
+        const colorNode = renderColor(color);
+        colorList.appendChild(colorNode);
+    });
+    return node;
+};
+
+//рендер всех товаров
+const renderGoodsList = () => {
+    goods.forEach((item) => {
+        const stringItem = renderGood(item);
+        document.querySelector('.goods').appendChild(stringItem);
+    });
+};
+
+renderGoodsList();
+
+// регистрация-авторизация переходы
 $('#reg').fadeOut();
 $('#lk').fadeOut();
 
@@ -48,6 +260,8 @@ $('#submit-auth').on('click', (e) => {
         $('#lk').fadeIn(100);
     }, 100);
 });
+
+//------
 
 const mainGlide = new Glide('.glide', {
     type: 'carousel',

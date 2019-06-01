@@ -423,31 +423,33 @@ block content
                 .product-text
                   .product-text__company Nike
                   .product-text__name Men's Air More
-                .modal__product-price 10 490 р
+                .modal__product-price 
+                  span.modal__product-price-nums 10 490 
+                  span р
           .modal__gallery
             .modal__slider
               .glide--modal.glide--ltr.glide--carousel.glide--swipeable.glide--slider
                 .glide__track(data-glide-el="track")
                   ul.glide__slides
-                    li.glide__slide.glide__slide_modal
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_modal
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_modal
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_modal
+                    //- li.glide__slide.glide__slide_modal
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_modal
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_modal
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_modal
                       img(src="images/1.png")
             .modal__preview-slider
               .glide--preview.glide--ltr.glide--carousel.glide--swipeable.glide--slider
                 .glide__track(data-glide-el="track")
                   ul.glide__slides.glide__slides_preview
-                    li.glide__slide.glide__slide_preview
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_preview
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_preview
-                      img(src="images/1.png")
-                    li.glide__slide.glide__slide_preview
+                    //- li.glide__slide.glide__slide_preview
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_preview
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_preview
+                    //-   img(src="images/1.png")
+                    //- li.glide__slide.glide__slide_preview
                       img(src="images/1.png")
                 .glide__arrows(data-glide-el="controls")
                   a.glide__arrow.glide__arrow_preview-left.glide__arrow_left(href="#" data-glide-dir="<")
@@ -457,16 +459,16 @@ block content
                     svg.glide__icon.glide__icon_preview.glide__icon_right
                       use(xlink:href="images/sprite.svg#arrow")
               ul.modal__preview-gallery
-                li.modal__preview-item
-                  .modal__preview-inner
-                    img.modal__preview-img(src="images/1.png")
-                li.modal__preview-item
-                  .modal__preview-inner
-                    img.modal__preview-img(src="images/1.png")
-                li.modal__preview-item
-                  .modal__preview-inner
-                    img.modal__preview-img(src="images/1.png")
-                li.modal__preview-item
+                //- li.modal__preview-item
+                //-   .modal__preview-inner
+                //-     img.modal__preview-img(src="images/1.png")
+                //- li.modal__preview-item
+                //-   .modal__preview-inner
+                //-     img.modal__preview-img(src="images/1.png")
+                //- li.modal__preview-item
+                //-   .modal__preview-inner
+                //-     img.modal__preview-img(src="images/1.png")
+                //- li.modal__preview-item
                   .modal__preview-inner
                     img.modal__preview-img(src="images/1.png")
           .modal__info
@@ -484,62 +486,62 @@ block content
                     svg.select-modal__grid-arrow
                       use(xlink:href="images/sprite.svg#arrow-grid")
                 ul.select-modal__list.categories.categories_modal-sizes
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 35
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 37
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 39
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 40
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 41
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 44
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 45
-                  li.categories__item.categories__item_modal-sizes.category
-                    label.category__label.label
-                      input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
-                      .category__radio-fake.radio-fake.radio-fake_modal-sizes
-                      .category__name 46
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 35
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 37
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 39
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 40
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 41
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 44
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 45
+                  //- li.categories__item.categories__item_modal-sizes.category
+                  //-   label.category__label.label
+                  //-     input(type="radio" checked name="modal-sizes").category__radio.radio.radio_modal-sizes
+                  //-     .category__radio-fake.radio-fake.radio-fake_modal-sizes
+                  //-     .category__name 46
               .modal__row.select-modal.modal__row_colors
                 .select-modal__title Цвета
                 ul.sneaker-colors.select-modal__list
-                  li.sneaker-colors__item
-                    label.label
-                      input(type="radio" checked name="sneaker-colors-modal-1").radio.radio_sneaker
-                      .color-fake(data-color="black")
-                  li.sneaker-colors__item
-                    label.label
-                      input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
-                      .color-fake(data-color="grey")
-                  li.sneaker-colors__item
-                    label.label
-                      input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
-                      .color-fake(data-color="pink")
-                  li.sneaker-colors__item
+                  //- li.sneaker-colors__item
+                  //-   label.label
+                  //-     input(type="radio" checked name="sneaker-colors-modal-1").radio.radio_sneaker
+                  //-     .color-fake(data-color="black")
+                  //- li.sneaker-colors__item
+                  //-   label.label
+                  //-     input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
+                  //-     .color-fake(data-color="grey")
+                  //- li.sneaker-colors__item
+                  //-   label.label
+                  //-     input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
+                  //-     .color-fake(data-color="pink")
+                  //- li.sneaker-colors__item
                     label.label
                       input(type="radio" name="sneaker-colors-modal-1").radio.radio_sneaker
                       .color-fake(data-color="purple")
@@ -1030,16 +1032,16 @@ block content
                     a(href="#").content-list__link Сначала дорогие
                   li.content-list__item.content-list__item_sort
                     a(href="#").content-list__link Сначала дешевые
-              .content__model-num.content-list
+              //- .content__model-num.content-list
                 .content-list__title Моделей на странице:
                 ul.content-list__list 
-                  li.content-list__item.active
+                  li.content-list__item.active.page-num
                     a(href="#").content-list__link 8
-                  li.content-list__item
+                  li.content-list__item.page-num
                     a(href="#").content-list__link 16
-                  li.content-list__item
+                  li.content-list__item.page-num
                     a(href="#").content-list__link 32
-                  li.content-list__item
+                  li.content-list__item.page-num
                     a(href="#").content-list__link 48
             ul.content__goods.goods
               li.goods__item
@@ -1314,11 +1316,11 @@ block content
                   .product__bottom-row.product-buy
                       a.product-buy__btn.btn.btn_more(href="#").modal-trigger Подробнее
                       .product-buy__price 2 590 р
-            .content__pagination.pagination
+            //- .content__pagination.pagination
               a(href="#").pagination__prev.pagination__icon
                 svg.pagination__svg
                   use(xlink:href="images/sprite.svg#arrow_left_double")
-              ul.pagination__pages.pages
+              //- ul.pagination__pages.pages
                 li.pages__item.pagination__icon.hidden
                   a(href="#").pages__link
                     span.pages__text 1
